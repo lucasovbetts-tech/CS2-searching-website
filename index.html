@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinLab</title>
+    <link rel="icon" href="assets/Images/ChatGPT Image Jun 29, 2026, 09_26_49 AM.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Mainstyle.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/pages/inventory.css">
+    <link rel="stylesheet" href="css/pages/tradeup.css">
+    <link rel="stylesheet" href="css/pages/explore.css">
+    <link rel="stylesheet" href="css/pages/case-simulator.css">
+    <link rel="stylesheet" href="css/pages/skin-detail.css">
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+
+    <!-- Animated background -->
+    <div class="bg-canvas" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="#/" class="brand-link">
+                <img src="assets/Images/ChatGPT Image Jun 29, 2026, 09_26_49 AM.png" alt="SkinLab Logo" class="logo">
+                <span class="brand-name">Skin<span class="brand-accent">Lab</span></span>
+            </a>
+        </div>
+
+        <div class="header-right">
+
+            <!-- Nav links -->
+            <nav class="header-nav">
+                <button class="nav-btn" data-route="home">Home</button>
+                <button class="nav-btn" data-route="inventory">Inventory</button>
+                <button class="nav-btn" data-route="tradeup">Tradeup</button>
+                <button class="nav-btn" data-route="case-simulator">Case Simulator</button>
+                <button class="nav-btn" data-route="explore">Explore Skins</button>
+            </nav>
+
+            <div class="header-divider"></div>
+
+            <!-- Language / Currency picker -->
+            <div class="locale-picker" id="localePicker">
+                <button class="locale-btn" id="localeBtn" aria-expanded="false" aria-haspopup="true">
+                    <svg class="locale-globe" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M12 3c-2 2.5-3.5 5.5-3.5 9s1.5 6.5 3.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M12 3c2 2.5 3.5 5.5 3.5 9s-1.5 6.5-3.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M3.6 8.5h16.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M3.6 15.5h16.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span id="localeLabel">EN / USD</span>
+                    <svg class="locale-chevron" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="locale-popup" id="localePopup">
+                    <div class="locale-section">
+                        <span class="locale-section-label">Language</span>
+                        <div class="custom-select" id="langSelect">
+                            <button class="custom-select-btn" type="button">
+                                <span class="custom-select-val">English</span>
+                                <svg viewBox="0 0 24 24" fill="none" class="select-chevron">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="custom-select-list">
+                                <button class="custom-select-opt active" data-value="en" type="button">English</button>
+                                <button class="custom-select-opt" data-value="es" type="button">Spanish — Español</button>
+                                <button class="custom-select-opt" data-value="fr" type="button">French — Français</button>
+                                <button class="custom-select-opt" data-value="de" type="button">German — Deutsch</button>
+                                <button class="custom-select-opt" data-value="pt" type="button">Portuguese — Português</button>
+                                <button class="custom-select-opt" data-value="ru" type="button">Russian — Русский</button>
+                                <button class="custom-select-opt" data-value="zh" type="button">Chinese — 中文</button>
+                                <button class="custom-select-opt" data-value="ja" type="button">Japanese — 日本語</button>
+                                <button class="custom-select-opt" data-value="ko" type="button">Korean — 한국어</button>
+                                <button class="custom-select-opt" data-value="ar" type="button">Arabic — العربية</button>
+                                <button class="custom-select-opt" data-value="tr" type="button">Turkish — Türkçe</button>
+                                <button class="custom-select-opt" data-value="it" type="button">Italian — Italiano</button>
+                                <button class="custom-select-opt" data-value="nl" type="button">Dutch — Nederlands</button>
+                                <button class="custom-select-opt" data-value="pl" type="button">Polish — Polski</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="locale-divider"></div>
+                    <div class="locale-section">
+                        <span class="locale-section-label">Currency</span>
+                        <div class="custom-select" id="currSelect">
+                            <button class="custom-select-btn" type="button">
+                                <span class="custom-select-val">USD — US Dollar ($)</span>
+                                <svg viewBox="0 0 24 24" fill="none" class="select-chevron">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="custom-select-list">
+                                <button class="custom-select-opt active" data-value="USD" type="button">USD — US Dollar ($)</button>
+                                <button class="custom-select-opt" data-value="EUR" type="button">EUR — Euro (€)</button>
+                                <button class="custom-select-opt" data-value="GBP" type="button">GBP — British Pound (£)</button>
+                                <button class="custom-select-opt" data-value="CAD" type="button">CAD — Canadian Dollar (CA$)</button>
+                                <button class="custom-select-opt" data-value="AUD" type="button">AUD — Australian Dollar (A$)</button>
+                                <button class="custom-select-opt" data-value="JPY" type="button">JPY — Japanese Yen (¥)</button>
+                                <button class="custom-select-opt" data-value="CNY" type="button">CNY — Chinese Yuan (¥)</button>
+                                <button class="custom-select-opt" data-value="RUB" type="button">RUB — Russian Ruble (₽)</button>
+                                <button class="custom-select-opt" data-value="BRL" type="button">BRL — Brazilian Real (R$)</button>
+                                <button class="custom-select-opt" data-value="KRW" type="button">KRW — South Korean Won (₩)</button>
+                                <button class="custom-select-opt" data-value="TRY" type="button">TRY — Turkish Lira (₺)</button>
+                                <button class="custom-select-opt" data-value="SEK" type="button">SEK — Swedish Krona (kr)</button>
+                                <button class="custom-select-opt" data-value="NOK" type="button">NOK — Norwegian Krone (kr)</button>
+                                <button class="custom-select-opt" data-value="CHF" type="button">CHF — Swiss Franc (Fr)</button>
+                                <button class="custom-select-opt" data-value="SGD" type="button">SGD — Singapore Dollar (S$)</button>
+                                <button class="custom-select-opt" data-value="PLN" type="button">PLN — Polish Złoty (zł)</button>
+                                <button class="custom-select-opt" data-value="CZK" type="button">CZK — Czech Koruna (Kč)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="steam-box">
+                <img src="assets/Images/steamLogo.png" alt="Steam" class="steam-icon">
+                <span>Sign in through Steam</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SPA mount point -->
+    <div id="app"></div>
+
+</body>
+</html>

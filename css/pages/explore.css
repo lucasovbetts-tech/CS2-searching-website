@@ -1,0 +1,614 @@
+/* ════════════════════════════════════════════════════
+   Explore Skins Page Styles
+   ════════════════════════════════════════════════════ */
+
+.explore-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.explore-main {
+    min-height: calc(100vh - 68px);
+    padding: 48px 40px;
+    width: 100%;
+    min-width: 0; /* lets the flex child shrink below its content's natural width instead of overflowing */
+    animation: fadeIn 0.2s ease;
+}
+
+.category-sidebar {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+    width: 285px;
+}
+
+.categoryTitle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 0 0 8px;
+}
+
+.category-sidebar-btn {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: left;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-sec);
+    cursor: pointer;
+    transition: border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.category-sidebar-btn:hover {
+    border-color: rgba(168, 85, 247, 0.45);
+    color: var(--text);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.explore-header {
+    margin-bottom: 32px;
+}
+
+.explore-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+}
+
+.explore-title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex: 1;
+}
+
+.explore-hero-row {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.case-hero {
+    flex-shrink: 0;
+    width: 260px;
+}
+
+.case-hero-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px 18px 16px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.35),
+        0 20px 40px -24px rgba(0, 0, 0, 0.7);
+}
+
+.case-hero-img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    margin-bottom: 14px;
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.45));
+}
+
+/* ── Back Button ── */
+
+.explore-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: var(--text-sec);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 12px;
+    transition: color 0.18s ease;
+}
+
+.explore-back:hover {
+    color: var(--accent);
+}
+
+.explore-sort-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--text-sec);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.explore-sort-toggle:hover {
+    color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent);
+    transform: scale(1.08);
+}
+
+/* ── Weapon Categories ── */
+
+.weapon-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.weapon-category-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    margin-bottom: 14px;
+}
+
+.weapon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+}
+
+.weapon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weapon-card:hover {
+    border-color: rgba(168, 85, 247, 0.45);
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.weapon-card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+.weapon-card-img--empty {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    background: rgba(168, 85, 247, 0.05);
+    border: 1.5px dashed var(--border);
+    margin-bottom: 4px;
+}
+
+.weapon-card-mosaic {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    background: rgba(168, 85, 247, 0.05);
+}
+
+/* golds card: the mosaic fills the whole button edge-to-edge instead of sitting in a boxed-off image area */
+.weapon-card--mosaic {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-end;
+}
+
+.weapon-card--mosaic .weapon-card-mosaic {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: unset;
+    border-radius: inherit;
+    margin-bottom: 0;
+}
+
+.weapon-card--mosaic::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 7, 20, 0) 45%, rgba(10, 7, 20, 0.85) 100%);
+    pointer-events: none;
+}
+
+.weapon-card--mosaic .weapon-card-name,
+.weapon-card--mosaic .weapon-card-count {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.weapon-card--mosaic .weapon-card-count {
+    padding-bottom: 18px;
+}
+
+.weapon-card-mosaic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.weapon-card-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.weapon-card-count {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-sec);
+}
+
+/* ── Skin Grid ── */
+
+.skin-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.skin-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px 18px 16px;
+    cursor: pointer;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.35),
+        0 20px 40px -24px rgba(0, 0, 0, 0.7);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.28s ease;
+}
+
+/* scrim: darkens the lower half so text/badges stay legible over bright rarity glows */
+.skin-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 7, 20, 0) 32%, rgba(10, 7, 20, 0.6) 100%);
+    pointer-events: none;
+}
+
+/* sheen: faint top-left glass highlight for a frosted-glass feel */
+.skin-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 32%);
+    pointer-events: none;
+}
+
+.skin-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 4px 14px rgba(0, 0, 0, 0.4),
+        0 32px 60px -24px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(168, 85, 247, 0.4),
+        0 0 40px rgba(168, 85, 247, 0.22);
+}
+
+.skin-rarity {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text);
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.skin-img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    margin-top: 16px;
+    margin-bottom: 14px;
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.45));
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skin-card:hover .skin-img {
+    transform: scale(1.06);
+}
+
+.skin-img-placeholder {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    margin-top: 34px;
+    margin-bottom: 14px;
+    background: rgba(168, 85, 247, 0.05);
+    border: 1.5px dashed var(--border);
+}
+
+.skin-weapon {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 4px;
+}
+
+.skin-name {
+    position: relative;
+    z-index: 1;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text);
+    margin: 0;
+}
+
+.skin-badges {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.skin-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.skin-badge--normal {
+    color: var(--text-sec);
+}
+
+.skin-badge--stattrak {
+    color: #e07b39;
+    background: rgba(224, 123, 57, 0.12);
+    border-color: rgba(224, 123, 57, 0.35);
+}
+
+.skin-badge--souvenir {
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.12);
+    border-color: rgba(255, 215, 0, 0.35);
+}
+
+.skinCardSpecialContainer {
+    position: relative;
+    z-index: 1;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.16);
+    padding: 12px 14px;
+    margin-top: 12px;
+}
+
+.skinCardPrices {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skinCardPrices p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-left: 3px solid var(--text-sec);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-family: 'SF Mono', 'Cascadia Code', Consolas, 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-sec);
+    margin: 0;
+    transition: background-color 0.2s ease;
+}
+
+.skinCardPrices p:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.skinCardPrices .skinCardPriceStattrak {
+    color: #e07b39;
+    border-left-color: #e07b39;
+}
+
+.skinCardPrices .skinCardPriceSouvenir {
+    color: #ffd700;
+    border-left-color: #ffd700;
+}
+
+.skinCardPrices .skinCardPriceNormal {
+    color: var(--text-sec);
+    border-left-color: var(--text-sec);
+}
+
+.csfloat-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 8px;
+    padding: 7px 14px;
+    color: var(--accent-light);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.csfloat-link:hover {
+    background: rgba(168, 85, 247, 0.22);
+    border-color: var(--accent);
+}
+
+/* ── Wear Bar ── */
+/* stops match the real CS2 wear-tier float boundaries: FN 0-.07, MW .07-.15, FT .15-.38, WW .38-.45, BS .45-1 */
+
+.wear-bar {
+    position: relative;
+    z-index: 1;
+    height: 7px;
+    border-radius: 999px;
+    margin: 6px 3px 16px;
+    cursor: default;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(
+        to right,
+        #4b9fe1 0%, #4b9fe1 7%,
+        #56c98d 7%, #56c98d 15%,
+        #d0c94a 15%, #d0c94a 38%,
+        #e0862f 38%, #e0862f 45%,
+        #c93b3b 45%, #c93b3b 100%
+    );
+}
+
+.wear-bar-marker {
+    position: absolute;
+    top: -6px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid var(--text);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+    transform: translateX(-50%);
+}
+
+.wear-bar::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: rgba(22, 16, 36, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--text);
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 10;
+}
+
+.wear-bar::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+    border: 5px solid transparent;
+    border-top-color: rgba(22, 16, 36, 0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+}
+
+.wear-bar:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-14px);
+}
+
+.wear-bar:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-6px);
+}
+
+/* ── States ── */
+
+.explore-empty,
+.explore-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 64px 0;
+    color: var(--text-sec);
+    font-size: 0.95rem;
+}

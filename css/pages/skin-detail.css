@@ -1,0 +1,129 @@
+/* ════════════════════════════════════════════════════
+   Skin Detail Page Styles
+   ════════════════════════════════════════════════════ */
+
+.skin-detail-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 40px;
+    min-height: calc(100vh - 68px);
+    animation: fadeIn 0.2s ease;
+}
+
+.skin-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.skin-detail-art {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 20px 40px -24px rgba(0, 0, 0, 0.7);
+}
+
+.skin-detail-img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.45));
+}
+
+.skin-detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.skin-detail-name {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin: 4px 0 16px;
+}
+
+.skin-detail-desc {
+    color: var(--text-sec);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 16px 0 0;
+}
+
+/* ── Wear-tier price table ── */
+
+.skin-price-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.skin-price-row {
+    display: grid;
+    grid-template-columns: 1.1fr repeat(3, 1fr);
+    gap: 8px;
+    align-items: center;
+}
+
+.skin-price-row--header .skin-price-col {
+    background: none;
+    border: none;
+    padding: 0 14px;
+    color: var(--text-sec);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.skin-price-tier {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.skin-price-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-left: 3px solid var(--text-sec);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-family: 'SF Mono', 'Cascadia Code', Consolas, 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-sec);
+    transition: background-color 0.2s ease;
+}
+
+.skin-price-col:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.skin-price-col--stattrak {
+    color: #e07b39;
+    border-left-color: #e07b39;
+}
+
+.skin-price-col--souvenir {
+    color: #ffd700;
+    border-left-color: #ffd700;
+}
+
+@media (max-width: 860px) {
+    .skin-detail-layout {
+        grid-template-columns: 1fr;
+    }
+}

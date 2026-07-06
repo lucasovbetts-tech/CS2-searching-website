@@ -1,0 +1,299 @@
+/* ════════════════════════════════════════════════════
+   Home Page Styles
+   ════════════════════════════════════════════════════ */
+
+/* ── Hero ── */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    width: fit-content;
+    max-width: min(1200px, 92vw);
+    margin-top: -60px;
+}
+
+.hero-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.15;
+}
+
+/* ── Search Bar ── */
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 500px;
+    height: 58px;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 0 8px 0 20px;
+    gap: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-wrap:focus-within {
+    border-color: rgba(168, 85, 247, 0.55);
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+.search-icon {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    color: var(--text-sec);
+}
+
+.search-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.975rem;
+    font-weight: 400;
+    caret-color: var(--accent);
+}
+
+.search-input::placeholder {
+    color: #4B3A6E;
+}
+
+.search-btn {
+    flex-shrink: 0;
+    height: 42px;
+    padding: 0 24px;
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.search-btn:hover {
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.5);
+    transform: translateY(-1px);
+}
+
+.search-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+    transition-duration: 0.07s;
+}
+
+/* ── Search Results Dropdown ── */
+
+.search-bar-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 8px;
+    z-index: 100;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 6px 0;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+    max-height: 320px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+    transform-origin: top center;
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.search-results:not(:empty) {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+.search-result {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 7px 16px;
+    color: var(--text-sec);
+    font-size: 0.84rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.15s ease, background 0.15s ease;
+}
+
+.search-result:hover {
+    color: var(--text);
+    background: rgba(168, 85, 247, 0.08);
+}
+
+.search-result-img {
+    width: 36px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 3px;
+}
+
+.search-result-img--empty {
+    display: inline-block;
+    background: rgba(168, 85, 247, 0.06);
+}
+
+/* ── Weapon Categories ── */
+
+.weapon-cats {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.cat-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-sec);
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.18s ease, background 0.18s ease;
+}
+
+.cat-btn--all {
+    color: var(--text);
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.cat-btn--all:hover {
+    background: rgba(168, 85, 247, 0.18);
+}
+
+.cat-item {
+    position: relative;
+}
+
+.cat-item:hover .cat-btn {
+    color: var(--text);
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.cat-item:hover .cat-chevron {
+    transform: rotate(180deg);
+}
+
+.cat-chevron {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+/* ── Category Dropdown ── */
+
+.cat-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    padding-top: 8px;
+    z-index: 150;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    min-width: 170px;
+}
+
+.cat-item:hover .cat-dropdown {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(-50%) translateY(0);
+}
+
+.cat-dropdown-inner {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 6px 0;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+    max-height: 280px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+
+.cat-dropdown-inner::-webkit-scrollbar {
+    width: 4px;
+}
+
+.cat-dropdown-inner::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+}
+
+.cat-weapon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 7px 16px;
+    background: none;
+    border: none;
+    color: var(--text-sec);
+    font-family: inherit;
+    font-size: 0.84rem;
+    font-weight: 400;
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s ease, background 0.15s ease, padding-left 0.15s ease;
+}
+
+.cat-weapon-thumb {
+    width: 36px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 3px;
+}
+
+.cat-weapon-thumb--empty {
+    display: inline-block;
+    width: 36px;
+    height: 24px;
+    background: rgba(168, 85, 247, 0.06);
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.cat-weapon:hover {
+    color: var(--text);
+    background: rgba(168, 85, 247, 0.08);
+    padding-left: 20px;
+}

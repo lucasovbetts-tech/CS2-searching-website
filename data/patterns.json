@@ -1,0 +1,273 @@
+[
+  {
+    "weapon": "Karambit",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 387, "tier": 1, "label": "Blue Gem" },
+      { "seed": 4, "tier": 2, "label": "Blue Gem" },
+      { "seed": 20, "tier": 2, "label": "Blue Gem" },
+      { "seed": 25, "tier": 2, "label": "Blue Gem" },
+      { "seed": 26, "tier": 2, "label": "Blue Gem" },
+      { "seed": 30, "tier": 2, "label": "Blue Gem" },
+      { "seed": 34, "tier": 2, "label": "Blue Gem" },
+      { "seed": 57, "tier": 2, "label": "Blue Gem" },
+      { "seed": 59, "tier": 2, "label": "Blue Gem" },
+      { "seed": 73, "tier": 2, "label": "Blue Gem" },
+      { "seed": 92, "tier": 2, "label": "Blue Gem" },
+      { "seed": 231, "tier": 2, "label": "Blue Gem" },
+      { "seed": 442, "tier": 2, "label": "Blue Gem" },
+      { "seed": 470, "tier": 2, "label": "Blue Gem" },
+      { "seed": 661, "tier": 2, "label": "Blue Gem" },
+      { "seed": 664, "tier": 2, "label": "Blue Gem" },
+      { "seed": 776, "tier": 2, "label": "Blue Gem" },
+      { "seed": 809, "tier": 2, "label": "Blue Gem" },
+      { "seed": 853, "tier": 2, "label": "Blue Gem" },
+      { "seed": 902, "tier": 2, "label": "Blue Gem" },
+      { "seed": 1293, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "M9 Bayonet",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 4, "tier": 2, "label": "Blue Gem" },
+      { "seed": 11, "tier": 2, "label": "Blue Gem" },
+      { "seed": 21, "tier": 2, "label": "Blue Gem" },
+      { "seed": 41, "tier": 2, "label": "Blue Gem" },
+      { "seed": 58, "tier": 2, "label": "Blue Gem" },
+      { "seed": 64, "tier": 2, "label": "Blue Gem" },
+      { "seed": 72, "tier": 2, "label": "Blue Gem" },
+      { "seed": 150, "tier": 2, "label": "Blue Gem" },
+      { "seed": 601, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Butterfly Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 510, "tier": 1, "label": "Blue Gem" },
+      { "seed": 39, "tier": 2, "label": "Blue Gem" },
+      { "seed": 182, "tier": 2, "label": "Blue Gem" },
+      { "seed": 371, "tier": 2, "label": "Blue Gem" },
+      { "seed": 396, "tier": 2, "label": "Blue Gem" },
+      { "seed": 494, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Flip Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 670, "tier": 1, "label": "Blue Gem" },
+      { "seed": 9, "tier": 2, "label": "Blue Gem" },
+      { "seed": 13, "tier": 2, "label": "Blue Gem" },
+      { "seed": 73, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Huntsman Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 248, "tier": 1, "label": "Blue Gem" },
+      { "seed": 29, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Gut Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 9, "tier": 2, "label": "Blue Gem" },
+      { "seed": 15, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Bayonet",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 179, "tier": 1, "label": "Blue Gem" },
+      { "seed": 57, "tier": 2, "label": "Blue Gem" },
+      { "seed": 63, "tier": 2, "label": "Blue Gem" },
+      { "seed": 65, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Shadow Daggers",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 56, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Falchion Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 149, "tier": 2, "label": "Blue Gem" },
+      { "seed": 917, "tier": 2, "label": "Blue Gem" },
+      { "seed": 811, "tier": 2, "label": "Blue Gem" },
+      { "seed": 302, "tier": 2, "label": "Blue Gem" },
+      { "seed": 494, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Bowie Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 913, "tier": 1, "label": "Blue Gem" },
+      { "seed": 7825, "tier": 1, "label": "Blue Gem" },
+      { "seed": 29, "tier": 2, "label": "Blue Gem" },
+      { "seed": 371, "tier": 2, "label": "Blue Gem" },
+      { "seed": 534, "tier": 2, "label": "Blue Gem" },
+      { "seed": 963, "tier": 2, "label": "Blue Gem" },
+      { "seed": 4078, "tier": 2, "label": "Blue Gem" },
+      { "seed": 2606, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Stiletto Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 891, "tier": 1, "label": "Blue Gem" },
+      { "seed": 92, "tier": 2, "label": "Blue Gem" },
+      { "seed": 330, "tier": 2, "label": "Blue Gem" },
+      { "seed": 488, "tier": 2, "label": "Blue Gem" },
+      { "seed": 515, "tier": 2, "label": "Blue Gem" },
+      { "seed": 664, "tier": 2, "label": "Blue Gem" },
+      { "seed": 868, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Ursus Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 891, "tier": 1, "label": "Blue Gem" },
+      { "seed": 38, "tier": 2, "label": "Blue Gem" },
+      { "seed": 283, "tier": 2, "label": "Blue Gem" },
+      { "seed": 398, "tier": 2, "label": "Blue Gem" },
+      { "seed": 488, "tier": 2, "label": "Blue Gem" },
+      { "seed": 494, "tier": 2, "label": "Blue Gem" },
+      { "seed": 575, "tier": 2, "label": "Blue Gem" },
+      { "seed": 618, "tier": 2, "label": "Blue Gem" },
+      { "seed": 652, "tier": 2, "label": "Blue Gem" },
+      { "seed": 770, "tier": 2, "label": "Blue Gem" },
+      { "seed": 808, "tier": 2, "label": "Blue Gem" },
+      { "seed": 838, "tier": 2, "label": "Blue Gem" },
+      { "seed": 917, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Talon Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 923, "tier": 1, "label": "Blue Gem" },
+      { "seed": 3, "tier": 2, "label": "Blue Gem" },
+      { "seed": 180, "tier": 2, "label": "Blue Gem" },
+      { "seed": 185, "tier": 2, "label": "Blue Gem" },
+      { "seed": 222, "tier": 2, "label": "Blue Gem" },
+      { "seed": 241, "tier": 2, "label": "Blue Gem" },
+      { "seed": 311, "tier": 2, "label": "Blue Gem" },
+      { "seed": 528, "tier": 2, "label": "Blue Gem" },
+      { "seed": 837, "tier": 2, "label": "Blue Gem" },
+      { "seed": 899, "tier": 2, "label": "Blue Gem" },
+      { "seed": 2359, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Navaja Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 321, "tier": 2, "label": "Blue Gem" },
+      { "seed": 396, "tier": 2, "label": "Blue Gem" },
+      { "seed": 720, "tier": 2, "label": "Blue Gem" },
+      { "seed": 877, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Classic Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 403, "tier": 1, "label": "Blue Gem" },
+      { "seed": 5754, "tier": 1, "label": "Blue Gem" },
+      { "seed": 456, "tier": 2, "label": "Blue Gem" },
+      { "seed": 668, "tier": 2, "label": "Blue Gem" },
+      { "seed": 3455, "tier": 2, "label": "Blue Gem" },
+      { "seed": 3528, "tier": 2, "label": "Blue Gem" },
+      { "seed": 3006, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Skeleton Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 10, "tier": 2, "label": "Blue Gem" },
+      { "seed": 12, "tier": 2, "label": "Blue Gem" },
+      { "seed": 456, "tier": 2, "label": "Blue Gem" },
+      { "seed": 634, "tier": 2, "label": "Blue Gem" },
+      { "seed": 1375, "tier": 2, "label": "Blue Gem" },
+      { "seed": 1427, "tier": 2, "label": "Blue Gem" },
+      { "seed": 2431, "tier": 2, "label": "Blue Gem" },
+      { "seed": 3706, "tier": 2, "label": "Blue Gem" },
+      { "seed": 4545, "tier": 2, "label": "Blue Gem" },
+      { "seed": 5760, "tier": 2, "label": "Blue Gem" },
+      { "seed": 6994, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Nomad Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 7624, "tier": 1, "label": "Blue Gem" },
+      { "seed": 456, "tier": 2, "label": "Blue Gem" },
+      { "seed": 1340, "tier": 2, "label": "Blue Gem" },
+      { "seed": 2504, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Paracord Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 456, "tier": 1, "label": "Blue Gem" },
+      { "seed": 577, "tier": 2, "label": "Blue Gem" },
+      { "seed": 583, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Survival Knife",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 456, "tier": 1, "label": "Blue Gem" },
+      { "seed": 577, "tier": 1, "label": "Blue Gem" },
+      { "seed": 55, "tier": 2, "label": "Blue Gem" },
+      { "seed": 585, "tier": 2, "label": "Blue Gem" },
+      { "seed": 601, "tier": 2, "label": "Blue Gem" },
+      { "seed": 634, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "Five-SeveN",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 28, "tier": 2, "label": "Blue Gem" },
+      { "seed": 30, "tier": 2, "label": "Blue Gem" },
+      { "seed": 278, "tier": 2, "label": "Blue Gem" },
+      { "seed": 670, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "MAC-10",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 6383, "tier": 2, "label": "Blue Gem" }
+    ]
+  },
+  {
+    "weapon": "AK-47",
+    "skin": "Case Hardened",
+    "patterns": [
+      { "seed": 219, "tier": 1, "label": "Gold Gem" },
+      { "seed": 3148, "tier": 1, "label": "Blue Gem" },
+      { "seed": 45, "tier": 2, "label": "Blue Gem" },
+      { "seed": 154, "tier": 2, "label": "Blue Gem" },
+      { "seed": 321, "tier": 2, "label": "Blue Gem" },
+      { "seed": 661, "tier": 2, "label": "Blue Gem" }
+    ]
+  }
+]
