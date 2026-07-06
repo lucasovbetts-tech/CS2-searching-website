@@ -89,15 +89,22 @@ export function initSearch() {
     requestAnimationFrame(syncSearchWidth);
     populateDropdowns();
 
-    let skins = [];
-    getSkins().then(data => { skins = data.map(s => ({ ...s, kind: 'skin' })); });
+    //precomputes a lowercased searchable string once per item so typing doesn't redo this work on every keystroke
+    const withSearchable = (items) => items.map(item => ({
+        ...item,
+        searchable: (item.kind === 'skin' ? `${item.weapon} ${item.name}` : item.name).toLowerCase()
+    }));
 
-    let weapons = [];
-    getWeapons().then(data => { weapons = Object.values(data).flat().map(w => ({ ...w, kind: 'weapon' })); });
+    let combined = [];
+    const setCombined = (kind, items) => {
+        combined = [...combined.filter(i => i.kind !== kind), ...withSearchable(items)];
+    };
 
-    let crates = [];
+    getSkins().then(data => setCombined('skin', data.map(s => ({ ...s, kind: 'skin' }))));
+    getWeapons().then(data => setCombined('weapon', Object.values(data).flat().map(w => ({ ...w, kind: 'weapon' }))));
+
     Promise.all([getCases(), getCollections(), getStickerCapsules(), getSouvenirPackages(), getNonTournamentStickerCapsules()]).then(([cases, collections, capsules, souvenirs, nonTournamentCapsules]) => {
-        crates = [...cases, ...collections, ...capsules, ...souvenirs, ...nonTournamentCapsules].map(c => ({ ...c, kind: 'crate' }));
+        setCombined('crate', [...cases, ...collections, ...capsules, ...souvenirs, ...nonTournamentCapsules].map(c => ({ ...c, kind: 'crate' })));
     });
 
     //slug here matches explore.js's COLLECTIBLE_TYPES keys, so clicking a result can route to that type's page the same way
@@ -105,22 +112,22 @@ export function initSearch() {
         agents: getAgents, charms: getCharms, patches: getPatches,
         'music-kits': getMusicKits, graffiti: getGraffiti, pins: getPins
     };
-    let collectibles = [];
     Promise.all(Object.entries(COLLECTIBLE_FETCHERS).map(([slug, fetchType]) =>
         fetchType().then(data => data.map(item => ({ ...item, kind: 'collectible', slug })))
-    )).then(results => { collectibles = results.flat(); });
+    )).then(results => setCombined('collectible', results.flat()));
 
-    let stickers = [];
-    getStickers().then(data => { stickers = data.map(s => ({ ...s, kind: 'sticker' })); });
+    getStickers().then(data => setCombined('sticker', data.map(s => ({ ...s, kind: 'sticker' }))));
 
+    const MAX_RESULTS = 40;
+    let debounceTimer;
     document.querySelector('.search-input')?.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase();
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => runSearch(e.target.value), 120);
+    });
+
+    function runSearch(rawQuery) {
+        const query = rawQuery.toLowerCase();
         const queryWords = query.split(' ').filter(Boolean); //drops empty strings from extra spaces
-        const combined = [...skins, ...weapons, ...crates, ...collectibles, ...stickers];
-        const filtered = combined.filter(item => {
-            const searchable = (item.kind === 'skin' ? `${item.weapon} ${item.name}` : item.name).toLowerCase(); //skins search weapon+name together, everything else just searches its own name
-            return queryWords.every(word => searchable.includes(word));
-        });
 
         const resultsEl = document.getElementById('searchResults');
         if (!resultsEl) return;
@@ -128,6 +135,14 @@ export function initSearch() {
         if (!queryWords.length) {
             resultsEl.innerHTML = '';
             return;
+        }
+
+        const filtered = [];
+        for (const item of combined) {
+            if (queryWords.every(word => item.searchable.includes(word))) {
+                filtered.push(item);
+                if (filtered.length >= MAX_RESULTS) break; //cap so a broad query doesn't render hundreds of DOM nodes/images at once
+            }
         }
 
         resultsEl.innerHTML = filtered.length ? filtered.map(f => {
@@ -143,7 +158,7 @@ export function initSearch() {
                 <span class="search-result-name">${label}</span>
             </div>`;
         }).join('') : '<p class="explore-empty">No results found.</p>';
-    });
+    }
 
     document.getElementById('searchResults')?.addEventListener('click', e => {
         const result = e.target.closest('.search-result');
