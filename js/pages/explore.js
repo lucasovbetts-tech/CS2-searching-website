@@ -4,7 +4,7 @@ import { getStickerCapsules, getSouvenirPackages, getNonTournamentStickerCapsule
 import { getCollections } from '../api/collections.js';
 import { getAgents, getCharms, getPatches, getMusicKits, getGraffiti, getPins } from '../api/collectibles.js';
 
-console.log(await getStickerCapsules(), await getSouvenirPackages(), await getNonTournamentStickerCapsules(), await getCases(), await getSkins(), await getAgents(), await getCharms(), await getPatches(), await getMusicKits(), await getGraffiti(), await getPins());
+console.log(await getStickerCapsules(), await getSouvenirPackages(), await getNonTournamentStickerCapsules(), await getCases(), await getSkins(), await getAgents(), await getCharms(), await getPatches(), await getMusicKits(), await getGraffiti(), await getPins(), await getCollections());
 
 //scales a hex color's RGB channels down toward black by `factor` (0-1), e.g. darken('#ffd700', 0.4) -> a dimmer gold
 function darken(hex, factor) {
@@ -161,7 +161,7 @@ const rarityMaps = {
 };
 
 //creates the card for the skin
-function renderSkinCard(skins, weapon) {
+export function renderSkinCard(skins, weapon) {
 
     sortByRarity(skins, sortDescending)
 

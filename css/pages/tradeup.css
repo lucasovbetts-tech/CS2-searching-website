@@ -1,3 +1,154 @@
 /* ════════════════════════════════════════════════════
    Tradeup Page Styles
    ════════════════════════════════════════════════════ */
+
+.tradeup-layout {
+    width: 100%;
+    padding: 48px 40px 48px 16px;
+    animation: fadeIn 0.2s ease;
+}
+
+#tradeupSentinel {
+    height: 1px;
+}
+
+.tradeup-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 32px;
+}
+
+.tradeup-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.tradeup-left,
+.tradeup-right {
+    flex: 1;
+    min-width: 0; /* lets the flex child shrink below its content's natural width instead of overflowing */
+}
+
+.tradeup-divider {
+    align-self: stretch;
+    width: 1px;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+.tradeup-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+}
+
+/* ── Tradeup card overrides (narrower than explore.js's skin-card, 6 to a row) ── */
+
+.tradeup-card {
+    padding: 12px 10px 12px;
+}
+
+.tradeup-card .skin-img {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.tradeup-card .skin-weapon {
+    font-size: 0.66rem;
+}
+
+.tradeup-card .skin-name {
+    font-size: 0.85rem;
+}
+
+/* ── Price pills, top of the card ── */
+
+.tradeup-price-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tradeup-price-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-size: 0.66rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.tradeup-price-sep {
+    color: var(--text-sec);
+    font-size: 0.7rem;
+}
+
+/* ── Collection badge + shortened wear-bar, below the image ── */
+
+.tradeup-meta-row {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.tradeup-collection-img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.tradeup-collection-img--empty {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed var(--border);
+}
+
+.tradeup-wear-bar {
+    position: relative;
+    flex: 1;
+    height: 5px;
+    border-radius: 999px;
+    cursor: default;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(
+        to right,
+        #4b9fe1 0%, #4b9fe1 7%,
+        #56c98d 7%, #56c98d 15%,
+        #d0c94a 15%, #d0c94a 38%,
+        #e0862f 38%, #e0862f 45%,
+        #c93b3b 45%, #c93b3b 100%
+    );
+}
+
+.tradeup-wear-marker {
+    position: absolute;
+    top: -3px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 5px solid var(--text);
+    transform: translateX(-50%);
+}
+
+.tradeup-name-col {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+}
