@@ -6,7 +6,7 @@
     display: flex;
     align-items: flex-start;
     gap: 28px;
-    max-width: 1600px;
+    max-width: min(95vw, 2080px);
     margin: 0 auto;
     width: 100%;
 }
@@ -334,12 +334,16 @@
 /* ── Skin Grid ── */
 
 .skin-grid {
+    container-type: inline-size; /* lets the grid's own track-width formula below respond to its real available
+                                    width (sidebar included/excluded) instead of raw viewport width */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 24cqi, 270px), 1fr));
+    gap: clamp(10px, 3cqi, 24px);
 }
 
 .skin-card {
+    container-type: inline-size; /* each card scales its own contents off its actual rendered width, see the
+                                     "Skin Grid Card - Fluid Scaling" rules further down */
     position: relative;
     overflow: hidden;
     background: var(--card);
@@ -648,6 +652,90 @@
     transform: translateX(-50%) translateY(-6px);
 }
 
+/* ── Skin Grid Card - Fluid Scaling ──
+   Scoped to .skin-grid .skin-card (not the bare .skin-card/.skin-rarity/etc. rules above, which are shared with
+   the tradeup, skin-detail, sticker-detail and collectible-detail pages) so only the explore grid's cards scale
+   continuously with their own rendered width - both the card and everything inside it - instead of jumping
+   between fixed sizes at breakpoints. cqi = 1% of .skin-card's own inline size (see container-type above), so
+   this tracks the card's real width even when it changes without the grid's column count changing. */
+
+.skin-grid .skin-card {
+    border-radius: clamp(14px, 9cqi, 24px);
+    padding: clamp(12px, 9cqi, 24px) clamp(11px, 8cqi, 22px) clamp(10px, 7cqi, 19px);
+}
+
+.skin-grid .skin-rarity {
+    top: clamp(9px, 6.4cqi, 17px);
+    left: clamp(9px, 6.4cqi, 17px);
+    font-size: clamp(0.5rem, 4.8cqi, 0.8rem);
+    padding: clamp(3px, 1.8cqi, 5px) clamp(7px, 4.5cqi, 12px);
+}
+
+.skin-grid .skin-img {
+    margin-top: clamp(8px, 7.3cqi, 19px);
+    margin-bottom: clamp(8px, 6.4cqi, 17px);
+}
+
+.skin-grid .skin-img-placeholder {
+    margin-top: clamp(16px, 15cqi, 40px);
+    margin-bottom: clamp(8px, 6.4cqi, 17px);
+}
+
+.skin-grid .wear-bar {
+    height: clamp(4px, 3.2cqi, 8px);
+    margin: clamp(4px, 2.7cqi, 7px) clamp(2px, 1.4cqi, 4px) clamp(10px, 7.3cqi, 19px);
+}
+
+.skin-grid .wear-bar-marker {
+    top: clamp(-8px, -3.2cqi, -4px);
+    border-left-width: clamp(3px, 2.3cqi, 6px);
+    border-right-width: clamp(3px, 2.3cqi, 6px);
+    border-top-width: clamp(4px, 3.2cqi, 8px);
+}
+
+.skin-grid .skin-weapon {
+    font-size: clamp(0.56rem, 5.2cqi, 0.86rem);
+    margin-bottom: clamp(3px, 1.8cqi, 5px);
+}
+
+.skin-grid .skin-name {
+    font-size: clamp(0.78rem, 7.6cqi, 1.25rem);
+}
+
+.skin-grid .skin-badges {
+    flex-wrap: wrap;
+    gap: clamp(4px, 2.7cqi, 7px);
+    margin-top: clamp(6px, 4.5cqi, 12px);
+}
+
+.skin-grid .skin-badge {
+    padding: clamp(2px, 1.4cqi, 4px) clamp(6px, 3.6cqi, 10px);
+    font-size: clamp(0.5rem, 4.4cqi, 0.72rem);
+}
+
+.skin-grid .skinCardSpecialContainer {
+    border-radius: clamp(10px, 6.4cqi, 17px);
+    padding: clamp(8px, 5.5cqi, 14px) clamp(9px, 6.4cqi, 17px);
+    margin-top: clamp(8px, 5.5cqi, 14px);
+}
+
+.skin-grid .skinCardPrices {
+    gap: clamp(5px, 3.6cqi, 10px);
+    margin-top: clamp(6px, 4.5cqi, 12px);
+}
+
+.skin-grid .skinCardPrices p {
+    padding: clamp(4px, 2.7cqi, 7px) clamp(8px, 6.4cqi, 17px);
+    font-size: clamp(0.65rem, 6.2cqi, 1rem);
+    border-left-width: clamp(2px, 1.4cqi, 4px);
+}
+
+.skin-grid .csfloat-link {
+    margin-top: clamp(6px, 4.5cqi, 12px);
+    padding: clamp(4px, 3.2cqi, 8px) clamp(8px, 6.4cqi, 17px);
+    font-size: clamp(0.65rem, 6.2cqi, 1rem);
+}
+
 /* ── States ── */
 
 .explore-empty,
@@ -718,11 +806,6 @@
     .explore-title-row {
         flex-wrap: wrap;
         gap: 8px;
-    }
-
-    .skin-grid {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-        gap: 10px;
     }
 
     .weapon-grid {
