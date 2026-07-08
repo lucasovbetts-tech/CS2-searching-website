@@ -21,8 +21,7 @@
 
 .category-sidebar {
     position: sticky;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 120px; /* clears the 68px header plus a bit of breathing room */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -36,6 +35,53 @@
     letter-spacing: -0.02em;
     color: var(--text);
     margin: 0 0 8px;
+}
+
+.sideBarSearch-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    background: rgba(168, 85, 247, 0.08);
+    border: 1.5px solid rgba(168, 85, 247, 0.3);
+    border-radius: 10px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.sideBarSearch-wrap:hover {
+    border-color: rgba(168, 85, 247, 0.45);
+}
+
+.sideBarSearch-wrap:focus-within {
+    border-color: rgba(168, 85, 247, 0.65);
+    background: rgba(168, 85, 247, 0.12);
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.12);
+}
+
+.sideBarSearch-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--accent-light);
+}
+
+.sideBarSearch {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    caret-color: var(--accent);
+}
+
+.sideBarSearch::placeholder {
+    color: #4B3A6E;
 }
 
 .category-sidebar-btn {

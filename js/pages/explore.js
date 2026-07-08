@@ -134,6 +134,13 @@ function renderCategorySidebar() {
     return `
     <nav class="category-sidebar">
         <p class="categoryTitle">Categories</p>
+        <div class="sideBarSearch-wrap">
+            <svg class="sideBarSearch-icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input class="sideBarSearch" type="text" placeholder="Search weapons, cases, collections..." autocomplete="off">
+        </div>
         ${weaponBtns}
         ${crateBtns}
         <button class="category-sidebar-btn" data-target="category-collectibles">Other</button>
@@ -459,6 +466,59 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
                 if (card.dataset.crate) window.location.hash = '#/explore/crate/' + encodeURIComponent(card.dataset.crate); //makes it so u can click on a capsule/souvenir/case/collection card
                 else if (card.dataset.collectible) window.location.hash = '#/explore/collectible/' + card.dataset.collectible; //makes it so u can click into agents/charms/patches/etc
                 else if (card.dataset.weapon) window.location.hash = '#/explore/' + encodeURIComponent(card.dataset.weapon); //makes it so u can click on the weapon categories
+
+            });
+
+            //flat list of every individual weapon/case/collection/capsule/souvenir, each tagged with the section it belongs
+            //to on the default page - built once this data has loaded, used by the sidebar search to filter this same grid
+            //while keeping matches grouped under their real section (Karambit stays under Knives, Fracture Case under Cases)
+            const searchableItems = [
+                ...categoryOrder.flatMap(category => (weaponData[category] || []).map(w => ({
+                    kind: 'weapon',
+                    name: w.name,
+                    image: skins.find(s => s.weapon === w.name)?.image,
+                    section: nameMap[category] || category[0].toUpperCase() + category.slice(1),
+                }))),
+                ...cases.map(c => ({ kind: 'crate', name: c.name, image: c.image, section: 'Cases' })),
+                ...collections.map(c => ({ kind: 'crate', name: c.name, image: c.image, section: 'Collections' })),
+                ...capsules.map(c => ({ kind: 'crate', name: c.name, image: c.image, section: 'Sticker Capsules' })),
+                ...souvenirs.map(c => ({ kind: 'crate', name: c.name, image: c.image, section: 'Souvenir Packages' })),
+            ];
+
+            //same order the sections appear in on the default page
+            const SECTION_ORDER = [
+                ...categoryOrder.map(c => nameMap[c] || c[0].toUpperCase() + c.slice(1)),
+                'Cases', 'Collections', 'Sticker Capsules', 'Souvenir Packages',
+            ];
+
+            const defaultGridHTML = grid.innerHTML; //snapshot of the full default grid, to restore once the search is cleared
+
+            document.querySelector('.sideBarSearch')?.addEventListener('input', e => {
+                const query = e.target.value.trim().toLowerCase();
+
+                if (!query) {
+                    grid.innerHTML = defaultGridHTML;
+                    return;
+                }
+
+                const matches = searchableItems.filter(item => item.name.toLowerCase().includes(query));
+
+                //group matches back under their section, dropping sections with nothing matching
+                const sections = SECTION_ORDER
+                    .map(section => ({ section, items: matches.filter(m => m.section === section) }))
+                    .filter(({ items }) => items.length);
+
+                grid.innerHTML = sections.length
+                    ? sections.map(({ section, items }) => `
+                        <section>
+                            <h2 class="weapon-category-title">${section}</h2>
+                            <div class="weapon-grid">${items.map(item => `
+                                <button class="weapon-card" ${item.kind === 'weapon' ? `data-weapon="${item.name}"` : `data-crate="${item.name}"`}>
+                                    ${item.image ? `<img class="weapon-card-img" src="${item.image}" alt="${item.name}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
+                                    <span class="weapon-card-name">${item.name}</span>
+                                </button>`).join('')}</div>
+                        </section>`).join('')
+                    : '<p class="explore-empty">No matches found.</p>';
             });
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
