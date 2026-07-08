@@ -127,3 +127,23 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 640px) {
+    .skin-detail-page {
+        padding: 28px 16px;
+    }
+
+    .skin-detail-name {
+        font-size: 1.5rem;
+    }
+
+    .skin-price-row {
+        gap: 5px;
+    }
+
+    .skin-price-col,
+    .skin-price-tier {
+        font-size: 0.75rem;
+        padding: 6px 8px;
+    }
+}

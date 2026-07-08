@@ -30,7 +30,7 @@ function darken(hex, factor) {
 }
 
 function rarityGradient(hex) {
-    return `radial-gradient(ellipse at 50% 35%, ${hex} 0%, ${darken(hex, 0.4)} 55%, ${darken(hex, 0.1)} 100%)`;
+    return `radial-gradient(ellipse at 50% 35%, ${hex} 0%, ${darken(hex, 0.6)} 55%, ${darken(hex, 0.1)} 100%)`;
 }
 
 //one toolbar dropdown field - same custom-select look as the header's locale/currency pickers, not the browser's native <select> popup.
