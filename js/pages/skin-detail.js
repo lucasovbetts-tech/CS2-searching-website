@@ -1,4 +1,6 @@
 import { getSkinByIndex } from '../api/skins.js';
+import { getPrices } from '../api/prices.js'
+import { wearTiersFor } from '../utils/wear-tiers.js';
 
 //same darken/gradient look the explore skin-cards use, kept in sync by hand since there's no shared module for it yet
 function darken(hex, factor) {
@@ -12,22 +14,18 @@ function rarityGradient(hex) {
     return `radial-gradient(ellipse at 50% 35%, ${hex} 0%, ${darken(hex, 0.4)} 55%, ${darken(hex, 0.1)} 100%)`;
 }
 
-//real CS2 wear-tier float boundaries (matches the ranges the .wear-bar gradient in explore.css is drawn against), paired with filler prices until real price data exists
-const WEAR_TIERS = [
-    { key: 'FN', label: 'Factory New',    min: 0,    max: 0.07, price: { normal: 50, stattrak: 80,  souvenir: 100 } },
-    { key: 'MW', label: 'Minimal Wear',   min: 0.07, max: 0.15, price: { normal: 35, stattrak: 60,  souvenir: 75 } },
-    { key: 'FT', label: 'Field-Tested',   min: 0.15, max: 0.38, price: { normal: 20, stattrak: 35,  souvenir: 45 } },
-    { key: 'WW', label: 'Well-Worn',      min: 0.38, max: 0.45, price: { normal: 15, stattrak: 25,  souvenir: 32 } },
-    { key: 'BS', label: 'Battle-Scarred', min: 0.45, max: 1,    price: { normal: 10, stattrak: 18,  souvenir: 22 } },
-];
-
-//only the tiers that actually overlap this skin's float range apply (e.g. a 0-0.08 knife only ever drops FN/MW, never BS)
-function wearTiersFor(s) {
-    return WEAR_TIERS.filter(t => s.minFloat < t.max && s.maxFloat > t.min);
+//each cell in `prices` (from getPrices) is a map of marketplace -> price, e.g. {csfloat: 28.81, csmoney: 30.64};
+//we show the lowest of whatever markets actually had data. prices is null while loading, {} once resolved with nothing found
+function lowestPrice(marketPrices) {
+    if (!marketPrices) return null;
+    const values = Object.values(marketPrices);
+    return values.length ? Math.min(...values) : null;
 }
 
-function renderPriceTable(s) {
+function renderPriceTable(s, prices) {
     const tiers = wearTiersFor(s);
+    const fmt = v => v == null ? (prices ? 'N/A' : '…') : `£${v.toFixed(2)}`;
+
     return `
     <div class="skin-price-table">
         <div class="skin-price-row skin-price-row--header">
@@ -36,13 +34,16 @@ function renderPriceTable(s) {
             ${s.stattrak ? '<span class="skin-price-col skin-price-col--stattrak">StatTrak™</span>' : ''}
             ${s.souvenir ? '<span class="skin-price-col skin-price-col--souvenir">Souvenir</span>' : ''}
         </div>
-        ${tiers.map(t => `
+        ${tiers.map(t => {
+            const cell = prices?.[t.key];
+            return `
         <div class="skin-price-row">
             <span class="skin-price-tier">${t.label}</span>
-            <span class="skin-price-col">£${t.price.normal}</span>
-            ${s.stattrak ? `<span class="skin-price-col skin-price-col--stattrak">£${t.price.stattrak}</span>` : ''}
-            ${s.souvenir ? `<span class="skin-price-col skin-price-col--souvenir">£${t.price.souvenir}</span>` : ''}
-        </div>`).join('')}
+            <span class="skin-price-col">${fmt(lowestPrice(cell?.normal))}</span>
+            ${s.stattrak ? `<span class="skin-price-col skin-price-col--stattrak">${fmt(lowestPrice(cell?.stattrak))}</span>` : ''}
+            ${s.souvenir ? `<span class="skin-price-col skin-price-col--souvenir">Unavailable</span>` : ''}
+        </div>`;
+        }).join('')}
     </div>`;
 }
 
@@ -67,7 +68,6 @@ export function renderSkinDetail(param) {
                 <p class="explore-empty">Skin not found.</p>`;
             return;
         }
-
         container.innerHTML = `
             <button class="explore-back" onclick="window.history.back()">← Back</button>
             <div class="skin-detail-layout">
@@ -93,12 +93,22 @@ export function renderSkinDetail(param) {
 
                     ${s.description ? `<p class="skin-detail-desc">${s.description.replace(/\\n/g, '<br><br>')}</p>` : ''}
 
-                    ${renderPriceTable(s)}
+                    ${renderPriceTable(s, null)}
 
                     <a class="csfloat-link" href="https://csfloat.com/search?def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
                 </div>
             </div>
         `;
+
+        //fetch happens after the page is already rendered so the price table starts as a loading
+        //state ("…") and gets swapped in-place once real prices resolve, instead of blocking the whole page
+        getPrices(defIndex, paintIndex).then(prices => {
+            const priceTable = document.querySelector('.skin-price-table');
+            if (priceTable) priceTable.outerHTML = renderPriceTable(s, prices);
+        }).catch(() => {
+            const priceTable = document.querySelector('.skin-price-table');
+            if (priceTable) priceTable.outerHTML = renderPriceTable(s, {});
+        });
     }).catch(() => {
         const container = document.querySelector('.skin-detail-page');
         if (container) container.innerHTML = `

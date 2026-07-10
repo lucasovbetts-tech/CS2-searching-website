@@ -27,6 +27,7 @@
     gap: 10px;
     flex-shrink: 0;
     width: 285px;
+    max-height: calc(100vh - 120px - 24px); /* bounds the whole sidebar to the viewport; the button list below is what actually scrolls within this */
 }
 
 .categoryTitle {
@@ -35,6 +36,26 @@
     letter-spacing: -0.02em;
     color: var(--text);
     margin: 0 0 8px;
+    flex-shrink: 0; /* stays full-size - only .category-sidebar-list should shrink/scroll */
+}
+
+.category-sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0; /* lets this flex child actually shrink below its content height instead of forcing the sidebar taller than max-height */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+
+.category-sidebar-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.category-sidebar-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
 }
 
 .sideBarSearch-wrap {
@@ -43,6 +64,7 @@
     gap: 10px;
     width: 100%;
     height: 42px;
+    flex-shrink: 0; /* stays full-size - only .category-sidebar-list should shrink/scroll */
     padding: 0 14px;
     background: rgba(168, 85, 247, 0.08);
     border: 1.5px solid rgba(168, 85, 247, 0.3);
@@ -768,6 +790,7 @@
 @media (max-width: 860px) {
     .category-sidebar {
         top: 210px;
+        max-height: calc(100vh - 210px - 24px);
     }
 }
 
@@ -778,6 +801,10 @@
 
     .category-sidebar {
         width: 165px;
+        gap: 8px;
+    }
+
+    .category-sidebar-list {
         gap: 8px;
     }
 

@@ -1,0 +1,5400 @@
+{
+  "4:38": {
+    "data": {
+      "FN": {
+        "normal": {
+          "csfloat": 1790,
+          "csmoney": 1917.42,
+          "marketcsgo": 2196.644,
+          "skinbaron": 1685,
+          "whitemarket": 1975.66
+        }
+      },
+      "MW": {
+        "normal": {
+          "csfloat": 2045,
+          "csmoney": 2200,
+          "marketcsgo": 2538.41,
+          "skinbaron": 1800,
+          "whitemarket": 2345.73
+        }
+      }
+    },
+    "time": 1783691605285
+  },
+  "507:38": {
+    "data": {
+      "FN": {
+        "normal": {
+          "csfloat": 1912,
+          "csmoney": 1896.99,
+          "marketcsgo": 2200,
+          "skinbaron": 2000,
+          "whitemarket": 2066.46
+        },
+        "stattrak": {
+          "csfloat": 1840,
+          "csmoney": 2056.28,
+          "marketcsgo": 2239.981,
+          "skinbaron": 1750,
+          "whitemarket": 2050.1
+        }
+      },
+      "MW": {
+        "normal": {
+          "csfloat": 2100,
+          "marketcsgo": 2567.976,
+          "whitemarket": 2205.35
+        },
+        "stattrak": {}
+      }
+    },
+    "time": 1783691854050
+  },
+  "507:419": {
+    "data": {
+      "FN": {
+        "normal": {
+          "csfloat": 1263.95,
+          "csmoney": 1365.98,
+          "marketcsgo": 1405.366,
+          "skinbaron": 1145.08,
+          "skinport": 1136.31,
+          "whitemarket": 1428.44
+        },
+        "stattrak": {
+          "csfloat": 1295,
+          "csmoney": 1322.92,
+          "marketcsgo": 1499.986,
+          "skinbaron": 2200,
+          "skinport": 1221.06,
+          "whitemarket": 1525.92
+        }
+      },
+      "MW": {
+        "normal": {
+          "csfloat": 1268.23,
+          "csmoney": 1409.86,
+          "marketcsgo": 1519.692,
+          "skinbaron": 2000,
+          "whitemarket": 1445.45
+        },
+        "stattrak": {
+          "csfloat": 1379.53,
+          "csmoney": 1937.34,
+          "marketcsgo": 1650,
+          "whitemarket": 1493.71
+        }
+      }
+    },
+    "time": 1783691876106
+  },
+  "61:313": {
+    "data": {
+      "FN": {
+        "normal": {
+          "csfloat": 133.48,
+          "csmoney": 137.11,
+          "gamerpaygg": 250,
+          "marketcsgo": 159.283,
+          "skinbaron": 133.85,
+          "skinport": 152.78,
+          "whitemarket": 142.82
+        },
+        "stattrak": {
+          "csfloat": 161.28,
+          "csmoney": 162.51,
+          "gamerpaygg": 160.71,
+          "marketcsgo": 196.216,
+          "skinbaron": 169.99,
+          "skinport": 195.63,
+          "whitemarket": 178.33
+        }
+      },
+      "MW": {
+        "normal": {
+          "csfloat": 55.04,
+          "csmoney": 52.58,
+          "marketcsgo": 62.123,
+          "skinbaron": 52.2,
+          "skinport": 59.76,
+          "whitemarket": 60.89
+        },
+        "stattrak": {
+          "csfloat": 117.84,
+          "csmoney": 116.77,
+          "marketcsgo": 135.461,
+          "skinbaron": 111.04,
+          "skinport": 231.56,
+          "whitemarket": 131.51
+        }
+      },
+      "FT": {
+        "normal": {
+          "csfloat": 54,
+          "csmoney": 52.57,
+          "gamerpaygg": 66,
+          "marketcsgo": 61.759,
+          "skinbaron": 52.65,
+          "skinport": 57,
+          "whitemarket": 54.9
+        },
+        "stattrak": {
+          "csfloat": 107.84,
+          "csmoney": 100.45,
+          "marketcsgo": 117.418,
+          "skinbaron": 101.96,
+          "whitemarket": 109.1
+        }
+      },
+      "WW": {
+        "normal": {
+          "csfloat": 61.44,
+          "csmoney": 58.34,
+          "marketcsgo": 83.313,
+          "skinport": 56.11,
+          "whitemarket": 73.06
+        },
+        "stattrak": {
+          "csfloat": 114,
+          "marketcsgo": 164.444,
+          "whitemarket": 157.08
+        }
+      },
+      "BS": {
+        "normal": {
+          "csfloat": 299,
+          "marketcsgo": 139.048
+        },
+        "stattrak": {
+          "csfloat": 399,
+          "marketcsgo": 405,
+          "whitemarket": 392.93
+        }
+      }
+    },
+    "time": 1783691888440
+  },
+  "9:51": {
+    "data": {
+      "FN": {
+        "normal": {
+          "csfloat": 510.42,
+          "csmoney": 502.61,
+          "marketcsgo": 540,
+          "skinbaron": 456.84,
+          "skinport": 531.28,
+          "whitemarket": 539.33
+        },
+        "stattrak": {
+          "csfloat": 876.62,
+          "csmoney": 1030.92,
+          "marketcsgo": 1014.309,
+          "skinbaron": 999,
+          "skinport": 810.45,
+          "whitemarket": 971.75
+        }
+      },
+      "MW": {
+        "normal": {
+          "csfloat": 500,
+          "csmoney": 514.6,
+          "marketcsgo": 608.813,
+          "skinbaron": 900,
+          "skinport": 615.27,
+          "whitemarket": 557.27
+        },
+        "stattrak": {
+          "csfloat": 1400,
+          "csmoney": 1510.82,
+          "marketcsgo": 1483.488,
+          "skinbaron": 900,
+          "whitemarket": 1813.26
+        }
+      }
+    },
+    "time": 1783692020301
+  },
+  "500:38": {
+    "data": {
+      "FN": {
+        "normal": {
+          "csfloat": 356,
+          "csmoney": 380.87,
+          "gamerpaygg": 358,
+          "marketcsgo": 401.003,
+          "skinbaron": 337.84,
+          "skinport": 347.33,
+          "whitemarket": 391.24
+        },
+        "stattrak": {
+          "csfloat": 470.7,
+          "csmoney": 440.02,
+          "marketcsgo": 533.181,
+          "skinbaron": 701,
+          "skinport": 512.72,
+          "whitemarket": 495.86
+        }
+      },
+      "MW": {
+        "normal": {
+          "csfloat": 627.49,
+          "csmoney": 480.08,
+          "marketcsgo": 515,
+          "skinport": 491.04,
+          "whitemarket": 523.91
+        },
+        "stattrak": {
+          "csfloat": 512.5,
+          "csmoney": 569.39,
+          "marketcsgo": 584.114,
+          "whitemarket": 803.12
+        }
+      }
+    },
+    "time": 1783692170303
+  },
+  "range:7:1449": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {}
+      },
+      "high": {
+        "normal": {}
+      }
+    },
+    "time": 1783692965848
+  },
+  "range:7:1425": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {},
+        "stattrak": {}
+      },
+      "high": {
+        "normal": {},
+        "stattrak": {}
+      }
+    },
+    "time": 1783692965850
+  },
+  "range:7:1207": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 26.19,
+          "csmoney": 26.52,
+          "marketcsgo": 30.37,
+          "skinbaron": 27.69,
+          "skinport": 27.2,
+          "whitemarket": 29.77
+        },
+        "stattrak": {
+          "csfloat": 35.99,
+          "csmoney": 38.89,
+          "marketcsgo": 43.096,
+          "skinbaron": 63.95,
+          "skinport": 42.41,
+          "whitemarket": 40.07
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.81,
+          "csmoney": 3.81,
+          "marketcsgo": 4.31,
+          "skinbaron": 3.55,
+          "skinport": 3.73,
+          "whitemarket": 4.05
+        },
+        "stattrak": {
+          "csfloat": 6.24,
+          "csmoney": 5.83,
+          "marketcsgo": 6.709,
+          "skinbaron": 5.56,
+          "skinport": 7.11,
+          "whitemarket": 6.31
+        }
+      }
+    },
+    "time": 1783692965851
+  },
+  "range:7:1466": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {}
+      },
+      "high": {
+        "normal": {}
+      }
+    },
+    "time": 1783692965852
+  },
+  "range:7:1352": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 273,
+          "csmoney": 284.85,
+          "marketcsgo": 329.87,
+          "skinport": 317.64,
+          "whitemarket": 294.32
+        },
+        "stattrak": {
+          "csfloat": 530,
+          "csmoney": 569.95,
+          "marketcsgo": 838.626,
+          "skinbaron": 1999,
+          "whitemarket": 598.59
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 30.61,
+          "csmoney": 30.09,
+          "marketcsgo": 34.598,
+          "skinbaron": 28,
+          "skinport": 25.47,
+          "whitemarket": 33
+        },
+        "stattrak": {
+          "csfloat": 57,
+          "csmoney": 54.29,
+          "marketcsgo": 60.892,
+          "skinport": 61.48,
+          "whitemarket": 57.77
+        }
+      }
+    },
+    "time": 1783692965854
+  },
+  "range:7:113": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 91,
+          "csmoney": 155.49,
+          "marketcsgo": 107.699,
+          "skinbaron": 90.05,
+          "whitemarket": 92.31
+        },
+        "stattrak": {
+          "csfloat": 84.5,
+          "csmoney": 84.39,
+          "gamerpaygg": 280,
+          "marketcsgo": 106.726,
+          "skinbaron": 225,
+          "skinport": 94.94,
+          "whitemarket": 90.89
+        }
+      },
+      "high": {
+        "normal": {},
+        "stattrak": {
+          "csfloat": 16.49,
+          "csmoney": 14.73,
+          "marketcsgo": 16.678,
+          "skinbaron": 15.42,
+          "whitemarket": 15.11
+        }
+      }
+    },
+    "time": 1783692965855
+  },
+  "range:7:1171": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 124.81,
+          "csmoney": 126.46,
+          "marketcsgo": 142.683,
+          "skinbaron": 113,
+          "skinport": 131.16,
+          "whitemarket": 137.8
+        },
+        "stattrak": {
+          "csfloat": 289.31,
+          "csmoney": 309.89,
+          "marketcsgo": 327.769,
+          "skinbaron": 269.72,
+          "skinport": 346.18,
+          "whitemarket": 323.34
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 34.35,
+          "csmoney": 34.58,
+          "marketcsgo": 39.487,
+          "skinbaron": 31.11,
+          "skinport": 34.73,
+          "whitemarket": 37.5
+        },
+        "stattrak": {
+          "csfloat": 68.34,
+          "csmoney": 65.46,
+          "marketcsgo": 78.932,
+          "skinbaron": 60.83,
+          "skinport": 65.95,
+          "whitemarket": 71.18
+        }
+      }
+    },
+    "time": 1783692965856
+  },
+  "range:7:456": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 4950,
+          "csmoney": 6028.15,
+          "marketcsgo": 5540.75,
+          "skinbaron": 4900,
+          "skinport": 6657.23,
+          "whitemarket": 5239
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 835,
+          "csmoney": 939,
+          "marketcsgo": 930,
+          "skinbaron": 1100,
+          "whitemarket": 908.03
+        }
+      }
+    },
+    "time": 1783692965857
+  },
+  "range:7:394": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 62.77,
+          "csmoney": 61.81,
+          "marketcsgo": 72.059,
+          "skinbaron": 55.55,
+          "skinport": 68.98,
+          "whitemarket": 65.79
+        },
+        "stattrak": {
+          "csfloat": 94.67,
+          "csmoney": 92.06,
+          "marketcsgo": 107.85,
+          "skinbaron": 80,
+          "skinport": 138.93,
+          "whitemarket": 98.45
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 15.77,
+          "csmoney": 15.26,
+          "marketcsgo": 16.559,
+          "skinbaron": 13.98,
+          "skinport": 18.14,
+          "whitemarket": 15.85
+        },
+        "stattrak": {
+          "csfloat": 40.99,
+          "csmoney": 40.69,
+          "marketcsgo": 48.999,
+          "skinbaron": 37.29,
+          "whitemarket": 43.38
+        }
+      }
+    },
+    "time": 1783692965858
+  },
+  "range:7:44": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 524,
+          "csmoney": 538.47,
+          "gamerpaygg": 1150,
+          "marketcsgo": 596.017,
+          "skinbaron": 575,
+          "skinport": 540.1,
+          "whitemarket": 555.08
+        },
+        "stattrak": {
+          "csfloat": 853.11,
+          "csmoney": 959.83,
+          "gamerpaygg": 850,
+          "marketcsgo": 1067,
+          "skinbaron": 1997,
+          "skinport": 1025.44,
+          "whitemarket": 1008.88
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 180.76,
+          "csmoney": 179.21,
+          "gamerpaygg": 161.16,
+          "marketcsgo": 206.358,
+          "skinbaron": 171.41,
+          "skinport": 217.89,
+          "whitemarket": 194.07
+        },
+        "stattrak": {
+          "csfloat": 368.72,
+          "csmoney": 369.96,
+          "marketcsgo": 414.999,
+          "whitemarket": 399.11
+        }
+      }
+    },
+    "time": 1783692965859
+  },
+  "range:7:941": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 28.61,
+          "csmoney": 28.03,
+          "gamerpaygg": 61.27,
+          "marketcsgo": 31.746,
+          "skinbaron": 28,
+          "skinport": 28.94,
+          "whitemarket": 30.68
+        },
+        "stattrak": {
+          "csfloat": 31.97,
+          "csmoney": 30.62,
+          "gamerpaygg": 3,
+          "marketcsgo": 37.514,
+          "skinbaron": 29.44,
+          "skinport": 34.56,
+          "whitemarket": 35.62
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 4.76,
+          "csmoney": 4.84,
+          "marketcsgo": 5.538,
+          "skinbaron": 4.49,
+          "skinport": 5.29,
+          "whitemarket": 5.11
+        },
+        "stattrak": {
+          "csfloat": 11.73,
+          "csmoney": 11.06,
+          "marketcsgo": 13.116,
+          "skinport": 12.23,
+          "whitemarket": 12.48
+        }
+      }
+    },
+    "time": 1783692965860
+  },
+  "range:7:600": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 274.86,
+          "csmoney": 264.1,
+          "marketcsgo": 342.274,
+          "skinbaron": 280,
+          "skinport": 343.46,
+          "whitemarket": 286.02
+        },
+        "stattrak": {
+          "csfloat": 205.7,
+          "csmoney": 200.53,
+          "gamerpaygg": 210,
+          "marketcsgo": 231.111,
+          "skinbaron": 289.69,
+          "whitemarket": 239.83
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 103.03,
+          "csmoney": 105.04,
+          "marketcsgo": 118.814,
+          "skinbaron": 91.87,
+          "skinport": 100.72,
+          "whitemarket": 109.76
+        },
+        "stattrak": {
+          "csfloat": 94.99,
+          "csmoney": 88.93,
+          "marketcsgo": 101.611,
+          "skinbaron": 86.23,
+          "skinport": 100.73,
+          "whitemarket": 94.89
+        }
+      }
+    },
+    "time": 1783692965862
+  },
+  "range:7:959": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 55.84,
+          "csmoney": 53.24,
+          "gamerpaygg": 65,
+          "marketcsgo": 61.021,
+          "skinbaron": 47.77,
+          "skinport": 57.77,
+          "whitemarket": 59.14
+        },
+        "stattrak": {
+          "csfloat": 67.69,
+          "csmoney": 67.83,
+          "marketcsgo": 80.268,
+          "skinbaron": 62,
+          "skinport": 65.83,
+          "whitemarket": 77.2
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 31.12,
+          "csmoney": 31.07,
+          "gamerpaygg": 38.69,
+          "marketcsgo": 35.579,
+          "skinbaron": 26.94,
+          "skinport": 34.73,
+          "whitemarket": 34.67
+        },
+        "stattrak": {
+          "csfloat": 34.58,
+          "csmoney": 36.86,
+          "gamerpaygg": 33.09,
+          "marketcsgo": 40.065,
+          "skinbaron": 44,
+          "skinport": 37.51,
+          "whitemarket": 37.11
+        }
+      }
+    },
+    "time": 1783692965863
+  },
+  "range:7:801": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 344.5,
+          "csmoney": 342.81,
+          "marketcsgo": 394.123,
+          "skinbaron": 399,
+          "whitemarket": 366.5
+        },
+        "stattrak": {
+          "csfloat": 505.58,
+          "csmoney": 478.97,
+          "gamerpaygg": 470,
+          "marketcsgo": 624.913,
+          "skinport": 563.99,
+          "whitemarket": 561.39
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 38,
+          "csmoney": 36.45,
+          "gamerpaygg": 50.02,
+          "marketcsgo": 42.503,
+          "skinbaron": 32,
+          "skinport": 39.45,
+          "whitemarket": 40.73
+        },
+        "stattrak": {
+          "csfloat": 66.9,
+          "csmoney": 64.84,
+          "marketcsgo": 74.993,
+          "skinbaron": 59.72,
+          "skinport": 64.75,
+          "whitemarket": 67.18
+        }
+      }
+    },
+    "time": 1783692965864
+  },
+  "range:7:836": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 4.01,
+          "csmoney": 4.06,
+          "marketcsgo": 4.4,
+          "skinbaron": 3.37,
+          "skinport": 2.89,
+          "whitemarket": 3.85
+        },
+        "stattrak": {
+          "csfloat": 4.99,
+          "csmoney": 5.05,
+          "marketcsgo": 5.935,
+          "skinbaron": 4.85,
+          "skinport": 5.44,
+          "whitemarket": 5.87
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.49,
+          "csmoney": 0.55,
+          "marketcsgo": 0.6,
+          "skinbaron": 0.48,
+          "skinport": 0.47,
+          "whitemarket": 0.56
+        },
+        "stattrak": {
+          "csfloat": 1.92,
+          "csmoney": 1.79,
+          "marketcsgo": 2.125,
+          "skinbaron": 1.97,
+          "skinport": 2.23,
+          "whitemarket": 2.14
+        }
+      }
+    },
+    "time": 1783692965866
+  },
+  "range:7:282": {
+    "data": {
+      "lowTier": "MW",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 141,
+          "csmoney": 150.55,
+          "gamerpaygg": 550,
+          "marketcsgo": 154.578,
+          "skinbaron": 136.99,
+          "skinport": 153.64,
+          "whitemarket": 154.08
+        },
+        "stattrak": {
+          "csfloat": 320,
+          "csmoney": 324.51,
+          "gamerpaygg": 320,
+          "marketcsgo": 365.711,
+          "skinbaron": 335,
+          "skinport": 348.65,
+          "whitemarket": 359.84
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 23.11,
+          "csmoney": 23.74,
+          "gamerpaygg": 45,
+          "marketcsgo": 27.218,
+          "skinbaron": 21.15,
+          "skinport": 26.35,
+          "whitemarket": 26.04
+        },
+        "stattrak": {
+          "csfloat": 41,
+          "csmoney": 38.46,
+          "marketcsgo": 43.77,
+          "skinbaron": 50,
+          "whitemarket": 40.88
+        }
+      }
+    },
+    "time": 1783692965867
+  },
+  "range:7:1143": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 15.33,
+          "csmoney": 15.4,
+          "gamerpaygg": 34.52,
+          "marketcsgo": 18.224,
+          "skinbaron": 15.69,
+          "skinport": 16.85,
+          "whitemarket": 17.45
+        },
+        "stattrak": {
+          "csfloat": 36,
+          "csmoney": 36.25,
+          "gamerpaygg": 50.02,
+          "marketcsgo": 40.498,
+          "skinbaron": 33.09,
+          "skinport": 28.74,
+          "whitemarket": 38.29
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.4,
+          "csmoney": 3.61,
+          "marketcsgo": 4.066,
+          "skinbaron": 3.06,
+          "skinport": 3.83,
+          "whitemarket": 3.69
+        },
+        "stattrak": {
+          "csfloat": 9.14,
+          "csmoney": 8.9,
+          "marketcsgo": 10.117,
+          "whitemarket": 9.65
+        }
+      }
+    },
+    "time": 1783692965868
+  },
+  "range:7:474": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 179.95,
+          "csmoney": 184.99,
+          "gamerpaygg": 230,
+          "marketcsgo": 214.202,
+          "skinbaron": 166,
+          "skinport": 230.4,
+          "whitemarket": 195.82
+        },
+        "stattrak": {
+          "csfloat": 286,
+          "csmoney": 291.33,
+          "gamerpaygg": 53890,
+          "marketcsgo": 329.989,
+          "whitemarket": 307.85
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 30.27,
+          "csmoney": 30.1,
+          "marketcsgo": 34.724,
+          "skinbaron": 26,
+          "skinport": 34.46,
+          "whitemarket": 33.29
+        },
+        "stattrak": {
+          "csfloat": 56.75,
+          "csmoney": 52.07,
+          "marketcsgo": 60.815,
+          "skinbaron": 63.96,
+          "skinport": 66.36,
+          "whitemarket": 58.28
+        }
+      }
+    },
+    "time": 1783692965869
+  },
+  "range:7:422": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 11.55,
+          "csmoney": 12.21,
+          "marketcsgo": 12.699,
+          "skinbaron": 10.95,
+          "skinport": 11.39,
+          "whitemarket": 11.27
+        },
+        "stattrak": {
+          "csfloat": 26.5,
+          "csmoney": 28.96,
+          "gamerpaygg": 38.16,
+          "marketcsgo": 33.692,
+          "skinbaron": 28.73,
+          "skinport": 30.25,
+          "whitemarket": 31.95
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1.3,
+          "csmoney": 1.29,
+          "marketcsgo": 1.518,
+          "skinbaron": 1.02,
+          "skinport": 1.45,
+          "whitemarket": 1.4
+        },
+        "stattrak": {
+          "csfloat": 3.53,
+          "csmoney": 3.42,
+          "marketcsgo": 3.956,
+          "skinbaron": 3.15,
+          "skinport": 3.95,
+          "whitemarket": 3.9
+        }
+      }
+    },
+    "time": 1783692965871
+  },
+  "range:7:1141": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 114.99,
+          "csmoney": 118.99,
+          "marketcsgo": 132.659,
+          "skinbaron": 99.5,
+          "skinport": 112.7,
+          "whitemarket": 128.27
+        },
+        "stattrak": {
+          "csfloat": 139.95,
+          "csmoney": 141.5,
+          "marketcsgo": 162.569,
+          "skinbaron": 132.29,
+          "skinport": 162.68,
+          "whitemarket": 153.93
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 57.15,
+          "csmoney": 57.63,
+          "marketcsgo": 66.792,
+          "skinbaron": 52,
+          "skinport": 57.89,
+          "whitemarket": 63.89
+        },
+        "stattrak": {
+          "csfloat": 57.71,
+          "csmoney": 55.86,
+          "gamerpaygg": 70.04,
+          "marketcsgo": 61.314,
+          "skinbaron": 52.06,
+          "skinport": 60.82,
+          "whitemarket": 57.58
+        }
+      }
+    },
+    "time": 1783692965872
+  },
+  "range:7:506": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 83.7,
+          "csmoney": 84.59,
+          "gamerpaygg": 220,
+          "marketcsgo": 93.301,
+          "skinbaron": 78.99,
+          "skinport": 92.04,
+          "whitemarket": 89.38
+        },
+        "stattrak": {
+          "csfloat": 91.54,
+          "csmoney": 93.96,
+          "marketcsgo": 103.804,
+          "skinbaron": 78.25,
+          "skinport": 98.05,
+          "whitemarket": 103.5
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 13.29,
+          "csmoney": 13.24,
+          "marketcsgo": 15.445,
+          "skinbaron": 12.69,
+          "skinport": 17.11,
+          "whitemarket": 14.59
+        },
+        "stattrak": {
+          "csfloat": 30.47,
+          "csmoney": 28.81,
+          "marketcsgo": 32.99,
+          "skinbaron": 30.81,
+          "whitemarket": 32.51
+        }
+      }
+    },
+    "time": 1783692965873
+  },
+  "range:7:302": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 589.99,
+          "csmoney": 620.21,
+          "marketcsgo": 660.316,
+          "skinbaron": 948,
+          "skinport": 544.16,
+          "whitemarket": 643.82
+        },
+        "stattrak": {
+          "csfloat": 1375,
+          "csmoney": 1667.5,
+          "marketcsgo": 1882.863,
+          "skinbaron": 1650,
+          "skinport": 1435.61,
+          "whitemarket": 1525.58
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 107.87,
+          "csmoney": 110.35,
+          "marketcsgo": 127.642,
+          "skinbaron": 94.99,
+          "skinport": 122.4,
+          "whitemarket": 117.12
+        },
+        "stattrak": {
+          "csfloat": 188.92,
+          "csmoney": 182.88,
+          "marketcsgo": 209.837,
+          "skinport": 230.55,
+          "whitemarket": 195.4
+        }
+      }
+    },
+    "time": 1783692965874
+  },
+  "range:7:490": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 124,
+          "csmoney": 128.41,
+          "gamerpaygg": 200,
+          "marketcsgo": 141.958,
+          "skinbaron": 120.56,
+          "skinport": 137.45,
+          "whitemarket": 132.2
+        },
+        "stattrak": {
+          "csfloat": 171.49,
+          "csmoney": 166.45,
+          "gamerpaygg": 248.58,
+          "marketcsgo": 200.268,
+          "skinbaron": 192.38,
+          "whitemarket": 189.53
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 15,
+          "csmoney": 14.63,
+          "marketcsgo": 16.656,
+          "skinbaron": 14.1,
+          "skinport": 13.74,
+          "whitemarket": 15.99
+        },
+        "stattrak": {
+          "csfloat": 30.78,
+          "csmoney": 29.6,
+          "marketcsgo": 33.98,
+          "skinbaron": 32,
+          "whitemarket": 31.74
+        }
+      }
+    },
+    "time": 1783692965876
+  },
+  "range:7:1221": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 95.9,
+          "csmoney": 95.09,
+          "marketcsgo": 111.111,
+          "skinbaron": 104,
+          "skinport": 107.94,
+          "whitemarket": 104.56
+        },
+        "stattrak": {
+          "csfloat": 108.41,
+          "csmoney": 110.4,
+          "gamerpaygg": 110,
+          "marketcsgo": 116.826,
+          "skinport": 103.1,
+          "whitemarket": 114.15
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 25.87,
+          "csmoney": 26.33,
+          "gamerpaygg": 33.69,
+          "marketcsgo": 31.49,
+          "skinbaron": 25.73,
+          "skinport": 23.29,
+          "whitemarket": 27.16
+        },
+        "stattrak": {
+          "csfloat": 23.34,
+          "csmoney": 22.57,
+          "marketcsgo": 26.134,
+          "skinbaron": 35,
+          "skinport": 22.57,
+          "whitemarket": 24.27
+        }
+      }
+    },
+    "time": 1783692965877
+  },
+  "range:7:724": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 14000,
+          "csmoney": 16558.41,
+          "marketcsgo": 21463.32,
+          "whitemarket": 15901.38
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 4445.12,
+          "csmoney": 4947,
+          "marketcsgo": 4500,
+          "whitemarket": 4243.2
+        }
+      }
+    },
+    "time": 1783692965878
+  },
+  "range:7:1018": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 465,
+          "csmoney": 472.39,
+          "marketcsgo": 559.978,
+          "skinbaron": 600,
+          "whitemarket": 477.69
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 176.85,
+          "csmoney": 158.25,
+          "gamerpaygg": 175,
+          "marketcsgo": 188.715,
+          "skinbaron": 400,
+          "whitemarket": 170.34
+        }
+      }
+    },
+    "time": 1783692965879
+  },
+  "range:7:707": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 201.49,
+          "csmoney": 206.2,
+          "marketcsgo": 245.453,
+          "skinbaron": 219.99,
+          "skinport": 209.11,
+          "whitemarket": 213.57
+        },
+        "stattrak": {
+          "csfloat": 352,
+          "csmoney": 376.76,
+          "marketcsgo": 525.832,
+          "skinbaron": 500,
+          "skinport": 378.58,
+          "whitemarket": 387.44
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 44.36,
+          "csmoney": 45.24,
+          "marketcsgo": 52.687,
+          "skinbaron": 40,
+          "skinport": 42.7,
+          "whitemarket": 45.5
+        },
+        "stattrak": {
+          "csfloat": 84,
+          "csmoney": 82.05,
+          "gamerpaygg": 85,
+          "marketcsgo": 93.999,
+          "skinbaron": 111.5,
+          "whitemarket": 86.7
+        }
+      }
+    },
+    "time": 1783692965881
+  },
+  "range:7:1004": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 2251.53,
+          "csmoney": 2379.78,
+          "marketcsgo": 2787.086,
+          "whitemarket": 2489.49
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 376.32,
+          "csmoney": 371.67,
+          "marketcsgo": 414.999,
+          "whitemarket": 395.64
+        }
+      }
+    },
+    "time": 1783692965882
+  },
+  "range:7:180": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 2250,
+          "csmoney": 2291.89,
+          "marketcsgo": 2691.883,
+          "skinbaron": 2922,
+          "whitemarket": 2461.08
+        },
+        "stattrak": {
+          "csfloat": 5449,
+          "csmoney": 6733.86,
+          "marketcsgo": 6199.961,
+          "whitemarket": 5507.16
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 534,
+          "csmoney": 541.44,
+          "marketcsgo": 596.424,
+          "skinbaron": 705,
+          "skinport": 582.55,
+          "whitemarket": 593.27
+        },
+        "stattrak": {
+          "csfloat": 1410,
+          "csmoney": 1258.8,
+          "marketcsgo": 1396.825,
+          "whitemarket": 1387.97
+        }
+      }
+    },
+    "time": 1783692965883
+  },
+  "range:7:912": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 7.13,
+          "csmoney": 6.87,
+          "marketcsgo": 7.937,
+          "skinbaron": 9.37,
+          "skinport": 7.58,
+          "whitemarket": 7.42
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1.76,
+          "csmoney": 1.79,
+          "marketcsgo": 1.984,
+          "skinbaron": 1.54,
+          "whitemarket": 1.89
+        }
+      }
+    },
+    "time": 1783692965884
+  },
+  "range:7:341": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 189.92,
+          "csmoney": 201.95,
+          "marketcsgo": 270.288,
+          "skinbaron": 179.9,
+          "skinport": 223.43,
+          "whitemarket": 246.87
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 83.07,
+          "csmoney": 119.99,
+          "marketcsgo": 83.061,
+          "skinbaron": 75,
+          "whitemarket": 80.8
+        }
+      }
+    },
+    "time": 1783692965886
+  },
+  "range:7:142": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 526.42,
+          "csmoney": 605.21,
+          "marketcsgo": 587.22,
+          "skinbaron": 543.48,
+          "skinport": 665.94,
+          "whitemarket": 587.72
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 69.74,
+          "csmoney": 69.78,
+          "marketcsgo": 78.451,
+          "skinbaron": 69.9,
+          "skinport": 60.39,
+          "whitemarket": 72.67
+        }
+      }
+    },
+    "time": 1783692965887
+  },
+  "range:7:316": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 589.23,
+          "csmoney": 636.2,
+          "marketcsgo": 727.898,
+          "whitemarket": 674.63
+        },
+        "stattrak": {
+          "csfloat": 720.69,
+          "csmoney": 2525.77,
+          "marketcsgo": 896.3,
+          "skinbaron": 1020,
+          "whitemarket": 817.15
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 75.37,
+          "csmoney": 72.06,
+          "marketcsgo": 79.356,
+          "skinbaron": 62.99,
+          "skinport": 77.18,
+          "whitemarket": 78.6
+        },
+        "stattrak": {
+          "csfloat": 144.99,
+          "csmoney": 145.45,
+          "marketcsgo": 157.174,
+          "whitemarket": 151.97
+        }
+      }
+    },
+    "time": 1783692965889
+  },
+  "range:7:300": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 27,
+          "csmoney": 26.17,
+          "marketcsgo": 30.424,
+          "skinbaron": 26.51,
+          "skinport": 32.07,
+          "whitemarket": 28.61
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 2.3,
+          "csmoney": 2.31,
+          "marketcsgo": 3.262,
+          "skinbaron": 2.58,
+          "skinport": 2.34,
+          "whitemarket": 2.4
+        }
+      }
+    },
+    "time": 1783692965890
+  },
+  "range:7:380": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 379.02,
+          "csmoney": 382.17,
+          "marketcsgo": 432.8,
+          "skinbaron": 355,
+          "whitemarket": 395.17
+        },
+        "stattrak": {
+          "csfloat": 1399,
+          "csmoney": 1555,
+          "gamerpaygg": 35999,
+          "marketcsgo": 2631.578,
+          "whitemarket": 1700
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 73.8,
+          "csmoney": 69.59,
+          "gamerpaygg": 95,
+          "marketcsgo": 81.056,
+          "skinbaron": 67.09,
+          "whitemarket": 74.29
+        },
+        "stattrak": {
+          "csfloat": 119.9,
+          "csmoney": 124.9,
+          "marketcsgo": 124.601,
+          "whitemarket": 108.13
+        }
+      }
+    },
+    "time": 1783692965892
+  },
+  "range:7:340": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1140,
+          "csmoney": 1189.73,
+          "marketcsgo": 1705.84,
+          "whitemarket": 1404.63
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 290.54,
+          "csmoney": 273.99,
+          "gamerpaygg": 445,
+          "marketcsgo": 283.174,
+          "whitemarket": 282.27
+        }
+      }
+    },
+    "time": 1783692965893
+  },
+  "range:7:1087": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 652.99,
+          "csmoney": 610.52,
+          "marketcsgo": 763.809,
+          "skinbaron": 666.66,
+          "whitemarket": 647.19
+        },
+        "stattrak": {
+          "csfloat": 293.83,
+          "csmoney": 278.37,
+          "marketcsgo": 339.879,
+          "skinbaron": 400,
+          "skinport": 402.43,
+          "whitemarket": 313.14
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 79.11,
+          "csmoney": 73.65,
+          "marketcsgo": 83.292,
+          "skinbaron": 70,
+          "whitemarket": 79.2
+        },
+        "stattrak": {
+          "csfloat": 99.94,
+          "csmoney": 91.2,
+          "marketcsgo": 115.01,
+          "whitemarket": 92.11
+        }
+      }
+    },
+    "time": 1783692965894
+  },
+  "range:7:639": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "WW",
+      "low": {
+        "normal": {
+          "csfloat": 167.99,
+          "csmoney": 175.52,
+          "gamerpaygg": 293.8,
+          "marketcsgo": 179.998,
+          "skinbaron": 158.04,
+          "skinport": 181.76,
+          "whitemarket": 183.2
+        },
+        "stattrak": {
+          "csfloat": 365.91,
+          "csmoney": 411.84,
+          "marketcsgo": 424.99,
+          "skinbaron": 340,
+          "skinport": 399.43,
+          "whitemarket": 419.16
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 126.57,
+          "csmoney": 135.8,
+          "marketcsgo": 147.779,
+          "skinbaron": 116.17,
+          "skinport": 147.15,
+          "whitemarket": 137.9
+        },
+        "stattrak": {
+          "csfloat": 250,
+          "csmoney": 250.26,
+          "marketcsgo": 323.193,
+          "skinport": 272.98,
+          "whitemarket": 264.77
+        }
+      }
+    },
+    "time": 1783692965896
+  },
+  "range:7:675": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 225,
+          "csmoney": 234.78,
+          "gamerpaygg": 380,
+          "marketcsgo": 249.296,
+          "skinbaron": 310,
+          "skinport": 247.75,
+          "whitemarket": 240.94
+        },
+        "stattrak": {
+          "csfloat": 374.98,
+          "csmoney": 367.32,
+          "gamerpaygg": 38888,
+          "marketcsgo": 408.634,
+          "skinbaron": 349.37,
+          "skinport": 402.39,
+          "whitemarket": 414.06
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 91,
+          "csmoney": 116.03,
+          "marketcsgo": 105.652,
+          "skinbaron": 79.86,
+          "skinport": 106.33,
+          "whitemarket": 97.91
+        },
+        "stattrak": {
+          "csfloat": 88.32,
+          "csmoney": 85.47,
+          "marketcsgo": 102.098,
+          "skinbaron": 79.43,
+          "skinport": 97.24,
+          "whitemarket": 92.06
+        }
+      }
+    },
+    "time": 1783692965897
+  },
+  "range:7:921": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 2312.79,
+          "csmoney": 2657,
+          "marketcsgo": 2565.84,
+          "skinbaron": 2300,
+          "skinport": 3435.23,
+          "whitemarket": 2465.48
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1100,
+          "csmoney": 1384.68,
+          "marketcsgo": 1273.925,
+          "skinbaron": 1581.64,
+          "whitemarket": 1187.87
+        }
+      }
+    },
+    "time": 1783692965899
+  },
+  "range:7:885": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 105.37,
+          "csmoney": 103.12,
+          "marketcsgo": 121.55,
+          "skinbaron": 99.13,
+          "skinport": 137.93,
+          "whitemarket": 113.5
+        },
+        "stattrak": {
+          "csfloat": 51,
+          "csmoney": 48.17,
+          "marketcsgo": 58.023,
+          "skinbaron": 50,
+          "skinport": 52.54,
+          "whitemarket": 53.75
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.69,
+          "csmoney": 3.71,
+          "marketcsgo": 4.211,
+          "skinbaron": 3.62,
+          "skinport": 4.9,
+          "whitemarket": 4.05
+        },
+        "stattrak": {
+          "csfloat": 12.96,
+          "csmoney": 12.25,
+          "marketcsgo": 13.614,
+          "skinbaron": 12.51,
+          "skinport": 10.42,
+          "whitemarket": 13.22
+        }
+      }
+    },
+    "time": 1783692965900
+  },
+  "range:7:1035": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 18.3,
+          "csmoney": 18.63,
+          "gamerpaygg": 20.71,
+          "marketcsgo": 20.9,
+          "skinbaron": 16.39,
+          "skinport": 17.1,
+          "whitemarket": 19.58
+        },
+        "stattrak": {
+          "csfloat": 49.42,
+          "csmoney": 52.43,
+          "gamerpaygg": 56.25,
+          "marketcsgo": 54.452,
+          "skinbaron": 44.47,
+          "skinport": 45.6,
+          "whitemarket": 53.63
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.19,
+          "csmoney": 3.23,
+          "marketcsgo": 3.634,
+          "skinbaron": 2.79,
+          "skinport": 3.47,
+          "whitemarket": 3.49
+        },
+        "stattrak": {
+          "csfloat": 10.58,
+          "csmoney": 10.46,
+          "marketcsgo": 12.092,
+          "skinbaron": 9.85,
+          "skinport": 11.17,
+          "whitemarket": 11.54
+        }
+      }
+    },
+    "time": 1783692965902
+  },
+  "range:7:1238": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 19.15,
+          "csmoney": 18.72,
+          "marketcsgo": 21.286,
+          "skinbaron": 18.5,
+          "skinport": 22.21,
+          "whitemarket": 20.45
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1.89,
+          "csmoney": 1.69,
+          "marketcsgo": 2,
+          "skinbaron": 1.81,
+          "skinport": 5.79,
+          "whitemarket": 1.96
+        }
+      }
+    },
+    "time": 1783692965903
+  },
+  "range:7:524": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 422.07,
+          "csmoney": 445.46,
+          "marketcsgo": 486.137,
+          "skinbaron": 600,
+          "skinport": 553.83,
+          "whitemarket": 451.72
+        },
+        "stattrak": {
+          "csfloat": 795,
+          "csmoney": 930.89,
+          "marketcsgo": 1068.725,
+          "whitemarket": 917.89
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 100.62,
+          "csmoney": 102.97,
+          "marketcsgo": 113.263,
+          "skinbaron": 91.94,
+          "skinport": 101.51,
+          "whitemarket": 107.79
+        },
+        "stattrak": {
+          "csfloat": 184.33,
+          "csmoney": 192.73,
+          "marketcsgo": 205.92,
+          "skinbaron": 212.72,
+          "skinport": 222.92,
+          "whitemarket": 197.35
+        }
+      }
+    },
+    "time": 1783692965904
+  },
+  "range:7:656": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 136.22,
+          "csmoney": 124.52,
+          "marketcsgo": 144.973,
+          "skinbaron": 160,
+          "skinport": 143.92,
+          "whitemarket": 131.59
+        },
+        "stattrak": {
+          "csfloat": 87.9,
+          "csmoney": 90.28,
+          "marketcsgo": 104.499,
+          "skinbaron": 106.64,
+          "skinport": 109.85,
+          "whitemarket": 97.8
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 29,
+          "csmoney": 26.33,
+          "marketcsgo": 32.173,
+          "skinport": 28.66,
+          "whitemarket": 28.2
+        },
+        "stattrak": {
+          "csfloat": 55.38,
+          "csmoney": 49.85,
+          "marketcsgo": 57.058,
+          "skinport": 52.1,
+          "whitemarket": 53.94
+        }
+      }
+    },
+    "time": 1783692965906
+  },
+  "range:7:1397": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {}
+      },
+      "high": {
+        "normal": {}
+      }
+    },
+    "time": 1783692965907
+  },
+  "range:7:1179": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 0.64,
+          "csmoney": 0.65,
+          "marketcsgo": 0.746,
+          "skinbaron": 0.71,
+          "skinport": 0.41,
+          "whitemarket": 0.71
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.09,
+          "csmoney": 0.12,
+          "marketcsgo": 0.2,
+          "skinbaron": 0.1,
+          "skinport": 0.13,
+          "whitemarket": 0.13
+        }
+      }
+    },
+    "time": 1783692965909
+  },
+  "range:7:226": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "WW",
+      "low": {
+        "normal": {
+          "csfloat": 54.21,
+          "csmoney": 53.6,
+          "gamerpaygg": 3999,
+          "marketcsgo": 60.392,
+          "skinbaron": 48,
+          "skinport": 58.39,
+          "whitemarket": 56.6
+        },
+        "stattrak": {
+          "csfloat": 49.16,
+          "csmoney": 51.99,
+          "gamerpaygg": 67.06,
+          "marketcsgo": 60.849,
+          "skinbaron": 47.33,
+          "skinport": 51.27,
+          "whitemarket": 56.56
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 21.44,
+          "csmoney": 20.05,
+          "gamerpaygg": 30.62,
+          "marketcsgo": 25.92,
+          "skinbaron": 23.73,
+          "skinport": 22.43,
+          "whitemarket": 23.01
+        },
+        "stattrak": {
+          "csfloat": 45.21,
+          "csmoney": 45.53,
+          "marketcsgo": 47.481,
+          "skinbaron": 900,
+          "whitemarket": 49.87
+        }
+      }
+    },
+    "time": 1783692965911
+  },
+  "range:7:172": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 300.58,
+          "csmoney": 322.46,
+          "marketcsgo": 539.71,
+          "skinbaron": 320,
+          "whitemarket": 327.13
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 36.91,
+          "csmoney": 40,
+          "marketcsgo": 43.704,
+          "skinport": 36.13,
+          "whitemarket": 39.37
+        }
+      }
+    },
+    "time": 1783692965912
+  },
+  "range:7:1070": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "WW",
+      "low": {
+        "normal": {
+          "csfloat": 61,
+          "csmoney": 62.18,
+          "gamerpaygg": 59.8,
+          "marketcsgo": 71.85,
+          "skinbaron": 92,
+          "skinport": 67.88,
+          "whitemarket": 64.44
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 35.04,
+          "csmoney": 34.93,
+          "marketcsgo": 40,
+          "skinbaron": 35.84,
+          "whitemarket": 41.52
+        }
+      }
+    },
+    "time": 1783692965914
+  },
+  "range:7:14": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 519.98,
+          "csmoney": 750,
+          "skinbaron": 600,
+          "whitemarket": 525
+        },
+        "stattrak": {
+          "csfloat": 1000.69,
+          "csmoney": 2034,
+          "whitemarket": 1427.62
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 55,
+          "csmoney": 51.92,
+          "marketcsgo": 58.5,
+          "skinbaron": 49.35,
+          "whitemarket": 56.68
+        },
+        "stattrak": {
+          "csfloat": 150,
+          "csmoney": 132.37,
+          "marketcsgo": 159.445,
+          "skinbaron": 160,
+          "whitemarket": 144.99
+        }
+      }
+    },
+    "time": 1783692965915
+  },
+  "range:7:795": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 26.28,
+          "csmoney": 25.75,
+          "marketcsgo": 29.869,
+          "skinbaron": 30.3,
+          "skinport": 27.5,
+          "whitemarket": 28.9
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 2.71,
+          "csmoney": 2.61,
+          "marketcsgo": 2.863,
+          "skinbaron": 2.99,
+          "skinport": 2.99,
+          "whitemarket": 2.81
+        }
+      }
+    },
+    "time": 1783692965917
+  },
+  "range:7:745": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 93.1,
+          "csmoney": 84.05,
+          "marketcsgo": 101.195,
+          "skinbaron": 84.57,
+          "skinport": 92.07,
+          "whitemarket": 95.08
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 5.55,
+          "csmoney": 5.47,
+          "marketcsgo": 6.488,
+          "skinbaron": 4.71,
+          "skinport": 5.94,
+          "whitemarket": 6.24
+        }
+      }
+    },
+    "time": 1783692965919
+  },
+  "range:7:1309": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 89.23,
+          "csmoney": 87.84,
+          "gamerpaygg": 254.62,
+          "marketcsgo": 99.559,
+          "skinbaron": 85.99,
+          "whitemarket": 92.46
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 6.23,
+          "csmoney": 5.77,
+          "marketcsgo": 6.679,
+          "skinbaron": 6.59,
+          "skinport": 7.26,
+          "whitemarket": 6.45
+        }
+      }
+    },
+    "time": 1783692965920
+  },
+  "range:7:1358": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {}
+      },
+      "high": {
+        "normal": {}
+      }
+    },
+    "time": 1783692965923
+  },
+  "range:7:1218": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 19.5,
+          "csmoney": 20.19,
+          "gamerpaygg": 71.63,
+          "marketcsgo": 23.216,
+          "skinbaron": 18,
+          "skinport": 20.75,
+          "whitemarket": 21.57
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1.97,
+          "csmoney": 1.83,
+          "marketcsgo": 2.116,
+          "skinbaron": 2.49,
+          "skinport": 2.32,
+          "whitemarket": 2.12
+        }
+      }
+    },
+    "time": 1783692965924
+  },
+  "range:7:1283": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 6,
+          "csmoney": 6.03,
+          "marketcsgo": 6.095,
+          "skinbaron": 5.43,
+          "skinport": 4.82,
+          "whitemarket": 6.28
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.48,
+          "csmoney": 0.49,
+          "marketcsgo": 0.493,
+          "skinbaron": 0.49,
+          "skinport": 0.45,
+          "whitemarket": 0.47
+        }
+      }
+    },
+    "time": 1783692965926
+  },
+  "range:7:1288": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 0.56,
+          "csmoney": 0.52,
+          "marketcsgo": 0.563,
+          "skinbaron": 0.65,
+          "skinport": 0.58,
+          "whitemarket": 0.56
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.05,
+          "csmoney": 0.06,
+          "marketcsgo": 0.099,
+          "skinbaron": 0.06,
+          "skinport": 0.07,
+          "whitemarket": 0.07
+        }
+      }
+    },
+    "time": 1783692965927
+  },
+  "range:7:72": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 11.35,
+          "csmoney": 11.07,
+          "marketcsgo": 12.062,
+          "skinbaron": 12.78,
+          "skinport": 12.28,
+          "whitemarket": 11.1
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.06,
+          "csmoney": 0.08,
+          "marketcsgo": 0.07,
+          "skinbaron": 0.05,
+          "skinport": 0.08,
+          "whitemarket": 0.09
+        }
+      }
+    },
+    "time": 1783692965929
+  },
+  "range:7:122": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 136.15,
+          "csmoney": 283.84,
+          "marketcsgo": 176.15,
+          "whitemarket": 146.44
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 12.49,
+          "csmoney": 10.84,
+          "marketcsgo": 12.769,
+          "skinbaron": 29.45,
+          "skinport": 6.74,
+          "whitemarket": 10.95
+        }
+      }
+    },
+    "time": 1783692965931
+  },
+  "range:7:170": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 89.98,
+          "csmoney": 95.23,
+          "marketcsgo": 112.48,
+          "skinbaron": 84.04,
+          "whitemarket": 106.95
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 8.24,
+          "csmoney": 8.55,
+          "marketcsgo": 11.665,
+          "skinbaron": 13,
+          "whitemarket": 8.99
+        }
+      }
+    },
+    "time": 1783692965933
+  },
+  "507:582": {
+    "data": {
+      "FN": {
+        "normal": {
+          "csfloat": 591.81,
+          "csmoney": 632.87,
+          "marketcsgo": 634.921,
+          "skinport": 626.81,
+          "whitemarket": 627.11
+        },
+        "stattrak": {
+          "csfloat": 615,
+          "csmoney": 638.67,
+          "marketcsgo": 814.626,
+          "whitemarket": 746.43
+        }
+      },
+      "MW": {
+        "normal": {
+          "csfloat": 530,
+          "csmoney": 566.13,
+          "marketcsgo": 673.95,
+          "skinport": 518.06,
+          "whitemarket": 585.4
+        },
+        "stattrak": {
+          "csfloat": 538.49,
+          "csmoney": 592.02,
+          "marketcsgo": 773.819,
+          "skinbaron": 934.93,
+          "whitemarket": 633.93
+        }
+      },
+      "FT": {
+        "normal": {
+          "csfloat": 504.56,
+          "csmoney": 526.32,
+          "marketcsgo": 565,
+          "skinbaron": 494.99,
+          "skinport": 486.27,
+          "whitemarket": 550.53
+        },
+        "stattrak": {
+          "csfloat": 499.82,
+          "csmoney": 521.19,
+          "marketcsgo": 595.134,
+          "whitemarket": 570.77
+        }
+      },
+      "WW": {
+        "normal": {
+          "csfloat": 556.03,
+          "csmoney": 554.4,
+          "marketcsgo": 732.43,
+          "skinbaron": 574.36,
+          "whitemarket": 545.96
+        },
+        "stattrak": {
+          "csfloat": 683.79,
+          "csmoney": 543.8
+        }
+      },
+      "BS": {
+        "normal": {
+          "csfloat": 490.43,
+          "csmoney": 526.32,
+          "marketcsgo": 550,
+          "whitemarket": 554.16
+        },
+        "stattrak": {
+          "csmoney": 515.9,
+          "whitemarket": 561.95
+        }
+      }
+    },
+    "time": 1783693085581
+  },
+  "7:1449": {
+    "data": {
+      "FN": {
+        "normal": {}
+      },
+      "MW": {
+        "normal": {}
+      },
+      "FT": {
+        "normal": {}
+      },
+      "WW": {
+        "normal": {}
+      },
+      "BS": {
+        "normal": {}
+      }
+    },
+    "time": 1783693208935
+  },
+  "range:507:38": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1912,
+          "csmoney": 1896.99,
+          "marketcsgo": 2200,
+          "skinbaron": 2000,
+          "whitemarket": 2066.46
+        },
+        "stattrak": {
+          "csfloat": 1840,
+          "csmoney": 2056.28,
+          "marketcsgo": 2239.961,
+          "skinbaron": 1750,
+          "whitemarket": 2050.1
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 2100,
+          "marketcsgo": 2567.93,
+          "whitemarket": 2205.35
+        },
+        "stattrak": {}
+      }
+    },
+    "time": 1783693299785
+  },
+  "range:507:417": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1263.95,
+          "csmoney": 1365.98,
+          "marketcsgo": 1405.366,
+          "skinbaron": 1145.08,
+          "skinport": 1136.31,
+          "whitemarket": 1428.44
+        },
+        "stattrak": {
+          "csfloat": 1295,
+          "csmoney": 1322.92,
+          "marketcsgo": 1499.976,
+          "skinbaron": 2200,
+          "skinport": 1220.54,
+          "whitemarket": 1525.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1268.23,
+          "csmoney": 1409.86,
+          "marketcsgo": 1519.692,
+          "skinbaron": 2000,
+          "whitemarket": 1445.45
+        },
+        "stattrak": {
+          "csfloat": 1379.53,
+          "csmoney": 1937.34,
+          "marketcsgo": 1650,
+          "whitemarket": 1493.71
+        }
+      }
+    },
+    "time": 1783693299787
+  },
+  "range:507:418": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1263.95,
+          "csmoney": 1365.98,
+          "marketcsgo": 1405.366,
+          "skinbaron": 1145.08,
+          "skinport": 1136.31,
+          "whitemarket": 1428.44
+        },
+        "stattrak": {
+          "csfloat": 1295,
+          "csmoney": 1322.92,
+          "marketcsgo": 1499.976,
+          "skinbaron": 2200,
+          "skinport": 1220.54,
+          "whitemarket": 1525.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1268.23,
+          "csmoney": 1409.86,
+          "marketcsgo": 1519.692,
+          "skinbaron": 2000,
+          "whitemarket": 1445.45
+        },
+        "stattrak": {
+          "csfloat": 1379.53,
+          "csmoney": 1937.34,
+          "marketcsgo": 1650,
+          "whitemarket": 1493.71
+        }
+      }
+    },
+    "time": 1783693299789
+  },
+  "range:507:419": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1263.95,
+          "csmoney": 1365.98,
+          "marketcsgo": 1405.366,
+          "skinbaron": 1145.08,
+          "skinport": 1136.31,
+          "whitemarket": 1428.44
+        },
+        "stattrak": {
+          "csfloat": 1295,
+          "csmoney": 1322.92,
+          "marketcsgo": 1499.976,
+          "skinbaron": 2200,
+          "skinport": 1220.54,
+          "whitemarket": 1525.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1268.23,
+          "csmoney": 1409.86,
+          "marketcsgo": 1519.692,
+          "skinbaron": 2000,
+          "whitemarket": 1445.45
+        },
+        "stattrak": {
+          "csfloat": 1379.53,
+          "csmoney": 1937.34,
+          "marketcsgo": 1650,
+          "whitemarket": 1493.71
+        }
+      }
+    },
+    "time": 1783693299790
+  },
+  "range:507:420": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1263.95,
+          "csmoney": 1365.98,
+          "marketcsgo": 1405.366,
+          "skinbaron": 1145.08,
+          "skinport": 1136.31,
+          "whitemarket": 1428.44
+        },
+        "stattrak": {
+          "csfloat": 1295,
+          "csmoney": 1322.92,
+          "marketcsgo": 1499.976,
+          "skinbaron": 2200,
+          "skinport": 1220.54,
+          "whitemarket": 1525.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1268.23,
+          "csmoney": 1409.86,
+          "marketcsgo": 1519.692,
+          "skinbaron": 2000,
+          "whitemarket": 1445.45
+        },
+        "stattrak": {
+          "csfloat": 1379.53,
+          "csmoney": 1937.34,
+          "marketcsgo": 1650,
+          "whitemarket": 1493.71
+        }
+      }
+    },
+    "time": 1783693299792
+  },
+  "range:507:421": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1263.95,
+          "csmoney": 1365.98,
+          "marketcsgo": 1405.366,
+          "skinbaron": 1145.08,
+          "skinport": 1136.31,
+          "whitemarket": 1428.44
+        },
+        "stattrak": {
+          "csfloat": 1295,
+          "csmoney": 1322.92,
+          "marketcsgo": 1499.976,
+          "skinbaron": 2200,
+          "skinport": 1220.54,
+          "whitemarket": 1525.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1268.23,
+          "csmoney": 1409.86,
+          "marketcsgo": 1519.692,
+          "skinbaron": 2000,
+          "whitemarket": 1445.45
+        },
+        "stattrak": {
+          "csfloat": 1379.53,
+          "csmoney": 1937.34,
+          "marketcsgo": 1650,
+          "whitemarket": 1493.71
+        }
+      }
+    },
+    "time": 1783693299794
+  },
+  "range:507:568": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1782.44,
+          "csmoney": 1862.61,
+          "gamerpaygg": 2009.18,
+          "marketcsgo": 2038.118,
+          "skinbaron": 1799.99,
+          "skinport": 2171.97,
+          "whitemarket": 1878.8
+        },
+        "stattrak": {
+          "csfloat": 1744.99,
+          "csmoney": 1817.58,
+          "marketcsgo": 2162.085,
+          "skinbaron": 1800,
+          "whitemarket": 2070.03
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1780,
+          "csmoney": 2477.05,
+          "marketcsgo": 2150,
+          "skinbaron": 1929,
+          "whitemarket": 1850
+        },
+        "stattrak": {
+          "csfloat": 2132.83,
+          "marketcsgo": 2631.12,
+          "whitemarket": 3100
+        }
+      }
+    },
+    "time": 1783693299796
+  },
+  "range:507:569": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1782.44,
+          "csmoney": 1862.61,
+          "gamerpaygg": 2009.18,
+          "marketcsgo": 2038.118,
+          "skinbaron": 1799.99,
+          "skinport": 2171.97,
+          "whitemarket": 1878.8
+        },
+        "stattrak": {
+          "csfloat": 1744.99,
+          "csmoney": 1817.58,
+          "marketcsgo": 2162.085,
+          "skinbaron": 1800,
+          "whitemarket": 2070.03
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1780,
+          "csmoney": 2477.05,
+          "marketcsgo": 2150,
+          "skinbaron": 1929,
+          "whitemarket": 1850
+        },
+        "stattrak": {
+          "csfloat": 2132.83,
+          "marketcsgo": 2631.12,
+          "whitemarket": 3100
+        }
+      }
+    },
+    "time": 1783693299797
+  },
+  "range:507:570": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1782.44,
+          "csmoney": 1862.61,
+          "gamerpaygg": 2009.18,
+          "marketcsgo": 2038.118,
+          "skinbaron": 1799.99,
+          "skinport": 2171.97,
+          "whitemarket": 1878.8
+        },
+        "stattrak": {
+          "csfloat": 1744.99,
+          "csmoney": 1817.58,
+          "marketcsgo": 2162.085,
+          "skinbaron": 1800,
+          "whitemarket": 2070.03
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1780,
+          "csmoney": 2477.05,
+          "marketcsgo": 2150,
+          "skinbaron": 1929,
+          "whitemarket": 1850
+        },
+        "stattrak": {
+          "csfloat": 2132.83,
+          "marketcsgo": 2631.12,
+          "whitemarket": 3100
+        }
+      }
+    },
+    "time": 1783693299799
+  },
+  "range:507:571": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1782.44,
+          "csmoney": 1862.61,
+          "gamerpaygg": 2009.18,
+          "marketcsgo": 2038.118,
+          "skinbaron": 1799.99,
+          "skinport": 2171.97,
+          "whitemarket": 1878.8
+        },
+        "stattrak": {
+          "csfloat": 1744.99,
+          "csmoney": 1817.58,
+          "marketcsgo": 2162.085,
+          "skinbaron": 1800,
+          "whitemarket": 2070.03
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1780,
+          "csmoney": 2477.05,
+          "marketcsgo": 2150,
+          "skinbaron": 1929,
+          "whitemarket": 1850
+        },
+        "stattrak": {
+          "csfloat": 2132.83,
+          "marketcsgo": 2631.12,
+          "whitemarket": 3100
+        }
+      }
+    },
+    "time": 1783693299801
+  },
+  "range:507:572": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1782.44,
+          "csmoney": 1862.61,
+          "gamerpaygg": 2009.18,
+          "marketcsgo": 2038.118,
+          "skinbaron": 1799.99,
+          "skinport": 2171.97,
+          "whitemarket": 1878.8
+        },
+        "stattrak": {
+          "csfloat": 1744.99,
+          "csmoney": 1817.58,
+          "marketcsgo": 2162.085,
+          "skinbaron": 1800,
+          "whitemarket": 2070.03
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1780,
+          "csmoney": 2477.05,
+          "marketcsgo": 2150,
+          "skinbaron": 1929,
+          "whitemarket": 1850
+        },
+        "stattrak": {
+          "csfloat": 2132.83,
+          "marketcsgo": 2631.12,
+          "whitemarket": 3100
+        }
+      }
+    },
+    "time": 1783693299803
+  },
+  "range:507:413": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1047.5,
+          "csmoney": 1108.26,
+          "marketcsgo": 1226.999,
+          "skinbaron": 999,
+          "skinport": 1083.36,
+          "whitemarket": 1155.7
+        },
+        "stattrak": {
+          "csfloat": 1110,
+          "csmoney": 1195,
+          "marketcsgo": 1378.906,
+          "skinport": 1215.67,
+          "whitemarket": 1201.93
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1170,
+          "csmoney": 1148.5,
+          "marketcsgo": 1407.324,
+          "skinport": 1125.36,
+          "whitemarket": 1319.04
+        },
+        "stattrak": {
+          "csfloat": 1700,
+          "csmoney": 1700,
+          "marketcsgo": 1769.45,
+          "whitemarket": 1583.88
+        }
+      }
+    },
+    "time": 1783693299805
+  },
+  "range:507:582": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 591.81,
+          "csmoney": 632.87,
+          "marketcsgo": 634.921,
+          "skinport": 626.81,
+          "whitemarket": 627.11
+        },
+        "stattrak": {
+          "csfloat": 615,
+          "csmoney": 638.67,
+          "marketcsgo": 814.626,
+          "whitemarket": 746.43
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 490.43,
+          "csmoney": 526.32,
+          "marketcsgo": 550,
+          "whitemarket": 554.16
+        },
+        "stattrak": {
+          "csmoney": 515.9,
+          "whitemarket": 561.95
+        }
+      }
+    },
+    "time": 1783693299807
+  },
+  "range:507:415": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1263.95,
+          "csmoney": 1365.98,
+          "marketcsgo": 1405.366,
+          "skinbaron": 1145.08,
+          "skinport": 1136.31,
+          "whitemarket": 1428.44
+        },
+        "stattrak": {
+          "csfloat": 1295,
+          "csmoney": 1322.92,
+          "marketcsgo": 1499.976,
+          "skinbaron": 2200,
+          "skinport": 1220.54,
+          "whitemarket": 1525.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1268.23,
+          "csmoney": 1409.86,
+          "marketcsgo": 1519.692,
+          "skinbaron": 2000,
+          "whitemarket": 1445.45
+        },
+        "stattrak": {
+          "csfloat": 1379.53,
+          "csmoney": 1937.34,
+          "marketcsgo": 1650,
+          "whitemarket": 1493.71
+        }
+      }
+    },
+    "time": 1783693299809
+  },
+  "range:507:416": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 1263.95,
+          "csmoney": 1365.98,
+          "marketcsgo": 1405.366,
+          "skinbaron": 1145.08,
+          "skinport": 1136.31,
+          "whitemarket": 1428.44
+        },
+        "stattrak": {
+          "csfloat": 1295,
+          "csmoney": 1322.92,
+          "marketcsgo": 1499.976,
+          "skinbaron": 2200,
+          "skinport": 1220.54,
+          "whitemarket": 1525.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1268.23,
+          "csmoney": 1409.86,
+          "marketcsgo": 1519.692,
+          "skinbaron": 2000,
+          "whitemarket": 1445.45
+        },
+        "stattrak": {
+          "csfloat": 1379.53,
+          "csmoney": 1937.34,
+          "marketcsgo": 1650,
+          "whitemarket": 1493.71
+        }
+      }
+    },
+    "time": 1783693299811
+  },
+  "range:507:59": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "FT",
+      "low": {
+        "normal": {
+          "csfloat": 1100.28,
+          "csmoney": 1226.39,
+          "marketcsgo": 1231.746,
+          "skinport": 1217.62,
+          "whitemarket": 1209.63
+        },
+        "stattrak": {
+          "csfloat": 1129.68,
+          "csmoney": 1250,
+          "marketcsgo": 1410.622,
+          "whitemarket": 1284.98
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 860.97,
+          "csmoney": 1027.94,
+          "gamerpaygg": 780,
+          "marketcsgo": 993.016,
+          "skinport": 912.64,
+          "whitemarket": 892.8
+        },
+        "stattrak": {
+          "csfloat": 970.6,
+          "marketcsgo": 966.53,
+          "whitemarket": 1045
+        }
+      }
+    },
+    "time": 1783693299813
+  },
+  "range:507:409": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 879.44,
+          "csmoney": 933.49,
+          "marketcsgo": 998,
+          "skinbaron": 760,
+          "skinport": 920.2,
+          "whitemarket": 929
+        },
+        "stattrak": {
+          "csfloat": 880,
+          "csmoney": 964.28,
+          "marketcsgo": 1079.364,
+          "whitemarket": 1013.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 904.17,
+          "csmoney": 919.19,
+          "marketcsgo": 1041.933,
+          "skinport": 979.42,
+          "whitemarket": 978.95
+        },
+        "stattrak": {
+          "csfloat": 975,
+          "csmoney": 1100,
+          "marketcsgo": 1029.995,
+          "whitemarket": 978.5
+        }
+      }
+    },
+    "time": 1783693299815
+  },
+  "range:507:42": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1090,
+          "csmoney": 1133,
+          "marketcsgo": 1542.385,
+          "whitemarket": 1147.72
+        },
+        "stattrak": {
+          "csfloat": 3845.17
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 683.93,
+          "csmoney": 770.05,
+          "marketcsgo": 779.86,
+          "whitemarket": 723.93
+        },
+        "stattrak": {
+          "marketcsgo": 815.71,
+          "whitemarket": 762.08
+        }
+      }
+    },
+    "time": 1783693299817
+  },
+  "range:507:410": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 697.04,
+          "csmoney": 703.74,
+          "marketcsgo": 809.53,
+          "skinbaron": 880,
+          "skinport": 699.91,
+          "whitemarket": 747.2
+        },
+        "stattrak": {
+          "csfloat": 838,
+          "csmoney": 895,
+          "whitemarket": 931.47
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 590.74,
+          "marketcsgo": 952.377,
+          "whitemarket": 655.11
+        },
+        "stattrak": {
+          "marketcsgo": 1130.157,
+          "whitemarket": 1125.6
+        }
+      }
+    },
+    "time": 1783693299819
+  },
+  "range:507:43": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 789,
+          "csmoney": 824.51,
+          "skinport": 886.87,
+          "whitemarket": 887.65
+        },
+        "stattrak": {
+          "whitemarket": 1124.2
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 502.62,
+          "csmoney": 546.31,
+          "marketcsgo": 584.042,
+          "skinport": 517.9,
+          "whitemarket": 553.68
+        },
+        "stattrak": {
+          "csfloat": 619.27,
+          "csmoney": 559.62,
+          "marketcsgo": 685.714,
+          "whitemarket": 594.15
+        }
+      }
+    },
+    "time": 1783693299821
+  },
+  "range:507:44": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1799,
+          "csmoney": 2061.86,
+          "marketcsgo": 2199.31,
+          "skinport": 1875.56,
+          "whitemarket": 1900.72
+        },
+        "stattrak": {
+          "csfloat": 4682.93
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 610.99,
+          "csmoney": 654.58,
+          "marketcsgo": 660.317,
+          "skinbaron": 979.99,
+          "skinport": 679.91,
+          "whitemarket": 654.73
+        },
+        "stattrak": {
+          "csfloat": 990,
+          "csmoney": 2271.57,
+          "marketcsgo": 1020,
+          "skinbaron": 702.85,
+          "whitemarket": 1121.97
+        }
+      }
+    },
+    "time": 1783693299823
+  },
+  "range:507:414": {
+    "data": {
+      "lowTier": "WW",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 496.01,
+          "csmoney": 526.82,
+          "marketcsgo": 562.54,
+          "whitemarket": 565.77
+        },
+        "stattrak": {
+          "csfloat": 649.86,
+          "csmoney": 799.23,
+          "whitemarket": 822.62
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 466.25,
+          "csmoney": 501.54,
+          "gamerpaygg": 480,
+          "marketcsgo": 549.19,
+          "skinbaron": 488.77,
+          "skinport": 424.42,
+          "whitemarket": 510.05
+        },
+        "stattrak": {
+          "csfloat": 493.55,
+          "csmoney": 510.43,
+          "marketcsgo": 569.072,
+          "whitemarket": 503.96
+        }
+      }
+    },
+    "time": 1783693299825
+  },
+  "range:507:561": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1137.05,
+          "csmoney": 1241.72,
+          "marketcsgo": 1337.235,
+          "skinport": 1060.95,
+          "whitemarket": 1300.8
+        },
+        "stattrak": {
+          "csfloat": 1204,
+          "csmoney": 1907.22,
+          "marketcsgo": 1904.279,
+          "whitemarket": 1312.18
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 507.93,
+          "csmoney": 539.15,
+          "marketcsgo": 589.897,
+          "skinbaron": 650,
+          "skinport": 523.79,
+          "whitemarket": 533.98
+        },
+        "stattrak": {
+          "csfloat": 560,
+          "marketcsgo": 679.629,
+          "whitemarket": 605.37
+        }
+      }
+    },
+    "time": 1783693299828
+  },
+  "range:507:566": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1018.21,
+          "csmoney": 1052.3,
+          "marketcsgo": 1060.952,
+          "whitemarket": 1056.25
+        },
+        "stattrak": {
+          "csfloat": 1250,
+          "csmoney": 1400,
+          "whitemarket": 1368.43
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 605.74,
+          "csmoney": 660.92,
+          "marketcsgo": 815.214,
+          "whitemarket": 640.63
+        },
+        "stattrak": {
+          "csfloat": 645,
+          "csmoney": 649.43,
+          "whitemarket": 729.03
+        }
+      }
+    },
+    "time": 1783693299830
+  },
+  "range:507:576": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1650,
+          "csmoney": 1766.85,
+          "marketcsgo": 2332.465,
+          "whitemarket": 1759.85
+        },
+        "stattrak": {
+          "csfloat": 2272.38,
+          "whitemarket": 2087.93
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 742.44,
+          "csmoney": 740.81,
+          "marketcsgo": 819.476,
+          "skinbaron": 999,
+          "skinport": 802.28,
+          "whitemarket": 756.6
+        },
+        "stattrak": {
+          "csfloat": 815.78,
+          "csmoney": 830.51,
+          "marketcsgo": 887.624,
+          "whitemarket": 769.04
+        }
+      }
+    },
+    "time": 1783693299832
+  },
+  "range:507:5": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "marketcsgo": 640,
+          "whitemarket": 690.69
+        },
+        "stattrak": {}
+      },
+      "high": {
+        "normal": {
+          "csfloat": 382.86,
+          "csmoney": 416.05,
+          "marketcsgo": 452.411,
+          "skinbaron": 373.35,
+          "skinport": 445.02,
+          "whitemarket": 428.25
+        },
+        "stattrak": {
+          "csfloat": 409.95,
+          "csmoney": 449,
+          "marketcsgo": 698.413,
+          "whitemarket": 451.3
+        }
+      }
+    },
+    "time": 1783693299834
+  },
+  "range:507:77": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 900,
+          "whitemarket": 1509.86
+        },
+        "stattrak": {
+          "csfloat": 3461.83
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 399,
+          "csmoney": 437.1,
+          "marketcsgo": 491.585,
+          "skinport": 430.68,
+          "whitemarket": 431.19
+        },
+        "stattrak": {
+          "marketcsgo": 526.299,
+          "whitemarket": 465
+        }
+      }
+    },
+    "time": 1783693299836
+  },
+  "range:507:578": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 567,
+          "csmoney": 644.72,
+          "marketcsgo": 647.12,
+          "skinport": 601.47,
+          "whitemarket": 599.91
+        },
+        "stattrak": {
+          "csfloat": 595,
+          "csmoney": 846.99,
+          "marketcsgo": 838.989,
+          "whitemarket": 726.75
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 445,
+          "csmoney": 485.09,
+          "marketcsgo": 521.844,
+          "whitemarket": 502.78
+        },
+        "stattrak": {
+          "csmoney": 834.28,
+          "marketcsgo": 698.413,
+          "whitemarket": 578.25
+        }
+      }
+    },
+    "time": 1783693299838
+  },
+  "range:507:12": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 8571.3,
+          "marketcsgo": 11248.084,
+          "whitemarket": 6602.49
+        },
+        "stattrak": {
+          "csfloat": 50000
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 540,
+          "csmoney": 596.19,
+          "marketcsgo": 676.236,
+          "skinbaron": 530,
+          "whitemarket": 572.31
+        },
+        "stattrak": {
+          "csfloat": 611.24,
+          "csmoney": 592.4,
+          "marketcsgo": 888.889,
+          "whitemarket": 847.12
+        }
+      }
+    },
+    "time": 1783693299840
+  },
+  "range:507:40": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1750,
+          "csmoney": 2573.25,
+          "gamerpaygg": 2099,
+          "whitemarket": 1807.86
+        },
+        "stattrak": {
+          "csfloat": 7251.58
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 496.2,
+          "csmoney": 560.63,
+          "marketcsgo": 570.379,
+          "skinbaron": 588.24,
+          "skinport": 504.35,
+          "whitemarket": 508.52
+        },
+        "stattrak": {
+          "csfloat": 486.96,
+          "marketcsgo": 660,
+          "whitemarket": 530.07
+        }
+      }
+    },
+    "time": 1783693299841
+  },
+  "range:507:98": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1661,
+          "whitemarket": 1733.21
+        },
+        "stattrak": {}
+      },
+      "high": {
+        "normal": {
+          "csfloat": 457.77,
+          "csmoney": 480.86,
+          "gamerpaygg": 406.44,
+          "marketcsgo": 519.35,
+          "whitemarket": 475.4
+        },
+        "stattrak": {
+          "csfloat": 457.49,
+          "csmoney": 477.05,
+          "marketcsgo": 939.682,
+          "whitemarket": 554.73
+        }
+      }
+    },
+    "time": 1783693299843
+  },
+  "range:507:175": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 750,
+          "csmoney": 1999,
+          "marketcsgo": 1389.994,
+          "whitemarket": 917.27
+        },
+        "stattrak": {}
+      },
+      "high": {
+        "normal": {
+          "csfloat": 397.71,
+          "csmoney": 426.71,
+          "marketcsgo": 479.933,
+          "whitemarket": 437.31
+        },
+        "stattrak": {
+          "csfloat": 430.4,
+          "skinport": 434.17,
+          "whitemarket": 512.08
+        }
+      }
+    },
+    "time": 1783693299845
+  },
+  "range:507:72": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 574.99,
+          "csmoney": 681.53,
+          "marketcsgo": 799.996,
+          "whitemarket": 664.16
+        },
+        "stattrak": {}
+      },
+      "high": {
+        "normal": {
+          "csfloat": 437.04,
+          "csmoney": 389.23,
+          "gamerpaygg": 380,
+          "marketcsgo": 434.967,
+          "skinbaron": 450,
+          "whitemarket": 424.99
+        },
+        "stattrak": {
+          "csfloat": 384.01,
+          "marketcsgo": 555.336,
+          "whitemarket": 449.75
+        }
+      }
+    },
+    "time": 1783693299847
+  },
+  "range:507:143": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 850,
+          "csmoney": 971.33,
+          "marketcsgo": 1018.429,
+          "whitemarket": 977.98
+        },
+        "stattrak": {}
+      },
+      "high": {
+        "normal": {
+          "csfloat": 415.2,
+          "csmoney": 411.74,
+          "marketcsgo": 496.109,
+          "whitemarket": 444.64
+        },
+        "stattrak": {
+          "marketcsgo": 571.428,
+          "whitemarket": 465.65
+        }
+      }
+    },
+    "time": 1783693299850
+  },
+  "range:9:1026": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 840.42,
+          "csmoney": 847.41,
+          "marketcsgo": 975.756,
+          "skinbaron": 789,
+          "skinport": 903.07,
+          "whitemarket": 897.4
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 880.63,
+          "csmoney": 918.4,
+          "marketcsgo": 1015.654,
+          "skinport": 897.46,
+          "whitemarket": 1017.45
+        }
+      }
+    },
+    "time": 1783693325606
+  },
+  "range:9:395": {
+    "data": {
+      "lowTier": "MW",
+      "highTier": "FT",
+      "low": {
+        "normal": {
+          "csfloat": 107.26,
+          "csmoney": 107.61,
+          "marketcsgo": 124.23,
+          "skinbaron": 100,
+          "skinport": 98.9,
+          "whitemarket": 116.49
+        },
+        "stattrak": {
+          "csfloat": 114.24,
+          "csmoney": 110.53,
+          "gamerpaygg": 180,
+          "marketcsgo": 130.366,
+          "skinbaron": 125.99,
+          "skinport": 141.1,
+          "whitemarket": 122.96
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 110.23,
+          "csmoney": 106.82,
+          "gamerpaygg": 120,
+          "marketcsgo": 126.511,
+          "skinbaron": 97.97,
+          "skinport": 119.44,
+          "whitemarket": 118.43
+        },
+        "stattrak": {
+          "csfloat": 133.05,
+          "csmoney": 114.03,
+          "marketcsgo": 127.123,
+          "whitemarket": 118.02
+        }
+      }
+    },
+    "time": 1783693325609
+  },
+  "range:9:718": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 9.66,
+          "csmoney": 9.24,
+          "marketcsgo": 11.068,
+          "skinbaron": 8.99,
+          "skinport": 10.42,
+          "whitemarket": 9.71
+        },
+        "stattrak": {
+          "csfloat": 14.08,
+          "csmoney": 13.12,
+          "gamerpaygg": 20.67,
+          "marketcsgo": 15.635,
+          "skinbaron": 12.85,
+          "skinport": 15.36,
+          "whitemarket": 15.48
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 2.15,
+          "csmoney": 1.98,
+          "marketcsgo": 2.203,
+          "skinbaron": 2.28,
+          "whitemarket": 2.22
+        },
+        "stattrak": {
+          "csfloat": 6,
+          "csmoney": 5.77,
+          "gamerpaygg": 9.94,
+          "marketcsgo": 6.488,
+          "skinbaron": 6.95,
+          "whitemarket": 5.83
+        }
+      }
+    },
+    "time": 1783693325611
+  },
+  "range:9:212": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 168.87,
+          "csmoney": 171,
+          "gamerpaygg": 472.72,
+          "marketcsgo": 193.948,
+          "skinbaron": 163.07,
+          "skinport": 176.18,
+          "whitemarket": 186.02
+        },
+        "stattrak": {
+          "csfloat": 343.7,
+          "csmoney": 367.23,
+          "marketcsgo": 389.52,
+          "skinbaron": 315,
+          "skinport": 675.4,
+          "whitemarket": 379.38
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 181.34,
+          "csmoney": 174.42,
+          "gamerpaygg": 182,
+          "marketcsgo": 197.453,
+          "skinbaron": 156.71,
+          "skinport": 267.64,
+          "whitemarket": 187.75
+        },
+        "stattrak": {
+          "csfloat": 345.53,
+          "csmoney": 337.59,
+          "marketcsgo": 399.89,
+          "whitemarket": 406.83
+        }
+      }
+    },
+    "time": 1783693325614
+  },
+  "range:9:51": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "MW",
+      "low": {
+        "normal": {
+          "csfloat": 510.42,
+          "csmoney": 502.61,
+          "marketcsgo": 540,
+          "skinbaron": 456.84,
+          "skinport": 531.28,
+          "whitemarket": 539.33
+        },
+        "stattrak": {
+          "csfloat": 876.62,
+          "csmoney": 1030.92,
+          "marketcsgo": 1014.272,
+          "skinbaron": 999,
+          "skinport": 810.45,
+          "whitemarket": 971.75
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 500,
+          "csmoney": 514.97,
+          "marketcsgo": 608.797,
+          "skinbaron": 900,
+          "skinport": 615.27,
+          "whitemarket": 557.27
+        },
+        "stattrak": {
+          "csfloat": 1400,
+          "csmoney": 1510.82,
+          "marketcsgo": 1483.488,
+          "skinbaron": 900,
+          "whitemarket": 1813.26
+        }
+      }
+    },
+    "time": 1783693325616
+  },
+  "range:9:1029": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 665,
+          "csmoney": 622.89,
+          "marketcsgo": 740,
+          "skinport": 740.98,
+          "whitemarket": 662.6
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 334.89,
+          "csmoney": 239.26,
+          "marketcsgo": 215.17,
+          "skinport": 202.75,
+          "whitemarket": 182.89
+        }
+      }
+    },
+    "time": 1783693325618
+  },
+  "range:9:424": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "WW",
+      "low": {
+        "normal": {
+          "csfloat": 6.44,
+          "csmoney": 6.47,
+          "gamerpaygg": 17.98,
+          "marketcsgo": 6.999,
+          "skinbaron": 5.38,
+          "skinport": 6.24,
+          "whitemarket": 6.53
+        },
+        "stattrak": {
+          "csfloat": 8.54,
+          "csmoney": 8.44,
+          "marketcsgo": 9.485,
+          "skinbaron": 8.07,
+          "skinport": 9.68,
+          "whitemarket": 9.58
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 2.18,
+          "csmoney": 2.16,
+          "marketcsgo": 2.592,
+          "skinbaron": 2.25,
+          "skinport": 2.48,
+          "whitemarket": 2.67
+        },
+        "stattrak": {
+          "csfloat": 6.49,
+          "csmoney": 8.44,
+          "marketcsgo": 7.975,
+          "skinbaron": 7.2,
+          "whitemarket": 6
+        }
+      }
+    },
+    "time": 1783693325619
+  },
+  "range:9:1467": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {}
+      },
+      "high": {
+        "normal": {}
+      }
+    },
+    "time": 1783693325621
+  },
+  "range:9:1346": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 30.8,
+          "csmoney": 32.88,
+          "marketcsgo": 36.096,
+          "skinbaron": 33.68,
+          "skinport": 32.58,
+          "whitemarket": 34.73
+        },
+        "stattrak": {
+          "csfloat": 67.04,
+          "csmoney": 68.48,
+          "marketcsgo": 77.959,
+          "skinport": 78.34,
+          "whitemarket": 71.35
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.88,
+          "csmoney": 3.91,
+          "gamerpaygg": 4.91,
+          "marketcsgo": 4.549,
+          "skinbaron": 3.99,
+          "skinport": 4.12,
+          "whitemarket": 4.26
+        },
+        "stattrak": {
+          "csfloat": 10.26,
+          "csmoney": 9.48,
+          "marketcsgo": 10.424,
+          "skinport": 11.16,
+          "whitemarket": 10.26
+        }
+      }
+    },
+    "time": 1783693325623
+  },
+  "range:9:1213": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 849,
+          "csmoney": 945,
+          "marketcsgo": 923.174,
+          "skinbaron": 1300,
+          "skinport": 1736.67,
+          "whitemarket": 916.86
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 61.09,
+          "csmoney": 60.06,
+          "marketcsgo": 70.771,
+          "skinbaron": 100,
+          "skinport": 81.04,
+          "whitemarket": 66.15
+        }
+      }
+    },
+    "time": 1783693325625
+  },
+  "range:9:1206": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 216.88,
+          "csmoney": 212.99,
+          "gamerpaygg": 350,
+          "marketcsgo": 256.999,
+          "skinbaron": 200,
+          "skinport": 88.29,
+          "whitemarket": 237.28
+        },
+        "stattrak": {
+          "csfloat": 409.68,
+          "csmoney": 405.21,
+          "gamerpaygg": 10,
+          "marketcsgo": 481.025,
+          "skinbaron": 450,
+          "skinport": 435.32,
+          "whitemarket": 442.44
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 39.96,
+          "csmoney": 39.42,
+          "gamerpaygg": 40.06,
+          "marketcsgo": 44.426,
+          "skinbaron": 35.56,
+          "skinport": 43.98,
+          "whitemarket": 41.77
+        },
+        "stattrak": {
+          "csfloat": 53.12,
+          "csmoney": 54.27,
+          "marketcsgo": 60.996,
+          "skinport": 56.8,
+          "whitemarket": 58.26
+        }
+      }
+    },
+    "time": 1783693325627
+  },
+  "range:9:1422": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {},
+        "stattrak": {}
+      },
+      "high": {
+        "normal": {},
+        "stattrak": {}
+      }
+    },
+    "time": 1783693325628
+  },
+  "range:9:1465": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {}
+      },
+      "high": {
+        "normal": {}
+      }
+    },
+    "time": 1783693325630
+  },
+  "range:9:1170": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 80.98,
+          "csmoney": 79.98,
+          "marketcsgo": 90.41,
+          "skinbaron": 76.99,
+          "skinport": 90.24,
+          "whitemarket": 87.84
+        },
+        "stattrak": {
+          "csfloat": 160.97,
+          "csmoney": 154.94,
+          "marketcsgo": 184.103,
+          "skinbaron": 151.55,
+          "skinport": 159.76,
+          "whitemarket": 170.49
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 23.79,
+          "csmoney": 23.24,
+          "gamerpaygg": 35.02,
+          "marketcsgo": 26.376,
+          "skinbaron": 20,
+          "skinport": 23.9,
+          "whitemarket": 26.04
+        },
+        "stattrak": {
+          "csfloat": 29.86,
+          "csmoney": 28.69,
+          "marketcsgo": 32.798,
+          "skinbaron": 30.41,
+          "skinport": 33.53,
+          "whitemarket": 31.67
+        }
+      }
+    },
+    "time": 1783693325632
+  },
+  "range:9:279": {
+    "data": {
+      "lowTier": "FT",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 113.51,
+          "csmoney": 113.47,
+          "gamerpaygg": 3999,
+          "marketcsgo": 126.985,
+          "skinbaron": 102.83,
+          "skinport": 116.11,
+          "whitemarket": 121.73
+        },
+        "stattrak": {
+          "csfloat": 235.18,
+          "csmoney": 234.83,
+          "gamerpaygg": 235,
+          "marketcsgo": 282.54,
+          "skinbaron": 219.96,
+          "skinport": 247.19,
+          "whitemarket": 258.46
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 73.39,
+          "csmoney": 73.2,
+          "gamerpaygg": 80,
+          "marketcsgo": 81.974,
+          "skinbaron": 69.99,
+          "skinport": 76.91,
+          "whitemarket": 79.31
+        },
+        "stattrak": {
+          "csfloat": 143.3,
+          "csmoney": 139.47,
+          "gamerpaygg": 201.4,
+          "marketcsgo": 161.96,
+          "skinbaron": 130,
+          "skinport": 136.62,
+          "whitemarket": 149.51
+        }
+      }
+    },
+    "time": 1783693325634
+  },
+  "range:9:1144": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 77.86,
+          "csmoney": 75.1,
+          "marketcsgo": 86.789,
+          "skinbaron": 73.18,
+          "skinport": 72.29,
+          "whitemarket": 82.56
+        },
+        "stattrak": {
+          "csfloat": 48,
+          "csmoney": 48.11,
+          "marketcsgo": 56,
+          "skinbaron": 47.01,
+          "skinport": 58.55,
+          "whitemarket": 55.5
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 29.9,
+          "csmoney": 28.79,
+          "marketcsgo": 32.944,
+          "skinbaron": 24.55,
+          "skinport": 24.31,
+          "whitemarket": 29.26
+        },
+        "stattrak": {
+          "csfloat": 22.95,
+          "csmoney": 22.72,
+          "marketcsgo": 25.381,
+          "skinport": 24.89,
+          "whitemarket": 24.33
+        }
+      }
+    },
+    "time": 1783693325637
+  },
+  "range:9:259": {
+    "data": {
+      "lowTier": "MW",
+      "highTier": "WW",
+      "low": {
+        "normal": {
+          "csfloat": 75,
+          "csmoney": 72.1,
+          "gamerpaygg": 899,
+          "marketcsgo": 81.258,
+          "skinbaron": 62.26,
+          "skinport": 73.32,
+          "whitemarket": 74.8
+        },
+        "stattrak": {
+          "csfloat": 137.7,
+          "csmoney": 145.86,
+          "gamerpaygg": 135,
+          "marketcsgo": 160.819,
+          "skinbaron": 141.43,
+          "skinport": 125.39,
+          "whitemarket": 153.9
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 43.84,
+          "csmoney": 44.09,
+          "marketcsgo": 51.345,
+          "skinport": 54.59,
+          "whitemarket": 50.39
+        },
+        "stattrak": {
+          "csfloat": 162.77,
+          "csmoney": 177.16,
+          "marketcsgo": 144.678,
+          "whitemarket": 252.26
+        }
+      }
+    },
+    "time": 1783693325639
+  },
+  "range:9:662": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 720,
+          "csmoney": 724.32,
+          "marketcsgo": 812.826,
+          "skinbaron": 680,
+          "whitemarket": 754.94
+        },
+        "stattrak": {
+          "csfloat": 859,
+          "gamerpaygg": 855.31,
+          "marketcsgo": 1044.915,
+          "skinbaron": 1199,
+          "whitemarket": 992.78
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 355.31,
+          "csmoney": 339.9,
+          "marketcsgo": 349.16,
+          "whitemarket": 354.09
+        },
+        "stattrak": {
+          "csfloat": 682.53,
+          "whitemarket": 943.58
+        }
+      }
+    },
+    "time": 1783693325641
+  },
+  "range:9:475": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 196.45,
+          "csmoney": 192.12,
+          "gamerpaygg": 270,
+          "marketcsgo": 222.207,
+          "skinbaron": 180.99,
+          "skinport": 196.82,
+          "whitemarket": 216.83
+        },
+        "stattrak": {
+          "csfloat": 244.78,
+          "csmoney": 297.89,
+          "marketcsgo": 285.922,
+          "skinbaron": 245,
+          "skinport": 326.93,
+          "whitemarket": 274.68
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 31.55,
+          "csmoney": 31.12,
+          "marketcsgo": 35.478,
+          "skinbaron": 28.26,
+          "skinport": 34,
+          "whitemarket": 33.71
+        },
+        "stattrak": {
+          "csfloat": 66.4,
+          "csmoney": 54.74,
+          "marketcsgo": 61.999,
+          "skinbaron": 52.95,
+          "whitemarket": 60.09
+        }
+      }
+    },
+    "time": 1783693325643
+  },
+  "range:9:525": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 103,
+          "csmoney": 127.26,
+          "marketcsgo": 114.658,
+          "skinbaron": 200,
+          "whitemarket": 103.8
+        },
+        "stattrak": {
+          "csfloat": 88.53,
+          "csmoney": 93.24,
+          "marketcsgo": 103.997,
+          "skinbaron": 164.87,
+          "whitemarket": 102.24
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 12.28,
+          "csmoney": 12.5,
+          "marketcsgo": 13.776,
+          "skinbaron": 11.99,
+          "whitemarket": 13.4
+        },
+        "stattrak": {
+          "csfloat": 24.08,
+          "csmoney": 25.18,
+          "gamerpaygg": 30.96,
+          "marketcsgo": 25.52,
+          "whitemarket": 22.88
+        }
+      }
+    },
+    "time": 1783693325645
+  },
+  "range:9:803": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 53.67,
+          "csmoney": 54.19,
+          "gamerpaygg": 63.79,
+          "marketcsgo": 57.403,
+          "skinbaron": 48.29,
+          "skinport": 56.73,
+          "whitemarket": 58
+        },
+        "stattrak": {
+          "csfloat": 91.43,
+          "csmoney": 96.31,
+          "marketcsgo": 108.474,
+          "skinbaron": 80,
+          "skinport": 80.59,
+          "whitemarket": 101.37
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 44.55,
+          "csmoney": 38.29,
+          "gamerpaygg": 47.05,
+          "marketcsgo": 43.68,
+          "skinbaron": 34.04,
+          "skinport": 41.14,
+          "whitemarket": 40.88
+        },
+        "stattrak": {
+          "csfloat": 55.75,
+          "csmoney": 50.84,
+          "marketcsgo": 58.412,
+          "whitemarket": 54.7
+        }
+      }
+    },
+    "time": 1783693325647
+  },
+  "range:9:640": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 28.57,
+          "csmoney": 29.59,
+          "gamerpaygg": 51.78,
+          "marketcsgo": 33.072,
+          "skinbaron": 26,
+          "skinport": 28.67,
+          "whitemarket": 31.33
+        },
+        "stattrak": {
+          "csfloat": 33.49,
+          "csmoney": 33.94,
+          "gamerpaygg": 2999,
+          "marketcsgo": 39.295,
+          "skinbaron": 32.69,
+          "skinport": 30.1,
+          "whitemarket": 37.92
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 11.42,
+          "csmoney": 11.02,
+          "marketcsgo": 12.896,
+          "skinbaron": 10.38,
+          "skinport": 13.09,
+          "whitemarket": 12.09
+        },
+        "stattrak": {
+          "csfloat": 23.4,
+          "csmoney": 22.31,
+          "marketcsgo": 22.856,
+          "skinport": 21.07,
+          "whitemarket": 22.72
+        }
+      }
+    },
+    "time": 1783693325649
+  },
+  "range:9:943": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 13.2,
+          "csmoney": 13.61,
+          "gamerpaygg": 9.99,
+          "marketcsgo": 14.601,
+          "skinbaron": 11.5,
+          "whitemarket": 13.33
+        },
+        "stattrak": {
+          "csfloat": 10.48,
+          "csmoney": 9.63,
+          "marketcsgo": 12.534,
+          "skinbaron": 11.35,
+          "whitemarket": 12.19
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.6,
+          "csmoney": 0.59,
+          "marketcsgo": 0.659,
+          "skinbaron": 0.51,
+          "skinport": 0.74,
+          "whitemarket": 0.65
+        },
+        "stattrak": {
+          "csfloat": 1.6,
+          "csmoney": 1.5,
+          "marketcsgo": 1.772,
+          "skinbaron": 1.91,
+          "skinport": 1.73,
+          "whitemarket": 1.79
+        }
+      }
+    },
+    "time": 1783693325651
+  },
+  "range:9:838": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 61.02,
+          "csmoney": 60.22,
+          "gamerpaygg": 48.33,
+          "marketcsgo": 65,
+          "skinbaron": 53.98,
+          "skinport": 53.81,
+          "whitemarket": 62.07
+        },
+        "stattrak": {
+          "csfloat": 40.36,
+          "csmoney": 44,
+          "gamerpaygg": 45.9,
+          "marketcsgo": 47.861,
+          "skinbaron": 38,
+          "skinport": 47.16,
+          "whitemarket": 44.88
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.14,
+          "csmoney": 3.15,
+          "marketcsgo": 3.566,
+          "skinbaron": 2.83,
+          "skinport": 3.61,
+          "whitemarket": 3.35
+        },
+        "stattrak": {
+          "csfloat": 5.96,
+          "csmoney": 5.87,
+          "marketcsgo": 7.151,
+          "skinbaron": 5.75,
+          "skinport": 6.02,
+          "whitemarket": 6.42
+        }
+      }
+    },
+    "time": 1783693325653
+  },
+  "range:9:887": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 540,
+          "csmoney": 961.99,
+          "marketcsgo": 624.477,
+          "skinbaron": 750,
+          "whitemarket": 562.11
+        },
+        "stattrak": {
+          "csfloat": 661.94,
+          "csmoney": 811.74,
+          "marketcsgo": 777,
+          "skinbaron": 690,
+          "whitemarket": 768.12
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 48.77,
+          "csmoney": 48.13,
+          "marketcsgo": 53.174,
+          "skinbaron": 39.5,
+          "skinport": 46.48,
+          "whitemarket": 50.16
+        },
+        "stattrak": {
+          "csfloat": 105.15,
+          "csmoney": 105.54,
+          "marketcsgo": 114.161,
+          "skinbaron": 97.71,
+          "whitemarket": 108.81
+        }
+      }
+    },
+    "time": 1783693325655
+  },
+  "range:9:917": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 182,
+          "csmoney": 180.6,
+          "marketcsgo": 210.61,
+          "skinbaron": 180,
+          "skinport": 217.69,
+          "whitemarket": 200.76
+        },
+        "stattrak": {
+          "csfloat": 277.7,
+          "csmoney": 292.08,
+          "marketcsgo": 329.815,
+          "skinbaron": 265.81,
+          "skinport": 266.45,
+          "whitemarket": 296.09
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 36.54,
+          "csmoney": 36.65,
+          "marketcsgo": 41.199,
+          "skinbaron": 31,
+          "skinport": 40.39,
+          "whitemarket": 38.81
+        },
+        "stattrak": {
+          "csfloat": 85.98,
+          "csmoney": 83.19,
+          "marketcsgo": 98.968,
+          "skinbaron": 79.88,
+          "whitemarket": 90.15
+        }
+      }
+    },
+    "time": 1783693325657
+  },
+  "range:9:181": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "FT",
+      "low": {
+        "normal": {
+          "csfloat": 196.36,
+          "csmoney": 191.93,
+          "marketcsgo": 215.709,
+          "skinbaron": 224.99,
+          "skinport": 232.1,
+          "whitemarket": 199.18
+        },
+        "stattrak": {
+          "csfloat": 123.5,
+          "csmoney": 120.85,
+          "marketcsgo": 153.335,
+          "skinbaron": 149.99,
+          "whitemarket": 143.17
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 22.82,
+          "csmoney": 22.7,
+          "marketcsgo": 25.479,
+          "skinbaron": 20.5,
+          "skinport": 25.29,
+          "whitemarket": 23.66
+        },
+        "stattrak": {
+          "csfloat": 35.67,
+          "csmoney": 42.99,
+          "marketcsgo": 41.811,
+          "skinbaron": 36.99,
+          "skinport": 37.05,
+          "whitemarket": 37.8
+        }
+      }
+    },
+    "time": 1783693325659
+  },
+  "range:9:344": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 11200,
+          "csmoney": 12946.29,
+          "marketcsgo": 13397.691,
+          "skinbaron": 12900,
+          "skinport": 12175.79,
+          "whitemarket": 12358.24
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 4449.7,
+          "csmoney": 4786.13,
+          "marketcsgo": 4952.096,
+          "whitemarket": 5034.99
+        }
+      }
+    },
+    "time": 1783693325661
+  },
+  "range:9:446": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 4488,
+          "csmoney": 4573.9,
+          "marketcsgo": 5249.431,
+          "whitemarket": 4869.38
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1750,
+          "csmoney": 1749.44,
+          "marketcsgo": 2029.99,
+          "skinbaron": 1399.99,
+          "skinport": 2158.83,
+          "whitemarket": 1931.59
+        }
+      }
+    },
+    "time": 1783693325663
+  },
+  "range:9:137": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 118.97,
+          "csmoney": 120.95,
+          "marketcsgo": 138.731,
+          "skinbaron": 150,
+          "skinport": 140.44,
+          "whitemarket": 133.33
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 18.51,
+          "csmoney": 18.99,
+          "gamerpaygg": 81.13,
+          "marketcsgo": 21.336,
+          "skinbaron": 16,
+          "skinport": 19.37,
+          "whitemarket": 20.96
+        }
+      }
+    },
+    "time": 1783693325665
+  },
+  "range:9:1280": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 59.53,
+          "csmoney": 58.99,
+          "gamerpaygg": 100,
+          "marketcsgo": 63.492,
+          "skinbaron": 60,
+          "skinport": 63.45,
+          "whitemarket": 65.17
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 5.2,
+          "csmoney": 4.95,
+          "marketcsgo": 5.715,
+          "skinbaron": 6.95,
+          "skinport": 6.95,
+          "whitemarket": 5.94
+        }
+      }
+    },
+    "time": 1783693325668
+  },
+  "range:9:691": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 23.4,
+          "csmoney": 23.64,
+          "gamerpaygg": 110.47,
+          "marketcsgo": 26.13,
+          "skinbaron": 21.3,
+          "skinport": 25.47,
+          "whitemarket": 24.35
+        },
+        "stattrak": {
+          "csfloat": 19.42,
+          "csmoney": 18.88,
+          "gamerpaygg": 25.12,
+          "marketcsgo": 22.963,
+          "skinbaron": 18.43,
+          "skinport": 21.28,
+          "whitemarket": 21.5
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.3,
+          "csmoney": 3.23,
+          "marketcsgo": 3.679,
+          "skinbaron": 3.94,
+          "skinport": 3.86,
+          "whitemarket": 3.6
+        },
+        "stattrak": {
+          "csfloat": 6.83,
+          "csmoney": 6.28,
+          "gamerpaygg": 6.51,
+          "marketcsgo": 8.633,
+          "skinbaron": 5.8,
+          "whitemarket": 7.21
+        }
+      }
+    },
+    "time": 1783693325670
+  },
+  "range:9:736": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 2775,
+          "csmoney": 2870.37,
+          "gamerpaygg": 3500,
+          "marketcsgo": 3375.109,
+          "skinbaron": 4000,
+          "skinport": 2720.78,
+          "whitemarket": 2987.63
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1903.74,
+          "csmoney": 2359.69,
+          "marketcsgo": 2102.284,
+          "skinbaron": 1799.99,
+          "whitemarket": 1993.8
+        }
+      }
+    },
+    "time": 1783693325673
+  },
+  "range:9:975": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 53.37,
+          "csmoney": 53.11,
+          "gamerpaygg": 56.73,
+          "marketcsgo": 62.528,
+          "skinbaron": 50,
+          "skinport": 62.29,
+          "whitemarket": 58.79
+        },
+        "stattrak": {
+          "csfloat": 34.29,
+          "csmoney": 34.73,
+          "marketcsgo": 42.29,
+          "skinbaron": 42,
+          "skinport": 43.72,
+          "whitemarket": 39.93
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 4.26,
+          "csmoney": 4.18,
+          "marketcsgo": 4.748,
+          "skinbaron": 3.86,
+          "skinport": 4.05,
+          "whitemarket": 4.48
+        },
+        "stattrak": {
+          "csfloat": 8.46,
+          "csmoney": 12.44,
+          "marketcsgo": 8.9,
+          "skinbaron": 7.96,
+          "whitemarket": 8.14
+        }
+      }
+    },
+    "time": 1783693325675
+  },
+  "range:9:756": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 12000,
+          "csmoney": 14607.59,
+          "marketcsgo": 14253.04,
+          "whitemarket": 12769.65
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 6100,
+          "csmoney": 7090.72,
+          "gamerpaygg": 7000,
+          "marketcsgo": 6857.265,
+          "whitemarket": 6264.26
+        }
+      }
+    },
+    "time": 1783693325678
+  },
+  "range:9:819": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1679.88,
+          "csmoney": 1830.68,
+          "gamerpaygg": 3000,
+          "marketcsgo": 1879.999,
+          "skinbaron": 3199,
+          "skinport": 2871.29,
+          "whitemarket": 1741.25
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 1030,
+          "csmoney": 1030.74,
+          "marketcsgo": 1319.364,
+          "whitemarket": 1156.15
+        }
+      }
+    },
+    "time": 1783693325680
+  },
+  "range:9:1222": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 16,
+          "csmoney": 15.54,
+          "gamerpaygg": 35,
+          "marketcsgo": 17.458,
+          "skinbaron": 14.2,
+          "skinport": 17.04,
+          "whitemarket": 17.47
+        },
+        "stattrak": {
+          "csfloat": 22.48,
+          "csmoney": 22.69,
+          "gamerpaygg": 31.84,
+          "marketcsgo": 27.177,
+          "skinbaron": 42.96,
+          "skinport": 24.72,
+          "whitemarket": 25.08
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 2.72,
+          "csmoney": 2.73,
+          "gamerpaygg": 5,
+          "marketcsgo": 3.064,
+          "skinbaron": 2.45,
+          "skinport": 2.77,
+          "whitemarket": 2.81
+        },
+        "stattrak": {
+          "csfloat": 4.5,
+          "csmoney": 4.4,
+          "marketcsgo": 5.212,
+          "skinbaron": 5.68,
+          "whitemarket": 4.91
+        }
+      }
+    },
+    "time": 1783693325683
+  },
+  "range:9:584": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "WW",
+      "low": {
+        "normal": {
+          "csfloat": 15,
+          "csmoney": 15.22,
+          "gamerpaygg": 12.99,
+          "marketcsgo": 17.121,
+          "skinbaron": 13.91,
+          "skinport": 14.47,
+          "whitemarket": 15.02
+        },
+        "stattrak": {
+          "csfloat": 8.19,
+          "csmoney": 7.98,
+          "marketcsgo": 9.645,
+          "skinbaron": 7.83,
+          "skinport": 9.81,
+          "whitemarket": 9.44
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.4,
+          "csmoney": 3.02,
+          "marketcsgo": 3.365,
+          "skinbaron": 3.5,
+          "whitemarket": 3.48
+        },
+        "stattrak": {
+          "csfloat": 12.76,
+          "csmoney": 14.7,
+          "marketcsgo": 13.231,
+          "skinbaron": 44.08,
+          "skinport": 16.31,
+          "whitemarket": 12.55
+        }
+      }
+    },
+    "time": 1783693325685
+  },
+  "range:9:1239": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 28.38,
+          "csmoney": 26.87,
+          "marketcsgo": 32.03,
+          "skinbaron": 25,
+          "skinport": 27.13,
+          "whitemarket": 29.49
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 3.25,
+          "csmoney": 2.96,
+          "marketcsgo": 3.429,
+          "skinbaron": 6.98,
+          "skinport": 3.6,
+          "whitemarket": 3.09
+        }
+      }
+    },
+    "time": 1783693325687
+  },
+  "range:9:163": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 931.63,
+          "csmoney": 1078.32,
+          "marketcsgo": 1099.999,
+          "skinbaron": 1019,
+          "whitemarket": 986.2
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 117,
+          "csmoney": 111.02,
+          "gamerpaygg": 180,
+          "marketcsgo": 124.29,
+          "skinbaron": 121,
+          "whitemarket": 118.63
+        }
+      }
+    },
+    "time": 1783693325689
+  },
+  "range:9:174": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "FT",
+      "low": {
+        "normal": {
+          "csfloat": 387.41,
+          "csmoney": 411.59,
+          "gamerpaygg": 590,
+          "marketcsgo": 497.995,
+          "skinbaron": 600,
+          "whitemarket": 432.27
+        },
+        "stattrak": {
+          "csfloat": 777.77,
+          "csmoney": 900,
+          "marketcsgo": 976.344,
+          "skinbaron": 999,
+          "whitemarket": 773.52
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 107.36,
+          "csmoney": 109.14,
+          "marketcsgo": 126.979,
+          "skinbaron": 94.99,
+          "skinport": 131.19,
+          "whitemarket": 114.92
+        },
+        "stattrak": {
+          "csfloat": 178.58,
+          "csmoney": 179.62,
+          "gamerpaygg": 190,
+          "marketcsgo": 215.237,
+          "skinbaron": 288.88,
+          "whitemarket": 197.52
+        }
+      }
+    },
+    "time": 1783693325691
+  },
+  "range:9:84": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 177.08,
+          "csmoney": 165.23,
+          "gamerpaygg": 250,
+          "marketcsgo": 201.714,
+          "skinbaron": 199,
+          "whitemarket": 178.06
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 27.87,
+          "csmoney": 25.78,
+          "marketcsgo": 30.929,
+          "whitemarket": 28.79
+        }
+      }
+    },
+    "time": 1783693325694
+  },
+  "range:9:227": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "WW",
+      "low": {
+        "normal": {
+          "csfloat": 140.86,
+          "csmoney": 133.1,
+          "gamerpaygg": 190,
+          "marketcsgo": 151.384,
+          "skinbaron": 179.99,
+          "skinport": 147.99,
+          "whitemarket": 150.24
+        },
+        "stattrak": {
+          "csfloat": 99,
+          "csmoney": 100.84,
+          "gamerpaygg": 97,
+          "marketcsgo": 118.819,
+          "skinbaron": 88,
+          "skinport": 124.99,
+          "whitemarket": 114.36
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 38.39,
+          "csmoney": 36.38,
+          "marketcsgo": 40.635,
+          "whitemarket": 42.98
+        },
+        "stattrak": {
+          "csfloat": 61.82,
+          "marketcsgo": 84.383,
+          "whitemarket": 69.79
+        }
+      }
+    },
+    "time": 1783693325695
+  },
+  "range:9:788": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 25.02,
+          "csmoney": 24.11,
+          "marketcsgo": 27.28,
+          "skinbaron": 23.61,
+          "skinport": 27.96,
+          "whitemarket": 26.53
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.68,
+          "csmoney": 0.7,
+          "marketcsgo": 0.79,
+          "skinbaron": 1.5,
+          "skinport": 0.45,
+          "whitemarket": 0.73
+        }
+      }
+    },
+    "time": 1783693325698
+  },
+  "range:9:251": {
+    "data": {
+      "lowTier": "MW",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1.45,
+          "csmoney": 1.49,
+          "gamerpaygg": 1.29,
+          "marketcsgo": 1.637,
+          "skinbaron": 1.35,
+          "skinport": 1.45,
+          "whitemarket": 1.53
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.85,
+          "csmoney": 0.87,
+          "marketcsgo": 0.965,
+          "skinbaron": 0.88,
+          "skinport": 1.02,
+          "whitemarket": 0.94
+        }
+      }
+    },
+    "time": 1783693325700
+  },
+  "range:9:1058": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "WW",
+      "low": {
+        "normal": {
+          "csfloat": 70.97,
+          "csmoney": 69.14,
+          "marketcsgo": 79.218,
+          "skinbaron": 64.45,
+          "skinport": 81.59,
+          "whitemarket": 74.73
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 10.99,
+          "csmoney": 11.14,
+          "marketcsgo": 12.03,
+          "skinbaron": 8.28,
+          "whitemarket": 10.74
+        }
+      }
+    },
+    "time": 1783693325702
+  },
+  "range:9:1324": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 1.18,
+          "csmoney": 1.28,
+          "marketcsgo": 1.294,
+          "skinbaron": 2.23,
+          "skinport": 1.25,
+          "whitemarket": 1.26
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.43,
+          "csmoney": 0.37,
+          "marketcsgo": 0.394,
+          "skinbaron": 0.38,
+          "whitemarket": 0.34
+        }
+      }
+    },
+    "time": 1783693325704
+  },
+  "range:9:451": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 80.48,
+          "csmoney": 81.12,
+          "gamerpaygg": 155.36,
+          "marketcsgo": 90.805,
+          "skinbaron": 77.23,
+          "skinport": 85.81,
+          "whitemarket": 86.41
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 20.76,
+          "csmoney": 19.85,
+          "marketcsgo": 23.382,
+          "skinbaron": 45,
+          "whitemarket": 23.68
+        }
+      }
+    },
+    "time": 1783693325706
+  },
+  "range:9:1378": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {}
+      },
+      "high": {
+        "normal": {}
+      }
+    },
+    "time": 1783693325708
+  },
+  "range:9:1356": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {}
+      },
+      "high": {
+        "normal": {}
+      }
+    },
+    "time": 1783693325710
+  },
+  "range:9:72": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 13.31,
+          "csmoney": 12.61,
+          "marketcsgo": 15.429,
+          "skinbaron": 13.47,
+          "skinport": 13.79,
+          "whitemarket": 13.86
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 0.15,
+          "csmoney": 0.19,
+          "gamerpaygg": 19.98,
+          "marketcsgo": 0.174,
+          "skinbaron": 0.15,
+          "skinport": 0.21,
+          "whitemarket": 0.15
+        }
+      }
+    },
+    "time": 1783693325712
+  },
+  "range:9:30": {
+    "data": {
+      "lowTier": "FN",
+      "highTier": "BS",
+      "low": {
+        "normal": {
+          "csfloat": 417.28,
+          "csmoney": 430.99,
+          "marketcsgo": 433.999,
+          "skinbaron": 339,
+          "whitemarket": 412.91
+        }
+      },
+      "high": {
+        "normal": {
+          "csfloat": 110.9,
+          "csmoney": 84.35,
+          "marketcsgo": 90.085,
+          "whitemarket": 85.35
+        }
+      }
+    },
+    "time": 1783693325714
+  },
+  "9:395": {
+    "data": {
+      "MW": {
+        "normal": {
+          "csfloat": 107.26,
+          "csmoney": 107.61,
+          "marketcsgo": 124.23,
+          "skinbaron": 100,
+          "skinport": 98.9,
+          "whitemarket": 116.49
+        },
+        "stattrak": {
+          "csfloat": 114.24,
+          "csmoney": 110.53,
+          "gamerpaygg": 180,
+          "marketcsgo": 130.366,
+          "skinbaron": 125.99,
+          "skinport": 141.1,
+          "whitemarket": 122.96
+        }
+      },
+      "FT": {
+        "normal": {
+          "csfloat": 110.23,
+          "csmoney": 106.82,
+          "gamerpaygg": 120,
+          "marketcsgo": 126.511,
+          "skinbaron": 97.97,
+          "skinport": 119.44,
+          "whitemarket": 118.43
+        },
+        "stattrak": {
+          "csfloat": 133.05,
+          "csmoney": 114.03,
+          "marketcsgo": 127.123,
+          "whitemarket": 118.02
+        }
+      }
+    },
+    "time": 1783693345885
+  }
+}

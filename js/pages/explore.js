@@ -3,6 +3,7 @@ import { getWeapons } from '../api/weapons.js';
 import { getStickerCapsules, getSouvenirPackages, getNonTournamentStickerCapsules, getCases } from '../api/crates.js';
 import { getCollections } from '../api/collections.js';
 import { getAgents, getCharms, getPatches, getMusicKits, getGraffiti, getPins } from '../api/collectibles.js';
+import { getPricesForWeapon } from '../api/prices.js';
 
 console.log(await getStickerCapsules(), await getSouvenirPackages(), await getNonTournamentStickerCapsules(), await getCases(), await getSkins(), await getAgents(), await getCharms(), await getPatches(), await getMusicKits(), await getGraffiti(), await getPins(), await getCollections());
 
@@ -141,9 +142,11 @@ function renderCategorySidebar() {
             </svg>
             <input class="sideBarSearch" type="text" placeholder="Search weapons, cases, collections..." autocomplete="off">
         </div>
-        ${weaponBtns}
-        ${crateBtns}
-        <button class="category-sidebar-btn" data-target="category-collectibles">Other</button>
+        <div class="category-sidebar-list">
+            ${weaponBtns}
+            ${crateBtns}
+            <button class="category-sidebar-btn" data-target="category-collectibles">Other</button>
+        </div>
     </nav>`;
 }
 const rarityMaps = {
@@ -167,15 +170,37 @@ const rarityMaps = {
     "Distinguished": 15,
 };
 
-//creates the card for the skin
-export function renderSkinCard(skins, weapon) {
+//lowest price across whatever marketplaces actually had data for one wear tier's cell; null if none did
+function lowestPrice(marketPrices) {
+    if (!marketPrices) return null;
+    const values = Object.values(marketPrices);
+    return values.length ? Math.min(...values) : null;
+}
+
+//"£highestWear -> £lowestWear", e.g. Battle-Scarred's price -> Factory New's price (or whatever the
+//skin's own float range actually spans). range is one entry from getPricesForWeapon, or undefined
+//if prices haven't loaded/failed - falls back to "…"/"N/A" like the detail page
+function priceRangeText(range, variant) {
+    if (!range) return '…';
+    const lowestWearPrice = lowestPrice(range.low?.[variant]); //range.low = the lowest-float tier (best condition, e.g. FN)
+    const highestWearPrice = lowestPrice(range.high?.[variant]); //range.high = the highest-float tier (worst condition, e.g. BS)
+    if (lowestWearPrice == null && highestWearPrice == null) return 'N/A';
+    if (range.lowTier === range.highTier || lowestWearPrice === highestWearPrice) return `£${(lowestWearPrice ?? highestWearPrice).toFixed(2)}`;
+    return `£${(highestWearPrice ?? 0).toFixed(2)} -> £${(lowestWearPrice ?? 0).toFixed(2)}`;
+}
+
+//creates the card for the skin. prices is the result of getPricesForWeapon (keyed by "defIndex-paintIndex"),
+//or null while it's still loading - each card shows "…" until it resolves, same loading pattern as the detail page
+export function renderSkinCard(skins, weapon, prices) {
 
     sortByRarity(skins, sortDescending)
 
     if (skins.length === 0) {
         return `<p class="explore-empty">No skins available for ${weapon} yet.</p>`; //if there isnt any skins dont load a skincard
     }
-    return skins.map(s => `
+    return skins.map(s => {
+        const range = prices?.[`${s.defIndex}-${s.paintIndex}`];
+        return `
         <div class="skin-card" data-def="${s.defIndex}" data-paint="${s.paintIndex}" style="background: ${rarityGradient(s.rarity.color)}">
             <span class="skin-rarity">${s.rarity.name}</span>
             ${s.image ? `<img class="skin-img" src="${s.image}" alt="${s.weapon} | ${s.name}">` : '<div class="skin-img-placeholder"></div>'}
@@ -192,14 +217,15 @@ export function renderSkinCard(skins, weapon) {
                     ${s.souvenir ? '<span class="skin-badge skin-badge--souvenir">Souvenir</span>' : ''}
                 </div>
                     <div class="skinCardPrices">
-                        <p class="skinCardPriceNormal">£10 -> £20</p>
-                        ${s.stattrak ? '<p class="skinCardPriceStattrak">£20 -> £30</p>' : ''}
-                        ${s.souvenir ? '<p class="skinCardPriceSouvenir">£30 -> £40</p>' : ''}
+                        <p class="skinCardPriceNormal">${priceRangeText(range, 'normal')}</p>
+                        ${s.stattrak ? `<p class="skinCardPriceStattrak">${priceRangeText(range, 'stattrak')}</p>` : ''}
+                        ${s.souvenir ? '<p class="skinCardPriceSouvenir">Unavailable</p>' : ''}
                     </div>
                     <a class="csfloat-link" href="https://csfloat.com/search?def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 //creates the card for an item inside a capsule/souvenir/case/collection (sticker or skin, both are just name + image here)
@@ -245,7 +271,7 @@ function renderCrateContentsCard(items, crateName, skins) {
                     <div class="skinCardPrices">
                         <p class="skinCardPriceNormal">£10 -> £20</p>
                         ${stattrak ? '<p class="skinCardPriceStattrak">£20 -> £30</p>' : ''}
-                        ${souvenir ? '<p class="skinCardPriceSouvenir">£40 -> £50</p>' : ''}
+                        ${souvenir ? '<p class="skinCardPriceSouvenir">Unavailable</p>' : ''}
                     </div>
                     ${csfloatLink ? `<a class="csfloat-link" href="${csfloatLink}" target="_blank" rel="noopener">View on CSFloat</a>` : ''}
                 </div>
@@ -444,8 +470,22 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
         return getSkinsByWeapon(weapon).then(skins => {
             const grid = document.getElementById('skinGrid');
             if (!grid) return;
-            grid.innerHTML = renderSkinCard(skins, weapon); //adds the skin name and weapon name to the skincard
+            grid.innerHTML = renderSkinCard(skins, weapon, null); //adds the skin name and weapon name to the skincard - prices start as "…" and fill in below
             attachSkinCardNav(grid);
+
+            //fetched separately from the skins themselves so the grid appears immediately and prices fill in
+            //once they resolve, rather than blocking the whole page behind however long ~60 skins' worth of prices take
+            getPricesForWeapon(weapon).then(prices => {
+                const grid = document.getElementById('skinGrid');
+                if (!grid) return;
+                grid.innerHTML = renderSkinCard(skins, weapon, prices);
+                attachSkinCardNav(grid);
+            }).catch(() => {
+                const grid = document.getElementById('skinGrid');
+                if (!grid) return;
+                grid.innerHTML = renderSkinCard(skins, weapon, {});
+                attachSkinCardNav(grid);
+            });
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
             if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load skins.</p>`; //if skins fail to load
