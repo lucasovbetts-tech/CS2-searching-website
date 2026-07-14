@@ -47,7 +47,7 @@ function navigate() {
     const param  = getRouteParam();
     const render = ROUTES[route] ?? renderHome;
     const hash   = window.location.hash; //capture now, in case it changes again before render finishes
-    const result = render(param); //render is for example "renderHome" and param is for example "AK-47"
+    const result = render(param);
     updateActiveNav(route);
 
     const skipRestore = forceTop;
@@ -56,15 +56,13 @@ function navigate() {
     //Promise.resolve on a non-promise (what the synchronous pages return) resolves immediately,
     //so this waits for real content on async pages (explore.js) without guessing at timing
     Promise.resolve(result).then(() => {
-        if (skipRestore) { scrollTo(0, 0); return; } //nav-bar click: always start at the top of the section
+        if (skipRestore) { scrollTo(0, 0); return; }
         const saved = localStorage.getItem('scroll:' + hash);
         scrollTo(0, saved ? Number(saved) : 0);
     });
 }
 
-//changes the page
 export function initRouter() {
-    // Wire nav buttons to hash navigation
     document.querySelectorAll('.nav-btn[data-route]').forEach(btn => {
         btn.addEventListener('click', () => {
             forceTop = true;

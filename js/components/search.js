@@ -6,7 +6,6 @@ import { getAgents, getCharms, getPatches, getMusicKits, getGraffiti, getPins, g
 
 const CATEGORIES = ['all', 'cases', 'collections', 'pistols', 'smgs', 'rifles', 'heavy', 'knives', 'gloves'];
 
-//arrow thingymabob for dropdowns
 const CHEVRON = `<svg class="cat-chevron" viewBox="0 0 24 24" fill="none">
     <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`;
@@ -18,7 +17,6 @@ export function syncSearchWidth() {
     search.style.width = cats.offsetWidth + 'px';
 }
 
-// ADDS THE WEAPONS TO THE DROPDOWNS
 async function populateDropdowns() {
     let weapons;
     let cases;
@@ -30,7 +28,7 @@ async function populateDropdowns() {
 
     const categoryData = { ...weapons, cases, collections }; //combines weapon-type categories with cases/collections into one lookup
 
-    CATEGORIES.filter(c => c !== 'all').forEach(cat => { //REMOVES ALL FROM CATEGORIES
+    CATEGORIES.filter(c => c !== 'all').forEach(cat => {
         const el = document.getElementById(`drop-${cat}`);
         if (!el || !categoryData[cat]) return;
         el.innerHTML = categoryData[cat]

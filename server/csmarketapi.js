@@ -14,12 +14,13 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
 async function fetchAggregateOnce(name) {
     const params = new URLSearchParams({ market_hash_name: name, key: CSMARKETAPI_KEY, currency: 'USD' });
     for (const m of MARKETS) params.append('markets', m);
 
     const res = await fetch(`https://api.csmarketapi.com/v1/listings/latest/aggregate?${params}`);
-    if (res.status === 404) return {}; // not every wear/variant combo actually exists as a real listed item
+    if (res.status === 404) return {}; // not every wear/variant combo exists as a real listed item - not a failure
 
     if (!res.ok) throw new Error(`CSMarketAPI request failed: ${res.status}`);
 
@@ -31,8 +32,7 @@ async function fetchAggregateOnce(name) {
     return prices;
 }
 
-//retries transient failures (e.g. the odd 403 we saw under heavy request load) before giving up on this one cell.
-//404 isn't retried above - it means "no listing exists", not a failure - so it never reaches here
+//retries transient failures (e.g. the odd 403 seen under heavy request load) before giving up on this cell
 async function fetchAggregate(name) {
     let lastErr;
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
@@ -46,8 +46,7 @@ async function fetchAggregate(name) {
     throw lastErr;
 }
 
-//fetches one tier's price across every variant the skin has, tolerating per-cell failures instead of
-//throwing - hadFailure tells the caller not to cache a result that includes a failed cell
+//hadFailureRef flags a failed cell so the caller skips caching this result
 async function fetchTierPrices(skin, tier, variants, hadFailureRef) {
     const cell = {};
     for (const variant of variants) {
@@ -63,11 +62,8 @@ async function fetchTierPrices(skin, tier, variants, hadFailureRef) {
     return cell;
 }
 
-//full wear-tier x variant grid, each cell aggregated across every marketplace CSMarketAPI covers in one
-//request — no per-item batching exists on this API, but the 1M/month quota makes that a non-issue.
+//no per-item batching exists on this API, but the 1M/month quota makes that a non-issue.
 //souvenir is skipped: same spotty coverage problem seen on CSFloat (tested "Souvenir AK-47 | Redline" -> 404)
-//returns { prices, hadFailure } - hadFailure tells the caller not to cache this result, since a cell
-//that failed (as opposed to genuinely having no listings) shouldn't get remembered as fact for a whole cache window
 export async function getCsMarketApiPrices(skin) {
     const tiers = wearTiersFor(skin);
     const variants = ['normal', ...(skin.stattrak ? ['stattrak'] : [])];
@@ -80,9 +76,8 @@ export async function getCsMarketApiPrices(skin) {
     return { prices, hadFailure: hadFailureRef.value };
 }
 
-//just the 2 extreme wear tiers (lowest float = best condition, highest float = worst) instead of the
-//full grid - built for skin-card price ranges (e.g. a weapon page showing all its skins at once),
-//where fetching every tier for every card would be far more requests than the range actually needs
+//just the 2 extreme wear tiers, not the full grid - built for skin-card price ranges (e.g. a weapon page
+//showing all its skins at once), where fetching every tier for every card would be far more requests than needed
 export async function getPriceRangeForSkin(skin) {
     const tiers = wearTiersFor(skin);
     if (!tiers.length) return { lowTier: null, highTier: null, low: {}, high: {}, hadFailure: false };
@@ -113,8 +108,7 @@ async function mapWithConcurrency(items, limit, fn) {
 
 const RANGE_CONCURRENCY = 10;
 
-//fetches price ranges for many skins at once (e.g. every skin of one weapon), capped at a modest
-//concurrency so a big weapon page doesn't fire dozens of requests all at the exact same instant
+//capped concurrency so a big weapon page doesn't fire dozens of requests all at the exact same instant
 export async function getPriceRangesForSkins(skins) {
     return mapWithConcurrency(skins, RANGE_CONCURRENCY, getPriceRangeForSkin);
 }

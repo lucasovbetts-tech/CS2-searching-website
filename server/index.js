@@ -1,13 +1,13 @@
-import './env.js'; //loads the secret keys - must be the first import, see the comment in that file
-import express from 'express'; //creates the backend server
-import cors from 'cors'; //lets frontend access the backend
+import './env.js'; // must stay the first import - see env.js
+import express from 'express';
+import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { getCsMarketApiPrices, getPriceRangesForSkins } from './csmarketapi.js';
 import { getCached, setCached } from './cache.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url)); //gets the file url, converts it to a path then gets the folder the file is in
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const SKINS_PATH = path.join(ROOT, 'data', 'skins.json');
 
@@ -16,8 +16,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 
 // serves the frontend from the same origin as the API, so prices.js never needs an
-// environment-specific backend URL. Only the folders the frontend actually references —
-// never server/ itself, which holds .env
+// environment-specific backend URL - never server/ itself, which holds .env
 app.use('/css', express.static(path.join(ROOT, 'css')));
 app.use('/js', express.static(path.join(ROOT, 'js')));
 app.use('/data', express.static(path.join(ROOT, 'data')));
@@ -61,8 +60,8 @@ app.get('/api/price', async (req, res) => {
     }
 });
 
-//price range (lowest wear -> highest wear, per variant) for every skin of one weapon at once - built
-//for weapon pages like "AK-47" (61 skins), not the full grid getCsMarketApiPrices gives one skin
+//price range for every skin of one weapon at once - built for weapon pages, not the full
+//grid getCsMarketApiPrices gives one skin
 app.get('/api/prices/weapon', async (req, res) => {
     const weapon = req.query.weapon;
     if (!weapon) return res.status(400).json({ error: 'weapon query param is required' });

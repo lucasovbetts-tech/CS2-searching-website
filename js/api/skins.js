@@ -8,7 +8,6 @@ export async function getSkins() {
     return _cache;
 }
 
-//returns all of the skins in a cat so if weapon = ak it returns all of the ak skins
 export async function getSkinsByWeapon(weapon) {
     const skins = await getSkins();
     return skins.filter(s => s.weapon === weapon);

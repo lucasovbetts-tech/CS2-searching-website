@@ -7,7 +7,6 @@ import { getPricesForWeapon } from '../api/prices.js';
 
 console.log(await getStickerCapsules(), await getSouvenirPackages(), await getNonTournamentStickerCapsules(), await getCases(), await getSkins(), await getAgents(), await getCharms(), await getPatches(), await getMusicKits(), await getGraffiti(), await getPins(), await getCollections());
 
-//scales a hex color's RGB channels down toward black by `factor` (0-1), e.g. darken('#ffd700', 0.4) -> a dimmer gold
 function darken(hex, factor) {
     const r = parseInt(hex.slice(1, 3), 16);
     const g = parseInt(hex.slice(3, 5), 16);
@@ -15,12 +14,10 @@ function darken(hex, factor) {
     return `rgb(${Math.round(r * factor)}, ${Math.round(g * factor)}, ${Math.round(b * factor)})`;
 }
 
-//builds the same "glow behind the item, fading to near-black at the edges" look for any rarity color
 function rarityGradient(hex) {
     return `radial-gradient(ellipse at 50% 35%, ${hex} 0%, ${darken(hex, 0.4)} 55%, ${darken(hex, 0.1)} 100%)`;
 }
 
-//rendering the sticker capsules and souvenir packages
 function renderCrateSection (items, title) {
     let goldItems = []
     const cards = items.map(i => {
@@ -44,7 +41,6 @@ function renderCrateSection (items, title) {
     </section>`;
 }
 
-//turns a title like "Sticker Capsules" into "sticker-capsules", to build/match section ids consistently
 function slugify(title) {
     return title.toLowerCase().replace(/\s+/g, '-');
 }
@@ -60,17 +56,16 @@ function explorePageSorting(skins, weaponData) {
     sortByRarity(skins); //so the first skin.find() hits for a weapon is the rarest one, not just whatever order the API returned
 
     const counts = {};
-    skins.forEach(s => { counts[s.weapon] = (counts[s.weapon] ?? 0) + 1; }); //counts the amount of skins per weapon
+    skins.forEach(s => { counts[s.weapon] = (counts[s.weapon] ?? 0) + 1; });
 
-    return categoryOrder.map(category => { //loops through categoryOrder in the order we defined, e.g. "knives", "gloves", "pistols", ...
-        const weapons = weaponData[category]; //looks up the weapons array for this category, e.g. weaponData["pistols"]
+    return categoryOrder.map(category => {
+        const weapons = weaponData[category];
 
-        const cards = weapons.map(w => { //loops through each weapon in the category
+        const cards = weapons.map(w => {
             const weapon = w.name;
             const count = counts[weapon] ?? 0;
             const img = skins.find(s => s.weapon === weapon)?.image;
 
-            //creates the card for the weapon categories on the explore page
             return `
             <button class="weapon-card" data-weapon="${weapon}">
                 ${img ? `<img class="weapon-card-img" src="${img}" alt="${weapon}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
@@ -79,7 +74,6 @@ function explorePageSorting(skins, weaponData) {
             </button>`;
         }).join('');
 
-        //capitalize first letter
         let weaponCat = nameMap[category] || category[0].toUpperCase() + category.slice(1);
 
         return `
@@ -90,7 +84,7 @@ function explorePageSorting(skins, weaponData) {
     }).join('');
 }
 
-//lets you click a skin/sticker/collectible card to open its detail page; ignores clicks on the CSFloat link so that keeps working on its own
+//ignores clicks on the CSFloat link so that keeps working on its own
 function attachSkinCardNav(grid) {
     grid.addEventListener('click', e => {
         if (e.target.closest('.csfloat-link')) return;
@@ -102,7 +96,6 @@ function attachSkinCardNav(grid) {
     });
 }
 
-//animates scrolling to targetY over `duration` ms, using an ease-out curve (starts fast, slows near the end)
 function smoothScrollTo(targetY, duration = 600) {
     const startY = window.scrollY;
     const distance = targetY - startY;
@@ -110,18 +103,17 @@ function smoothScrollTo(targetY, duration = 600) {
 
     function step(currentTime) {
         const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1); //0 at the start, 1 once the duration's up
+        const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3); //ease-out cubic
 
         window.scrollTo(0, (startY + distance * eased)-200);
 
-        if (progress < 1) requestAnimationFrame(step); //keep going until we hit the target
+        if (progress < 1) requestAnimationFrame(step);
     }
 
     requestAnimationFrame(step);
 }
 
-//builds the sidebar of jump-links to each weapon category section, plus the cases/collections/capsules/souvenirs sections
 function renderCategorySidebar() {
     const weaponBtns = categoryOrder.map(category => {
         const label = nameMap[category] || category[0].toUpperCase() + category.slice(1);
@@ -178,12 +170,13 @@ function lowestPrice(marketPrices) {
 }
 
 //"£highestWear -> £lowestWear", e.g. Battle-Scarred's price -> Factory New's price (or whatever the
-//skin's own float range actually spans). range is one entry from getPricesForWeapon, or undefined
-//if prices haven't loaded/failed - falls back to "…"/"N/A" like the detail page
+//skin's own float range actually spans). range.low/range.high are the lowest/highest-float tiers
+//(best/worst condition). range is one entry from getPricesForWeapon, or undefined if prices
+//haven't loaded/failed - falls back to "…"/"N/A" like the detail page
 function priceRangeText(range, variant) {
     if (!range) return '…';
-    const lowestWearPrice = lowestPrice(range.low?.[variant]); //range.low = the lowest-float tier (best condition, e.g. FN)
-    const highestWearPrice = lowestPrice(range.high?.[variant]); //range.high = the highest-float tier (worst condition, e.g. BS)
+    const lowestWearPrice = lowestPrice(range.low?.[variant]);
+    const highestWearPrice = lowestPrice(range.high?.[variant]);
     if (lowestWearPrice == null && highestWearPrice == null) return 'N/A';
     if (range.lowTier === range.highTier || lowestWearPrice === highestWearPrice) return `£${(lowestWearPrice ?? highestWearPrice).toFixed(2)}`;
     return `£${(highestWearPrice ?? 0).toFixed(2)} -> £${(lowestWearPrice ?? 0).toFixed(2)}`;
@@ -196,7 +189,7 @@ export function renderSkinCard(skins, weapon, prices) {
     sortByRarity(skins, sortDescending)
 
     if (skins.length === 0) {
-        return `<p class="explore-empty">No skins available for ${weapon} yet.</p>`; //if there isnt any skins dont load a skincard
+        return `<p class="explore-empty">No skins available for ${weapon} yet.</p>`;
     }
     return skins.map(s => {
         const range = prices?.[`${s.defIndex}-${s.paintIndex}`];
@@ -221,7 +214,7 @@ export function renderSkinCard(skins, weapon, prices) {
                         ${s.stattrak ? `<p class="skinCardPriceStattrak">${priceRangeText(range, 'stattrak')}</p>` : ''}
                         ${s.souvenir ? '<p class="skinCardPriceSouvenir">Unavailable</p>' : ''}
                     </div>
-                    <a class="csfloat-link" href="https://csfloat.com/search?def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
+                    <a class="csfloat-link" href="https://csfloat.com/search?sort_by=lowest_price&type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
             </div>
         </div>
     `;
@@ -237,7 +230,7 @@ function renderCrateContentsCard(items, crateName, skins) {
         return `<p class="explore-empty">Nothing found for ${crateName}.</p>`;
     }
     return items.map(i => {
-        const name = i.name; //now you can call string methods on this, e.g. name.replace(...), name.split(...)
+        const name = i.name;
         let [weapon, skin] = name.split("|").map(s => s.trim());
         const weaponName = weapon.replace("★ ", "");
         if (skin === undefined) {
@@ -248,7 +241,7 @@ function renderCrateContentsCard(items, crateName, skins) {
     const maxFloat = match?.maxFloat;
     const stattrak = match?.stattrak;
     const souvenir = match?.souvenir;
-    const csfloatLink = match ? `https://csfloat.com/search?def_index=${match.defIndex}&paint_index=${match.paintIndex}` : null;
+    const csfloatLink = match ? `https://csfloat.com/search?sort_by=lowest_price&type=buy_now&def_index=${match.defIndex}&paint_index=${match.paintIndex}` : null;
 
         return `
         <div class="skin-card" ${match ? `data-def="${match.defIndex}" data-paint="${match.paintIndex}"` : `data-sticker-id="${i.id}"`} style="background: ${rarityGradient(i.rarity.color)}">
@@ -296,7 +289,7 @@ function renderCaseCard(crate) {
 }
 
 
-//sort all of the skin cards, rarest first unless descending is true (then rarest last)
+//rarityMaps ranks rarest as the lowest number, so ascending sort is rarest-first by default
 function sortByRarity(items, descending = false) {
     return items.sort((a, b) => descending
         ? rarityMaps[b.rarity.name] - rarityMaps[a.rarity.name]
@@ -347,7 +340,6 @@ function renderCollectibleItems(items, label) {
         return `<p class="explore-empty">Nothing found for ${label}.</p>`;
     }
 
-    //turn COLLECTIBLE_TYPES into an array of configs, then pick out this type's csfloatParam by matching on label
     const [slug, type] = Object.entries(COLLECTIBLE_TYPES).find(([, t]) => t.label === label) ?? [];
     const csfloatParam = type?.csfloatParam;
 
@@ -367,7 +359,7 @@ function renderCollectibleItems(items, label) {
         `}).join('');
 }
 
-export function renderExplorePage(weapon = null) { //if nothing is passed to weapon then weapon = null
+export function renderExplorePage(weapon = null) {
     const app = document.getElementById('app');
 
     //a crate route looks like "crate/Halo Capsule" so we can tell it apart from a weapon route
@@ -380,7 +372,6 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
     const collectibleLabel = isCollectible ? COLLECTIBLE_TYPES[collectibleSlug]?.label : null;
     const title = isCollectible ? collectibleLabel : isCrate ? crateName : weapon;
 
-    //adds the back button and the weapon skins title if a specific weapon was selected
     app.innerHTML = `
         <div class="explore-layout">
             ${!weapon ? renderCategorySidebar() : ''}
@@ -414,7 +405,7 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
     if (weapon && !isCollectible) {
         document.getElementById('sortToggleBtn')?.addEventListener('click', () => {
             sortDescending = !sortDescending;
-            renderExplorePage(weapon); //re-render with the flipped sort order
+            renderExplorePage(weapon);
         });
     }
 
@@ -425,13 +416,13 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
             if (!grid) return;
 
             if (isGolds) {
-                grid.innerHTML = renderCrateContentsCard(crate ? crate.contains_rare : [], crateName, skins); //shows just the golds for this crate
+                grid.innerHTML = renderCrateContentsCard(crate ? crate.contains_rare : [], crateName, skins);
                 attachSkinCardNav(grid);
                 return;
             }
 
             const goldCount = crate && crate.contains_rare ? crate.contains_rare.length : 0;
-            const goldsPreview = crate && crate.contains_rare ? crate.contains_rare.slice(0, 24) : []; //first 6 golds' own images, tiled into a mosaic instead of one static gloves/knife stand-in
+            const goldsPreview = crate && crate.contains_rare ? crate.contains_rare.slice(0, 24) : [];
             const goldsMosaic = goldsPreview.length
                 ? `<div class="weapon-card-mosaic">${goldsPreview.map(g => `<img src="${g.image}" alt="${g.name}">`).join('')}</div>`
                 : '<div class="weapon-card-img weapon-card-img--empty"></div>';
@@ -444,7 +435,7 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
             </button>`;
             const hero = document.getElementById('caseHero');
             if (hero && crate) hero.innerHTML = renderCaseCard(crate);
-            grid.innerHTML = goldsCard + renderCrateContentsCard(crate ? crate.contains : [], crateName, skins); //shows the golds card plus what's inside the capsule/souvenir/case/collection
+            grid.innerHTML = goldsCard + renderCrateContentsCard(crate ? crate.contains : [], crateName, skins);
             grid.addEventListener('click', e => {
                 const card = e.target.closest('.weapon-card');
                 if (card && card.dataset.golds) window.location.hash = '#/explore/crate/' + encodeURIComponent(crateName) + '/golds';
@@ -456,7 +447,7 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
         });
     } else if (isCollectible) {
         const type = COLLECTIBLE_TYPES[collectibleSlug];
-        if (!type) return; //unknown slug in the url
+        if (!type) return;
         return type.fetch().then(items => {
             const grid = document.getElementById('skinGrid');
             if (!grid) return;
@@ -470,7 +461,7 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
         return getSkinsByWeapon(weapon).then(skins => {
             const grid = document.getElementById('skinGrid');
             if (!grid) return;
-            grid.innerHTML = renderSkinCard(skins, weapon, null); //adds the skin name and weapon name to the skincard - prices start as "…" and fill in below
+            grid.innerHTML = renderSkinCard(skins, weapon, null);
             attachSkinCardNav(grid);
 
             //fetched separately from the skins themselves so the grid appears immediately and prices fill in
@@ -488,24 +479,24 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
             });
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
-            if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load skins.</p>`; //if skins fail to load
+            if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load skins.</p>`;
         });
     } else {
-        return Promise.all([getSkins(), getWeapons(), getStickerCapsules(), getSouvenirPackages(), getCases(), getCollections(), getAgents(), getCharms(), getPatches(), getMusicKits(), getGraffiti(), getPins()]).then(([skins, weaponData, capsules, souvenirs, cases, collections, agents, charms, patches, musicKits, graffiti, pins]) => { //getSkins() = skins, getWeapons() = weaponData (skins gets the skins and weaponData gets the weapons)
+        return Promise.all([getSkins(), getWeapons(), getStickerCapsules(), getSouvenirPackages(), getCases(), getCollections(), getAgents(), getCharms(), getPatches(), getMusicKits(), getGraffiti(), getPins()]).then(([skins, weaponData, capsules, souvenirs, cases, collections, agents, charms, patches, musicKits, graffiti, pins]) => {
             const grid = document.getElementById('skinGrid');
             if (!grid) return;
             grid.innerHTML = explorePageSorting(skins, weaponData)
                 + renderCrateSection(cases, 'Cases')
                 + renderCrateSection(collections, 'Collections')
                 + renderCrateSection(capsules, 'Sticker Capsules')
-                + renderCrateSection(souvenirs, 'Souvenir Packages') //adds the weapon cards plus the capsule/souvenir/case/collection sections to the page
+                + renderCrateSection(souvenirs, 'Souvenir Packages')
                 + renderCollectibles(agents, charms, patches, musicKits, graffiti, pins)
                 grid.addEventListener('click', e => {
                 const card = e.target.closest('.weapon-card');
                 if (!card) return;
-                if (card.dataset.crate) window.location.hash = '#/explore/crate/' + encodeURIComponent(card.dataset.crate); //makes it so u can click on a capsule/souvenir/case/collection card
-                else if (card.dataset.collectible) window.location.hash = '#/explore/collectible/' + card.dataset.collectible; //makes it so u can click into agents/charms/patches/etc
-                else if (card.dataset.weapon) window.location.hash = '#/explore/' + encodeURIComponent(card.dataset.weapon); //makes it so u can click on the weapon categories
+                if (card.dataset.crate) window.location.hash = '#/explore/crate/' + encodeURIComponent(card.dataset.crate);
+                else if (card.dataset.collectible) window.location.hash = '#/explore/collectible/' + card.dataset.collectible;
+                else if (card.dataset.weapon) window.location.hash = '#/explore/' + encodeURIComponent(card.dataset.weapon);
 
             });
 
@@ -543,7 +534,7 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
 
                 const matches = searchableItems.filter(item => item.name.toLowerCase().includes(query));
 
-                //group matches back under their section, dropping sections with nothing matching
+                //drops sections with nothing matching
                 const sections = SECTION_ORDER
                     .map(section => ({ section, items: matches.filter(m => m.section === section) }))
                     .filter(({ items }) => items.length);
@@ -562,7 +553,7 @@ export function renderExplorePage(weapon = null) { //if nothing is passed to wea
             });
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
-            if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load skins.</p>`; //incase it fails to fetch getSkins() or getWeapons()
+            if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load skins.</p>`;
         });
     }
 }

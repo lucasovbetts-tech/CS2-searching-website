@@ -1,6 +1,4 @@
-// Wires up a custom dropdown element and returns { closeList, getValue }.
-// el       — the .custom-select wrapper element
-// onChange — callback fired with the selected data-value whenever the user picks an option
+// Wires up a custom dropdown element; onChange fires with the selected data-value on pick
 function makeSelect(el, onChange) {
     if (!el) return null;
 
@@ -8,11 +6,10 @@ function makeSelect(el, onChange) {
     const list       = el.querySelector('.custom-select-list');
     const valEl      = el.querySelector('.custom-select-val');
 
-    // Returns the data-value of the currently active option, or '' if none is active
     const getValue = () => el.querySelector('.custom-select-opt.active')?.dataset.value ?? '';
 
     function openList() {
-        // Close any other open dropdown inside the same popup before opening this one
+        //closes any other open dropdown inside the same popup before opening this one
         el.closest('.locale-popup')?.querySelectorAll('.custom-select-list.open').forEach(l => {
             if (l !== list) l.classList.remove('open');
         });
@@ -28,15 +25,12 @@ function makeSelect(el, onChange) {
         triggerBtn.classList.remove('open');
     }
 
-    // Toggle the dropdown open/closed on trigger click; stopPropagation prevents
-    // the document click listener from immediately closing it
+    // stopPropagation prevents the document click listener from immediately closing this
     triggerBtn.addEventListener('click', e => {
         e.stopPropagation();
         list.classList.contains('open') ? closeList() : openList();
     });
 
-    // Handle option selection: mark the clicked option active, update the visible
-    // label text, close the list, and notify the caller via onChange
     list.addEventListener('click', e => {
         e.stopPropagation();
         const opt = e.target.closest('.custom-select-opt');
@@ -51,8 +45,6 @@ function makeSelect(el, onChange) {
     return { closeList, getValue };
 }
 
-// Initialises the locale popup: wires the language and currency dropdowns,
-// keeps the header label in sync, and handles open/close behaviour
 export function initLocale() {
     const btn    = document.getElementById('localeBtn');
     const popup  = document.getElementById('localePopup');
@@ -62,7 +54,6 @@ export function initLocale() {
 
     if (!btn) return;
 
-    //turns the language data into uppercase and changes the label to the current selection
     function updateLabel(langVal, currVal) {
         const l = langVal.toUpperCase();
         label.textContent = `${l} / ${currVal}`;
@@ -71,7 +62,6 @@ export function initLocale() {
     const langSel = makeSelect(langEl, val => updateLabel(val, currSel.getValue()));
     const currSel = makeSelect(currEl, val => updateLabel(langSel.getValue(), val));
 
-    // Clicking the popup background (outside any dropdown) closes any open dropdown lists
     popup.addEventListener('click', e => {
         e.stopPropagation();
         if (!e.target.closest('.custom-select')) {
@@ -86,7 +76,6 @@ export function initLocale() {
         btn.setAttribute('aria-expanded', 'true');
     }
 
-    // Closes the popup and collapses any open dropdown lists inside it
     function closePopup() {
         popup.classList.remove('open');
         btn.classList.remove('open');
@@ -95,14 +84,12 @@ export function initLocale() {
         currSel.closeList();
     }
 
-    // Toggle popup on locale button click; stopPropagation prevents the document
-    // listener below from closing it in the same event cycle
+    // stopPropagation prevents the document listener below from closing this in the same event cycle
     btn.addEventListener('click', e => {
         e.stopPropagation();
         popup.classList.contains('open') ? closePopup() : openPopup();
     });
 
-    // Close popup when clicking anywhere outside it, or pressing Escape
     document.addEventListener('click', closePopup);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
 }
