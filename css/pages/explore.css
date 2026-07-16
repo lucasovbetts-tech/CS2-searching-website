@@ -45,6 +45,11 @@
     gap: 10px;
     min-height: 0; /* lets this flex child actually shrink below its content height instead of forcing the sidebar taller than max-height */
     overflow-y: auto;
+    overflow-x: hidden; /* buttons scale up on hover past the column width - don't let that make the sidebar scroll sideways */
+    /* bleeds this list 16px past the sidebar's own edges so overflow-x's clip line sits outside the hover-scaled
+       button, not flush against it; padding shifts content back in so buttons still render at the original width */
+    margin: 0 -16px;
+    padding: 0 16px;
     scrollbar-width: thin;
     scrollbar-color: var(--border) transparent;
 }
