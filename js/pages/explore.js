@@ -3,9 +3,21 @@ import { getWeapons } from '../api/weapons.js';
 import { getStickerCapsules, getSouvenirPackages, getNonTournamentStickerCapsules, getCases } from '../api/crates.js';
 import { getCollections } from '../api/collections.js';
 import { getAgents, getCharms, getPatches, getMusicKits, getGraffiti, getPins } from '../api/collectibles.js';
-import { getPricesForWeapon } from '../api/prices.js';
 
-console.log(await getStickerCapsules(), await getSouvenirPackages(), await getNonTournamentStickerCapsules(), await getCases(), await getSkins(), await getAgents(), await getCharms(), await getPatches(), await getMusicKits(), await getGraffiti(), await getPins(), await getCollections());
+console.log(
+    'getStickerCapsules', await getStickerCapsules(),
+    'getSouvenirPackages', await getSouvenirPackages(),
+    'getNonTournamentStickerCapsules', await getNonTournamentStickerCapsules(),
+    'getCases', await getCases(),
+    'getSkins', await getSkins(),
+    'getAgents', await getAgents(),
+    'getCharms', await getCharms(),
+    'getPatches', await getPatches(),
+    'getMusicKits', await getMusicKits(),
+    'getGraffiti', await getGraffiti(),
+    'getPins', await getPins(),
+    'getCollections', await getCollections(),
+);
 
 function darken(hex, factor) {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -162,29 +174,8 @@ const rarityMaps = {
     "Distinguished": 15,
 };
 
-//lowest price across whatever marketplaces actually had data for one wear tier's cell; null if none did
-function lowestPrice(marketPrices) {
-    if (!marketPrices) return null;
-    const values = Object.values(marketPrices);
-    return values.length ? Math.min(...values) : null;
-}
-
-//"£highestWear -> £lowestWear", e.g. Battle-Scarred's price -> Factory New's price (or whatever the
-//skin's own float range actually spans). range.low/range.high are the lowest/highest-float tiers
-//(best/worst condition). range is one entry from getPricesForWeapon, or undefined if prices
-//haven't loaded/failed - falls back to "…"/"N/A" like the detail page
-function priceRangeText(range, variant) {
-    if (!range) return '…';
-    const lowestWearPrice = lowestPrice(range.low?.[variant]);
-    const highestWearPrice = lowestPrice(range.high?.[variant]);
-    if (lowestWearPrice == null && highestWearPrice == null) return 'N/A';
-    if (range.lowTier === range.highTier || lowestWearPrice === highestWearPrice) return `£${(lowestWearPrice ?? highestWearPrice).toFixed(2)}`;
-    return `£${(highestWearPrice ?? 0).toFixed(2)} -> £${(lowestWearPrice ?? 0).toFixed(2)}`;
-}
-
-//creates the card for the skin. prices is the result of getPricesForWeapon (keyed by "defIndex-paintIndex"),
-//or null while it's still loading - each card shows "…" until it resolves, same loading pattern as the detail page
-export function renderSkinCard(skins, weapon, prices) {
+//creates the card for the skin
+export function renderSkinCard(skins, weapon) {
 
     sortByRarity(skins, sortDescending)
 
@@ -192,7 +183,6 @@ export function renderSkinCard(skins, weapon, prices) {
         return `<p class="explore-empty">No skins available for ${weapon} yet.</p>`;
     }
     return skins.map(s => {
-        const range = prices?.[`${s.defIndex}-${s.paintIndex}`];
         return `
         <div class="skin-card" data-def="${s.defIndex}" data-paint="${s.paintIndex}" style="background: ${rarityGradient(s.rarity.color)}">
             <span class="skin-rarity">${s.rarity.name}</span>
@@ -210,11 +200,11 @@ export function renderSkinCard(skins, weapon, prices) {
                     ${s.souvenir ? '<span class="skin-badge skin-badge--souvenir">Souvenir</span>' : ''}
                 </div>
                     <div class="skinCardPrices">
-                        <p class="skinCardPriceNormal">${priceRangeText(range, 'normal')}</p>
-                        ${s.stattrak ? `<p class="skinCardPriceStattrak">${priceRangeText(range, 'stattrak')}</p>` : ''}
+                        <p class="skinCardPriceNormal">£10 -> £20</p>
+                        ${s.stattrak ? '<p class="skinCardPriceStattrak">£20 -> £30</p>' : ''}
                         ${s.souvenir ? '<p class="skinCardPriceSouvenir">Unavailable</p>' : ''}
                     </div>
-                    <a class="csfloat-link" href="https://csfloat.com/search?sort_by=lowest_price&type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
+                    <a class="csfloat-link" href="https://csfloat.com/search?type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
             </div>
         </div>
     `;
@@ -241,7 +231,7 @@ function renderCrateContentsCard(items, crateName, skins) {
     const maxFloat = match?.maxFloat;
     const stattrak = match?.stattrak;
     const souvenir = match?.souvenir;
-    const csfloatLink = match ? `https://csfloat.com/search?sort_by=lowest_price&type=buy_now&def_index=${match.defIndex}&paint_index=${match.paintIndex}` : null;
+    const csfloatLink = match ? `https://csfloat.com/search?type=buy_now&def_index=${match.defIndex}&paint_index=${match.paintIndex}` : null;
 
         return `
         <div class="skin-card" ${match ? `data-def="${match.defIndex}" data-paint="${match.paintIndex}"` : `data-sticker-id="${i.id}"`} style="background: ${rarityGradient(i.rarity.color)}">
@@ -276,14 +266,15 @@ function renderCrateContentsCard(items, crateName, skins) {
 function renderCaseCard(crate) {
     const name = crate.name;
     const img = crate.image;
-    const csfloatLink = `https://csfloat.com/search?def_index=${crate.def_index}`
+    const csfloatLink = crate.def_index != null ? `https://csfloat.com/search?def_index=${crate.def_index}` : null; //collections have no def_index - CSFloat has nothing to link to
     const color = crate.rarity?.color ?? '#a855f7'; //collections have no rarity field at all (mixed rarities inside), so fall back to the app's accent color
     return `
         <div class="case-hero-card" style="background: ${rarityGradient(color)}">
             ${img ? `<img class="case-hero-img" src="${img}" alt="${name}">` : '<div class="skin-img-placeholder"></div>'}
+            ${crate.def_index != null ? `
             <div class="skinCardPrices">
-                <p class="skinCardPriceNormal">£20</p>
-            </div>
+                <p class="skinCardPriceNormal">£10</p>
+            </div>` : ''}
             ${csfloatLink ? `<a class="csfloat-link" href="${csfloatLink}" target="_blank" rel="noopener">View on CSFloat</a>` : ''}
         </div>`;
 }
@@ -461,22 +452,8 @@ export function renderExplorePage(weapon = null) {
         return getSkinsByWeapon(weapon).then(skins => {
             const grid = document.getElementById('skinGrid');
             if (!grid) return;
-            grid.innerHTML = renderSkinCard(skins, weapon, null);
+            grid.innerHTML = renderSkinCard(skins, weapon);
             attachSkinCardNav(grid);
-
-            //fetched separately from the skins themselves so the grid appears immediately and prices fill in
-            //once they resolve, rather than blocking the whole page behind however long ~60 skins' worth of prices take
-            getPricesForWeapon(weapon).then(prices => {
-                const grid = document.getElementById('skinGrid');
-                if (!grid) return;
-                grid.innerHTML = renderSkinCard(skins, weapon, prices);
-                attachSkinCardNav(grid);
-            }).catch(() => {
-                const grid = document.getElementById('skinGrid');
-                if (!grid) return;
-                grid.innerHTML = renderSkinCard(skins, weapon, {});
-                attachSkinCardNav(grid);
-            });
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
             if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load skins.</p>`;

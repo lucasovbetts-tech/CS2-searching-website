@@ -51,8 +51,8 @@ app.get('/api/price', async (req, res) => {
     if (!skin) return res.status(404).json({ error: 'Unknown skin' });
 
     try {
-        const { prices, hadFailure } = await getCsMarketApiPrices(skin);
-        if (!hadFailure) setCached(cacheKey, prices); // a partial failure shouldn't get remembered as fact for the whole cache window
+        const prices = await getCsMarketApiPrices(skin);
+        setCached(cacheKey, prices);
         res.json(prices);
     } catch (err) {
         console.error('CSMarketAPI error:', err.message);
@@ -82,10 +82,9 @@ app.get('/api/prices/weapon', async (req, res) => {
     if (toFetch.length) {
         try {
             const fetched = await getPriceRangesForSkins(toFetch);
-            fetched.forEach(({ lowTier, highTier, low, high, hadFailure }, i) => {
+            fetched.forEach((data, i) => {
                 const skin = toFetch[i];
-                const data = { lowTier, highTier, low, high };
-                if (!hadFailure) setCached(`range:${skin.defIndex}:${skin.paintIndex}`, data);
+                setCached(`range:${skin.defIndex}:${skin.paintIndex}`, data);
                 result[`${skin.defIndex}-${skin.paintIndex}`] = data;
             });
         } catch (err) {

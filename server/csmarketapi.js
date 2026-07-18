@@ -7,15 +7,7 @@ const CSMARKETAPI_KEY = process.env.CSMARKETAPI_API_KEY;
 // listing showing 3910 when everywhere else agrees on ~150), not usable data
 const MARKETS = ['CSFLOAT', 'CSMONEY', 'GAMERPAYGG', 'MARKETCSGO', 'SKINBARON', 'SKINPORT', 'WHITEMARKET'];
 
-const MAX_ATTEMPTS = 3;
-const RETRY_DELAY_MS = 500;
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-
-async function fetchAggregateOnce(name) {
+async function fetchAggregate(name) {
     const params = new URLSearchParams({ market_hash_name: name, key: CSMARKETAPI_KEY, currency: 'USD' });
     for (const m of MARKETS) params.append('markets', m);
 
@@ -32,83 +24,42 @@ async function fetchAggregateOnce(name) {
     return prices;
 }
 
-//retries transient failures (e.g. the odd 403 seen under heavy request load) before giving up on this cell
-async function fetchAggregate(name) {
-    let lastErr;
-    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-        try {
-            return await fetchAggregateOnce(name);
-        } catch (err) {
-            lastErr = err;
-            if (attempt < MAX_ATTEMPTS) await sleep(RETRY_DELAY_MS * attempt);
-        }
-    }
-    throw lastErr;
-}
-
-//hadFailureRef flags a failed cell so the caller skips caching this result
-async function fetchTierPrices(skin, tier, variants, hadFailureRef) {
+async function fetchTierPrices(skin, tier, variants) {
     const cell = {};
     for (const variant of variants) {
         const name = marketHashName(skin, tier.label, variant);
-        try {
-            cell[variant] = await fetchAggregate(name);
-        } catch (err) {
-            console.error(`CSMarketAPI cell failed (${name}):`, err.message);
-            cell[variant] = null;
-            hadFailureRef.value = true;
-        }
+        cell[variant] = await fetchAggregate(name);
     }
     return cell;
 }
 
-//no per-item batching exists on this API, but the 1M/month quota makes that a non-issue.
-//souvenir is skipped: same spotty coverage problem seen on CSFloat (tested "Souvenir AK-47 | Redline" -> 404)
 export async function getCsMarketApiPrices(skin) {
     const tiers = wearTiersFor(skin);
     const variants = ['normal', ...(skin.stattrak ? ['stattrak'] : [])];
-    const hadFailureRef = { value: false };
 
     const prices = {};
     for (const tier of tiers) {
-        prices[tier.key] = await fetchTierPrices(skin, tier, variants, hadFailureRef);
+        prices[tier.key] = await fetchTierPrices(skin, tier, variants);
     }
-    return { prices, hadFailure: hadFailureRef.value };
+    return prices;
 }
 
 //just the 2 extreme wear tiers, not the full grid - built for skin-card price ranges (e.g. a weapon page
 //showing all its skins at once), where fetching every tier for every card would be far more requests than needed
 export async function getPriceRangeForSkin(skin) {
     const tiers = wearTiersFor(skin);
-    if (!tiers.length) return { lowTier: null, highTier: null, low: {}, high: {}, hadFailure: false };
+    if (!tiers.length) return { lowTier: null, highTier: null, low: {}, high: {} };
 
     const lowTier = tiers[0];
     const highTier = tiers[tiers.length - 1];
     const variants = ['normal', ...(skin.stattrak ? ['stattrak'] : [])];
-    const hadFailureRef = { value: false };
 
-    const low = await fetchTierPrices(skin, lowTier, variants, hadFailureRef);
-    const high = lowTier.key === highTier.key ? low : await fetchTierPrices(skin, highTier, variants, hadFailureRef);
+    const low = await fetchTierPrices(skin, lowTier, variants);
+    const high = lowTier.key === highTier.key ? low : await fetchTierPrices(skin, highTier, variants);
 
-    return { lowTier: lowTier.key, highTier: highTier.key, low, high, hadFailure: hadFailureRef.value };
+    return { lowTier: lowTier.key, highTier: highTier.key, low, high };
 }
 
-async function mapWithConcurrency(items, limit, fn) {
-    const results = new Array(items.length);
-    let next = 0;
-    async function worker() {
-        while (next < items.length) {
-            const i = next++;
-            results[i] = await fn(items[i]);
-        }
-    }
-    await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
-    return results;
-}
-
-const RANGE_CONCURRENCY = 10;
-
-//capped concurrency so a big weapon page doesn't fire dozens of requests all at the exact same instant
 export async function getPriceRangesForSkins(skins) {
-    return mapWithConcurrency(skins, RANGE_CONCURRENCY, getPriceRangeForSkin);
+    return Promise.all(skins.map(getPriceRangeForSkin));
 }

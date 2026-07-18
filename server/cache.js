@@ -30,4 +30,3 @@ export function setCached(key, data) {
     cache[key] = { data, time: Date.now() };
     save(cache);
 }
-
