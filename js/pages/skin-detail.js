@@ -18,20 +18,23 @@ function rarityGradient(hex) {
 
 const VARIANT_LABELS = { normal: 'Normal', stattrak: 'StatTrak™' };
 
-//lowest price per wear-tier/variant cell (cheapest market for that cell), feeds the price grid table
+//cheapest market for each wear-tier/variant cell - keeps which market it came from too (not just the price),
+//so the table can show that market's logo next to the number
 function priceGrid(prices) {
     const grid = {};
     for (const [tier, variants] of Object.entries(prices)) {
         grid[tier] = {};
         for (const [variant, markets] of Object.entries(variants)) {
-            const values = Object.values(markets);
-            grid[tier][variant] = values.length ? Math.min(...values) : null;
+            const entries = Object.entries(markets);
+            grid[tier][variant] = entries.length
+                ? entries.reduce((min, e) => e[1] < min[1] ? e : min)
+                : null;
         }
     }
     return grid;
 }
 
-function renderPriceGrid(s, prices) {
+function renderPriceGrid(s, prices, markets) {
     if (!prices) return '<p class="skin-detail-desc">Prices Unavailable. (Not found in cache)</p>';
 
     const grid = priceGrid(prices);
@@ -49,9 +52,12 @@ function renderPriceGrid(s, prices) {
     <div class="skin-price-row" style="grid-template-columns: ${cols}">
         <span class="skin-price-tier">${tier.label}</span>
         ${variants.map(v => {
-            const price = grid[tier.key]?.[v];
+            const cell = grid[tier.key]?.[v];
             const stattrakClass = v === 'stattrak' ? ' skin-price-col--stattrak' : '';
-            return `<span class="skin-price-col${stattrakClass}">${price != null ? '$' + price.toFixed(2) : '—'}</span>`;
+            if (!cell) return `<span class="skin-price-col${stattrakClass}">—</span>`;
+            const [market, price] = cell;
+            const logo = markets[market]?.logo;
+            return `<span class="skin-price-col${stattrakClass}">${logo ? `<img class="skin-price-col-logo" src="${logo}" alt="${market}">` : ''}$${price.toFixed(2)}</span>`;
         }).join('')}
     </div>`).join('');
 
@@ -172,7 +178,7 @@ export function renderSkinDetail(param) {
 
                     ${s.description ? `<p class="skin-detail-desc">${s.description.replace(/\\n/g, '<br><br>')}</p>` : ''}
                     ${renderDetailStats(s)}
-                    ${renderPriceGrid(s, prices)}
+                    ${renderPriceGrid(s, prices, markets)}
                     <a class="csfloat-link" href="https://csfloat.com/search?type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
                     ${renderCrates(s)}
                     </div>
