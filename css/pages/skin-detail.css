@@ -58,6 +58,120 @@
     margin: 16px 0 0;
 }
 
+/* ── Detail stats (total supply / release date) ── */
+
+.detail-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 0;
+}
+
+.detail-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.detail-stat-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-sec);
+}
+
+.detail-stat-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* ── Detail crates (found in) ── */
+
+.detail-crates {
+    margin: 16px 0 0;
+}
+
+.detail-crates .detail-stat-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.detail-crates-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.detail-crate-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 999px;
+    padding: 4px 14px 4px 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: background-color 0.2s ease;
+}
+
+.detail-crate-chip:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.detail-crate-chip img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Market listings (per-provider price breakdown) ── */
+
+.market-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0 0;
+}
+
+.market-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 999px;
+    padding: 6px 14px 6px 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    transition: background-color 0.2s ease;
+}
+
+.market-pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.market-pill img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.08);
+}
+
 /* ── Wear-tier price table ── */
 
 .skin-price-table {
@@ -122,6 +236,67 @@
     border-left-color: #ffd700;
 }
 
+/* ── Highlight match metadata ── */
+
+.highlight-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.highlight-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.highlight-meta-item--wide {
+    grid-column: 1 / -1;
+}
+
+.highlight-meta-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-sec);
+}
+
+.highlight-meta-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.highlight-meta-vs {
+    color: var(--text-sec);
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 0 6px;
+}
+
+/* ── Highlight video (below the image and metadata, not swapped in for either) ── */
+
+.highlight-video-wrap {
+    margin-top: 32px;
+}
+
+.highlight-video {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px -24px rgba(0, 0, 0, 0.7);
+    background: var(--card);
+}
+
 @media (max-width: 860px) {
     .skin-detail-layout {
         grid-template-columns: 1fr;
@@ -145,5 +320,9 @@
     .skin-price-tier {
         font-size: 0.75rem;
         padding: 6px 8px;
+    }
+
+    .highlight-meta {
+        grid-template-columns: 1fr;
     }
 }

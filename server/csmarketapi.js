@@ -43,23 +43,3 @@ export async function getCsMarketApiPrices(skin) {
     }
     return prices;
 }
-
-//just the 2 extreme wear tiers, not the full grid - built for skin-card price ranges (e.g. a weapon page
-//showing all its skins at once), where fetching every tier for every card would be far more requests than needed
-export async function getPriceRangeForSkin(skin) {
-    const tiers = wearTiersFor(skin);
-    if (!tiers.length) return { lowTier: null, highTier: null, low: {}, high: {} };
-
-    const lowTier = tiers[0];
-    const highTier = tiers[tiers.length - 1];
-    const variants = ['normal', ...(skin.stattrak ? ['stattrak'] : [])];
-
-    const low = await fetchTierPrices(skin, lowTier, variants);
-    const high = lowTier.key === highTier.key ? low : await fetchTierPrices(skin, highTier, variants);
-
-    return { lowTier: lowTier.key, highTier: highTier.key, low, high };
-}
-
-export async function getPriceRangesForSkins(skins) {
-    return Promise.all(skins.map(getPriceRangeForSkin));
-}

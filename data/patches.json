@@ -1,0 +1,2198 @@
+[
+  {
+    "id": "3557",
+    "name": "Crazy Banana",
+    "marketHashName": "Patch | Crazy Banana",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_banana_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Agent for scale</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4550
+  },
+  {
+    "id": "3558",
+    "name": "The Boss",
+    "marketHashName": "Patch | The Boss",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_boss_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Heavy is the agent that wears the crown</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4551
+  },
+  {
+    "id": "3559",
+    "name": "Chicken Lover",
+    "marketHashName": "Patch | Chicken Lover",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_chickenlover_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Thank you for sparing them</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4552
+  },
+  {
+    "id": "3560",
+    "name": "Welcome to the Clutch",
+    "marketHashName": "Patch | Welcome to the Clutch",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_clutch_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>4K's are the norm to an agent wearing this patch</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4553
+  },
+  {
+    "id": "3561",
+    "name": "Dragon",
+    "marketHashName": "Patch | Dragon",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_dragon_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features a dragon flanked on either side by the iconic AK-47</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4554
+  },
+  {
+    "id": "3562",
+    "name": "Easy Peasy",
+    "marketHashName": "Patch | Easy Peasy",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_easypeasy_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch somehow made it through quality control misspelling \\\"SQEEZY\\\"</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4555
+  },
+  {
+    "id": "3563",
+    "name": "Rage",
+    "marketHashName": "Patch | Rage",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_fury_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>A patch signifying rage, anger, or fury</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4556
+  },
+  {
+    "id": "3564",
+    "name": "Howl",
+    "marketHashName": "Patch | Howl",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_howl_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch is worth its weight in red, orange, and gold</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4557
+  },
+  {
+    "id": "3565",
+    "name": "Koi",
+    "marketHashName": "Patch | Koi",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_koi_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features two Koi fish atop swirling blue water</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4558
+  },
+  {
+    "id": "3566",
+    "name": "Longevity",
+    "marketHashName": "Patch | Longevity",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_longevity_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This red and white patch features an artistic take on the \\\"CSGO\\\" logo</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4559
+  },
+  {
+    "id": "3567",
+    "name": "Wildfire",
+    "marketHashName": "Patch | Wildfire",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_wildfire_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Wildfire, which launched on February 17th, 2016</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4560
+  },
+  {
+    "id": "3568",
+    "name": "Vigilance",
+    "marketHashName": "Patch | Vigilance",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_vigilance_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>A patch for the lurker; a teammate who keeps a careful watch</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4561
+  },
+  {
+    "id": "3569",
+    "name": "Bloodhound",
+    "marketHashName": "Patch | Bloodhound",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_bloodhound_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Bloodhound, which launched on May 26th, 2015</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4562
+  },
+  {
+    "id": "3570",
+    "name": "Bravo",
+    "marketHashName": "Patch | Bravo",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_bravo_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Bravo, which launched on September 19th, 2013</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4563
+  },
+  {
+    "id": "3571",
+    "name": "Breakout",
+    "marketHashName": "Patch | Breakout",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_breakout_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Breakout, which launched on July 1st, 2014</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4564
+  },
+  {
+    "id": "3572",
+    "name": "Danger Zone",
+    "marketHashName": "Patch | Danger Zone",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_dangerzone_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Danger Zone, which launched on December 6th, 2018</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4565
+  },
+  {
+    "id": "3573",
+    "name": "Hydra",
+    "marketHashName": "Patch | Hydra",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_hydra_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Hydra, which launched on May 23rd, 2017</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4566
+  },
+  {
+    "id": "3574",
+    "name": "Payback",
+    "marketHashName": "Patch | Payback",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_payback_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Payback, which launched on April 25th, 2013</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4567
+  },
+  {
+    "id": "3575",
+    "name": "Phoenix",
+    "marketHashName": "Patch | Phoenix",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_phoenix_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Phoenix, which launched on February 20th, 2014</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4568
+  },
+  {
+    "id": "3576",
+    "name": "Shattered Web",
+    "marketHashName": "Patch | Shattered Web",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_shatteredweb_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Shattered Web, which launched on November 18th, 2019</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4569
+  },
+  {
+    "id": "3577",
+    "name": "Vanguard",
+    "marketHashName": "Patch | Vanguard",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case01/patch_vanguard_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This patch features iconography from Operation Vanguard, which launched on November 11th, 2014</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "CS:GO Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack01_png.png"
+      }
+    ],
+    "releaseDate": "2020-02-24",
+    "defIndex": 4570
+  },
+  {
+    "id": "3578",
+    "name": "Metal Silver",
+    "marketHashName": "Patch | Metal Silver",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_silver_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>A patch for those taking their first step on the road to Global.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4571
+  },
+  {
+    "id": "3579",
+    "name": "Metal Gold Nova I",
+    "marketHashName": "Patch | Metal Gold Nova I",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_goldnova1_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Made it out of Silver? There's still work to do.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4572
+  },
+  {
+    "id": "3580",
+    "name": "Metal Gold Nova Master",
+    "marketHashName": "Patch | Metal Gold Nova Master",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_goldnovamaster_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>And you thought Silver was hard to get out of...</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4575
+  },
+  {
+    "id": "3581",
+    "name": "Metal Master Guardian I",
+    "marketHashName": "Patch | Metal Master Guardian I",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_masterguardian1_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Escaped Gold Nova? Good, you're learning.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4576
+  },
+  {
+    "id": "3582",
+    "name": "Metal Master Guardian Elite",
+    "marketHashName": "Patch | Metal Master Guardian Elite",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_masterguardianelite_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Expertly crafted, the silver thread on this MGE patch jumps off the navy background.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4578
+  },
+  {
+    "id": "3583",
+    "name": "Metal Distinguished Master Guardian ★",
+    "marketHashName": "Patch | Metal Distinguished Master Guardian ★",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_dmg_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Individuals must bend, adapt, and work together to achieve the Skill Group of DMG. Keep climbing.</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4579
+  },
+  {
+    "id": "3584",
+    "name": "Metal Legendary Eagle Master ★",
+    "marketHashName": "Patch | Metal Legendary Eagle Master ★",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_legendaryeaglemaster_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>You're nearing the top, but those awaiting your challenge will show no mercy.</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4581
+  },
+  {
+    "id": "3585",
+    "name": "Metal Supreme Master First Class",
+    "marketHashName": "Patch | Metal Supreme Master First Class",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_supreme_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This Supreme patch features a heart-shaped globe and red and blue details.</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4582
+  },
+  {
+    "id": "3586",
+    "name": "Metal The Global Elite ★",
+    "marketHashName": "Patch | Metal The Global Elite ★",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_globalelite_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Congratulations, you've arrived. Now the real challenge begins.</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4583
+  },
+  {
+    "id": "3587",
+    "name": "Metal Distinguished Master Guardian",
+    "marketHashName": "Patch | Metal Distinguished Master Guardian",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_dmg2_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Individuals must bend, adapt, and work together to achieve the Skill Group of DMG. Keep climbing.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4584
+  },
+  {
+    "id": "3588",
+    "name": "Metal Legendary Eagle",
+    "marketHashName": "Patch | Metal Legendary Eagle",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_legendaryeagle2_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>This Legendary Eagle patch includes a pair of golden wings.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4585
+  },
+  {
+    "id": "3589",
+    "name": "Metal Legendary Eagle Master",
+    "marketHashName": "Patch | Metal Legendary Eagle Master",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_legendaryeaglemaster2_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>You're nearing the top, but those awaiting your challenge will show no mercy.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4586
+  },
+  {
+    "id": "3590",
+    "name": "Metal Silver Demon",
+    "marketHashName": "Patch | Metal Silver Demon",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_silver_demon_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>\\\"Silver Hell\\\" isn't a place, it's a state of mind. And you can leave at any time.</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4587
+  },
+  {
+    "id": "3591",
+    "name": "Metal Supreme Master",
+    "marketHashName": "Patch | Metal Supreme Master",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_suprememaster_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>A winged defuser is flanked by six stars on this SMFC patch.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4588
+  },
+  {
+    "id": "3592",
+    "name": "Alyx",
+    "marketHashName": "Patch | Alyx",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_alyx_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4589
+  },
+  {
+    "id": "3593",
+    "name": "Sustenance!",
+    "marketHashName": "Patch | Sustenance!",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_headcrab_green_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4591
+  },
+  {
+    "id": "3594",
+    "name": "Vortigaunt",
+    "marketHashName": "Patch | Vortigaunt",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_vort_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4592
+  },
+  {
+    "id": "3595",
+    "name": "Headcrab Glyph",
+    "marketHashName": "Patch | Headcrab Glyph",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_headcrab_teal_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4593
+  },
+  {
+    "id": "3596",
+    "name": "Copper Lambda",
+    "marketHashName": "Patch | Copper Lambda",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_lambda_copper_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4594
+  },
+  {
+    "id": "3597",
+    "name": "Health",
+    "marketHashName": "Patch | Health",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_hearts_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4595
+  },
+  {
+    "id": "3598",
+    "name": "Combine Helmet",
+    "marketHashName": "Patch | Combine Helmet",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_combine_front_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4596
+  },
+  {
+    "id": "3599",
+    "name": "Black Mesa",
+    "marketHashName": "Patch | Black Mesa",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_blackmesa_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4597
+  },
+  {
+    "id": "3600",
+    "name": "CMB",
+    "marketHashName": "Patch | CMB",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_cmb_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4598
+  },
+  {
+    "id": "3601",
+    "name": "Lambda",
+    "marketHashName": "Patch | Lambda",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_lambda_orange_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4599
+  },
+  {
+    "id": "3602",
+    "name": "City 17",
+    "marketHashName": "Patch | City 17",
+    "image": "https://cdn.cs2c.app/images/econ/patches/casehlalyx/patch_hlalyx_c17_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br>Half-Life: Alyx Commemorative Patch",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Half-Life: Alyx Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_hlalyx_png.png"
+      }
+    ],
+    "releaseDate": "2020-03-22",
+    "defIndex": 4600
+  },
+  {
+    "id": "3603",
+    "name": "Metal The Global Elite",
+    "marketHashName": "Patch | Metal The Global Elite",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_globalelite2_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Congratulations, you've arrived. Now the real challenge begins.</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4697
+  },
+  {
+    "id": "3604",
+    "name": "Metal Master Guardian",
+    "marketHashName": "Patch | Metal Master Guardian",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_masterguardian3_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Escaped Gold Nova? Good, you're learning.</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4699
+  },
+  {
+    "id": "3605",
+    "name": "Metal Gold Nova",
+    "marketHashName": "Patch | Metal Gold Nova",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_skillgroups/patch_goldnova4_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Made it out of Silver? There's still work to do.</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Metal Skill Group Patch Collection",
+      "image": "https://cdn.cs2c.app/images/brokenfang/rank_patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2020-12-03",
+    "defIndex": 4700
+  },
+  {
+    "id": "3606",
+    "name": "Abandon Hope",
+    "marketHashName": "Patch | Abandon Hope",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_abandon_hope_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>All ye who dare enter...</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4937
+  },
+  {
+    "id": "3607",
+    "name": "Anchors Aweigh",
+    "marketHashName": "Patch | Anchors Aweigh",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_anchor_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Staying still in stormy seas...</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4938
+  },
+  {
+    "id": "3608",
+    "name": "Cruising Ray",
+    "marketHashName": "Patch | Cruising Ray",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_cruising_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Glides below the waves...</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4939
+  },
+  {
+    "id": "3609",
+    "name": "Bayonet Frog",
+    "marketHashName": "Patch | Bayonet Frog",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_frog_skeleton_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Don't give up 'till you croak...</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4940
+  },
+  {
+    "id": "3610",
+    "name": "Mad Sushi",
+    "marketHashName": "Patch | Mad Sushi",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_mad_sushi_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Roll the enemy!</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4941
+  },
+  {
+    "id": "3611",
+    "name": "Giant Squid",
+    "marketHashName": "Patch | Giant Squid",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_pink_squid_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Draws its prey into the depths...</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4942
+  },
+  {
+    "id": "3612",
+    "name": "El Pirata",
+    "marketHashName": "Patch | El Pirata",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_piranha_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Small bites; team effort...</i>",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4943
+  },
+  {
+    "id": "3613",
+    "name": "Death From Below",
+    "marketHashName": "Patch | Death From Below",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_siren_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Look out above...</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4944
+  },
+  {
+    "id": "3614",
+    "name": "Dead Men",
+    "marketHashName": "Patch | Dead Men",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_skull_crossswords_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Universal sigil of danger...</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4945
+  },
+  {
+    "id": "3615",
+    "name": "Sunset Wave",
+    "marketHashName": "Patch | Sunset Wave",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_sunset_wave_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>A new day on the ocean...</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4946
+  },
+  {
+    "id": "3616",
+    "name": "Aquatic Offensive",
+    "marketHashName": "Patch | Aquatic Offensive",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_fish_go_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Fish on the Go</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4947
+  },
+  {
+    "id": "3617",
+    "name": "Elder God",
+    "marketHashName": "Patch | Elder God",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_cthulhu_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Cthulhu approves those who defuse...</i>",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4948
+  },
+  {
+    "id": "3618",
+    "name": "Meal Time",
+    "marketHashName": "Patch | Meal Time",
+    "image": "https://cdn.cs2c.app/images/econ/patches/case_op11/patch_op11_meal_time_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.<br><br><i>Hungry for victory...</i>",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Operation Riptide Patch Collection",
+      "image": "https://cdn.cs2c.app/images/operationriptide/patches.png"
+    },
+    "crates": [],
+    "releaseDate": "2021-09-21",
+    "defIndex": 4949
+  },
+  {
+    "id": "3619",
+    "name": "Ninjas in Pyjamas | Stockholm 2021",
+    "marketHashName": "Patch | Ninjas in Pyjamas | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_nip_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5079
+  },
+  {
+    "id": "3620",
+    "name": "Ninjas in Pyjamas (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Ninjas in Pyjamas (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_nip_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5080
+  },
+  {
+    "id": "3621",
+    "name": "FURIA | Stockholm 2021",
+    "marketHashName": "Patch | FURIA | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_furi_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5081
+  },
+  {
+    "id": "3622",
+    "name": "FURIA (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | FURIA (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_furi_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5082
+  },
+  {
+    "id": "3623",
+    "name": "Natus Vincere | Stockholm 2021",
+    "marketHashName": "Patch | Natus Vincere | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_navi_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5083
+  },
+  {
+    "id": "3624",
+    "name": "Natus Vincere (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Natus Vincere (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_navi_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5084
+  },
+  {
+    "id": "3625",
+    "name": "Vitality | Stockholm 2021",
+    "marketHashName": "Patch | Vitality | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_vita_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5085
+  },
+  {
+    "id": "3626",
+    "name": "Vitality (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Vitality (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_vita_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5086
+  },
+  {
+    "id": "3627",
+    "name": "Team Liquid | Stockholm 2021",
+    "marketHashName": "Patch | Team Liquid | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_liq_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5087
+  },
+  {
+    "id": "3628",
+    "name": "Team Liquid (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Team Liquid (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_liq_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5088
+  },
+  {
+    "id": "3629",
+    "name": "Gambit Gaming | Stockholm 2021",
+    "marketHashName": "Patch | Gambit Gaming | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_gamb_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5089
+  },
+  {
+    "id": "3630",
+    "name": "Gambit Gaming (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Gambit Gaming (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_gamb_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5090
+  },
+  {
+    "id": "3631",
+    "name": "G2 Esports | Stockholm 2021",
+    "marketHashName": "Patch | G2 Esports | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_g2_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5091
+  },
+  {
+    "id": "3632",
+    "name": "G2 Esports (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | G2 Esports (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_g2_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5092
+  },
+  {
+    "id": "3633",
+    "name": "Evil Geniuses | Stockholm 2021",
+    "marketHashName": "Patch | Evil Geniuses | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_evl_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5093
+  },
+  {
+    "id": "3634",
+    "name": "Evil Geniuses (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Evil Geniuses (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_evl_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5094
+  },
+  {
+    "id": "3635",
+    "name": "Team Spirit | Stockholm 2021",
+    "marketHashName": "Patch | Team Spirit | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_spir_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5095
+  },
+  {
+    "id": "3636",
+    "name": "Team Spirit (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Team Spirit (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_spir_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5096
+  },
+  {
+    "id": "3637",
+    "name": "Astralis | Stockholm 2021",
+    "marketHashName": "Patch | Astralis | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_astr_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5097
+  },
+  {
+    "id": "3638",
+    "name": "Astralis (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Astralis (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_astr_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5098
+  },
+  {
+    "id": "3639",
+    "name": "paiN Gaming | Stockholm 2021",
+    "marketHashName": "Patch | paiN Gaming | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_pain_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5099
+  },
+  {
+    "id": "3640",
+    "name": "paiN Gaming (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | paiN Gaming (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_pain_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5100
+  },
+  {
+    "id": "3641",
+    "name": "ENCE | Stockholm 2021",
+    "marketHashName": "Patch | ENCE | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_ence_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5101
+  },
+  {
+    "id": "3642",
+    "name": "ENCE (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | ENCE (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_ence_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5102
+  },
+  {
+    "id": "3643",
+    "name": "BIG | Stockholm 2021",
+    "marketHashName": "Patch | BIG | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_big_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5103
+  },
+  {
+    "id": "3644",
+    "name": "BIG (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | BIG (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_big_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5104
+  },
+  {
+    "id": "3645",
+    "name": "Movistar Riders | Stockholm 2021",
+    "marketHashName": "Patch | Movistar Riders | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_ride_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5105
+  },
+  {
+    "id": "3646",
+    "name": "Movistar Riders (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Movistar Riders (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_ride_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5106
+  },
+  {
+    "id": "3647",
+    "name": "Heroic | Stockholm 2021",
+    "marketHashName": "Patch | Heroic | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_hero_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5107
+  },
+  {
+    "id": "3648",
+    "name": "Heroic (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Heroic (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_hero_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5108
+  },
+  {
+    "id": "3649",
+    "name": "MOUZ | Stockholm 2021",
+    "marketHashName": "Patch | MOUZ | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_mouz_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5109
+  },
+  {
+    "id": "3650",
+    "name": "MOUZ (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | MOUZ (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_mouz_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5110
+  },
+  {
+    "id": "3651",
+    "name": "Sharks Esports | Stockholm 2021",
+    "marketHashName": "Patch | Sharks Esports | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_shrk_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5111
+  },
+  {
+    "id": "3652",
+    "name": "Sharks Esports (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Sharks Esports (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_shrk_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5112
+  },
+  {
+    "id": "3653",
+    "name": "Tyloo | Stockholm 2021",
+    "marketHashName": "Patch | Tyloo | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_tyl_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5113
+  },
+  {
+    "id": "3654",
+    "name": "Tyloo (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Tyloo (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_tyl_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5114
+  },
+  {
+    "id": "3655",
+    "name": "Renegades | Stockholm 2021",
+    "marketHashName": "Patch | Renegades | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_ren_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5115
+  },
+  {
+    "id": "3656",
+    "name": "Renegades (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Renegades (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_ren_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5116
+  },
+  {
+    "id": "3657",
+    "name": "Entropiq | Stockholm 2021",
+    "marketHashName": "Patch | Entropiq | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_ent_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5117
+  },
+  {
+    "id": "3658",
+    "name": "Entropiq (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Entropiq (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_ent_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5118
+  },
+  {
+    "id": "3659",
+    "name": "GODSENT | Stockholm 2021",
+    "marketHashName": "Patch | GODSENT | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_god_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5119
+  },
+  {
+    "id": "3660",
+    "name": "GODSENT (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | GODSENT (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_god_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5120
+  },
+  {
+    "id": "3661",
+    "name": "Virtus.Pro | Stockholm 2021",
+    "marketHashName": "Patch | Virtus.Pro | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_vp_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5121
+  },
+  {
+    "id": "3662",
+    "name": "Virtus.Pro (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Virtus.Pro (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_vp_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5122
+  },
+  {
+    "id": "3663",
+    "name": "Copenhagen Flames | Stockholm 2021",
+    "marketHashName": "Patch | Copenhagen Flames | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_cope_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5123
+  },
+  {
+    "id": "3664",
+    "name": "Copenhagen Flames (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | Copenhagen Flames (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_cope_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5124
+  },
+  {
+    "id": "3665",
+    "name": "FaZe Clan | Stockholm 2021",
+    "marketHashName": "Patch | FaZe Clan | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_faze_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5125
+  },
+  {
+    "id": "3666",
+    "name": "FaZe Clan (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | FaZe Clan (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_faze_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5126
+  },
+  {
+    "id": "3667",
+    "name": "PGL | Stockholm 2021",
+    "marketHashName": "Patch | PGL | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_pgl_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      },
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      },
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5127
+  },
+  {
+    "id": "3668",
+    "name": "PGL (Gold) | Stockholm 2021",
+    "marketHashName": "Patch | PGL (Gold) | Stockholm 2021",
+    "image": "https://cdn.cs2c.app/images/econ/patches/stockh2021/patch_pgl_gold_png.png",
+    "description": "This patch can be applied to any agent you own. Once applied, it can be removed but not recovered.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": null,
+    "crates": [
+      {
+        "name": "Stockholm 2021 Challengers Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_challengers_png.png"
+      },
+      {
+        "name": "Stockholm 2021 Contenders Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_contenders_png.png"
+      },
+      {
+        "name": "Stockholm 2021 Legends Patch Pack",
+        "image": "https://cdn.cs2c.app/images/econ/weapon_cases/crate_patch_pack_stockh2021_legends_png.png"
+      }
+    ],
+    "releaseDate": "2021-10-21",
+    "defIndex": 5128
+  }
+]

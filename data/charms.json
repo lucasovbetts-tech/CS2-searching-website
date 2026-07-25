@@ -1,0 +1,1406 @@
+[
+  {
+    "id": "3308",
+    "name": "Lil' Ava",
+    "marketHashName": "Charm | Lil' Ava",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_ava_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 1
+  },
+  {
+    "id": "3309",
+    "name": "Hot Sauce",
+    "marketHashName": "Charm | Hot Sauce",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_sam_catchup_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 10
+  },
+  {
+    "id": "3310",
+    "name": "Diamond Dog",
+    "marketHashName": "Charm | Diamond Dog",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_sam_diamond_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 11
+  },
+  {
+    "id": "3311",
+    "name": "Pinch O' Salt",
+    "marketHashName": "Charm | Pinch O' Salt",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_sam_salty_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 12
+  },
+  {
+    "id": "3312",
+    "name": "Diner Dog",
+    "marketHashName": "Charm | Diner Dog",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_sam_shape_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 13
+  },
+  {
+    "id": "3313",
+    "name": "Lil' Teacup",
+    "marketHashName": "Charm | Lil' Teacup",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_sam_toile_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 14
+  },
+  {
+    "id": "3314",
+    "name": "Lil' SAS",
+    "marketHashName": "Charm | Lil' SAS",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_sas_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 15
+  },
+  {
+    "id": "3315",
+    "name": "Hot Wurst",
+    "marketHashName": "Charm | Hot Wurst",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_wurst_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 16
+  },
+  {
+    "id": "3316",
+    "name": "Baby's AK",
+    "marketHashName": "Charm | Baby's AK",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_ak_base_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 17
+  },
+  {
+    "id": "3317",
+    "name": "Die-cast AK",
+    "marketHashName": "Charm | Die-cast AK",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_ak_jelly_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 18
+  },
+  {
+    "id": "3318",
+    "name": "Pocket AWP",
+    "marketHashName": "Charm | Pocket AWP",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_awp_plastic_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 19
+  },
+  {
+    "id": "3319",
+    "name": "That's Bananas",
+    "marketHashName": "Charm | That's Bananas",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_banana_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 2
+  },
+  {
+    "id": "3320",
+    "name": "Titeenium AWP",
+    "marketHashName": "Charm | Titeenium AWP",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_awp_spoon_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 20
+  },
+  {
+    "id": "3321",
+    "name": "Baby Karat CT",
+    "marketHashName": "Charm | Baby Karat CT",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_ctknife_gold_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 21
+  },
+  {
+    "id": "3322",
+    "name": "Whittle Knife",
+    "marketHashName": "Charm | Whittle Knife",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_ctknife_wood_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 22
+  },
+  {
+    "id": "3323",
+    "name": "POP Art",
+    "marketHashName": "Charm | POP Art",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_m4a1s_comic_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 23
+  },
+  {
+    "id": "3324",
+    "name": "Lil' Squirt",
+    "marketHashName": "Charm | Lil' Squirt",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_m4a1s_ss_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 24
+  },
+  {
+    "id": "3325",
+    "name": "Disco MAC",
+    "marketHashName": "Charm | Disco MAC",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_mac10_glitter_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 25
+  },
+  {
+    "id": "3326",
+    "name": "Backsplash",
+    "marketHashName": "Charm | Backsplash",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_mac10_tile_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 26
+  },
+  {
+    "id": "3327",
+    "name": "Lil' Cap Gun",
+    "marketHashName": "Charm | Lil' Cap Gun",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_tec9_cap_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 27
+  },
+  {
+    "id": "3328",
+    "name": "Hot Hands",
+    "marketHashName": "Charm | Hot Hands",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_tec9_magma_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 28
+  },
+  {
+    "id": "3329",
+    "name": "Semi-Precious",
+    "marketHashName": "Charm | Semi-Precious",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_tknife_crystal_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 29
+  },
+  {
+    "id": "3330",
+    "name": "Lil' Whiskers",
+    "marketHashName": "Charm | Lil' Whiskers",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_cat_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 3
+  },
+  {
+    "id": "3331",
+    "name": "Baby Karat T",
+    "marketHashName": "Charm | Baby Karat T",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_tknife_gold_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 30
+  },
+  {
+    "id": "3332",
+    "name": "Glamour Shot",
+    "marketHashName": "Charm | Glamour Shot",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_usp_jewel_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 31
+  },
+  {
+    "id": "3333",
+    "name": "Stitch-Loaded",
+    "marketHashName": "Charm | Stitch-Loaded",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/weapon_1/kc_wpn_usp_yarn_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Small Arms Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_weapon_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 32
+  },
+  {
+    "id": "3334",
+    "name": "Lil' Squatch",
+    "marketHashName": "Charm | Lil' Squatch",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_bigfoot_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 33
+  },
+  {
+    "id": "3335",
+    "name": "Lil' Curse",
+    "marketHashName": "Charm | Lil' Curse",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_ancientcurse_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 38
+  },
+  {
+    "id": "3336",
+    "name": "Lil' Serpent",
+    "marketHashName": "Charm | Lil' Serpent",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_babyserpent_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 39
+  },
+  {
+    "id": "3337",
+    "name": "Lil' Sandy",
+    "marketHashName": "Charm | Lil' Sandy",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_catbeach_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 4
+  },
+  {
+    "id": "3338",
+    "name": "Lil' Baller",
+    "marketHashName": "Charm | Lil' Baller",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_basketball_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 40
+  },
+  {
+    "id": "3339",
+    "name": "Dead Weight",
+    "marketHashName": "Charm | Dead Weight",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_bodybag_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 41
+  },
+  {
+    "id": "3340",
+    "name": "Lil' Prick",
+    "marketHashName": "Charm | Lil' Prick",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_cactus_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 42
+  },
+  {
+    "id": "3341",
+    "name": "Lil' Buns",
+    "marketHashName": "Charm | Lil' Buns",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_charmburger_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 43
+  },
+  {
+    "id": "3342",
+    "name": "Lil' Smokey",
+    "marketHashName": "Charm | Lil' Smokey",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_cigar_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 44
+  },
+  {
+    "id": "3343",
+    "name": "Lil' Eldritch",
+    "marketHashName": "Charm | Lil' Eldritch",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_cthulhu_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 45
+  },
+  {
+    "id": "3344",
+    "name": "Lil' Happy",
+    "marketHashName": "Charm | Lil' Happy",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_happy_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 46
+  },
+  {
+    "id": "3345",
+    "name": "Magmatude",
+    "marketHashName": "Charm | Magmatude",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_lilhothead_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 47
+  },
+  {
+    "id": "3346",
+    "name": "Lil' Cackle",
+    "marketHashName": "Charm | Lil' Cackle",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_lillol_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 48
+  },
+  {
+    "id": "3347",
+    "name": "Quick Silver",
+    "marketHashName": "Charm | Quick Silver",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_melted_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 49
+  },
+  {
+    "id": "3348",
+    "name": "Chicken Lil'",
+    "marketHashName": "Charm | Chicken Lil'",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_chicken_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 5
+  },
+  {
+    "id": "3349",
+    "name": "Lil' No. 2",
+    "marketHashName": "Charm | Lil' No. 2",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_pencil_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 50
+  },
+  {
+    "id": "3350",
+    "name": "Piñatita",
+    "marketHashName": "Charm | Piñatita",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_pinata_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 51
+  },
+  {
+    "id": "3351",
+    "name": "Pocket Pop",
+    "marketHashName": "Charm | Pocket Pop",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_popsicle_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 52
+  },
+  {
+    "id": "3352",
+    "name": "Lil' Hero",
+    "marketHashName": "Charm | Lil' Hero",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_sentai_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 53
+  },
+  {
+    "id": "3353",
+    "name": "Lil' Tusk",
+    "marketHashName": "Charm | Lil' Tusk",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_sillyelephant_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 54
+  },
+  {
+    "id": "3354",
+    "name": "Lil' Goop",
+    "marketHashName": "Charm | Lil' Goop",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_slime_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 55
+  },
+  {
+    "id": "3355",
+    "name": "Hang Loose",
+    "marketHashName": "Charm | Hang Loose",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_surfsup_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 56
+  },
+  {
+    "id": "3356",
+    "name": "Lil' Vino",
+    "marketHashName": "Charm | Lil' Vino",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_winemaker_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 57
+  },
+  {
+    "id": "3357",
+    "name": "Lil' Moments",
+    "marketHashName": "Charm | Lil' Moments",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_retrovision_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 58
+  },
+  {
+    "id": "3358",
+    "name": "Lil' Boo",
+    "marketHashName": "Charm | Lil' Boo",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_muteghost_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 59
+  },
+  {
+    "id": "3359",
+    "name": "Lil' Crass",
+    "marketHashName": "Charm | Lil' Crass",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_guerilla_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 6
+  },
+  {
+    "id": "3360",
+    "name": "Lil' Chirp",
+    "marketHashName": "Charm | Lil' Chirp",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink_community_01/kc_missinglink_lilhatchling_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Missing Link Community Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_ml_community_01_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 60
+  },
+  {
+    "id": "3361",
+    "name": "Big Brain",
+    "marketHashName": "Charm | Big Brain",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_200iq_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 61
+  },
+  {
+    "id": "3362",
+    "name": "Biomech",
+    "marketHashName": "Charm | Biomech",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_biomech_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 62
+  },
+  {
+    "id": "3363",
+    "name": "Splatter Cat",
+    "marketHashName": "Charm | Splatter Cat",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_hellcat_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 63
+  },
+  {
+    "id": "3364",
+    "name": "Gritty",
+    "marketHashName": "Charm | Gritty",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_terror_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 64
+  },
+  {
+    "id": "3365",
+    "name": "Fluffy",
+    "marketHashName": "Charm | Fluffy",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_ugly_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 65
+  },
+  {
+    "id": "3366",
+    "name": "Whittle Guy",
+    "marketHashName": "Charm | Whittle Guy",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_wood_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 66
+  },
+  {
+    "id": "3367",
+    "name": "Lil' Zen",
+    "marketHashName": "Charm | Lil' Zen",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_yinyang_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 67
+  },
+  {
+    "id": "3368",
+    "name": "Lil' Facelift",
+    "marketHashName": "Charm | Lil' Facelift",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_aztec_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 68
+  },
+  {
+    "id": "3369",
+    "name": "Lil' Chomper",
+    "marketHashName": "Charm | Lil' Chomper",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_bombacat_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 69
+  },
+  {
+    "id": "3370",
+    "name": "Hot Howl",
+    "marketHashName": "Charm | Hot Howl",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_howl_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 7
+  },
+  {
+    "id": "3371",
+    "name": "Lil' Bloody",
+    "marketHashName": "Charm | Lil' Bloody",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_clown_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 70
+  },
+  {
+    "id": "3372",
+    "name": "Lil' Dumplin'",
+    "marketHashName": "Charm | Lil' Dumplin'",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_dimsum_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 71
+  },
+  {
+    "id": "3373",
+    "name": "Bomb Tag",
+    "marketHashName": "Charm | Bomb Tag",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_eviscerate_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 72
+  },
+  {
+    "id": "3374",
+    "name": "Glitter Bomb",
+    "marketHashName": "Charm | Glitter Bomb",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_dripfade_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 73
+  },
+  {
+    "id": "3375",
+    "name": "Lil' Eco",
+    "marketHashName": "Charm | Lil' Eco",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_eco_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 74
+  },
+  {
+    "id": "3376",
+    "name": "Hungry Eyes",
+    "marketHashName": "Charm | Hungry Eyes",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_eyecritter_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 75
+  },
+  {
+    "id": "3377",
+    "name": "Eye of Ball",
+    "marketHashName": "Charm | Eye of Ball",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_occult_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 76
+  },
+  {
+    "id": "3378",
+    "name": "Lil' Yeti",
+    "marketHashName": "Charm | Lil' Yeti",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_yeti_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 77
+  },
+  {
+    "id": "3379",
+    "name": "8 Ball IGL",
+    "marketHashName": "Charm | 8 Ball IGL",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_8ball_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 78
+  },
+  {
+    "id": "3380",
+    "name": "Flash Bomb",
+    "marketHashName": "Charm | Flash Bomb",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_flash_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 79
+  },
+  {
+    "id": "3381",
+    "name": "Big Kev",
+    "marketHashName": "Charm | Big Kev",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_kev_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 8
+  },
+  {
+    "id": "3382",
+    "name": "Lil' Ferno",
+    "marketHashName": "Charm | Lil' Ferno",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_incendiary_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 80
+  },
+  {
+    "id": "3383",
+    "name": "Butane Buddy",
+    "marketHashName": "Charm | Butane Buddy",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_lighter_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Extraordinary",
+      "color": "#eb4b4b"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 81
+  },
+  {
+    "id": "3384",
+    "name": "Dr. Brian",
+    "marketHashName": "Charm | Dr. Brian",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/drboom/kc_db_drbrian_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Remarkable",
+      "color": "#8847ff"
+    },
+    "collection": {
+      "name": "Dr Boom Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_drboom_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2025-10-01",
+    "defIndex": 82
+  },
+  {
+    "id": "3385",
+    "name": "Lil' Monster",
+    "marketHashName": "Charm | Lil' Monster",
+    "image": "https://cdn.cs2c.app/images/econ/keychains/missinglink/kc_missinglink_monster_png.png",
+    "description": "This charm can be attached to any weapon you own. Each attached charm can be detached by using a Charm Detachment. Detached charms will be returned to your inventory.",
+    "rarity": {
+      "name": "Exotic",
+      "color": "#d32ce6"
+    },
+    "collection": {
+      "name": "Missing Link Charm Collection",
+      "image": "https://cdn.cs2c.app/images/econ/set_icons/set_kc_missinglink_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2024-10-02",
+    "defIndex": 9
+  }
+]

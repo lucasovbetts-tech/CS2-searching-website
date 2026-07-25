@@ -90,7 +90,9 @@ export function initSearch() {
     //precomputes a lowercased searchable string once per item so typing doesn't redo this work on every keystroke
     const withSearchable = (items) => items.map(item => ({
         ...item,
-        searchable: (item.kind === 'skin' ? `${item.weapon} ${item.name}` : item.name).toLowerCase()
+        searchable: (item.kind === 'skin' ? `${item.weapon} ${item.name ?? ''}`
+            : item.slug === 'agents' ? item.marketHashName
+            : item.name).toLowerCase()
     }));
 
     let combined = [];
@@ -149,7 +151,9 @@ export function initSearch() {
                 : f.kind === 'collectible' ? `data-collectible="${f.slug}" data-id="${f.id}"`
                 : f.kind === 'sticker' ? `data-sticker-id="${f.id}"`
                 : `data-weapon="${f.name}"`;
-            const label = f.kind === 'skin' ? `${f.weapon} | ${f.name}${f.phase ? ` | ${f.phase}` : ''}` : f.name;
+            const label = f.kind === 'skin' ? `${f.weapon}${f.name ? ` | ${f.name}` : ''}${f.phase ? ` | ${f.phase}` : ''}`
+                : f.slug === 'agents' ? f.marketHashName
+                : f.name;
             return `
             <div class="search-result" ${dataAttr}>
                 ${f.image ? `<img class="search-result-img" src="${f.image}" alt="${f.name}">` : '<span class="search-result-img search-result-img--empty"></span>'}

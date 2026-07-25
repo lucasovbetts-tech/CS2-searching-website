@@ -1,10 +1,10 @@
-import './env.js'; // must stay the first import - see env.js
+import './env.js'; // must stay the first import so env.js is loaded first
 import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getCsMarketApiPrices, getPriceRangesForSkins } from './csmarketapi.js';
+import { getCsMarketApiPrices } from './csmarketapi.js';
 import { getCached, setCached } from './cache.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -58,42 +58,6 @@ app.get('/api/price', async (req, res) => {
         console.error('CSMarketAPI error:', err.message);
         res.status(502).json({ error: 'Failed to fetch prices' });
     }
-});
-
-//price range for every skin of one weapon at once - built for weapon pages, not the full
-//grid getCsMarketApiPrices gives one skin
-app.get('/api/prices/weapon', async (req, res) => {
-    const weapon = req.query.weapon;
-    if (!weapon) return res.status(400).json({ error: 'weapon query param is required' });
-
-    loadSkins();
-    const skins = allSkins.filter(s => s.weapon === weapon);
-    if (!skins.length) return res.json({});
-
-    const result = {};
-    const toFetch = [];
-    for (const skin of skins) {
-        const id = `${skin.defIndex}-${skin.paintIndex}`;
-        const cached = getCached(`range:${skin.defIndex}:${skin.paintIndex}`);
-        if (cached) result[id] = cached;
-        else toFetch.push(skin);
-    }
-
-    if (toFetch.length) {
-        try {
-            const fetched = await getPriceRangesForSkins(toFetch);
-            fetched.forEach((data, i) => {
-                const skin = toFetch[i];
-                setCached(`range:${skin.defIndex}:${skin.paintIndex}`, data);
-                result[`${skin.defIndex}-${skin.paintIndex}`] = data;
-            });
-        } catch (err) {
-            console.error('CSMarketAPI weapon-range error:', err.message);
-            // whatever was already cached still gets returned - only the uncached skins are missing
-        }
-    }
-
-    res.json(result);
 });
 
 app.listen(PORT, () => console.log(`Price server listening on http://localhost:${PORT}`));

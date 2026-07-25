@@ -1,0 +1,1027 @@
+{
+  "Avan Market": {
+    "key": "avanmarket",
+    "logo": "https://cdn.cs2c.app/images/providers/avanmarket.png",
+    "code": "AVAN",
+    "market_type": "STORE",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.14,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:43.707960+00:00",
+      "total_offers": 390329,
+      "unique_items": 21413,
+      "market_coverage": 52.21,
+      "total_value": 4051650826,
+      "total_value_usd": 4051650826
+    }
+  },
+  "BUFF163": {
+    "key": "buff163",
+    "logo": "https://cdn.cs2c.app/images/providers/buff163.png",
+    "code": "B163",
+    "market_type": "P2P",
+    "default_currency": "CNY",
+    "fees": {
+      "sell_fee": 0.015,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": true
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T19:59:09.110495+00:00",
+      "total_offers": 4749741,
+      "unique_items": 32454,
+      "market_coverage": 79.12,
+      "total_value": 85020856460,
+      "total_value_usd": 12550223984
+    }
+  },
+  "BUFF Market": {
+    "key": "buffmarket",
+    "logo": "https://cdn.cs2c.app/images/providers/buffmarket.png",
+    "code": "BMAR",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.025,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T19:27:55.451955+00:00",
+      "total_offers": 558922,
+      "unique_items": 24339,
+      "market_coverage": 59.34,
+      "total_value": 5998476700,
+      "total_value_usd": 5998476700
+    }
+  },
+  "C5GAME": {
+    "key": "c5",
+    "logo": "https://cdn.cs2c.app/images/providers/c5.png",
+    "code": "C5GA",
+    "market_type": "P2P",
+    "default_currency": "CNY",
+    "fees": {
+      "sell_fee": 0.01,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": true
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:01:46.165106+00:00",
+      "total_offers": 5217492,
+      "unique_items": 29285,
+      "market_coverage": 71.4,
+      "total_value": 44585151619,
+      "total_value_usd": 6581369119
+    }
+  },
+  "CS.Deals": {
+    "key": "csdeals",
+    "logo": "https://cdn.cs2c.app/images/providers/csdeals.png",
+    "code": "DEAL",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.02,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:08.411708+00:00",
+      "total_offers": 39384,
+      "unique_items": 6697,
+      "market_coverage": 16.33,
+      "total_value": 83735578,
+      "total_value_usd": 83735578
+    }
+  },
+  "CSFloat": {
+    "key": "csfloat",
+    "logo": "https://cdn.cs2c.app/images/providers/csfloat.png",
+    "code": "CSFT",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.02,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": true
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:11.512082+00:00",
+      "total_offers": 2286552,
+      "unique_items": 26974,
+      "market_coverage": 65.76,
+      "total_value": 6818249824,
+      "total_value_usd": 6818249824
+    }
+  },
+  "CSGO500": {
+    "key": "csgo500",
+    "logo": "https://cdn.cs2c.app/images/providers/csgo500.png",
+    "code": "C500",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": true
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:15.523493+00:00",
+      "total_offers": 169757,
+      "unique_items": 17986,
+      "market_coverage": 43.85,
+      "total_value": 1487113236,
+      "total_value_usd": 1487113236
+    }
+  },
+  "CSGOEmpire": {
+    "key": "csgoempire",
+    "logo": "https://cdn.cs2c.app/images/providers/csgoempire.png",
+    "code": "EMPR",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": true
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:08:13.626045+00:00",
+      "total_offers": 96165,
+      "unique_items": 12677,
+      "market_coverage": 30.91,
+      "total_value": 954331798,
+      "total_value_usd": 954331798
+    }
+  },
+  "CS.MONEY - Market": {
+    "key": "csmoney_m",
+    "logo": "https://cdn.cs2c.app/images/providers/csmoney_m.png",
+    "code": "CSMM",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.05,
+      "insta_sell_fee": 0.05,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:06:23.530153+00:00",
+      "total_offers": 784712,
+      "unique_items": 27005,
+      "market_coverage": 65.84,
+      "total_value": 2681332792,
+      "total_value_usd": 2681332792
+    }
+  },
+  "CS.MONEY - Trade": {
+    "key": "csmoney_t",
+    "logo": "https://cdn.cs2c.app/images/providers/csmoney_t.png",
+    "code": "CSMT",
+    "market_type": "TRADING",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": null,
+      "trading_spread_fee": 0.15
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:14.928312+00:00",
+      "total_offers": 728164,
+      "unique_items": 22593,
+      "market_coverage": 55.08,
+      "total_value": 2492644950,
+      "total_value_usd": 2492644950
+    }
+  },
+  "CS.Trade": {
+    "key": "cstrade",
+    "logo": "https://cdn.cs2c.app/images/providers/cstrade.png",
+    "code": "CSTR",
+    "market_type": "TRADING",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": null,
+      "trading_spread_fee": 0.08
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:06:31.018181+00:00",
+      "total_offers": 14541,
+      "unique_items": 3774,
+      "market_coverage": 9.2,
+      "total_value": 22827982,
+      "total_value_usd": 22827982
+    }
+  },
+  "DMarket": {
+    "key": "dmarket",
+    "logo": "https://cdn.cs2c.app/images/providers/dmarket.png",
+    "code": "DMAR",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.02,
+      "insta_sell_fee": 0.2,
+      "trading_spread_fee": 0.125
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": true
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T19:58:29.404239+00:00",
+      "total_offers": 688498,
+      "unique_items": 20433,
+      "market_coverage": 49.82,
+      "total_value": 1389248628,
+      "total_value_usd": 1389248628
+    }
+  },
+  "ECOSteam": {
+    "key": "ecosteam",
+    "logo": "https://cdn.cs2c.app/images/providers/ecosteam.png",
+    "code": "ECOS",
+    "market_type": "P2P",
+    "default_currency": "CNY",
+    "fees": {
+      "sell_fee": 0,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:07:07.556402+00:00",
+      "total_offers": 3273852,
+      "unique_items": 29584,
+      "market_coverage": 72.13,
+      "total_value": 49256392452,
+      "total_value_usd": 7270907206
+    }
+  },
+  "HaloSkins": {
+    "key": "haloskins",
+    "logo": "https://cdn.cs2c.app/images/providers/haloskins.png",
+    "code": "HALO",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.03,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:03.693525+00:00",
+      "total_offers": 5036950,
+      "unique_items": 29421,
+      "market_coverage": 71.73,
+      "total_value": 7342503478,
+      "total_value_usd": 7342503478
+    }
+  },
+  "iTrade.gg": {
+    "key": "itradegg",
+    "logo": "https://cdn.cs2c.app/images/providers/itradegg.png",
+    "code": "ITGG",
+    "market_type": "TRADING",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": null,
+      "trading_spread_fee": 0.075
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T19:59:42.935879+00:00",
+      "total_offers": 4928,
+      "unique_items": 2001,
+      "market_coverage": 4.88,
+      "total_value": 7884280,
+      "total_value_usd": 7884280
+    }
+  },
+  "LIS-SKINS": {
+    "key": "lisskins",
+    "logo": "https://cdn.cs2c.app/images/providers/lisskins.png",
+    "code": "LISK",
+    "market_type": "STORE",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.08,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:01.035606+00:00",
+      "total_offers": 2191324,
+      "unique_items": 25055,
+      "market_coverage": 61.08,
+      "total_value": 6679397574,
+      "total_value_usd": 6679397574
+    }
+  },
+  "LOOT.Farm": {
+    "key": "lootfarm",
+    "logo": "https://cdn.cs2c.app/images/providers/lootfarm.png",
+    "code": "LOOT",
+    "market_type": "TRADING",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": null,
+      "trading_spread_fee": 0.08
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:07:10.584361+00:00",
+      "total_offers": 13317,
+      "unique_items": 2913,
+      "market_coverage": 7.1,
+      "total_value": 82012772,
+      "total_value_usd": 82012772
+    }
+  },
+  "Mannco.store": {
+    "key": "mannco",
+    "logo": "https://cdn.cs2c.app/images/providers/mannco.png",
+    "code": "MANN",
+    "market_type": "ESCROW",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.05,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:00:06.104429+00:00",
+      "total_offers": 252933,
+      "unique_items": 11211,
+      "market_coverage": 27.33,
+      "total_value": 469958689,
+      "total_value_usd": 469958689
+    }
+  },
+  "Market.CSGO": {
+    "key": "marketcsgo",
+    "logo": "https://cdn.cs2c.app/images/providers/marketcsgo.png",
+    "code": "TMAR",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.05,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:35.014882+00:00",
+      "total_offers": 1375190,
+      "unique_items": 27630,
+      "market_coverage": 67.36,
+      "total_value": 2993359505,
+      "total_value_usd": 2993359505
+    }
+  },
+  "PirateSwap": {
+    "key": "pirateswap",
+    "logo": "https://cdn.cs2c.app/images/providers/pirateswap.png",
+    "code": "PIRA",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.33,
+      "trading_spread_fee": 0.11
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:00:40.133747+00:00",
+      "total_offers": 624066,
+      "unique_items": 9471,
+      "market_coverage": 23.09,
+      "total_value": 274280606,
+      "total_value_usd": 274280606
+    }
+  },
+  "RapidSkins": {
+    "key": "rapidskins",
+    "logo": "https://cdn.cs2c.app/images/providers/rapidskins.png",
+    "code": "RAPS",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.25,
+      "trading_spread_fee": 0.3
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:10.509476+00:00",
+      "total_offers": 2130,
+      "unique_items": 981,
+      "market_coverage": 2.39,
+      "total_value": 11102155,
+      "total_value_usd": 11102155
+    }
+  },
+  "ShadowPay": {
+    "key": "shadowpay",
+    "logo": "https://cdn.cs2c.app/images/providers/shadowpay.png",
+    "code": "SPAY",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.05,
+      "insta_sell_fee": 0.17,
+      "trading_spread_fee": 0.33
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:06:27.803476+00:00",
+      "total_offers": 934728,
+      "unique_items": 19849,
+      "market_coverage": 48.39,
+      "total_value": 2374759511,
+      "total_value_usd": 2374759511
+    }
+  },
+  "SkinBaron": {
+    "key": "skinbaron",
+    "logo": "https://cdn.cs2c.app/images/providers/skinbaron.png",
+    "code": "SBAR",
+    "market_type": "ESCROW",
+    "default_currency": "EUR",
+    "fees": {
+      "sell_fee": 0.15,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:08.393530+00:00",
+      "total_offers": 2064646,
+      "unique_items": 21340,
+      "market_coverage": 52.03,
+      "total_value": 493014982,
+      "total_value_usd": 560792013
+    }
+  },
+  "Skinflow": {
+    "key": "skinflow",
+    "logo": "https://cdn.cs2c.app/images/providers/skinflow.png",
+    "code": "FLOW",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.27,
+      "trading_spread_fee": 0.11
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:06:17.219196+00:00",
+      "total_offers": 674909,
+      "unique_items": 20525,
+      "market_coverage": 50.04,
+      "total_value": 992134667,
+      "total_value_usd": 992134667
+    }
+  },
+  "SkinOut": {
+    "key": "skinout",
+    "logo": "https://cdn.cs2c.app/images/providers/skinout.png",
+    "code": "SOUT",
+    "market_type": "STORE",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.11,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:51.356278+00:00",
+      "total_offers": 26557,
+      "unique_items": 2972,
+      "market_coverage": 7.25,
+      "total_value": 60440276,
+      "total_value_usd": 60440276
+    }
+  },
+  "SkinPlace": {
+    "key": "skinplace",
+    "logo": "https://cdn.cs2c.app/images/providers/skinplace.png",
+    "code": "PLAC",
+    "market_type": "STORE",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.14,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:06:31.198399+00:00",
+      "total_offers": 57771,
+      "unique_items": 2059,
+      "market_coverage": 5.02,
+      "total_value": 245879385,
+      "total_value_usd": 245879385
+    }
+  },
+  "Skinport": {
+    "key": "skinport",
+    "logo": "https://cdn.cs2c.app/images/providers/skinport.png",
+    "code": "PORT",
+    "market_type": "ESCROW",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.08,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:58.316980+00:00",
+      "total_offers": 3597190,
+      "unique_items": 24997,
+      "market_coverage": 60.94,
+      "total_value": 1705675329,
+      "total_value_usd": 1705675329
+    }
+  },
+  "Skins.com": {
+    "key": "skinscom",
+    "logo": "https://cdn.cs2c.app/images/providers/skinscom.png",
+    "code": "SKIN",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:51.658345+00:00",
+      "total_offers": 83049,
+      "unique_items": 16558,
+      "market_coverage": 40.37,
+      "total_value": 945457832,
+      "total_value_usd": 945457832
+    }
+  },
+  "SkinsMonkey": {
+    "key": "skinsmonkey",
+    "logo": "https://cdn.cs2c.app/images/providers/skinsmonkey.png",
+    "code": "MONK",
+    "market_type": "TRADING",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": null,
+      "trading_spread_fee": 0.1
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:06:43.906299+00:00",
+      "total_offers": 87250,
+      "unique_items": 7854,
+      "market_coverage": 19.15,
+      "total_value": 312486695,
+      "total_value_usd": 312486695
+    }
+  },
+  "SkinSwap - Market": {
+    "key": "skinswap",
+    "logo": "https://cdn.cs2c.app/images/providers/skinswap.png",
+    "code": "SKSW",
+    "market_type": "STORE",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.13,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:21.916869+00:00",
+      "total_offers": 7567823,
+      "unique_items": 31203,
+      "market_coverage": 76.07,
+      "total_value": 14785939312,
+      "total_value_usd": 14785939312
+    }
+  },
+  "Skinvault": {
+    "key": "skinvault",
+    "logo": "https://cdn.cs2c.app/images/providers/skinvault.png",
+    "code": "SVLT",
+    "market_type": "TRADING",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": null,
+      "trading_spread_fee": 0.25
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:47.547842+00:00",
+      "total_offers": 1042611,
+      "unique_items": 20007,
+      "market_coverage": 48.78,
+      "total_value": 2330706079,
+      "total_value_usd": 2330706079
+    }
+  },
+  "Steam Community Market": {
+    "key": "steam",
+    "logo": "https://cdn.cs2c.app/images/providers/steam.png",
+    "code": "STCM",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.13,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T19:59:30.515158+00:00",
+      "total_offers": 26892433,
+      "unique_items": 32733,
+      "market_coverage": 79.8,
+      "total_value": 3030251420,
+      "total_value_usd": 3030251420
+    }
+  },
+  "Swap.gg": {
+    "key": "swapgg",
+    "logo": "https://cdn.cs2c.app/images/providers/swapgg.png",
+    "code": "SWAP",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.3,
+      "trading_spread_fee": 0.3
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T19:00:25.052252+00:00",
+      "total_offers": 50362,
+      "unique_items": 9299,
+      "market_coverage": 22.67,
+      "total_value": 70467830,
+      "total_value_usd": 70467830
+    }
+  },
+  "Tradeit.gg": {
+    "key": "tradeit",
+    "logo": "https://cdn.cs2c.app/images/providers/tradeit.png",
+    "code": "TRAD",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.23,
+      "trading_spread_fee": 0.15
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:50.046309+00:00",
+      "total_offers": 381757,
+      "unique_items": 25175,
+      "market_coverage": 61.38,
+      "total_value": 2143299020,
+      "total_value_usd": 2143299020
+    }
+  },
+  "WAXPEER": {
+    "key": "waxpeer",
+    "logo": "https://cdn.cs2c.app/images/providers/waxpeer.png",
+    "code": "WAXP",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.06,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:08:23.727479+00:00",
+      "total_offers": 1148928,
+      "unique_items": 20969,
+      "market_coverage": 51.12,
+      "total_value": 4344871077,
+      "total_value_usd": 4344871077
+    }
+  },
+  "white.market": {
+    "key": "whitemarket",
+    "logo": "https://cdn.cs2c.app/images/providers/whitemarket.png",
+    "code": "WHIT",
+    "market_type": "HYBRID",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.05,
+      "insta_sell_fee": 0.14,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:51.308264+00:00",
+      "total_offers": 2784487,
+      "unique_items": 20774,
+      "market_coverage": 50.65,
+      "total_value": 8106828571,
+      "total_value_usd": 8106828571
+    }
+  },
+  "Youpin898": {
+    "key": "youpin",
+    "logo": "https://cdn.cs2c.app/images/providers/youpin.png",
+    "code": "YOUP",
+    "market_type": "P2P",
+    "default_currency": "CNY",
+    "fees": {
+      "sell_fee": 0.01,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": true
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T19:58:58.271675+00:00",
+      "total_offers": 6164576,
+      "unique_items": 27983,
+      "market_coverage": 68.22,
+      "total_value": 93091166974,
+      "total_value_usd": 13741510555
+    }
+  },
+  "Dupe.fi": {
+    "key": "dupefi",
+    "logo": "https://cdn.cs2c.app/images/providers/dupefi.png",
+    "code": "DUPE",
+    "market_type": "P2P",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": true,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T19:55:48.798729+00:00",
+      "total_offers": 23182,
+      "unique_items": 5805,
+      "market_coverage": 14.15,
+      "total_value": 299734930,
+      "total_value_usd": 299734930
+    }
+  },
+  "Skin.Land": {
+    "key": "skinland",
+    "logo": "https://cdn.cs2c.app/images/providers/skinland.png",
+    "code": "LAND",
+    "market_type": "STORE",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": 0.055,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:05:55.623946+00:00",
+      "total_offers": 2188124,
+      "unique_items": 24988,
+      "market_coverage": 60.92,
+      "total_value": 6677896909,
+      "total_value_usd": 6677896909
+    }
+  },
+  "GameBoost": {
+    "key": "gameboost",
+    "logo": "https://cdn.cs2c.app/images/providers/gameboost.png",
+    "code": "GAME",
+    "market_type": "STORE",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": 0.15,
+      "insta_sell_fee": null,
+      "trading_spread_fee": null
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "down",
+      "last_checked_at": "2026-07-25T19:44:41.943547+00:00",
+      "total_offers": null,
+      "unique_items": 20376,
+      "market_coverage": 49.68,
+      "total_value": null,
+      "total_value_usd": null
+    }
+  },
+  "SkinSwap - Trade": {
+    "key": "skinswap_t",
+    "logo": "https://cdn.cs2c.app/images/providers/skinswap_t.png",
+    "code": "SKST",
+    "market_type": "TRADING",
+    "default_currency": "USD",
+    "fees": {
+      "sell_fee": null,
+      "insta_sell_fee": null,
+      "trading_spread_fee": 0.08
+    },
+    "features": {
+      "has_buy_orders": false,
+      "has_recent_sales": false
+    },
+    "health": {
+      "status": "up",
+      "last_checked_at": "2026-07-25T20:04:05.827394+00:00",
+      "total_offers": 25724,
+      "unique_items": 4906,
+      "market_coverage": 11.96,
+      "total_value": 85830909,
+      "total_value_usd": 85830909
+    }
+  }
+}
