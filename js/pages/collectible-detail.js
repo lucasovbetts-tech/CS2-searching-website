@@ -98,27 +98,31 @@ function renderHighlightMeta(item) {
 
 const PRICE_UNAVAILABLE = 'Price unavailable. (Not found in cache)';
 
-//cheapest market found for the item - no wear tiers/variants for these types, just one price per market
+//cheapest market found for the item - no wear tiers/variants for these types, just one price per market.
+//each market's value is {price, link}
 function lowestPrice(prices) {
     if (!prices) return PRICE_UNAVAILABLE;
     const values = Object.values(prices);
     if (!values.length) return PRICE_UNAVAILABLE;
-    return `From $${Math.min(...values).toFixed(2)}`;
+    return `From $${Math.min(...values.map(v => v.price)).toFixed(2)}`;
 }
 
-//one pill per market that actually has a price for this item - logo + price, cheapest first
+//one pill per market that actually has a price for this item - logo + price, cheapest first.
+//each pill links straight to that market's listing when CS2Cap gave us one (not every provider has a link)
 function renderMarketListings(prices, markets) {
     if (!prices) return '';
-    const entries = Object.entries(prices).sort((a, b) => a[1] - b[1]);
+    const entries = Object.entries(prices).sort((a, b) => a[1].price - b[1].price);
     if (!entries.length) return '';
 
     return `
     <div class="market-listings">
-        ${entries.map(([key, price]) => `
-        <span class="market-pill">
-            ${markets[key]?.logo ? `<img src="${markets[key].logo}" alt="${key}">` : ''}
-            $${price.toFixed(2)}
-        </span>`).join('')}
+        ${entries.map(([key, data]) => {
+            const logo = markets[key]?.logo;
+            const inner = `${logo ? `<img src="${logo}" alt="${key}">` : ''}$${data.price.toFixed(2)}`;
+            return data.link
+                ? `<a class="market-pill" href="${data.link}" target="_blank" rel="noopener">${inner}</a>`
+                : `<span class="market-pill">${inner}</span>`;
+        }).join('')}
     </div>`;
 }
 

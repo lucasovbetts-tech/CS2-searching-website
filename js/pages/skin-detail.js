@@ -19,7 +19,7 @@ function rarityGradient(hex) {
 const VARIANT_LABELS = { normal: 'Normal', stattrak: 'StatTrak™' };
 
 //cheapest market for each wear-tier/variant cell - keeps which market it came from too (not just the price),
-//so the table can show that market's logo next to the number
+//so the table can show that market's logo next to the number. Each market's value is {price, link}.
 function priceGrid(prices) {
     const grid = {};
     for (const [tier, variants] of Object.entries(prices)) {
@@ -27,7 +27,7 @@ function priceGrid(prices) {
         for (const [variant, markets] of Object.entries(variants)) {
             const entries = Object.entries(markets);
             grid[tier][variant] = entries.length
-                ? entries.reduce((min, e) => e[1] < min[1] ? e : min)
+                ? entries.reduce((min, e) => e[1].price < min[1].price ? e : min)
                 : null;
         }
     }
@@ -55,9 +55,12 @@ function renderPriceGrid(s, prices, markets) {
             const cell = grid[tier.key]?.[v];
             const stattrakClass = v === 'stattrak' ? ' skin-price-col--stattrak' : '';
             if (!cell) return `<span class="skin-price-col${stattrakClass}">—</span>`;
-            const [market, price] = cell;
+            const [market, data] = cell;
             const logo = markets[market]?.logo;
-            return `<span class="skin-price-col${stattrakClass}">${logo ? `<img class="skin-price-col-logo" src="${logo}" alt="${market}">` : ''}$${price.toFixed(2)}</span>`;
+            const inner = `${logo ? `<img class="skin-price-col-logo" src="${logo}" alt="${market}">` : ''}$${data.price.toFixed(2)}`;
+            return data.link
+                ? `<a class="skin-price-col${stattrakClass}" href="${data.link}" target="_blank" rel="noopener">${inner}</a>`
+                : `<span class="skin-price-col${stattrakClass}">${inner}</span>`;
         }).join('')}
     </div>`).join('');
 
@@ -77,19 +80,22 @@ function representativeTierPrices(prices) {
     return null;
 }
 
-//one pill per market that actually has a price for this item - logo + price, cheapest first
+//one pill per market that actually has a price for this item - logo + price, cheapest first.
+//each pill links straight to that market's listing when CS2Cap gave us one (not every provider has a link)
 function renderMarketListings(prices, markets) {
     if (!prices) return '';
-    const entries = Object.entries(prices).sort((a, b) => a[1] - b[1]);
+    const entries = Object.entries(prices).sort((a, b) => a[1].price - b[1].price);
     if (!entries.length) return '';
 
     return `
     <div class="market-listings">
-        ${entries.map(([key, price]) => `
-        <span class="market-pill">
-            ${markets[key]?.logo ? `<img src="${markets[key].logo}" alt="${key}">` : ''}
-            $${price.toFixed(2)}
-        </span>`).join('')}
+        ${entries.map(([key, data]) => {
+            const logo = markets[key]?.logo;
+            const inner = `${logo ? `<img src="${logo}" alt="${key}">` : ''}$${data.price.toFixed(2)}`;
+            return data.link
+                ? `<a class="market-pill" href="${data.link}" target="_blank" rel="noopener">${inner}</a>`
+                : `<span class="market-pill">${inner}</span>`;
+        }).join('')}
     </div>`;
 }
 

@@ -157,6 +157,7 @@
     font-weight: 700;
     color: var(--text);
     font-variant-numeric: tabular-nums;
+    text-decoration: none; /* pills are <a> tags when a market link exists, plain <span> otherwise */
     transition: background-color 0.2s ease;
 }
 
@@ -220,6 +221,7 @@
     font-weight: 600;
     font-variant-numeric: tabular-nums;
     color: var(--text-sec);
+    text-decoration: none; /* cells are <a> tags when a market link exists, plain <span> otherwise */
     transition: background-color 0.2s ease;
 }
 

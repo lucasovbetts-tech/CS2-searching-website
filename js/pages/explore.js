@@ -388,12 +388,14 @@ async function renderCollectibleItems(items, label) {
 
 const PRICE_UNAVAILABLE = 'Price unavailable.';
 
-//cheapest market found for a non-skin item (sticker, agent, charm, etc.) - no wear tiers/variants, one price per market
+//cheapest market found for a non-skin item (sticker, agent, charm, etc.) - no wear tiers/variants, one price per
+//market. Also fed a flat array of {price, link} objects directly by skinPriceTexts below (Object.values on an
+//array just returns the array), so this handles both shapes the same way. Each market's value is {price, link}.
 function lowestPrice(prices) {
     if (!prices) return PRICE_UNAVAILABLE;
     const values = Object.values(prices);
     if (!values.length) return PRICE_UNAVAILABLE;
-    return `From $${Math.min(...values).toFixed(2)}`;
+    return `From $${Math.min(...values.map(v => v.price)).toFixed(2)}`;
 }
 
 //lowest normal/stattrak/souvenir price text for one skin, fetched once and reused per variant rather than

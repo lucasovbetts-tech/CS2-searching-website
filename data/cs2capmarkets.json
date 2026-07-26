@@ -16,12 +16,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:43.707960+00:00",
-      "total_offers": 390329,
-      "unique_items": 21413,
-      "market_coverage": 52.21,
-      "total_value": 4051650826,
-      "total_value_usd": 4051650826
+      "last_checked_at": "2026-07-25T23:54:15.177091+00:00",
+      "total_offers": 392163,
+      "unique_items": 21396,
+      "market_coverage": 52.16,
+      "total_value": 4086706306,
+      "total_value_usd": 4086706306
     }
   },
   "BUFF163": {
@@ -41,12 +41,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T19:59:09.110495+00:00",
-      "total_offers": 4749741,
-      "unique_items": 32454,
-      "market_coverage": 79.12,
-      "total_value": 85020856460,
-      "total_value_usd": 12550223984
+      "last_checked_at": "2026-07-25T23:58:55.404331+00:00",
+      "total_offers": 4737497,
+      "unique_items": 32435,
+      "market_coverage": 79.08,
+      "total_value": 85045632162,
+      "total_value_usd": 12555183869
     }
   },
   "BUFF Market": {
@@ -66,12 +66,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T19:27:55.451955+00:00",
-      "total_offers": 558922,
-      "unique_items": 24339,
-      "market_coverage": 59.34,
-      "total_value": 5998476700,
-      "total_value_usd": 5998476700
+      "last_checked_at": "2026-07-25T22:10:33.123314+00:00",
+      "total_offers": 559435,
+      "unique_items": 24333,
+      "market_coverage": 59.32,
+      "total_value": 6004279200,
+      "total_value_usd": 6004279200
     }
   },
   "C5GAME": {
@@ -91,12 +91,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:01:46.165106+00:00",
-      "total_offers": 5217492,
-      "unique_items": 29285,
-      "market_coverage": 71.4,
-      "total_value": 44585151619,
-      "total_value_usd": 6581369119
+      "last_checked_at": "2026-07-25T23:30:42.361432+00:00",
+      "total_offers": 5200325,
+      "unique_items": 29280,
+      "market_coverage": 71.39,
+      "total_value": 42927420350,
+      "total_value_usd": 6337417527
     }
   },
   "CS.Deals": {
@@ -116,7 +116,7 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:08.411708+00:00",
+      "last_checked_at": "2026-07-25T23:54:31.039471+00:00",
       "total_offers": 39384,
       "unique_items": 6697,
       "market_coverage": 16.33,
@@ -141,12 +141,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:11.512082+00:00",
-      "total_offers": 2286552,
-      "unique_items": 26974,
-      "market_coverage": 65.76,
-      "total_value": 6818249824,
-      "total_value_usd": 6818249824
+      "last_checked_at": "2026-07-25T23:58:12.173911+00:00",
+      "total_offers": 2287662,
+      "unique_items": 26950,
+      "market_coverage": 65.7,
+      "total_value": 6797528780,
+      "total_value_usd": 6797528780
     }
   },
   "CSGO500": {
@@ -166,12 +166,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:15.523493+00:00",
-      "total_offers": 169757,
-      "unique_items": 17986,
-      "market_coverage": 43.85,
-      "total_value": 1487113236,
-      "total_value_usd": 1487113236
+      "last_checked_at": "2026-07-25T23:58:26.552850+00:00",
+      "total_offers": 34682,
+      "unique_items": 7410,
+      "market_coverage": 18.07,
+      "total_value": 208130922,
+      "total_value_usd": 208130922
     }
   },
   "CSGOEmpire": {
@@ -191,12 +191,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:08:13.626045+00:00",
-      "total_offers": 96165,
-      "unique_items": 12677,
-      "market_coverage": 30.91,
-      "total_value": 954331798,
-      "total_value_usd": 954331798
+      "last_checked_at": "2026-07-25T23:56:59.402456+00:00",
+      "total_offers": 95916,
+      "unique_items": 12655,
+      "market_coverage": 30.85,
+      "total_value": 952688756,
+      "total_value_usd": 952688756
     }
   },
   "CS.MONEY - Market": {
@@ -216,12 +216,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:06:23.530153+00:00",
-      "total_offers": 784712,
-      "unique_items": 27005,
-      "market_coverage": 65.84,
-      "total_value": 2681332792,
-      "total_value_usd": 2681332792
+      "last_checked_at": "2026-07-25T23:56:28.082519+00:00",
+      "total_offers": 784409,
+      "unique_items": 27009,
+      "market_coverage": 65.85,
+      "total_value": 2668555624,
+      "total_value_usd": 2668555624
     }
   },
   "CS.MONEY - Trade": {
@@ -241,12 +241,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:14.928312+00:00",
-      "total_offers": 728164,
-      "unique_items": 22593,
-      "market_coverage": 55.08,
-      "total_value": 2492644950,
-      "total_value_usd": 2492644950
+      "last_checked_at": "2026-07-25T23:54:56.534087+00:00",
+      "total_offers": 729318,
+      "unique_items": 22647,
+      "market_coverage": 55.21,
+      "total_value": 2495338191,
+      "total_value_usd": 2495338191
     }
   },
   "CS.Trade": {
@@ -266,12 +266,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:06:31.018181+00:00",
-      "total_offers": 14541,
-      "unique_items": 3774,
-      "market_coverage": 9.2,
-      "total_value": 22827982,
-      "total_value_usd": 22827982
+      "last_checked_at": "2026-07-25T23:56:31.658181+00:00",
+      "total_offers": 14643,
+      "unique_items": 3789,
+      "market_coverage": 9.24,
+      "total_value": 22835151,
+      "total_value_usd": 22835151
     }
   },
   "DMarket": {
@@ -291,12 +291,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T19:58:29.404239+00:00",
-      "total_offers": 688498,
-      "unique_items": 20433,
-      "market_coverage": 49.82,
-      "total_value": 1389248628,
-      "total_value_usd": 1389248628
+      "last_checked_at": "2026-07-25T23:58:23.620843+00:00",
+      "total_offers": 687981,
+      "unique_items": 20432,
+      "market_coverage": 49.81,
+      "total_value": 1386037500,
+      "total_value_usd": 1386037500
     }
   },
   "ECOSteam": {
@@ -316,12 +316,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:07:07.556402+00:00",
-      "total_offers": 3273852,
-      "unique_items": 29584,
-      "market_coverage": 72.13,
-      "total_value": 49256392452,
-      "total_value_usd": 7270907206
+      "last_checked_at": "2026-07-25T23:57:09.051202+00:00",
+      "total_offers": 3252511,
+      "unique_items": 29528,
+      "market_coverage": 71.99,
+      "total_value": 47733529778,
+      "total_value_usd": 7046843299
     }
   },
   "HaloSkins": {
@@ -341,12 +341,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:03.693525+00:00",
-      "total_offers": 5036950,
-      "unique_items": 29421,
-      "market_coverage": 71.73,
-      "total_value": 7342503478,
-      "total_value_usd": 7342503478
+      "last_checked_at": "2026-07-25T23:58:00.191267+00:00",
+      "total_offers": 5027402,
+      "unique_items": 29404,
+      "market_coverage": 71.69,
+      "total_value": 7295591455,
+      "total_value_usd": 7295591455
     }
   },
   "iTrade.gg": {
@@ -366,12 +366,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T19:59:42.935879+00:00",
-      "total_offers": 4928,
-      "unique_items": 2001,
-      "market_coverage": 4.88,
-      "total_value": 7884280,
-      "total_value_usd": 7884280
+      "last_checked_at": "2026-07-25T23:58:37.159849+00:00",
+      "total_offers": 4956,
+      "unique_items": 2020,
+      "market_coverage": 4.92,
+      "total_value": 7886527,
+      "total_value_usd": 7886527
     }
   },
   "LIS-SKINS": {
@@ -391,12 +391,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:01.035606+00:00",
-      "total_offers": 2191324,
-      "unique_items": 25055,
-      "market_coverage": 61.08,
-      "total_value": 6679397574,
-      "total_value_usd": 6679397574
+      "last_checked_at": "2026-07-25T23:59:00.902751+00:00",
+      "total_offers": 2185569,
+      "unique_items": 25049,
+      "market_coverage": 61.07,
+      "total_value": 6625302939,
+      "total_value_usd": 6625302939
     }
   },
   "LOOT.Farm": {
@@ -416,12 +416,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:07:10.584361+00:00",
-      "total_offers": 13317,
-      "unique_items": 2913,
-      "market_coverage": 7.1,
-      "total_value": 82012772,
-      "total_value_usd": 82012772
+      "last_checked_at": "2026-07-25T23:57:07.224863+00:00",
+      "total_offers": 12703,
+      "unique_items": 2899,
+      "market_coverage": 7.07,
+      "total_value": 81568868,
+      "total_value_usd": 81568868
     }
   },
   "Mannco.store": {
@@ -441,12 +441,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:00:06.104429+00:00",
-      "total_offers": 252933,
-      "unique_items": 11211,
-      "market_coverage": 27.33,
-      "total_value": 469958689,
-      "total_value_usd": 469958689
+      "last_checked_at": "2026-07-25T23:50:05.096411+00:00",
+      "total_offers": 252704,
+      "unique_items": 11134,
+      "market_coverage": 27.14,
+      "total_value": 467272474,
+      "total_value_usd": 467272474
     }
   },
   "Market.CSGO": {
@@ -466,12 +466,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:35.014882+00:00",
-      "total_offers": 1375190,
-      "unique_items": 27630,
-      "market_coverage": 67.36,
-      "total_value": 2993359505,
-      "total_value_usd": 2993359505
+      "last_checked_at": "2026-07-25T23:49:31.774582+00:00",
+      "total_offers": 1357718,
+      "unique_items": 27422,
+      "market_coverage": 66.86,
+      "total_value": 2826909341,
+      "total_value_usd": 2826909341
     }
   },
   "PirateSwap": {
@@ -491,12 +491,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:00:40.133747+00:00",
-      "total_offers": 624066,
-      "unique_items": 9471,
-      "market_coverage": 23.09,
-      "total_value": 274280606,
-      "total_value_usd": 274280606
+      "last_checked_at": "2026-07-25T23:50:23.722559+00:00",
+      "total_offers": 623395,
+      "unique_items": 9396,
+      "market_coverage": 22.91,
+      "total_value": 259117146,
+      "total_value_usd": 259117146
     }
   },
   "RapidSkins": {
@@ -516,12 +516,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:10.509476+00:00",
+      "last_checked_at": "2026-07-25T23:54:39.248781+00:00",
       "total_offers": 2130,
-      "unique_items": 981,
+      "unique_items": 982,
       "market_coverage": 2.39,
-      "total_value": 11102155,
-      "total_value_usd": 11102155
+      "total_value": 11114167,
+      "total_value_usd": 11114167
     }
   },
   "ShadowPay": {
@@ -541,12 +541,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:06:27.803476+00:00",
-      "total_offers": 934728,
-      "unique_items": 19849,
-      "market_coverage": 48.39,
-      "total_value": 2374759511,
-      "total_value_usd": 2374759511
+      "last_checked_at": "2026-07-25T23:56:28.718377+00:00",
+      "total_offers": 931533,
+      "unique_items": 19763,
+      "market_coverage": 48.18,
+      "total_value": 2347208764,
+      "total_value_usd": 2347208764
     }
   },
   "SkinBaron": {
@@ -566,12 +566,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:08.393530+00:00",
-      "total_offers": 2064646,
-      "unique_items": 21340,
-      "market_coverage": 52.03,
-      "total_value": 493014982,
-      "total_value_usd": 560792013
+      "last_checked_at": "2026-07-25T23:54:03.366626+00:00",
+      "total_offers": 2063115,
+      "unique_items": 21338,
+      "market_coverage": 52.02,
+      "total_value": 492443195,
+      "total_value_usd": 560093615
     }
   },
   "Skinflow": {
@@ -591,12 +591,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:06:17.219196+00:00",
-      "total_offers": 674909,
-      "unique_items": 20525,
-      "market_coverage": 50.04,
-      "total_value": 992134667,
-      "total_value_usd": 992134667
+      "last_checked_at": "2026-07-25T23:56:14.931240+00:00",
+      "total_offers": 667164,
+      "unique_items": 20540,
+      "market_coverage": 50.08,
+      "total_value": 1009021283,
+      "total_value_usd": 1009021283
     }
   },
   "SkinOut": {
@@ -616,12 +616,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:51.356278+00:00",
-      "total_offers": 26557,
-      "unique_items": 2972,
-      "market_coverage": 7.25,
-      "total_value": 60440276,
-      "total_value_usd": 60440276
+      "last_checked_at": "2026-07-25T23:58:34.889587+00:00",
+      "total_offers": 26425,
+      "unique_items": 2979,
+      "market_coverage": 7.26,
+      "total_value": 60291325,
+      "total_value_usd": 60291325
     }
   },
   "SkinPlace": {
@@ -641,12 +641,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:06:31.198399+00:00",
-      "total_offers": 57771,
-      "unique_items": 2059,
-      "market_coverage": 5.02,
-      "total_value": 245879385,
-      "total_value_usd": 245879385
+      "last_checked_at": "2026-07-25T23:55:32.783757+00:00",
+      "total_offers": 57699,
+      "unique_items": 2053,
+      "market_coverage": 5.01,
+      "total_value": 244331728,
+      "total_value_usd": 244331728
     }
   },
   "Skinport": {
@@ -666,12 +666,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:58.316980+00:00",
-      "total_offers": 3597190,
-      "unique_items": 24997,
-      "market_coverage": 60.94,
-      "total_value": 1705675329,
-      "total_value_usd": 1705675329
+      "last_checked_at": "2026-07-25T23:57:25.004345+00:00",
+      "total_offers": 3597427,
+      "unique_items": 24993,
+      "market_coverage": 60.93,
+      "total_value": 1705960754,
+      "total_value_usd": 1705960754
     }
   },
   "Skins.com": {
@@ -691,12 +691,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:51.658345+00:00",
-      "total_offers": 83049,
-      "unique_items": 16558,
-      "market_coverage": 40.37,
-      "total_value": 945457832,
-      "total_value_usd": 945457832
+      "last_checked_at": "2026-07-25T23:03:01.222603+00:00",
+      "total_offers": 81841,
+      "unique_items": 16492,
+      "market_coverage": 40.21,
+      "total_value": 926576772,
+      "total_value_usd": 926576772
     }
   },
   "SkinsMonkey": {
@@ -716,12 +716,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:06:43.906299+00:00",
-      "total_offers": 87250,
-      "unique_items": 7854,
-      "market_coverage": 19.15,
-      "total_value": 312486695,
-      "total_value_usd": 312486695
+      "last_checked_at": "2026-07-25T23:56:44.310929+00:00",
+      "total_offers": 87314,
+      "unique_items": 7892,
+      "market_coverage": 19.24,
+      "total_value": 312305558,
+      "total_value_usd": 312305558
     }
   },
   "SkinSwap - Market": {
@@ -741,12 +741,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:21.916869+00:00",
-      "total_offers": 7567823,
-      "unique_items": 31203,
-      "market_coverage": 76.07,
-      "total_value": 14785939312,
-      "total_value_usd": 14785939312
+      "last_checked_at": "2026-07-25T23:55:01.731792+00:00",
+      "total_offers": 7578653,
+      "unique_items": 31224,
+      "market_coverage": 76.12,
+      "total_value": 14631080813,
+      "total_value_usd": 14631080813
     }
   },
   "Skinvault": {
@@ -766,12 +766,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:47.547842+00:00",
-      "total_offers": 1042611,
-      "unique_items": 20007,
-      "market_coverage": 48.78,
-      "total_value": 2330706079,
-      "total_value_usd": 2330706079
+      "last_checked_at": "2026-07-25T23:03:44.345645+00:00",
+      "total_offers": 1045334,
+      "unique_items": 19811,
+      "market_coverage": 48.3,
+      "total_value": 2317829805,
+      "total_value_usd": 2317829805
     }
   },
   "Steam Community Market": {
@@ -791,12 +791,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T19:59:30.515158+00:00",
-      "total_offers": 26892433,
-      "unique_items": 32733,
-      "market_coverage": 79.8,
-      "total_value": 3030251420,
-      "total_value_usd": 3030251420
+      "last_checked_at": "2026-07-25T23:58:32.528315+00:00",
+      "total_offers": 26862865,
+      "unique_items": 32735,
+      "market_coverage": 79.81,
+      "total_value": 3027293048,
+      "total_value_usd": 3027293048
     }
   },
   "Swap.gg": {
@@ -818,8 +818,8 @@
       "status": "up",
       "last_checked_at": "2026-07-25T19:00:25.052252+00:00",
       "total_offers": 50362,
-      "unique_items": 9299,
-      "market_coverage": 22.67,
+      "unique_items": 9027,
+      "market_coverage": 22.01,
       "total_value": 70467830,
       "total_value_usd": 70467830
     }
@@ -841,12 +841,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:50.046309+00:00",
-      "total_offers": 381757,
-      "unique_items": 25175,
-      "market_coverage": 61.38,
-      "total_value": 2143299020,
-      "total_value_usd": 2143299020
+      "last_checked_at": "2026-07-25T23:55:36.630574+00:00",
+      "total_offers": 383921,
+      "unique_items": 25210,
+      "market_coverage": 61.46,
+      "total_value": 2150340602,
+      "total_value_usd": 2150340602
     }
   },
   "WAXPEER": {
@@ -866,12 +866,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:08:23.727479+00:00",
-      "total_offers": 1148928,
-      "unique_items": 20969,
-      "market_coverage": 51.12,
-      "total_value": 4344871077,
-      "total_value_usd": 4344871077
+      "last_checked_at": "2026-07-25T23:57:31.613325+00:00",
+      "total_offers": 1154901,
+      "unique_items": 20750,
+      "market_coverage": 50.59,
+      "total_value": 4363929921,
+      "total_value_usd": 4363929921
     }
   },
   "white.market": {
@@ -891,9 +891,9 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:51.308264+00:00",
+      "last_checked_at": "2026-07-25T23:59:08.690502+00:00",
       "total_offers": 2784487,
-      "unique_items": 20774,
+      "unique_items": 20775,
       "market_coverage": 50.65,
       "total_value": 8106828571,
       "total_value_usd": 8106828571
@@ -916,12 +916,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T19:58:58.271675+00:00",
-      "total_offers": 6164576,
-      "unique_items": 27983,
-      "market_coverage": 68.22,
-      "total_value": 93091166974,
-      "total_value_usd": 13741510555
+      "last_checked_at": "2026-07-25T23:58:46.143200+00:00",
+      "total_offers": 6424128,
+      "unique_items": 28001,
+      "market_coverage": 68.27,
+      "total_value": 94741286298,
+      "total_value_usd": 13986541569
     }
   },
   "Dupe.fi": {
@@ -941,12 +941,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T19:55:48.798729+00:00",
-      "total_offers": 23182,
-      "unique_items": 5805,
-      "market_coverage": 14.15,
-      "total_value": 299734930,
-      "total_value_usd": 299734930
+      "last_checked_at": "2026-07-25T23:55:51.282817+00:00",
+      "total_offers": 23030,
+      "unique_items": 5770,
+      "market_coverage": 14.07,
+      "total_value": 297864488,
+      "total_value_usd": 297864488
     }
   },
   "Skin.Land": {
@@ -966,12 +966,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:05:55.623946+00:00",
-      "total_offers": 2188124,
-      "unique_items": 24988,
-      "market_coverage": 60.92,
-      "total_value": 6677896909,
-      "total_value_usd": 6677896909
+      "last_checked_at": "2026-07-25T23:55:54.637021+00:00",
+      "total_offers": 2184951,
+      "unique_items": 24985,
+      "market_coverage": 60.91,
+      "total_value": 6636331114,
+      "total_value_usd": 6636331114
     }
   },
   "GameBoost": {
@@ -991,7 +991,7 @@
     },
     "health": {
       "status": "down",
-      "last_checked_at": "2026-07-25T19:44:41.943547+00:00",
+      "last_checked_at": "2026-07-25T23:44:41.326951+00:00",
       "total_offers": null,
       "unique_items": 20376,
       "market_coverage": 49.68,
@@ -1016,12 +1016,12 @@
     },
     "health": {
       "status": "up",
-      "last_checked_at": "2026-07-25T20:04:05.827394+00:00",
-      "total_offers": 25724,
-      "unique_items": 4906,
-      "market_coverage": 11.96,
-      "total_value": 85830909,
-      "total_value_usd": 85830909
+      "last_checked_at": "2026-07-25T23:58:04.086356+00:00",
+      "total_offers": 25523,
+      "unique_items": 4741,
+      "market_coverage": 11.56,
+      "total_value": 84733749,
+      "total_value_usd": 84733749
     }
   }
 }

@@ -1,930 +1,2814 @@
 {
   "1": {
     "data": {
-      "avanmarket": 33.78,
-      "buff163": 33.66,
-      "buffmarket": 34,
-      "c5": 33.71,
-      "csdeals": 58.76,
-      "csfloat": 33.9,
-      "csgo500": 36.49,
-      "csgoempire": 32.69,
-      "csmoney_m": 33.33,
-      "csmoney_t": 39.54,
-      "cstrade": 35.83,
-      "dmarket": 33.6,
-      "ecosteam": 32.71,
-      "haloskins": 34.05,
-      "lisskins": 35.2,
-      "mannco": 37,
-      "marketcsgo": 36.09,
-      "pirateswap": 41.13,
-      "shadowpay": 36.26,
-      "skinbaron": 42.05,
-      "skinflow": 33.64,
-      "skinland": 35.31,
-      "skinout": 37.15,
-      "skinport": 36.35,
-      "skinscom": 33.49,
-      "skinsmonkey": 37.93,
-      "skinswap": 32.83,
-      "skinvault": 36.8,
-      "steam": 49.17,
-      "swapgg": 51.78,
-      "tradeit": 34.24,
-      "waxpeer": 35.45,
-      "whitemarket": 35.11,
-      "youpin": 32.7
+      "avanmarket": {
+        "price": 35.04,
+        "link": "https://cs2c.app/r/avanmarket/1"
+      },
+      "buff163": {
+        "price": 33.14,
+        "link": "https://cs2c.app/r/buff163/1"
+      },
+      "buffmarket": {
+        "price": 33,
+        "link": "https://cs2c.app/r/buffmarket/1"
+      },
+      "c5": {
+        "price": 33.74,
+        "link": "https://cs2c.app/r/c5/1"
+      },
+      "csdeals": {
+        "price": 58.76,
+        "link": "https://cs2c.app/r/csdeals/1"
+      },
+      "csfloat": {
+        "price": 34,
+        "link": "https://cs2c.app/r/csfloat/1"
+      },
+      "csgo500": {
+        "price": 37.5,
+        "link": "https://cs2c.app/r/csgo500/1"
+      },
+      "csgoempire": {
+        "price": 33.5,
+        "link": "https://cs2c.app/r/csgoempire/1"
+      },
+      "csmoney_m": {
+        "price": 37.71,
+        "link": "https://cs2c.app/r/csmoney_m/1"
+      },
+      "csmoney_t": {
+        "price": 39.12,
+        "link": "https://cs2c.app/r/csmoney_t/1"
+      },
+      "cstrade": {
+        "price": 35.77,
+        "link": "https://cs2c.app/r/cstrade/1"
+      },
+      "dmarket": {
+        "price": 33.26,
+        "link": "https://cs2c.app/r/dmarket/1"
+      },
+      "ecosteam": {
+        "price": 34.02,
+        "link": "https://cs2c.app/r/ecosteam/1"
+      },
+      "haloskins": {
+        "price": 34.08,
+        "link": "https://cs2c.app/r/haloskins/1"
+      },
+      "lisskins": {
+        "price": 35.01,
+        "link": "https://cs2c.app/r/lisskins/1"
+      },
+      "mannco": {
+        "price": 37.27,
+        "link": "https://cs2c.app/r/mannco/1"
+      },
+      "marketcsgo": {
+        "price": 37.79,
+        "link": "https://cs2c.app/r/marketcsgo/1"
+      },
+      "pirateswap": {
+        "price": 41.13,
+        "link": "https://cs2c.app/r/pirateswap/1"
+      },
+      "shadowpay": {
+        "price": 36.02,
+        "link": "https://cs2c.app/r/shadowpay/1"
+      },
+      "skinbaron": {
+        "price": 41.51,
+        "link": "https://cs2c.app/r/skinbaron/1"
+      },
+      "skinflow": {
+        "price": 33.88,
+        "link": "https://cs2c.app/r/skinflow/1"
+      },
+      "skinland": {
+        "price": 35.04,
+        "link": "https://cs2c.app/r/skinland/1"
+      },
+      "skinout": {
+        "price": 36.84,
+        "link": "https://cs2c.app/r/skinout/1"
+      },
+      "skinport": {
+        "price": 37.53,
+        "link": "https://cs2c.app/r/skinport/1"
+      },
+      "skinscom": {
+        "price": 34.83,
+        "link": "https://cs2c.app/r/skinscom/1"
+      },
+      "skinsmonkey": {
+        "price": 37.76,
+        "link": "https://cs2c.app/r/skinsmonkey/1"
+      },
+      "skinswap": {
+        "price": 32.67,
+        "link": "https://cs2c.app/r/skinswap/1"
+      },
+      "skinvault": {
+        "price": 37.31,
+        "link": "https://cs2c.app/r/skinvault/1"
+      },
+      "steam": {
+        "price": 49.17,
+        "link": "https://cs2c.app/r/steam/1"
+      },
+      "swapgg": {
+        "price": 51.78,
+        "link": "https://cs2c.app/r/swapgg/1"
+      },
+      "tradeit": {
+        "price": 34.09,
+        "link": "https://cs2c.app/r/tradeit/1"
+      },
+      "waxpeer": {
+        "price": 36.76,
+        "link": "https://cs2c.app/r/waxpeer/1"
+      },
+      "whitemarket": {
+        "price": 35.11,
+        "link": "https://cs2c.app/r/whitemarket/1"
+      },
+      "youpin": {
+        "price": 32.55,
+        "link": "https://cs2c.app/r/youpin/1"
+      }
     },
-    "time": 1784979311272
+    "time": 1785024480137
   },
   "76": {
     "data": {
-      "avanmarket": 17.32,
-      "buff163": 15.48,
-      "buffmarket": 15,
-      "c5": 17.26,
-      "csfloat": 15.5,
-      "csgo500": 17.82,
-      "csgoempire": 18.61,
-      "csmoney_m": 15.49,
-      "csmoney_t": 15.96,
-      "dmarket": 16.11,
-      "ecosteam": 17.42,
-      "haloskins": 17.43,
-      "lisskins": 17.95,
-      "marketcsgo": 20.45,
-      "pirateswap": 19,
-      "shadowpay": 18.42,
-      "skinbaron": 16.79,
-      "skinland": 16.56,
-      "skinport": 16.59,
-      "skinscom": 30,
-      "skinsmonkey": 17.39,
-      "skinswap": 15.57,
-      "skinvault": 19.02,
-      "steam": 25.92,
-      "tradeit": 15.96,
-      "waxpeer": 19.01,
-      "youpin": 15.5
+      "avanmarket": {
+        "price": 18.29,
+        "link": "https://cs2c.app/r/avanmarket/76"
+      },
+      "buff163": {
+        "price": 15.39,
+        "link": "https://cs2c.app/r/buff163/76"
+      },
+      "buffmarket": {
+        "price": 15,
+        "link": "https://cs2c.app/r/buffmarket/76"
+      },
+      "c5": {
+        "price": 16.97,
+        "link": "https://cs2c.app/r/c5/76"
+      },
+      "csfloat": {
+        "price": 15.5,
+        "link": "https://cs2c.app/r/csfloat/76"
+      },
+      "csgoempire": {
+        "price": 17.5,
+        "link": "https://cs2c.app/r/csgoempire/76"
+      },
+      "csmoney_m": {
+        "price": 15.49,
+        "link": "https://cs2c.app/r/csmoney_m/76"
+      },
+      "csmoney_t": {
+        "price": 15.96,
+        "link": "https://cs2c.app/r/csmoney_t/76"
+      },
+      "dmarket": {
+        "price": 16.11,
+        "link": "https://cs2c.app/r/dmarket/76"
+      },
+      "ecosteam": {
+        "price": 16.82,
+        "link": "https://cs2c.app/r/ecosteam/76"
+      },
+      "haloskins": {
+        "price": 17.15,
+        "link": "https://cs2c.app/r/haloskins/76"
+      },
+      "lisskins": {
+        "price": 17.42,
+        "link": "https://cs2c.app/r/lisskins/76"
+      },
+      "marketcsgo": {
+        "price": 18.9,
+        "link": "https://cs2c.app/r/marketcsgo/76"
+      },
+      "pirateswap": {
+        "price": 19,
+        "link": "https://cs2c.app/r/pirateswap/76"
+      },
+      "shadowpay": {
+        "price": 18.41,
+        "link": "https://cs2c.app/r/shadowpay/76"
+      },
+      "skinbaron": {
+        "price": 16.8,
+        "link": null
+      },
+      "skinland": {
+        "price": 17.43,
+        "link": "https://cs2c.app/r/skinland/76"
+      },
+      "skinport": {
+        "price": 16.59,
+        "link": "https://cs2c.app/r/skinport/76"
+      },
+      "skinscom": {
+        "price": 30,
+        "link": "https://cs2c.app/r/skinscom/76"
+      },
+      "skinsmonkey": {
+        "price": 17.44,
+        "link": "https://cs2c.app/r/skinsmonkey/76"
+      },
+      "skinswap": {
+        "price": 15.55,
+        "link": "https://cs2c.app/r/skinswap/76"
+      },
+      "skinvault": {
+        "price": 17.87,
+        "link": "https://cs2c.app/r/skinvault/76"
+      },
+      "steam": {
+        "price": 25,
+        "link": "https://cs2c.app/r/steam/76"
+      },
+      "tradeit": {
+        "price": 15.96,
+        "link": "https://cs2c.app/r/tradeit/76"
+      },
+      "waxpeer": {
+        "price": 18.52,
+        "link": "https://cs2c.app/r/waxpeer/76"
+      },
+      "youpin": {
+        "price": 15.48,
+        "link": "https://cs2c.app/r/youpin/76"
+      }
     },
-    "time": 1784979312175
+    "time": 1785024480972
   },
   "604": {
     "data": {
-      "buff163": 1.69,
-      "buffmarket": 2,
-      "c5": 9.58,
-      "csdeals": 10.14,
-      "csgo500": 10.22,
-      "csmoney_m": 1.64,
-      "csmoney_t": 1.74,
-      "dmarket": 2.4,
-      "ecosteam": 2.39,
-      "haloskins": 9.68,
-      "lisskins": 9.83,
-      "marketcsgo": 2.35,
-      "pirateswap": 1.77,
-      "skinbaron": 1.72,
-      "skinflow": 9.91,
-      "skinland": 9.84,
-      "skinport": 1.45,
-      "skinswap": 2.05,
-      "steam": 2.15,
-      "youpin": 1.98
+      "buff163": {
+        "price": 1.69,
+        "link": "https://cs2c.app/r/buff163/604"
+      },
+      "buffmarket": {
+        "price": 2,
+        "link": "https://cs2c.app/r/buffmarket/604"
+      },
+      "c5": {
+        "price": 9.58,
+        "link": "https://cs2c.app/r/c5/604"
+      },
+      "csdeals": {
+        "price": 10.14,
+        "link": "https://cs2c.app/r/csdeals/604"
+      },
+      "csmoney_m": {
+        "price": 1.64,
+        "link": "https://cs2c.app/r/csmoney_m/604"
+      },
+      "csmoney_t": {
+        "price": 1.74,
+        "link": "https://cs2c.app/r/csmoney_t/604"
+      },
+      "dmarket": {
+        "price": 2.4,
+        "link": "https://cs2c.app/r/dmarket/604"
+      },
+      "ecosteam": {
+        "price": 1.76,
+        "link": "https://cs2c.app/r/ecosteam/604"
+      },
+      "haloskins": {
+        "price": 9.68,
+        "link": "https://cs2c.app/r/haloskins/604"
+      },
+      "lisskins": {
+        "price": 9.83,
+        "link": "https://cs2c.app/r/lisskins/604"
+      },
+      "marketcsgo": {
+        "price": 1.74,
+        "link": "https://cs2c.app/r/marketcsgo/604"
+      },
+      "pirateswap": {
+        "price": 1.77,
+        "link": "https://cs2c.app/r/pirateswap/604"
+      },
+      "skinbaron": {
+        "price": 1.72,
+        "link": null
+      },
+      "skinflow": {
+        "price": 9.91,
+        "link": "https://cs2c.app/r/skinflow/604"
+      },
+      "skinland": {
+        "price": 9.84,
+        "link": "https://cs2c.app/r/skinland/604"
+      },
+      "skinport": {
+        "price": 1.45,
+        "link": "https://cs2c.app/r/skinport/604"
+      },
+      "skinswap": {
+        "price": 2.25,
+        "link": "https://cs2c.app/r/skinswap/604"
+      },
+      "steam": {
+        "price": 2.15,
+        "link": "https://cs2c.app/r/steam/604"
+      },
+      "youpin": {
+        "price": 2.18,
+        "link": "https://cs2c.app/r/youpin/604"
+      }
     },
-    "time": 1784979311992
+    "time": 1785024480809
   },
   "3308": {
     "data": {
-      "avanmarket": 0.12,
-      "buff163": 0.11,
-      "c5": 0.1,
-      "csdeals": 1.41,
-      "csfloat": 0.09,
-      "csmoney_m": 0.11,
-      "csmoney_t": 0.14,
-      "dmarket": 0.64,
-      "ecosteam": 0.1,
-      "haloskins": 0.11,
-      "lisskins": 0.12,
-      "mannco": 0.32,
-      "marketcsgo": 0.12,
-      "shadowpay": 0.14,
-      "skinbaron": 0.12,
-      "skinland": 0.14,
-      "skinport": 0.09,
-      "skinscom": 0.11,
-      "skinsmonkey": 0.13,
-      "skinswap": 0.12,
-      "skinvault": 0.14,
-      "steam": 0.17,
-      "swapgg": 0.15,
-      "tradeit": 0.11,
-      "waxpeer": 12.75,
-      "whitemarket": 0.13,
-      "youpin": 0.1
+      "buff163": {
+        "price": 0.12,
+        "link": "https://cs2c.app/r/buff163/3308"
+      },
+      "c5": {
+        "price": 0.1,
+        "link": "https://cs2c.app/r/c5/3308"
+      },
+      "csdeals": {
+        "price": 1.41,
+        "link": "https://cs2c.app/r/csdeals/3308"
+      },
+      "csfloat": {
+        "price": 0.09,
+        "link": "https://cs2c.app/r/csfloat/3308"
+      },
+      "csmoney_m": {
+        "price": 0.11,
+        "link": "https://cs2c.app/r/csmoney_m/3308"
+      },
+      "csmoney_t": {
+        "price": 0.14,
+        "link": "https://cs2c.app/r/csmoney_t/3308"
+      },
+      "dmarket": {
+        "price": 0.64,
+        "link": "https://cs2c.app/r/dmarket/3308"
+      },
+      "ecosteam": {
+        "price": 0.1,
+        "link": "https://cs2c.app/r/ecosteam/3308"
+      },
+      "haloskins": {
+        "price": 0.11,
+        "link": "https://cs2c.app/r/haloskins/3308"
+      },
+      "lisskins": {
+        "price": 0.15,
+        "link": "https://cs2c.app/r/lisskins/3308"
+      },
+      "mannco": {
+        "price": 0.32,
+        "link": "https://cs2c.app/r/mannco/3308"
+      },
+      "marketcsgo": {
+        "price": 0.12,
+        "link": "https://cs2c.app/r/marketcsgo/3308"
+      },
+      "shadowpay": {
+        "price": 0.14,
+        "link": "https://cs2c.app/r/shadowpay/3308"
+      },
+      "skinbaron": {
+        "price": 0.12,
+        "link": "https://cs2c.app/r/skinbaron/3308"
+      },
+      "skinland": {
+        "price": 0.16,
+        "link": "https://cs2c.app/r/skinland/3308"
+      },
+      "skinport": {
+        "price": 0.09,
+        "link": "https://cs2c.app/r/skinport/3308"
+      },
+      "skinscom": {
+        "price": 0.11,
+        "link": "https://cs2c.app/r/skinscom/3308"
+      },
+      "skinsmonkey": {
+        "price": 0.13,
+        "link": "https://cs2c.app/r/skinsmonkey/3308"
+      },
+      "skinswap": {
+        "price": 0.12,
+        "link": "https://cs2c.app/r/skinswap/3308"
+      },
+      "skinvault": {
+        "price": 0.14,
+        "link": "https://cs2c.app/r/skinvault/3308"
+      },
+      "steam": {
+        "price": 0.16,
+        "link": "https://cs2c.app/r/steam/3308"
+      },
+      "swapgg": {
+        "price": 0.15,
+        "link": "https://cs2c.app/r/swapgg/3308"
+      },
+      "tradeit": {
+        "price": 0.11,
+        "link": "https://cs2c.app/r/tradeit/3308"
+      },
+      "whitemarket": {
+        "price": 0.13,
+        "link": "https://cs2c.app/r/whitemarket/3308"
+      },
+      "youpin": {
+        "price": 0.1,
+        "link": "https://cs2c.app/r/youpin/3308"
+      }
     },
-    "time": 1784979311467
+    "time": 1785024480280
   },
   "3386": {
     "data": {
-      "avanmarket": 3.05,
-      "buff163": 1.84,
-      "buffmarket": 1,
-      "c5": 1.85,
-      "csdeals": 3.09,
-      "csfloat": 1.76,
-      "csgo500": 2,
-      "csmoney_m": 1.85,
-      "csmoney_t": 1.96,
-      "dmarket": 2.25,
-      "ecosteam": 2.1,
-      "haloskins": 1.88,
-      "itradegg": 1.81,
-      "lisskins": 2.04,
-      "mannco": 3,
-      "marketcsgo": 2.16,
-      "pirateswap": 1.98,
-      "shadowpay": 2.65,
-      "skinbaron": 1.71,
-      "skinland": 2.01,
-      "skinport": 2.27,
-      "skinscom": 1.94,
-      "skinswap": 1.64,
-      "skinvault": 2.7,
-      "steam": 2.48,
-      "tradeit": 1.71,
-      "waxpeer": 2.14,
-      "youpin": 1.62
+      "avanmarket": {
+        "price": 3.05,
+        "link": "https://cs2c.app/r/avanmarket/3386"
+      },
+      "buff163": {
+        "price": 1.77,
+        "link": "https://cs2c.app/r/buff163/3386"
+      },
+      "buffmarket": {
+        "price": 1,
+        "link": "https://cs2c.app/r/buffmarket/3386"
+      },
+      "c5": {
+        "price": 1.85,
+        "link": "https://cs2c.app/r/c5/3386"
+      },
+      "csdeals": {
+        "price": 3.09,
+        "link": "https://cs2c.app/r/csdeals/3386"
+      },
+      "csfloat": {
+        "price": 1.76,
+        "link": "https://cs2c.app/r/csfloat/3386"
+      },
+      "csmoney_m": {
+        "price": 1.82,
+        "link": "https://cs2c.app/r/csmoney_m/3386"
+      },
+      "csmoney_t": {
+        "price": 1.93,
+        "link": "https://cs2c.app/r/csmoney_t/3386"
+      },
+      "dmarket": {
+        "price": 2.25,
+        "link": "https://cs2c.app/r/dmarket/3386"
+      },
+      "ecosteam": {
+        "price": 1.84,
+        "link": "https://cs2c.app/r/ecosteam/3386"
+      },
+      "haloskins": {
+        "price": 1.88,
+        "link": "https://cs2c.app/r/haloskins/3386"
+      },
+      "itradegg": {
+        "price": 1.81,
+        "link": "https://cs2c.app/r/itradegg/3386"
+      },
+      "lisskins": {
+        "price": 1.8,
+        "link": "https://cs2c.app/r/lisskins/3386"
+      },
+      "mannco": {
+        "price": 3,
+        "link": "https://cs2c.app/r/mannco/3386"
+      },
+      "marketcsgo": {
+        "price": 2.11,
+        "link": "https://cs2c.app/r/marketcsgo/3386"
+      },
+      "pirateswap": {
+        "price": 2.14,
+        "link": "https://cs2c.app/r/pirateswap/3386"
+      },
+      "shadowpay": {
+        "price": 1.85,
+        "link": "https://cs2c.app/r/shadowpay/3386"
+      },
+      "skinbaron": {
+        "price": 1.71,
+        "link": null
+      },
+      "skinland": {
+        "price": 1.81,
+        "link": "https://cs2c.app/r/skinland/3386"
+      },
+      "skinplace": {
+        "price": 1.85,
+        "link": "https://cs2c.app/r/skinplace/3386"
+      },
+      "skinport": {
+        "price": 2.27,
+        "link": "https://cs2c.app/r/skinport/3386"
+      },
+      "skinscom": {
+        "price": 1.94,
+        "link": "https://cs2c.app/r/skinscom/3386"
+      },
+      "skinswap": {
+        "price": 1.59,
+        "link": "https://cs2c.app/r/skinswap/3386"
+      },
+      "skinvault": {
+        "price": 2.7,
+        "link": "https://cs2c.app/r/skinvault/3386"
+      },
+      "steam": {
+        "price": 2.48,
+        "link": "https://cs2c.app/r/steam/3386"
+      },
+      "tradeit": {
+        "price": 1.66,
+        "link": "https://cs2c.app/r/tradeit/3386"
+      },
+      "waxpeer": {
+        "price": 1.89,
+        "link": "https://cs2c.app/r/waxpeer/3386"
+      },
+      "youpin": {
+        "price": 1.57,
+        "link": "https://cs2c.app/r/youpin/3386"
+      }
     },
-    "time": 1784979311836
+    "time": 1785024480671
   },
   "3557": {
     "data": {
-      "avanmarket": 1.31,
-      "buff163": 0.94,
-      "buffmarket": 1,
-      "c5": 0.97,
-      "csfloat": 1.41,
-      "csgo500": 1.22,
-      "csmoney_m": 1.05,
-      "csmoney_t": 1.12,
-      "cstrade": 1.04,
-      "dmarket": 1.49,
-      "ecosteam": 1.14,
-      "haloskins": 0.99,
-      "lisskins": 1.15,
-      "mannco": 4.8,
-      "marketcsgo": 1.2,
-      "shadowpay": 0.99,
-      "skinbaron": 1.37,
-      "skinflow": 2.28,
-      "skinland": 1.17,
-      "skinport": 1.6,
-      "skinscom": 8,
-      "skinswap": 0.97,
-      "skinvault": 1.47,
-      "steam": 1.65,
-      "tradeit": 1.14,
-      "waxpeer": 1.25,
-      "whitemarket": 1.3,
-      "youpin": 0.95
+      "avanmarket": {
+        "price": 1.31,
+        "link": "https://cs2c.app/r/avanmarket/3557"
+      },
+      "buff163": {
+        "price": 0.94,
+        "link": "https://cs2c.app/r/buff163/3557"
+      },
+      "buffmarket": {
+        "price": 1,
+        "link": "https://cs2c.app/r/buffmarket/3557"
+      },
+      "c5": {
+        "price": 0.97,
+        "link": "https://cs2c.app/r/c5/3557"
+      },
+      "csfloat": {
+        "price": 0.95,
+        "link": "https://cs2c.app/r/csfloat/3557"
+      },
+      "csmoney_m": {
+        "price": 1.03,
+        "link": "https://cs2c.app/r/csmoney_m/3557"
+      },
+      "csmoney_t": {
+        "price": 1.09,
+        "link": "https://cs2c.app/r/csmoney_t/3557"
+      },
+      "cstrade": {
+        "price": 1.04,
+        "link": "https://cs2c.app/r/cstrade/3557"
+      },
+      "dmarket": {
+        "price": 1.38,
+        "link": "https://cs2c.app/r/dmarket/3557"
+      },
+      "ecosteam": {
+        "price": 1.13,
+        "link": "https://cs2c.app/r/ecosteam/3557"
+      },
+      "haloskins": {
+        "price": 0.99,
+        "link": "https://cs2c.app/r/haloskins/3557"
+      },
+      "lisskins": {
+        "price": 1.13,
+        "link": "https://cs2c.app/r/lisskins/3557"
+      },
+      "mannco": {
+        "price": 4.8,
+        "link": "https://cs2c.app/r/mannco/3557"
+      },
+      "marketcsgo": {
+        "price": 1.21,
+        "link": "https://cs2c.app/r/marketcsgo/3557"
+      },
+      "shadowpay": {
+        "price": 0.99,
+        "link": "https://cs2c.app/r/shadowpay/3557"
+      },
+      "skinbaron": {
+        "price": 1.38,
+        "link": null
+      },
+      "skinflow": {
+        "price": 2.28,
+        "link": "https://cs2c.app/r/skinflow/3557"
+      },
+      "skinland": {
+        "price": 1.14,
+        "link": "https://cs2c.app/r/skinland/3557"
+      },
+      "skinport": {
+        "price": 1.6,
+        "link": "https://cs2c.app/r/skinport/3557"
+      },
+      "skinscom": {
+        "price": 8,
+        "link": "https://cs2c.app/r/skinscom/3557"
+      },
+      "skinswap": {
+        "price": 0.97,
+        "link": "https://cs2c.app/r/skinswap/3557"
+      },
+      "skinvault": {
+        "price": 1.16,
+        "link": "https://cs2c.app/r/skinvault/3557"
+      },
+      "steam": {
+        "price": 1.65,
+        "link": "https://cs2c.app/r/steam/3557"
+      },
+      "waxpeer": {
+        "price": 1.2,
+        "link": "https://cs2c.app/r/waxpeer/3557"
+      },
+      "whitemarket": {
+        "price": 1.3,
+        "link": "https://cs2c.app/r/whitemarket/3557"
+      },
+      "youpin": {
+        "price": 0.95,
+        "link": "https://cs2c.app/r/youpin/3557"
+      }
     },
-    "time": 1784979311639
+    "time": 1785024480472
   },
   "22033": {
     "data": {
-      "avanmarket": 381.54,
-      "buff163": 366.13,
-      "buffmarket": 377,
-      "c5": 366.8,
-      "csfloat": 356,
-      "csgo500": 382.45,
-      "csgoempire": 425.7,
-      "csmoney_m": 359.42,
-      "csmoney_t": 380.57,
-      "dmarket": 359.92,
-      "ecosteam": 372.05,
-      "haloskins": 370.34,
-      "lisskins": 363.32,
-      "marketcsgo": 431.98,
-      "pirateswap": 422.89,
-      "shadowpay": 375.88,
-      "skinbaron": 454.93,
-      "skinflow": 379.3,
-      "skinland": 363.68,
-      "skinplace": 374.22,
-      "skinport": 390.58,
-      "skinscom": 370.14,
-      "skinswap": 356.06,
-      "skinvault": 374.22,
-      "steam": 485.09,
-      "tradeit": 363.6,
-      "waxpeer": 381.48,
-      "youpin": 361.02
+      "avanmarket": {
+        "price": 387.63,
+        "link": "https://cs2c.app/r/avanmarket/22033"
+      },
+      "buff163": {
+        "price": 360.21,
+        "link": "https://cs2c.app/r/buff163/22033"
+      },
+      "buffmarket": {
+        "price": 370,
+        "link": "https://cs2c.app/r/buffmarket/22033"
+      },
+      "c5": {
+        "price": 367.03,
+        "link": "https://cs2c.app/r/c5/22033"
+      },
+      "csfloat": {
+        "price": 355.99,
+        "link": "https://cs2c.app/r/csfloat/22033"
+      },
+      "csgoempire": {
+        "price": 425.7,
+        "link": "https://cs2c.app/r/csgoempire/22033"
+      },
+      "csmoney_m": {
+        "price": 359.42,
+        "link": "https://cs2c.app/r/csmoney_m/22033"
+      },
+      "csmoney_t": {
+        "price": 380.57,
+        "link": "https://cs2c.app/r/csmoney_t/22033"
+      },
+      "dmarket": {
+        "price": 359.91,
+        "link": "https://cs2c.app/r/dmarket/22033"
+      },
+      "ecosteam": {
+        "price": 376.01,
+        "link": "https://cs2c.app/r/ecosteam/22033"
+      },
+      "haloskins": {
+        "price": 372.26,
+        "link": "https://cs2c.app/r/haloskins/22033"
+      },
+      "lisskins": {
+        "price": 367.14,
+        "link": "https://cs2c.app/r/lisskins/22033"
+      },
+      "marketcsgo": {
+        "price": 463.15,
+        "link": "https://cs2c.app/r/marketcsgo/22033"
+      },
+      "pirateswap": {
+        "price": 411.48,
+        "link": "https://cs2c.app/r/pirateswap/22033"
+      },
+      "shadowpay": {
+        "price": 377.78,
+        "link": "https://cs2c.app/r/shadowpay/22033"
+      },
+      "skinbaron": {
+        "price": 455.02,
+        "link": null
+      },
+      "skinflow": {
+        "price": 379.54,
+        "link": "https://cs2c.app/r/skinflow/22033"
+      },
+      "skinland": {
+        "price": 367.5,
+        "link": "https://cs2c.app/r/skinland/22033"
+      },
+      "skinplace": {
+        "price": 378.15,
+        "link": "https://cs2c.app/r/skinplace/22033"
+      },
+      "skinport": {
+        "price": 390.58,
+        "link": "https://cs2c.app/r/skinport/22033"
+      },
+      "skinscom": {
+        "price": 413.99,
+        "link": "https://cs2c.app/r/skinscom/22033"
+      },
+      "skinswap": {
+        "price": 359.8,
+        "link": "https://cs2c.app/r/skinswap/22033"
+      },
+      "skinvault": {
+        "price": 408.28,
+        "link": "https://cs2c.app/r/skinvault/22033"
+      },
+      "steam": {
+        "price": 485.09,
+        "link": "https://cs2c.app/r/steam/22033"
+      },
+      "tradeit": {
+        "price": 363.6,
+        "link": "https://cs2c.app/r/tradeit/22033"
+      },
+      "waxpeer": {
+        "price": 385.49,
+        "link": "https://cs2c.app/r/waxpeer/22033"
+      },
+      "youpin": {
+        "price": 360.14,
+        "link": "https://cs2c.app/r/youpin/22033"
+      }
     },
-    "time": 1784979311107
+    "time": 1785024479952
   },
   "4:1421": {
     "data": {
       "FN": {
         "normal": {
-          "avanmarket": 179.44,
-          "buff163": 176.45,
-          "buffmarket": 180,
-          "c5": 176.63,
-          "csfloat": 182.65,
-          "csgo500": 188.62,
-          "csgoempire": 197,
-          "csmoney_m": 176.31,
-          "csmoney_t": 210.96,
-          "dmarket": 206.26,
-          "dupefi": 185.23,
-          "ecosteam": 173.79,
-          "haloskins": 178.31,
-          "lisskins": 184.38,
-          "marketcsgo": 196.76,
-          "pirateswap": 216.72,
-          "shadowpay": 211.68,
-          "skinbaron": 625.62,
-          "skinflow": 208.53,
-          "skinland": 187.82,
-          "skinport": 229.62,
-          "skinscom": 240,
-          "skinswap": 170.88,
-          "skinvault": 227.17,
-          "steam": 277.84,
-          "tradeit": 188.57,
-          "waxpeer": 184.83,
-          "whitemarket": 210.81,
-          "youpin": 180.14
+          "avanmarket": {
+            "price": 178.37,
+            "link": "https://cs2c.app/r/avanmarket/37512"
+          },
+          "buff163": {
+            "price": 175.09,
+            "link": "https://cs2c.app/r/buff163/37512"
+          },
+          "buffmarket": {
+            "price": 179,
+            "link": "https://cs2c.app/r/buffmarket/37512"
+          },
+          "c5": {
+            "price": 174.2,
+            "link": "https://cs2c.app/r/c5/37512"
+          },
+          "csfloat": {
+            "price": 181.62,
+            "link": "https://cs2c.app/r/csfloat/37512"
+          },
+          "csgoempire": {
+            "price": 178.2,
+            "link": "https://cs2c.app/r/csgoempire/37512"
+          },
+          "csmoney_m": {
+            "price": 176.31,
+            "link": "https://cs2c.app/r/csmoney_m/37512"
+          },
+          "csmoney_t": {
+            "price": 209.09,
+            "link": "https://cs2c.app/r/csmoney_t/37512"
+          },
+          "dmarket": {
+            "price": 206.24,
+            "link": "https://cs2c.app/r/dmarket/37512"
+          },
+          "dupefi": {
+            "price": 185.09,
+            "link": "https://cs2c.app/r/dupefi/37512"
+          },
+          "ecosteam": {
+            "price": 172.72,
+            "link": "https://cs2c.app/r/ecosteam/37512"
+          },
+          "haloskins": {
+            "price": 175.89,
+            "link": "https://cs2c.app/r/haloskins/37512"
+          },
+          "lisskins": {
+            "price": 181.89,
+            "link": "https://cs2c.app/r/lisskins/37512"
+          },
+          "marketcsgo": {
+            "price": 195.58,
+            "link": "https://cs2c.app/r/marketcsgo/37512"
+          },
+          "pirateswap": {
+            "price": 215.01,
+            "link": "https://cs2c.app/r/pirateswap/37512"
+          },
+          "shadowpay": {
+            "price": 196.92,
+            "link": "https://cs2c.app/r/shadowpay/37512"
+          },
+          "skinbaron": {
+            "price": 625.68,
+            "link": "https://cs2c.app/r/skinbaron/37512"
+          },
+          "skinflow": {
+            "price": 180.52,
+            "link": "https://cs2c.app/r/skinflow/37512"
+          },
+          "skinland": {
+            "price": 182.07,
+            "link": "https://cs2c.app/r/skinland/37512"
+          },
+          "skinport": {
+            "price": 228.11,
+            "link": "https://cs2c.app/r/skinport/37512"
+          },
+          "skinscom": {
+            "price": 240,
+            "link": "https://cs2c.app/r/skinscom/37512"
+          },
+          "skinsmonkey": {
+            "price": 201.97,
+            "link": "https://cs2c.app/r/skinsmonkey/37512"
+          },
+          "skinswap": {
+            "price": 169.87,
+            "link": "https://cs2c.app/r/skinswap/37512"
+          },
+          "skinvault": {
+            "price": 222.64,
+            "link": "https://cs2c.app/r/skinvault/37512"
+          },
+          "steam": {
+            "price": 277.84,
+            "link": "https://cs2c.app/r/steam/37512"
+          },
+          "tradeit": {
+            "price": 182.23,
+            "link": "https://cs2c.app/r/tradeit/37512"
+          },
+          "waxpeer": {
+            "price": 184.99,
+            "link": "https://cs2c.app/r/waxpeer/37512"
+          },
+          "whitemarket": {
+            "price": 210.81,
+            "link": "https://cs2c.app/r/whitemarket/37512"
+          },
+          "youpin": {
+            "price": 174.05,
+            "link": "https://cs2c.app/r/youpin/37512"
+          }
         },
         "stattrak": {
-          "avanmarket": 250.03,
-          "buff163": 250.2,
-          "buffmarket": 280,
-          "c5": 252.79,
-          "csfloat": 350,
-          "csgo500": 267.5,
-          "csgoempire": 264.41,
-          "csmoney_m": 297.48,
-          "csmoney_t": 304.24,
-          "ecosteam": 242.16,
-          "haloskins": 255.19,
-          "lisskins": 260.93,
-          "marketcsgo": 274.16,
-          "pirateswap": 305.09,
-          "shadowpay": 264.49,
-          "skinbaron": 296.05,
-          "skinflow": 261.35,
-          "skinland": 256.75,
-          "skinport": 344.03,
-          "skinswap": 238.12,
-          "skinvault": 294.05,
-          "steam": 399.24,
-          "tradeit": 253.41,
-          "waxpeer": 257.54,
-          "whitemarket": 290.4,
-          "youpin": 242.08
+          "avanmarket": {
+            "price": 250.03,
+            "link": "https://cs2c.app/r/avanmarket/37607"
+          },
+          "buff163": {
+            "price": 250.52,
+            "link": "https://cs2c.app/r/buff163/37607"
+          },
+          "buffmarket": {
+            "price": 290,
+            "link": "https://cs2c.app/r/buffmarket/37607"
+          },
+          "c5": {
+            "price": 248.41,
+            "link": "https://cs2c.app/r/c5/37607"
+          },
+          "csfloat": {
+            "price": 320.55,
+            "link": "https://cs2c.app/r/csfloat/37607"
+          },
+          "csgoempire": {
+            "price": 264.41,
+            "link": "https://cs2c.app/r/csgoempire/37607"
+          },
+          "csmoney_m": {
+            "price": 294.33,
+            "link": "https://cs2c.app/r/csmoney_m/37607"
+          },
+          "csmoney_t": {
+            "price": 304.24,
+            "link": "https://cs2c.app/r/csmoney_t/37607"
+          },
+          "ecosteam": {
+            "price": 242.11,
+            "link": "https://cs2c.app/r/ecosteam/37607"
+          },
+          "haloskins": {
+            "price": 250.82,
+            "link": "https://cs2c.app/r/haloskins/37607"
+          },
+          "lisskins": {
+            "price": 259.37,
+            "link": "https://cs2c.app/r/lisskins/37607"
+          },
+          "marketcsgo": {
+            "price": 261.03,
+            "link": "https://cs2c.app/r/marketcsgo/37607"
+          },
+          "pirateswap": {
+            "price": 305.09,
+            "link": "https://cs2c.app/r/pirateswap/37607"
+          },
+          "shadowpay": {
+            "price": 264.49,
+            "link": "https://cs2c.app/r/shadowpay/37607"
+          },
+          "skinflow": {
+            "price": 261.27,
+            "link": "https://cs2c.app/r/skinflow/37607"
+          },
+          "skinland": {
+            "price": 259.62,
+            "link": "https://cs2c.app/r/skinland/37607"
+          },
+          "skinport": {
+            "price": 344.03,
+            "link": "https://cs2c.app/r/skinport/37607"
+          },
+          "skinswap": {
+            "price": 238.12,
+            "link": "https://cs2c.app/r/skinswap/37607"
+          },
+          "skinvault": {
+            "price": 283.39,
+            "link": "https://cs2c.app/r/skinvault/37607"
+          },
+          "steam": {
+            "price": 399.24,
+            "link": "https://cs2c.app/r/steam/37607"
+          },
+          "tradeit": {
+            "price": 253.18,
+            "link": "https://cs2c.app/r/tradeit/37607"
+          },
+          "waxpeer": {
+            "price": 280.15,
+            "link": "https://cs2c.app/r/waxpeer/37607"
+          },
+          "whitemarket": {
+            "price": 290.4,
+            "link": "https://cs2c.app/r/whitemarket/37607"
+          },
+          "youpin": {
+            "price": 241.81,
+            "link": "https://cs2c.app/r/youpin/37607"
+          }
         }
       },
       "MW": {
         "normal": {
-          "avanmarket": 116.47,
-          "buff163": 113.38,
-          "buffmarket": 114,
-          "c5": 113.29,
-          "csfloat": 112.8,
-          "csgo500": 119.06,
-          "csgoempire": 115.48,
-          "csmoney_m": 113.44,
-          "csmoney_t": 120.11,
-          "cstrade": 124.32,
-          "dmarket": 114.83,
-          "dupefi": 120.46,
-          "ecosteam": 112.8,
-          "haloskins": 114.37,
-          "itradegg": 117.74,
-          "lisskins": 116.21,
-          "mannco": 130.88,
-          "marketcsgo": 125.05,
-          "pirateswap": 133.21,
-          "rapidskins": 115.47,
-          "skinbaron": 120.56,
-          "skinflow": 117.17,
-          "skinland": 116.09,
-          "skinout": 121.9,
-          "skinport": 107.09,
-          "skinscom": 116.47,
-          "skinsmonkey": 131.73,
-          "skinswap": 110.92,
-          "skinswap_t": 157.76,
-          "skinvault": 120.2,
-          "steam": 164.11,
-          "tradeit": 110.18,
-          "waxpeer": 119.97,
-          "whitemarket": 126.2,
-          "youpin": 113.03
+          "avanmarket": {
+            "price": 116.91,
+            "link": "https://cs2c.app/r/avanmarket/37513"
+          },
+          "buff163": {
+            "price": 113.08,
+            "link": "https://cs2c.app/r/buff163/37513"
+          },
+          "buffmarket": {
+            "price": 114,
+            "link": "https://cs2c.app/r/buffmarket/37513"
+          },
+          "c5": {
+            "price": 112.92,
+            "link": "https://cs2c.app/r/c5/37513"
+          },
+          "csfloat": {
+            "price": 111.58,
+            "link": "https://cs2c.app/r/csfloat/37513"
+          },
+          "csgoempire": {
+            "price": 114,
+            "link": "https://cs2c.app/r/csgoempire/37513"
+          },
+          "csmoney_m": {
+            "price": 113.44,
+            "link": "https://cs2c.app/r/csmoney_m/37513"
+          },
+          "csmoney_t": {
+            "price": 120.11,
+            "link": "https://cs2c.app/r/csmoney_t/37513"
+          },
+          "cstrade": {
+            "price": 124.32,
+            "link": "https://cs2c.app/r/cstrade/37513"
+          },
+          "dmarket": {
+            "price": 114.83,
+            "link": "https://cs2c.app/r/dmarket/37513"
+          },
+          "dupefi": {
+            "price": 119.63,
+            "link": "https://cs2c.app/r/dupefi/37513"
+          },
+          "ecosteam": {
+            "price": 113.2,
+            "link": "https://cs2c.app/r/ecosteam/37513"
+          },
+          "haloskins": {
+            "price": 114.02,
+            "link": "https://cs2c.app/r/haloskins/37513"
+          },
+          "itradegg": {
+            "price": 117.92,
+            "link": "https://cs2c.app/r/itradegg/37513"
+          },
+          "lisskins": {
+            "price": 117.07,
+            "link": "https://cs2c.app/r/lisskins/37513"
+          },
+          "mannco": {
+            "price": 130.86,
+            "link": "https://cs2c.app/r/mannco/37513"
+          },
+          "marketcsgo": {
+            "price": 124.3,
+            "link": "https://cs2c.app/r/marketcsgo/37513"
+          },
+          "pirateswap": {
+            "price": 131.48,
+            "link": "https://cs2c.app/r/pirateswap/37513"
+          },
+          "rapidskins": {
+            "price": 115.14,
+            "link": "https://cs2c.app/r/rapidskins/37513"
+          },
+          "shadowpay": {
+            "price": 120.46,
+            "link": "https://cs2c.app/r/shadowpay/37513"
+          },
+          "skinbaron": {
+            "price": 118.9,
+            "link": "https://cs2c.app/r/skinbaron/37513"
+          },
+          "skinflow": {
+            "price": 135.69,
+            "link": "https://cs2c.app/r/skinflow/37513"
+          },
+          "skinland": {
+            "price": 117.18,
+            "link": "https://cs2c.app/r/skinland/37513"
+          },
+          "skinout": {
+            "price": 123.46,
+            "link": "https://cs2c.app/r/skinout/37513"
+          },
+          "skinport": {
+            "price": 114.97,
+            "link": "https://cs2c.app/r/skinport/37513"
+          },
+          "skinscom": {
+            "price": 116.12,
+            "link": "https://cs2c.app/r/skinscom/37513"
+          },
+          "skinsmonkey": {
+            "price": 131.44,
+            "link": "https://cs2c.app/r/skinsmonkey/37513"
+          },
+          "skinswap": {
+            "price": 111.33,
+            "link": "https://cs2c.app/r/skinswap/37513"
+          },
+          "skinswap_t": {
+            "price": 155.53,
+            "link": "https://cs2c.app/r/skinswap_t/37513"
+          },
+          "skinvault": {
+            "price": 124.91,
+            "link": "https://cs2c.app/r/skinvault/37513"
+          },
+          "steam": {
+            "price": 164.11,
+            "link": "https://cs2c.app/r/steam/37513"
+          },
+          "tradeit": {
+            "price": 110.18,
+            "link": "https://cs2c.app/r/tradeit/37513"
+          },
+          "waxpeer": {
+            "price": 119.56,
+            "link": "https://cs2c.app/r/waxpeer/37513"
+          },
+          "whitemarket": {
+            "price": 126.2,
+            "link": "https://cs2c.app/r/whitemarket/37513"
+          },
+          "youpin": {
+            "price": 112.49,
+            "link": "https://cs2c.app/r/youpin/37513"
+          }
         },
         "stattrak": {
-          "avanmarket": 123.07,
-          "buff163": 114.43,
-          "buffmarket": 117,
-          "c5": 118.1,
-          "csfloat": 119.42,
-          "csgo500": 126.94,
-          "csgoempire": 142.61,
-          "csmoney_m": 133.4,
-          "csmoney_t": 136.43,
-          "dmarket": 120.18,
-          "ecosteam": 123.59,
-          "haloskins": 119.23,
-          "lisskins": 120.59,
-          "marketcsgo": 131.03,
-          "shadowpay": 145.83,
-          "skinflow": 125.98,
-          "skinland": 119.72,
-          "skinport": 131.91,
-          "skinscom": 145.99,
-          "skinswap": 114.71,
-          "skinvault": 130.78,
-          "steam": 170.56,
-          "tradeit": 119.72,
-          "waxpeer": 126.62,
-          "whitemarket": 126.36,
-          "youpin": 114.36
+          "avanmarket": {
+            "price": 124.9,
+            "link": "https://cs2c.app/r/avanmarket/37608"
+          },
+          "buff163": {
+            "price": 117.95,
+            "link": "https://cs2c.app/r/buff163/37608"
+          },
+          "buffmarket": {
+            "price": 121,
+            "link": "https://cs2c.app/r/buffmarket/37608"
+          },
+          "c5": {
+            "price": 115.15,
+            "link": "https://cs2c.app/r/c5/37608"
+          },
+          "csfloat": {
+            "price": 119.41,
+            "link": "https://cs2c.app/r/csfloat/37608"
+          },
+          "csgoempire": {
+            "price": 129.01,
+            "link": "https://cs2c.app/r/csgoempire/37608"
+          },
+          "csmoney_m": {
+            "price": 135.36,
+            "link": "https://cs2c.app/r/csmoney_m/37608"
+          },
+          "csmoney_t": {
+            "price": 138.44,
+            "link": "https://cs2c.app/r/csmoney_t/37608"
+          },
+          "dmarket": {
+            "price": 122.99,
+            "link": "https://cs2c.app/r/dmarket/37608"
+          },
+          "dupefi": {
+            "price": 123.39,
+            "link": "https://cs2c.app/r/dupefi/37608"
+          },
+          "ecosteam": {
+            "price": 123.27,
+            "link": "https://cs2c.app/r/ecosteam/37608"
+          },
+          "haloskins": {
+            "price": 116.27,
+            "link": "https://cs2c.app/r/haloskins/37608"
+          },
+          "lisskins": {
+            "price": 120.23,
+            "link": "https://cs2c.app/r/lisskins/37608"
+          },
+          "mannco": {
+            "price": 135.73,
+            "link": "https://cs2c.app/r/mannco/37608"
+          },
+          "marketcsgo": {
+            "price": 124.3,
+            "link": "https://cs2c.app/r/marketcsgo/37608"
+          },
+          "shadowpay": {
+            "price": 123.86,
+            "link": "https://cs2c.app/r/shadowpay/37608"
+          },
+          "skinflow": {
+            "price": 122.1,
+            "link": "https://cs2c.app/r/skinflow/37608"
+          },
+          "skinland": {
+            "price": 120.35,
+            "link": "https://cs2c.app/r/skinland/37608"
+          },
+          "skinport": {
+            "price": 134.09,
+            "link": "https://cs2c.app/r/skinport/37608"
+          },
+          "skinscom": {
+            "price": 120.46,
+            "link": "https://cs2c.app/r/skinscom/37608"
+          },
+          "skinswap": {
+            "price": 115.43,
+            "link": "https://cs2c.app/r/skinswap/37608"
+          },
+          "skinswap_t": {
+            "price": 165.02,
+            "link": "https://cs2c.app/r/skinswap_t/37608"
+          },
+          "skinvault": {
+            "price": 130.78,
+            "link": "https://cs2c.app/r/skinvault/37608"
+          },
+          "steam": {
+            "price": 168.62,
+            "link": "https://cs2c.app/r/steam/37608"
+          },
+          "tradeit": {
+            "price": 121.49,
+            "link": "https://cs2c.app/r/tradeit/37608"
+          },
+          "waxpeer": {
+            "price": 126.38,
+            "link": "https://cs2c.app/r/waxpeer/37608"
+          },
+          "whitemarket": {
+            "price": 126.36,
+            "link": "https://cs2c.app/r/whitemarket/37608"
+          },
+          "youpin": {
+            "price": 116.03,
+            "link": "https://cs2c.app/r/youpin/37608"
+          }
         }
       },
       "FT": {
         "normal": {
-          "avanmarket": 61.28,
-          "buff163": 58.54,
-          "buffmarket": 60,
-          "c5": 59.43,
-          "csfloat": 57.9,
-          "csgo500": 60.32,
-          "csgoempire": 60.49,
-          "csmoney_m": 59.46,
-          "csmoney_t": 63.91,
-          "dmarket": 58.61,
-          "dupefi": 59.76,
-          "ecosteam": 59.35,
-          "haloskins": 60,
-          "lisskins": 61.49,
-          "mannco": 64.38,
-          "marketcsgo": 63.48,
-          "pirateswap": 71.08,
-          "shadowpay": 61.62,
-          "skinbaron": 60.84,
-          "skinflow": 58.53,
-          "skinland": 61.52,
-          "skinport": 62.84,
-          "skinscom": 60.43,
-          "skinsmonkey": 66.93,
-          "skinswap": 58.36,
-          "skinswap_t": 82.9,
-          "skinvault": 63.46,
-          "steam": 86.34,
-          "tradeit": 60.29,
-          "waxpeer": 62,
-          "whitemarket": 60.87,
-          "youpin": 58.24
+          "avanmarket": {
+            "price": 60.52,
+            "link": "https://cs2c.app/r/avanmarket/37514"
+          },
+          "buff163": {
+            "price": 58.24,
+            "link": "https://cs2c.app/r/buff163/37514"
+          },
+          "buffmarket": {
+            "price": 59,
+            "link": "https://cs2c.app/r/buffmarket/37514"
+          },
+          "c5": {
+            "price": 58.56,
+            "link": "https://cs2c.app/r/c5/37514"
+          },
+          "csfloat": {
+            "price": 57.13,
+            "link": "https://cs2c.app/r/csfloat/37514"
+          },
+          "csgo500": {
+            "price": 61.18,
+            "link": "https://cs2c.app/r/csgo500/37514"
+          },
+          "csgoempire": {
+            "price": 61.4,
+            "link": "https://cs2c.app/r/csgoempire/37514"
+          },
+          "csmoney_m": {
+            "price": 59.46,
+            "link": "https://cs2c.app/r/csmoney_m/37514"
+          },
+          "csmoney_t": {
+            "price": 63.07,
+            "link": "https://cs2c.app/r/csmoney_t/37514"
+          },
+          "dmarket": {
+            "price": 58.21,
+            "link": "https://cs2c.app/r/dmarket/37514"
+          },
+          "dupefi": {
+            "price": 61.69,
+            "link": "https://cs2c.app/r/dupefi/37514"
+          },
+          "ecosteam": {
+            "price": 58.6,
+            "link": "https://cs2c.app/r/ecosteam/37514"
+          },
+          "haloskins": {
+            "price": 59.13,
+            "link": "https://cs2c.app/r/haloskins/37514"
+          },
+          "lisskins": {
+            "price": 60.41,
+            "link": "https://cs2c.app/r/lisskins/37514"
+          },
+          "mannco": {
+            "price": 63.98,
+            "link": "https://cs2c.app/r/mannco/37514"
+          },
+          "marketcsgo": {
+            "price": 64,
+            "link": "https://cs2c.app/r/marketcsgo/37514"
+          },
+          "pirateswap": {
+            "price": 71.08,
+            "link": "https://cs2c.app/r/pirateswap/37514"
+          },
+          "shadowpay": {
+            "price": 62.16,
+            "link": "https://cs2c.app/r/shadowpay/37514"
+          },
+          "skinbaron": {
+            "price": 60.85,
+            "link": "https://cs2c.app/r/skinbaron/37514"
+          },
+          "skinflow": {
+            "price": 58.16,
+            "link": "https://cs2c.app/r/skinflow/37514"
+          },
+          "skinland": {
+            "price": 60.47,
+            "link": "https://cs2c.app/r/skinland/37514"
+          },
+          "skinport": {
+            "price": 62.18,
+            "link": "https://cs2c.app/r/skinport/37514"
+          },
+          "skinscom": {
+            "price": 59.96,
+            "link": "https://cs2c.app/r/skinscom/37514"
+          },
+          "skinsmonkey": {
+            "price": 66.49,
+            "link": "https://cs2c.app/r/skinsmonkey/37514"
+          },
+          "skinswap": {
+            "price": 57.64,
+            "link": "https://cs2c.app/r/skinswap/37514"
+          },
+          "skinswap_t": {
+            "price": 82.04,
+            "link": "https://cs2c.app/r/skinswap_t/37514"
+          },
+          "skinvault": {
+            "price": 63.46,
+            "link": "https://cs2c.app/r/skinvault/37514"
+          },
+          "steam": {
+            "price": 90,
+            "link": "https://cs2c.app/r/steam/37514"
+          },
+          "tradeit": {
+            "price": 59.68,
+            "link": "https://cs2c.app/r/tradeit/37514"
+          },
+          "waxpeer": {
+            "price": 61.65,
+            "link": "https://cs2c.app/r/waxpeer/37514"
+          },
+          "whitemarket": {
+            "price": 60.87,
+            "link": "https://cs2c.app/r/whitemarket/37514"
+          },
+          "youpin": {
+            "price": 58.01,
+            "link": "https://cs2c.app/r/youpin/37514"
+          }
         },
         "stattrak": {
-          "avanmarket": 62.3,
-          "buff163": 56.99,
-          "buffmarket": 58,
-          "c5": 58.58,
-          "csfloat": 61.75,
-          "csgo500": 63.34,
-          "csmoney_m": 58.89,
-          "csmoney_t": 67.35,
-          "dmarket": 61.53,
-          "ecosteam": 60.68,
-          "haloskins": 59.14,
-          "lisskins": 62.4,
-          "mannco": 63.1,
-          "marketcsgo": 67.57,
-          "pirateswap": 67.81,
-          "shadowpay": 68.92,
-          "skinflow": 57.36,
-          "skinland": 61.88,
-          "skinport": 80.61,
-          "skinscom": 60,
-          "skinswap": 58.07,
-          "skinvault": 68.31,
-          "steam": 87.13,
-          "swapgg": 89.68,
-          "tradeit": 60.6,
-          "waxpeer": 64.54,
-          "whitemarket": 64.72,
-          "youpin": 57.95
+          "avanmarket": {
+            "price": 62.53,
+            "link": "https://cs2c.app/r/avanmarket/37609"
+          },
+          "buff163": {
+            "price": 57.26,
+            "link": "https://cs2c.app/r/buff163/37609"
+          },
+          "buffmarket": {
+            "price": 58,
+            "link": "https://cs2c.app/r/buffmarket/37609"
+          },
+          "c5": {
+            "price": 58.57,
+            "link": "https://cs2c.app/r/c5/37609"
+          },
+          "csfloat": {
+            "price": 57.37,
+            "link": "https://cs2c.app/r/csfloat/37609"
+          },
+          "csgo500": {
+            "price": 65.57,
+            "link": "https://cs2c.app/r/csgo500/37609"
+          },
+          "csmoney_m": {
+            "price": 58.89,
+            "link": "https://cs2c.app/r/csmoney_m/37609"
+          },
+          "csmoney_t": {
+            "price": 67.35,
+            "link": "https://cs2c.app/r/csmoney_t/37609"
+          },
+          "dmarket": {
+            "price": 61.47,
+            "link": "https://cs2c.app/r/dmarket/37609"
+          },
+          "ecosteam": {
+            "price": 63.18,
+            "link": "https://cs2c.app/r/ecosteam/37609"
+          },
+          "haloskins": {
+            "price": 59.14,
+            "link": "https://cs2c.app/r/haloskins/37609"
+          },
+          "lisskins": {
+            "price": 62.24,
+            "link": "https://cs2c.app/r/lisskins/37609"
+          },
+          "mannco": {
+            "price": 63.1,
+            "link": "https://cs2c.app/r/mannco/37609"
+          },
+          "marketcsgo": {
+            "price": 67.59,
+            "link": "https://cs2c.app/r/marketcsgo/37609"
+          },
+          "pirateswap": {
+            "price": 67.81,
+            "link": "https://cs2c.app/r/pirateswap/37609"
+          },
+          "shadowpay": {
+            "price": 64.04,
+            "link": "https://cs2c.app/r/shadowpay/37609"
+          },
+          "skinflow": {
+            "price": 57.36,
+            "link": "https://cs2c.app/r/skinflow/37609"
+          },
+          "skinland": {
+            "price": 62.3,
+            "link": "https://cs2c.app/r/skinland/37609"
+          },
+          "skinport": {
+            "price": 80.61,
+            "link": "https://cs2c.app/r/skinport/37609"
+          },
+          "skinscom": {
+            "price": 60,
+            "link": "https://cs2c.app/r/skinscom/37609"
+          },
+          "skinswap": {
+            "price": 58.29,
+            "link": "https://cs2c.app/r/skinswap/37609"
+          },
+          "skinswap_t": {
+            "price": 81,
+            "link": "https://cs2c.app/r/skinswap_t/37609"
+          },
+          "skinvault": {
+            "price": 67.85,
+            "link": "https://cs2c.app/r/skinvault/37609"
+          },
+          "steam": {
+            "price": 87.13,
+            "link": "https://cs2c.app/r/steam/37609"
+          },
+          "swapgg": {
+            "price": 89.68,
+            "link": "https://cs2c.app/r/swapgg/37609"
+          },
+          "tradeit": {
+            "price": 60.82,
+            "link": "https://cs2c.app/r/tradeit/37609"
+          },
+          "waxpeer": {
+            "price": 65.35,
+            "link": "https://cs2c.app/r/waxpeer/37609"
+          },
+          "whitemarket": {
+            "price": 64.72,
+            "link": "https://cs2c.app/r/whitemarket/37609"
+          },
+          "youpin": {
+            "price": 58.09,
+            "link": "https://cs2c.app/r/youpin/37609"
+          }
         }
       },
       "WW": {
         "normal": {
-          "avanmarket": 58.71,
-          "buff163": 56.3,
-          "buffmarket": 57,
-          "c5": 56.28,
-          "csfloat": 55.5,
-          "csgo500": 59,
-          "csgoempire": 55.9,
-          "csmoney_m": 57.98,
-          "csmoney_t": 57.8,
-          "cstrade": 59.98,
-          "dmarket": 54.95,
-          "dupefi": 60.3,
-          "ecosteam": 56.86,
-          "haloskins": 56.82,
-          "lisskins": 57.09,
-          "mannco": 63.25,
-          "marketcsgo": 58.78,
-          "pirateswap": 66.08,
-          "shadowpay": 59.77,
-          "skinbaron": 55.18,
-          "skinflow": 58.2,
-          "skinland": 57.09,
-          "skinport": 57.58,
-          "skinscom": 58.08,
-          "skinsmonkey": 61.9,
-          "skinswap": 55.91,
-          "skinswap_t": 76.29,
-          "skinvault": 63.37,
-          "steam": 76.17,
-          "swapgg": 80.92,
-          "tradeit": 55.87,
-          "waxpeer": 59.94,
-          "whitemarket": 58.4,
-          "youpin": 56.55
+          "avanmarket": {
+            "price": 58.08,
+            "link": "https://cs2c.app/r/avanmarket/37515"
+          },
+          "buff163": {
+            "price": 55.8,
+            "link": "https://cs2c.app/r/buff163/37515"
+          },
+          "buffmarket": {
+            "price": 57,
+            "link": "https://cs2c.app/r/buffmarket/37515"
+          },
+          "c5": {
+            "price": 55.88,
+            "link": "https://cs2c.app/r/c5/37515"
+          },
+          "csfloat": {
+            "price": 54.84,
+            "link": "https://cs2c.app/r/csfloat/37515"
+          },
+          "csgo500": {
+            "price": 62.13,
+            "link": "https://cs2c.app/r/csgo500/37515"
+          },
+          "csgoempire": {
+            "price": 55.9,
+            "link": "https://cs2c.app/r/csgoempire/37515"
+          },
+          "csmoney_m": {
+            "price": 54.5,
+            "link": "https://cs2c.app/r/csmoney_m/37515"
+          },
+          "csmoney_t": {
+            "price": 57.2,
+            "link": "https://cs2c.app/r/csmoney_t/37515"
+          },
+          "cstrade": {
+            "price": 59.92,
+            "link": "https://cs2c.app/r/cstrade/37515"
+          },
+          "dmarket": {
+            "price": 54.6,
+            "link": "https://cs2c.app/r/dmarket/37515"
+          },
+          "dupefi": {
+            "price": 59.66,
+            "link": "https://cs2c.app/r/dupefi/37515"
+          },
+          "ecosteam": {
+            "price": 56.24,
+            "link": "https://cs2c.app/r/ecosteam/37515"
+          },
+          "haloskins": {
+            "price": 56.43,
+            "link": "https://cs2c.app/r/haloskins/37515"
+          },
+          "lisskins": {
+            "price": 58.35,
+            "link": "https://cs2c.app/r/lisskins/37515"
+          },
+          "mannco": {
+            "price": 62.81,
+            "link": "https://cs2c.app/r/mannco/37515"
+          },
+          "marketcsgo": {
+            "price": 58.51,
+            "link": "https://cs2c.app/r/marketcsgo/37515"
+          },
+          "shadowpay": {
+            "price": 55.67,
+            "link": "https://cs2c.app/r/shadowpay/37515"
+          },
+          "skinbaron": {
+            "price": 55.18,
+            "link": "https://cs2c.app/r/skinbaron/37515"
+          },
+          "skinflow": {
+            "price": 57.81,
+            "link": "https://cs2c.app/r/skinflow/37515"
+          },
+          "skinland": {
+            "price": 58.4,
+            "link": "https://cs2c.app/r/skinland/37515"
+          },
+          "skinport": {
+            "price": 56.43,
+            "link": "https://cs2c.app/r/skinport/37515"
+          },
+          "skinscom": {
+            "price": 57.68,
+            "link": "https://cs2c.app/r/skinscom/37515"
+          },
+          "skinsmonkey": {
+            "price": 61.73,
+            "link": "https://cs2c.app/r/skinsmonkey/37515"
+          },
+          "skinswap": {
+            "price": 55.32,
+            "link": "https://cs2c.app/r/skinswap/37515"
+          },
+          "skinswap_t": {
+            "price": 75.17,
+            "link": "https://cs2c.app/r/skinswap_t/37515"
+          },
+          "skinvault": {
+            "price": 65.92,
+            "link": "https://cs2c.app/r/skinvault/37515"
+          },
+          "steam": {
+            "price": 76.17,
+            "link": "https://cs2c.app/r/steam/37515"
+          },
+          "swapgg": {
+            "price": 80.92,
+            "link": "https://cs2c.app/r/swapgg/37515"
+          },
+          "tradeit": {
+            "price": 54.73,
+            "link": "https://cs2c.app/r/tradeit/37515"
+          },
+          "waxpeer": {
+            "price": 59.62,
+            "link": "https://cs2c.app/r/waxpeer/37515"
+          },
+          "whitemarket": {
+            "price": 58.4,
+            "link": "https://cs2c.app/r/whitemarket/37515"
+          },
+          "youpin": {
+            "price": 56.09,
+            "link": "https://cs2c.app/r/youpin/37515"
+          }
         },
         "stattrak": {
-          "avanmarket": 42.9,
-          "buff163": 41.15,
-          "buffmarket": 42,
-          "c5": 43.7,
-          "csfloat": 46.62,
-          "csgo500": 46.08,
-          "csgoempire": 43.87,
-          "csmoney_m": 47.04,
-          "csmoney_t": 48.11,
-          "dmarket": 43.13,
-          "ecosteam": 41.54,
-          "haloskins": 44.13,
-          "lisskins": 44.67,
-          "marketcsgo": 48,
-          "pirateswap": 50.33,
-          "shadowpay": 48.7,
-          "skinbaron": 68.25,
-          "skinflow": 46.87,
-          "skinland": 44.98,
-          "skinport": 56.41,
-          "skinswap": 40.85,
-          "skinvault": 47.29,
-          "steam": 66.55,
-          "tradeit": 43.44,
-          "waxpeer": 45.01,
-          "whitemarket": 46.14,
-          "youpin": 41.49
+          "avanmarket": {
+            "price": 42.9,
+            "link": "https://cs2c.app/r/avanmarket/37610"
+          },
+          "buff163": {
+            "price": 41.07,
+            "link": "https://cs2c.app/r/buff163/37610"
+          },
+          "buffmarket": {
+            "price": 42,
+            "link": "https://cs2c.app/r/buffmarket/37610"
+          },
+          "c5": {
+            "price": 43.69,
+            "link": "https://cs2c.app/r/c5/37610"
+          },
+          "csfloat": {
+            "price": 46.62,
+            "link": "https://cs2c.app/r/csfloat/37610"
+          },
+          "csgoempire": {
+            "price": 43.87,
+            "link": "https://cs2c.app/r/csgoempire/37610"
+          },
+          "csmoney_m": {
+            "price": 46.33,
+            "link": "https://cs2c.app/r/csmoney_m/37610"
+          },
+          "csmoney_t": {
+            "price": 47.39,
+            "link": "https://cs2c.app/r/csmoney_t/37610"
+          },
+          "dmarket": {
+            "price": 42.45,
+            "link": "https://cs2c.app/r/dmarket/37610"
+          },
+          "ecosteam": {
+            "price": 41.53,
+            "link": "https://cs2c.app/r/ecosteam/37610"
+          },
+          "haloskins": {
+            "price": 44.13,
+            "link": "https://cs2c.app/r/haloskins/37610"
+          },
+          "lisskins": {
+            "price": 44.25,
+            "link": "https://cs2c.app/r/lisskins/37610"
+          },
+          "marketcsgo": {
+            "price": 47.15,
+            "link": "https://cs2c.app/r/marketcsgo/37610"
+          },
+          "pirateswap": {
+            "price": 50.33,
+            "link": "https://cs2c.app/r/pirateswap/37610"
+          },
+          "shadowpay": {
+            "price": 46.39,
+            "link": "https://cs2c.app/r/shadowpay/37610"
+          },
+          "skinbaron": {
+            "price": 68.25,
+            "link": "https://cs2c.app/r/skinbaron/37610"
+          },
+          "skinflow": {
+            "price": 46.87,
+            "link": "https://cs2c.app/r/skinflow/37610"
+          },
+          "skinland": {
+            "price": 44.29,
+            "link": "https://cs2c.app/r/skinland/37610"
+          },
+          "skinport": {
+            "price": 56.41,
+            "link": "https://cs2c.app/r/skinport/37610"
+          },
+          "skinswap": {
+            "price": 40.85,
+            "link": "https://cs2c.app/r/skinswap/37610"
+          },
+          "skinvault": {
+            "price": 47.29,
+            "link": "https://cs2c.app/r/skinvault/37610"
+          },
+          "steam": {
+            "price": 66.55,
+            "link": "https://cs2c.app/r/steam/37610"
+          },
+          "tradeit": {
+            "price": 42.98,
+            "link": "https://cs2c.app/r/tradeit/37610"
+          },
+          "waxpeer": {
+            "price": 47.34,
+            "link": "https://cs2c.app/r/waxpeer/37610"
+          },
+          "whitemarket": {
+            "price": 46.14,
+            "link": "https://cs2c.app/r/whitemarket/37610"
+          },
+          "youpin": {
+            "price": 41.04,
+            "link": "https://cs2c.app/r/youpin/37610"
+          }
         }
       },
       "BS": {
         "normal": {
-          "avanmarket": 42.84,
-          "buff163": 40.45,
-          "buffmarket": 41,
-          "c5": 41.63,
-          "csfloat": 38.74,
-          "csgo500": 43.31,
-          "csgoempire": 42.96,
-          "csmoney_m": 39.68,
-          "csmoney_t": 42.01,
-          "cstrade": 42.54,
-          "dmarket": 40.21,
-          "ecosteam": 41.49,
-          "haloskins": 42.04,
-          "itradegg": 42.57,
-          "lisskins": 41.37,
-          "marketcsgo": 46.15,
-          "pirateswap": 47.48,
-          "skinbaron": 45.5,
-          "skinflow": 43.3,
-          "skinland": 41.21,
-          "skinport": 39.88,
-          "skinsmonkey": 45.47,
-          "skinswap": 41.35,
-          "skinswap_t": 56.15,
-          "skinvault": 43.9,
-          "steam": 54.48,
-          "tradeit": 39.85,
-          "waxpeer": 43.43,
-          "whitemarket": 41.15,
-          "youpin": 39.2
+          "avanmarket": {
+            "price": 42.84,
+            "link": "https://cs2c.app/r/avanmarket/37516"
+          },
+          "buff163": {
+            "price": 40.49,
+            "link": "https://cs2c.app/r/buff163/37516"
+          },
+          "buffmarket": {
+            "price": 41,
+            "link": "https://cs2c.app/r/buffmarket/37516"
+          },
+          "c5": {
+            "price": 41.06,
+            "link": "https://cs2c.app/r/c5/37516"
+          },
+          "csfloat": {
+            "price": 38.99,
+            "link": "https://cs2c.app/r/csfloat/37516"
+          },
+          "csgoempire": {
+            "price": 42.96,
+            "link": "https://cs2c.app/r/csgoempire/37516"
+          },
+          "csmoney_m": {
+            "price": 39.56,
+            "link": "https://cs2c.app/r/csmoney_m/37516"
+          },
+          "csmoney_t": {
+            "price": 41.89,
+            "link": "https://cs2c.app/r/csmoney_t/37516"
+          },
+          "cstrade": {
+            "price": 43.03,
+            "link": "https://cs2c.app/r/cstrade/37516"
+          },
+          "dmarket": {
+            "price": 40.21,
+            "link": "https://cs2c.app/r/dmarket/37516"
+          },
+          "ecosteam": {
+            "price": 41.48,
+            "link": "https://cs2c.app/r/ecosteam/37516"
+          },
+          "haloskins": {
+            "price": 41.47,
+            "link": "https://cs2c.app/r/haloskins/37516"
+          },
+          "itradegg": {
+            "price": 42.46,
+            "link": "https://cs2c.app/r/itradegg/37516"
+          },
+          "lisskins": {
+            "price": 40.55,
+            "link": "https://cs2c.app/r/lisskins/37516"
+          },
+          "marketcsgo": {
+            "price": 53.63,
+            "link": "https://cs2c.app/r/marketcsgo/37516"
+          },
+          "pirateswap": {
+            "price": 47.48,
+            "link": "https://cs2c.app/r/pirateswap/37516"
+          },
+          "shadowpay": {
+            "price": 41.73,
+            "link": "https://cs2c.app/r/shadowpay/37516"
+          },
+          "skinbaron": {
+            "price": 45.5,
+            "link": "https://cs2c.app/r/skinbaron/37516"
+          },
+          "skinflow": {
+            "price": 42.89,
+            "link": "https://cs2c.app/r/skinflow/37516"
+          },
+          "skinland": {
+            "price": 40.59,
+            "link": "https://cs2c.app/r/skinland/37516"
+          },
+          "skinport": {
+            "price": 39.88,
+            "link": "https://cs2c.app/r/skinport/37516"
+          },
+          "skinscom": {
+            "price": 42.57,
+            "link": "https://cs2c.app/r/skinscom/37516"
+          },
+          "skinsmonkey": {
+            "price": 45.5,
+            "link": "https://cs2c.app/r/skinsmonkey/37516"
+          },
+          "skinswap": {
+            "price": 40.55,
+            "link": "https://cs2c.app/r/skinswap/37516"
+          },
+          "skinvault": {
+            "price": 42.86,
+            "link": "https://cs2c.app/r/skinvault/37516"
+          },
+          "steam": {
+            "price": 54.48,
+            "link": "https://cs2c.app/r/steam/37516"
+          },
+          "tradeit": {
+            "price": 39.85,
+            "link": "https://cs2c.app/r/tradeit/37516"
+          },
+          "waxpeer": {
+            "price": 42.57,
+            "link": "https://cs2c.app/r/waxpeer/37516"
+          },
+          "whitemarket": {
+            "price": 41.15,
+            "link": "https://cs2c.app/r/whitemarket/37516"
+          },
+          "youpin": {
+            "price": 40.8,
+            "link": "https://cs2c.app/r/youpin/37516"
+          }
         },
         "stattrak": {
-          "avanmarket": 41.63,
-          "buff163": 37.57,
-          "buffmarket": 38,
-          "c5": 38.08,
-          "csfloat": 38.66,
-          "csgo500": 41.91,
-          "csgoempire": 45.7,
-          "csmoney_m": 39.07,
-          "csmoney_t": 41,
-          "dmarket": 38.54,
-          "ecosteam": 40.9,
-          "haloskins": 38.45,
-          "lisskins": 39.81,
-          "marketcsgo": 44.47,
-          "pirateswap": 46.92,
-          "shadowpay": 43.86,
-          "skinflow": 45.81,
-          "skinland": 39.84,
-          "skinout": 39.68,
-          "skinport": 40.12,
-          "skinswap": 38.18,
-          "skinswap_t": 54.02,
-          "skinvault": 41.3,
-          "steam": 56.44,
-          "tradeit": 40.5,
-          "waxpeer": 41.67,
-          "whitemarket": 42.86,
-          "youpin": 38.68
+          "avanmarket": {
+            "price": 41.62,
+            "link": "https://cs2c.app/r/avanmarket/37611"
+          },
+          "buff163": {
+            "price": 36.68,
+            "link": "https://cs2c.app/r/buff163/37611"
+          },
+          "buffmarket": {
+            "price": 37,
+            "link": "https://cs2c.app/r/buffmarket/37611"
+          },
+          "c5": {
+            "price": 38.06,
+            "link": "https://cs2c.app/r/c5/37611"
+          },
+          "csfloat": {
+            "price": 38.64,
+            "link": "https://cs2c.app/r/csfloat/37611"
+          },
+          "csmoney_m": {
+            "price": 39.07,
+            "link": "https://cs2c.app/r/csmoney_m/37611"
+          },
+          "csmoney_t": {
+            "price": 41,
+            "link": "https://cs2c.app/r/csmoney_t/37611"
+          },
+          "dmarket": {
+            "price": 38.64,
+            "link": "https://cs2c.app/r/dmarket/37611"
+          },
+          "dupefi": {
+            "price": 41.76,
+            "link": "https://cs2c.app/r/dupefi/37611"
+          },
+          "ecosteam": {
+            "price": 40.15,
+            "link": "https://cs2c.app/r/ecosteam/37611"
+          },
+          "haloskins": {
+            "price": 38.43,
+            "link": "https://cs2c.app/r/haloskins/37611"
+          },
+          "lisskins": {
+            "price": 39.14,
+            "link": "https://cs2c.app/r/lisskins/37611"
+          },
+          "marketcsgo": {
+            "price": 45.62,
+            "link": "https://cs2c.app/r/marketcsgo/37611"
+          },
+          "pirateswap": {
+            "price": 46.12,
+            "link": "https://cs2c.app/r/pirateswap/37611"
+          },
+          "shadowpay": {
+            "price": 40.28,
+            "link": "https://cs2c.app/r/shadowpay/37611"
+          },
+          "skinflow": {
+            "price": 45.81,
+            "link": "https://cs2c.app/r/skinflow/37611"
+          },
+          "skinland": {
+            "price": 39.17,
+            "link": "https://cs2c.app/r/skinland/37611"
+          },
+          "skinout": {
+            "price": 39.68,
+            "link": "https://cs2c.app/r/skinout/37611"
+          },
+          "skinport": {
+            "price": 40.12,
+            "link": "https://cs2c.app/r/skinport/37611"
+          },
+          "skinswap": {
+            "price": 38.17,
+            "link": "https://cs2c.app/r/skinswap/37611"
+          },
+          "skinswap_t": {
+            "price": 51.75,
+            "link": "https://cs2c.app/r/skinswap_t/37611"
+          },
+          "skinvault": {
+            "price": 41.09,
+            "link": "https://cs2c.app/r/skinvault/37611"
+          },
+          "steam": {
+            "price": 56.44,
+            "link": "https://cs2c.app/r/steam/37611"
+          },
+          "tradeit": {
+            "price": 41.13,
+            "link": "https://cs2c.app/r/tradeit/37611"
+          },
+          "waxpeer": {
+            "price": 41.09,
+            "link": "https://cs2c.app/r/waxpeer/37611"
+          },
+          "whitemarket": {
+            "price": 42.86,
+            "link": "https://cs2c.app/r/whitemarket/37611"
+          },
+          "youpin": {
+            "price": 39.26,
+            "link": "https://cs2c.app/r/youpin/37611"
+          }
         }
       }
     },
-    "time": 1784973936648
+    "time": 1785024478989
   },
   "4:1119": {
     "data": {
       "FN": {
         "normal": {
-          "avanmarket": 179.44,
-          "buff163": 176.45,
-          "buffmarket": 180,
-          "c5": 176.63,
-          "csfloat": 182.65,
-          "csgo500": 188.62,
-          "csgoempire": 197,
-          "csmoney_m": 176.31,
-          "csmoney_t": 210.96,
-          "dmarket": 206.26,
-          "dupefi": 185.23,
-          "ecosteam": 173.79,
-          "haloskins": 178.31,
-          "lisskins": 184.38,
-          "marketcsgo": 196.76,
-          "pirateswap": 216.72,
-          "shadowpay": 211.68,
-          "skinbaron": 625.62,
-          "skinflow": 208.53,
-          "skinland": 187.82,
-          "skinport": 229.62,
-          "skinscom": 240,
-          "skinswap": 170.88,
-          "skinvault": 227.17,
-          "steam": 277.84,
-          "tradeit": 188.57,
-          "waxpeer": 184.83,
-          "whitemarket": 210.81,
-          "youpin": 180.14
-        },
-        "stattrak": {
-          "avanmarket": 250.03,
-          "buff163": 250.2,
-          "buffmarket": 280,
-          "c5": 252.79,
-          "csfloat": 350,
-          "csgo500": 267.5,
-          "csgoempire": 264.41,
-          "csmoney_m": 297.48,
-          "csmoney_t": 304.24,
-          "ecosteam": 242.16,
-          "haloskins": 255.19,
-          "lisskins": 260.93,
-          "marketcsgo": 274.16,
-          "pirateswap": 305.09,
-          "shadowpay": 264.49,
-          "skinbaron": 296.05,
-          "skinflow": 261.35,
-          "skinland": 256.75,
-          "skinport": 344.03,
-          "skinswap": 238.12,
-          "skinvault": 294.05,
-          "steam": 399.24,
-          "tradeit": 253.41,
-          "waxpeer": 257.54,
-          "whitemarket": 290.4,
-          "youpin": 242.08
+          "avanmarket": {
+            "price": 136.15,
+            "link": "https://cs2c.app/r/avanmarket/4549"
+          },
+          "buff163": {
+            "price": 131.39,
+            "link": "https://cs2c.app/r/buff163/7817"
+          },
+          "buffmarket": {
+            "price": 133,
+            "link": "https://cs2c.app/r/buffmarket/14652"
+          },
+          "c5": {
+            "price": 129.54,
+            "link": "https://cs2c.app/r/c5/7817"
+          },
+          "csdeals": {
+            "price": 294.23,
+            "link": "https://cs2c.app/r/csdeals/4549"
+          },
+          "csfloat": {
+            "price": 126,
+            "link": "https://cs2c.app/r/csfloat/4549"
+          },
+          "csgo500": {
+            "price": 135.91,
+            "link": "https://cs2c.app/r/csgo500/4549"
+          },
+          "csgoempire": {
+            "price": 128.69,
+            "link": "https://cs2c.app/r/csgoempire/4549"
+          },
+          "csmoney_m": {
+            "price": 131.82,
+            "link": "https://cs2c.app/r/csmoney_m/4549"
+          },
+          "csmoney_t": {
+            "price": 135.86,
+            "link": "https://cs2c.app/r/csmoney_t/4549"
+          },
+          "dmarket": {
+            "price": 132.05,
+            "link": "https://cs2c.app/r/dmarket/4549"
+          },
+          "dupefi": {
+            "price": 132.55,
+            "link": "https://cs2c.app/r/dupefi/4549"
+          },
+          "ecosteam": {
+            "price": 131.83,
+            "link": "https://cs2c.app/r/ecosteam/4549"
+          },
+          "haloskins": {
+            "price": 130.8,
+            "link": "https://cs2c.app/r/haloskins/7817"
+          },
+          "lisskins": {
+            "price": 134.54,
+            "link": "https://cs2c.app/r/lisskins/4549"
+          },
+          "lootfarm": {
+            "price": 184.05,
+            "link": "https://cs2c.app/r/lootfarm/19263"
+          },
+          "mannco": {
+            "price": 145.27,
+            "link": "https://cs2c.app/r/mannco/19263"
+          },
+          "marketcsgo": {
+            "price": 148.68,
+            "link": "https://cs2c.app/r/marketcsgo/4549"
+          },
+          "pirateswap": {
+            "price": 153.47,
+            "link": "https://cs2c.app/r/pirateswap/4549"
+          },
+          "rapidskins": {
+            "price": 134.33,
+            "link": "https://cs2c.app/r/rapidskins/5614"
+          },
+          "shadowpay": {
+            "price": 138.09,
+            "link": "https://cs2c.app/r/shadowpay/4549"
+          },
+          "skinbaron": {
+            "price": 136.51,
+            "link": "https://cs2c.app/r/skinbaron/5614"
+          },
+          "skinflow": {
+            "price": 132.06,
+            "link": "https://cs2c.app/r/skinflow/4549"
+          },
+          "skinland": {
+            "price": 134.67,
+            "link": "https://cs2c.app/r/skinland/4549"
+          },
+          "skinport": {
+            "price": 132.43,
+            "link": "https://cs2c.app/r/skinport/5614"
+          },
+          "skinscom": {
+            "price": 131.2,
+            "link": "https://cs2c.app/r/skinscom/4549"
+          },
+          "skinsmonkey": {
+            "price": 150.62,
+            "link": "https://cs2c.app/r/skinsmonkey/5614"
+          },
+          "skinswap": {
+            "price": 129.65,
+            "link": "https://cs2c.app/r/skinswap/4549"
+          },
+          "skinswap_t": {
+            "price": 185.04,
+            "link": "https://cs2c.app/r/skinswap_t/7817"
+          },
+          "skinvault": {
+            "price": 149.47,
+            "link": "https://cs2c.app/r/skinvault/7817"
+          },
+          "steam": {
+            "price": 189.65,
+            "link": "https://cs2c.app/r/steam/19263"
+          },
+          "tradeit": {
+            "price": 132.61,
+            "link": "https://cs2c.app/r/tradeit/4549"
+          },
+          "waxpeer": {
+            "price": 144.45,
+            "link": "https://cs2c.app/r/waxpeer/14652"
+          },
+          "whitemarket": {
+            "price": 147.93,
+            "link": "https://cs2c.app/r/whitemarket/4549"
+          },
+          "youpin": {
+            "price": 126.66,
+            "link": "https://cs2c.app/r/youpin/4549"
+          }
         }
       },
       "MW": {
         "normal": {
-          "avanmarket": 116.47,
-          "buff163": 113.38,
-          "buffmarket": 114,
-          "c5": 113.29,
-          "csfloat": 112.8,
-          "csgo500": 119.06,
-          "csgoempire": 115.48,
-          "csmoney_m": 113.44,
-          "csmoney_t": 120.11,
-          "cstrade": 124.32,
-          "dmarket": 114.83,
-          "dupefi": 120.46,
-          "ecosteam": 112.8,
-          "haloskins": 114.37,
-          "itradegg": 117.74,
-          "lisskins": 116.21,
-          "mannco": 130.88,
-          "marketcsgo": 125.05,
-          "pirateswap": 133.21,
-          "rapidskins": 115.47,
-          "skinbaron": 120.56,
-          "skinflow": 117.17,
-          "skinland": 116.09,
-          "skinout": 121.9,
-          "skinport": 107.09,
-          "skinscom": 116.47,
-          "skinsmonkey": 131.73,
-          "skinswap": 110.92,
-          "skinswap_t": 157.76,
-          "skinvault": 120.2,
-          "steam": 164.11,
-          "tradeit": 110.18,
-          "waxpeer": 119.97,
-          "whitemarket": 126.2,
-          "youpin": 113.03
-        },
-        "stattrak": {
-          "avanmarket": 123.07,
-          "buff163": 114.43,
-          "buffmarket": 117,
-          "c5": 118.1,
-          "csfloat": 119.42,
-          "csgo500": 126.94,
-          "csgoempire": 142.61,
-          "csmoney_m": 133.4,
-          "csmoney_t": 136.43,
-          "dmarket": 120.18,
-          "ecosteam": 123.59,
-          "haloskins": 119.23,
-          "lisskins": 120.59,
-          "marketcsgo": 131.03,
-          "shadowpay": 145.83,
-          "skinflow": 125.98,
-          "skinland": 119.72,
-          "skinport": 131.91,
-          "skinscom": 145.99,
-          "skinswap": 114.71,
-          "skinvault": 130.78,
-          "steam": 170.56,
-          "tradeit": 119.72,
-          "waxpeer": 126.62,
-          "whitemarket": 126.36,
-          "youpin": 114.36
+          "avanmarket": {
+            "price": 89.64,
+            "link": "https://cs2c.app/r/avanmarket/4550"
+          },
+          "buff163": {
+            "price": 85.47,
+            "link": "https://cs2c.app/r/buff163/14653"
+          },
+          "buffmarket": {
+            "price": 87.85,
+            "link": "https://cs2c.app/r/buffmarket/4550"
+          },
+          "c5": {
+            "price": 89.16,
+            "link": "https://cs2c.app/r/c5/14653"
+          },
+          "csdeals": {
+            "price": 114.24,
+            "link": "https://cs2c.app/r/csdeals/14653"
+          },
+          "csfloat": {
+            "price": 81.27,
+            "link": "https://cs2c.app/r/csfloat/4550"
+          },
+          "csgo500": {
+            "price": 94.38,
+            "link": "https://cs2c.app/r/csgo500/14653"
+          },
+          "csgoempire": {
+            "price": 88,
+            "link": "https://cs2c.app/r/csgoempire/4550"
+          },
+          "csmoney_m": {
+            "price": 82.25,
+            "link": "https://cs2c.app/r/csmoney_m/4550"
+          },
+          "csmoney_t": {
+            "price": 87.09,
+            "link": "https://cs2c.app/r/csmoney_t/4550"
+          },
+          "dmarket": {
+            "price": 83.44,
+            "link": "https://cs2c.app/r/dmarket/4550"
+          },
+          "dupefi": {
+            "price": 115.28,
+            "link": "https://cs2c.app/r/dupefi/14653"
+          },
+          "ecosteam": {
+            "price": 86.8,
+            "link": "https://cs2c.app/r/ecosteam/4550"
+          },
+          "haloskins": {
+            "price": 90.04,
+            "link": "https://cs2c.app/r/haloskins/14653"
+          },
+          "lisskins": {
+            "price": 88.3,
+            "link": "https://cs2c.app/r/lisskins/4550"
+          },
+          "mannco": {
+            "price": 92.7,
+            "link": "https://cs2c.app/r/mannco/19265"
+          },
+          "marketcsgo": {
+            "price": 91.93,
+            "link": "https://cs2c.app/r/marketcsgo/4550"
+          },
+          "pirateswap": {
+            "price": 101.92,
+            "link": "https://cs2c.app/r/pirateswap/4550"
+          },
+          "shadowpay": {
+            "price": 90.87,
+            "link": "https://cs2c.app/r/shadowpay/4550"
+          },
+          "skinbaron": {
+            "price": 91,
+            "link": "https://cs2c.app/r/skinbaron/7818"
+          },
+          "skinflow": {
+            "price": 84.27,
+            "link": "https://cs2c.app/r/skinflow/14653"
+          },
+          "skinland": {
+            "price": 88.38,
+            "link": "https://cs2c.app/r/skinland/4550"
+          },
+          "skinport": {
+            "price": 102.3,
+            "link": "https://cs2c.app/r/skinport/14653"
+          },
+          "skinscom": {
+            "price": 88.09,
+            "link": "https://cs2c.app/r/skinscom/14653"
+          },
+          "skinsmonkey": {
+            "price": 98.51,
+            "link": "https://cs2c.app/r/skinsmonkey/14653"
+          },
+          "skinswap": {
+            "price": 87.11,
+            "link": "https://cs2c.app/r/skinswap/4550"
+          },
+          "skinswap_t": {
+            "price": 120.78,
+            "link": "https://cs2c.app/r/skinswap_t/4550"
+          },
+          "skinvault": {
+            "price": 95.44,
+            "link": "https://cs2c.app/r/skinvault/14653"
+          },
+          "steam": {
+            "price": 122.77,
+            "link": "https://cs2c.app/r/steam/19265"
+          },
+          "swapgg": {
+            "price": 132.58,
+            "link": "https://cs2c.app/r/swapgg/19265"
+          },
+          "tradeit": {
+            "price": 88.1,
+            "link": "https://cs2c.app/r/tradeit/14653"
+          },
+          "waxpeer": {
+            "price": 92.5,
+            "link": "https://cs2c.app/r/waxpeer/4550"
+          },
+          "whitemarket": {
+            "price": 97.92,
+            "link": "https://cs2c.app/r/whitemarket/14653"
+          },
+          "youpin": {
+            "price": 84.14,
+            "link": "https://cs2c.app/r/youpin/14653"
+          }
         }
       },
       "FT": {
         "normal": {
-          "avanmarket": 61.28,
-          "buff163": 58.54,
-          "buffmarket": 60,
-          "c5": 59.43,
-          "csfloat": 57.9,
-          "csgo500": 60.32,
-          "csgoempire": 60.49,
-          "csmoney_m": 59.46,
-          "csmoney_t": 63.91,
-          "dmarket": 58.61,
-          "dupefi": 59.76,
-          "ecosteam": 59.35,
-          "haloskins": 60,
-          "lisskins": 61.49,
-          "mannco": 64.38,
-          "marketcsgo": 63.48,
-          "pirateswap": 71.08,
-          "shadowpay": 61.62,
-          "skinbaron": 60.84,
-          "skinflow": 58.53,
-          "skinland": 61.52,
-          "skinport": 62.84,
-          "skinscom": 60.43,
-          "skinsmonkey": 66.93,
-          "skinswap": 58.36,
-          "skinswap_t": 82.9,
-          "skinvault": 63.46,
-          "steam": 86.34,
-          "tradeit": 60.29,
-          "waxpeer": 62,
-          "whitemarket": 60.87,
-          "youpin": 58.24
-        },
-        "stattrak": {
-          "avanmarket": 62.3,
-          "buff163": 56.99,
-          "buffmarket": 58,
-          "c5": 58.58,
-          "csfloat": 61.75,
-          "csgo500": 63.34,
-          "csmoney_m": 58.89,
-          "csmoney_t": 67.35,
-          "dmarket": 61.53,
-          "ecosteam": 60.68,
-          "haloskins": 59.14,
-          "lisskins": 62.4,
-          "mannco": 63.1,
-          "marketcsgo": 67.57,
-          "pirateswap": 67.81,
-          "shadowpay": 68.92,
-          "skinflow": 57.36,
-          "skinland": 61.88,
-          "skinport": 80.61,
-          "skinscom": 60,
-          "skinswap": 58.07,
-          "skinvault": 68.31,
-          "steam": 87.13,
-          "swapgg": 89.68,
-          "tradeit": 60.6,
-          "waxpeer": 64.54,
-          "whitemarket": 64.72,
-          "youpin": 57.95
+          "avanmarket": {
+            "price": 81.29,
+            "link": "https://cs2c.app/r/avanmarket/14654"
+          },
+          "buff163": {
+            "price": 76.76,
+            "link": "https://cs2c.app/r/buff163/14654"
+          },
+          "buffmarket": {
+            "price": 75,
+            "link": "https://cs2c.app/r/buffmarket/14654"
+          },
+          "c5": {
+            "price": 77.65,
+            "link": "https://cs2c.app/r/c5/4551"
+          },
+          "csdeals": {
+            "price": 171.35,
+            "link": "https://cs2c.app/r/csdeals/14654"
+          },
+          "csfloat": {
+            "price": 75.3,
+            "link": "https://cs2c.app/r/csfloat/7819"
+          },
+          "csgo500": {
+            "price": 81.42,
+            "link": "https://cs2c.app/r/csgo500/7819"
+          },
+          "csgoempire": {
+            "price": 75.09,
+            "link": "https://cs2c.app/r/csgoempire/4551"
+          },
+          "csmoney_m": {
+            "price": 76.2,
+            "link": "https://cs2c.app/r/csmoney_m/5616"
+          },
+          "csmoney_t": {
+            "price": 79.8,
+            "link": "https://cs2c.app/r/csmoney_t/14654"
+          },
+          "cstrade": {
+            "price": 83.06,
+            "link": "https://cs2c.app/r/cstrade/7819"
+          },
+          "dmarket": {
+            "price": 76.26,
+            "link": "https://cs2c.app/r/dmarket/4551"
+          },
+          "dupefi": {
+            "price": 80.25,
+            "link": "https://cs2c.app/r/dupefi/7819"
+          },
+          "ecosteam": {
+            "price": 80.31,
+            "link": "https://cs2c.app/r/ecosteam/14654"
+          },
+          "haloskins": {
+            "price": 78.41,
+            "link": "https://cs2c.app/r/haloskins/4551"
+          },
+          "itradegg": {
+            "price": 83.82,
+            "link": "https://cs2c.app/r/itradegg/14654"
+          },
+          "lisskins": {
+            "price": 78.29,
+            "link": "https://cs2c.app/r/lisskins/14654"
+          },
+          "lootfarm": {
+            "price": 106.42,
+            "link": "https://cs2c.app/r/lootfarm/19264"
+          },
+          "mannco": {
+            "price": 85.61,
+            "link": "https://cs2c.app/r/mannco/19264"
+          },
+          "marketcsgo": {
+            "price": 86.99,
+            "link": "https://cs2c.app/r/marketcsgo/4551"
+          },
+          "pirateswap": {
+            "price": 93.29,
+            "link": "https://cs2c.app/r/pirateswap/14654"
+          },
+          "rapidskins": {
+            "price": 78.97,
+            "link": "https://cs2c.app/r/rapidskins/4551"
+          },
+          "shadowpay": {
+            "price": 80.55,
+            "link": "https://cs2c.app/r/shadowpay/14654"
+          },
+          "skinbaron": {
+            "price": 73.83,
+            "link": "https://cs2c.app/r/skinbaron/5616"
+          },
+          "skinflow": {
+            "price": 77.83,
+            "link": "https://cs2c.app/r/skinflow/7819"
+          },
+          "skinland": {
+            "price": 78.36,
+            "link": "https://cs2c.app/r/skinland/14654"
+          },
+          "skinport": {
+            "price": 80.61,
+            "link": "https://cs2c.app/r/skinport/4551"
+          },
+          "skinscom": {
+            "price": 79.05,
+            "link": "https://cs2c.app/r/skinscom/14654"
+          },
+          "skinsmonkey": {
+            "price": 87.47,
+            "link": "https://cs2c.app/r/skinsmonkey/4551"
+          },
+          "skinswap": {
+            "price": 76.74,
+            "link": "https://cs2c.app/r/skinswap/14654"
+          },
+          "skinswap_t": {
+            "price": 105.35,
+            "link": "https://cs2c.app/r/skinswap_t/4551"
+          },
+          "skinvault": {
+            "price": 81.05,
+            "link": "https://cs2c.app/r/skinvault/4551"
+          },
+          "steam": {
+            "price": 109.51,
+            "link": "https://cs2c.app/r/steam/19264"
+          },
+          "swapgg": {
+            "price": 120.28,
+            "link": "https://cs2c.app/r/swapgg/19264"
+          },
+          "tradeit": {
+            "price": 80.3,
+            "link": "https://cs2c.app/r/tradeit/7819"
+          },
+          "waxpeer": {
+            "price": 82.2,
+            "link": "https://cs2c.app/r/waxpeer/14654"
+          },
+          "whitemarket": {
+            "price": 84.83,
+            "link": "https://cs2c.app/r/whitemarket/7819"
+          },
+          "youpin": {
+            "price": 76.69,
+            "link": "https://cs2c.app/r/youpin/7819"
+          }
         }
       },
       "WW": {
         "normal": {
-          "avanmarket": 58.71,
-          "buff163": 56.3,
-          "buffmarket": 57,
-          "c5": 56.28,
-          "csfloat": 55.5,
-          "csgo500": 59,
-          "csgoempire": 55.9,
-          "csmoney_m": 57.98,
-          "csmoney_t": 57.8,
-          "cstrade": 59.98,
-          "dmarket": 54.95,
-          "dupefi": 60.3,
-          "ecosteam": 56.86,
-          "haloskins": 56.82,
-          "lisskins": 57.09,
-          "mannco": 63.25,
-          "marketcsgo": 58.78,
-          "pirateswap": 66.08,
-          "shadowpay": 59.77,
-          "skinbaron": 55.18,
-          "skinflow": 58.2,
-          "skinland": 57.09,
-          "skinport": 57.58,
-          "skinscom": 58.08,
-          "skinsmonkey": 61.9,
-          "skinswap": 55.91,
-          "skinswap_t": 76.29,
-          "skinvault": 63.37,
-          "steam": 76.17,
-          "swapgg": 80.92,
-          "tradeit": 55.87,
-          "waxpeer": 59.94,
-          "whitemarket": 58.4,
-          "youpin": 56.55
-        },
-        "stattrak": {
-          "avanmarket": 42.9,
-          "buff163": 41.15,
-          "buffmarket": 42,
-          "c5": 43.7,
-          "csfloat": 46.62,
-          "csgo500": 46.08,
-          "csgoempire": 43.87,
-          "csmoney_m": 47.04,
-          "csmoney_t": 48.11,
-          "dmarket": 43.13,
-          "ecosteam": 41.54,
-          "haloskins": 44.13,
-          "lisskins": 44.67,
-          "marketcsgo": 48,
-          "pirateswap": 50.33,
-          "shadowpay": 48.7,
-          "skinbaron": 68.25,
-          "skinflow": 46.87,
-          "skinland": 44.98,
-          "skinport": 56.41,
-          "skinswap": 40.85,
-          "skinvault": 47.29,
-          "steam": 66.55,
-          "tradeit": 43.44,
-          "waxpeer": 45.01,
-          "whitemarket": 46.14,
-          "youpin": 41.49
+          "avanmarket": {
+            "price": 89.43,
+            "link": "https://cs2c.app/r/avanmarket/7820"
+          },
+          "buff163": {
+            "price": 109.08,
+            "link": "https://cs2c.app/r/buff163/5617"
+          },
+          "buffmarket": {
+            "price": 99,
+            "link": "https://cs2c.app/r/buffmarket/7820"
+          },
+          "c5": {
+            "price": 85.33,
+            "link": "https://cs2c.app/r/c5/14655"
+          },
+          "csfloat": {
+            "price": 81.44,
+            "link": "https://cs2c.app/r/csfloat/7820"
+          },
+          "csgoempire": {
+            "price": 104.92,
+            "link": "https://cs2c.app/r/csgoempire/4552"
+          },
+          "csmoney_m": {
+            "price": 105,
+            "link": "https://cs2c.app/r/csmoney_m/7820"
+          },
+          "dmarket": {
+            "price": 79.75,
+            "link": "https://cs2c.app/r/dmarket/7820"
+          },
+          "ecosteam": {
+            "price": 82.67,
+            "link": "https://cs2c.app/r/ecosteam/14655"
+          },
+          "haloskins": {
+            "price": 86.17,
+            "link": "https://cs2c.app/r/haloskins/14655"
+          },
+          "lisskins": {
+            "price": 83,
+            "link": "https://cs2c.app/r/lisskins/14655"
+          },
+          "lootfarm": {
+            "price": 113.35,
+            "link": "https://cs2c.app/r/lootfarm/19266"
+          },
+          "mannco": {
+            "price": 88.69,
+            "link": "https://cs2c.app/r/mannco/19266"
+          },
+          "marketcsgo": {
+            "price": 91.22,
+            "link": "https://cs2c.app/r/marketcsgo/7820"
+          },
+          "pirateswap": {
+            "price": 92.09,
+            "link": "https://cs2c.app/r/pirateswap/4552"
+          },
+          "shadowpay": {
+            "price": 87.32,
+            "link": "https://cs2c.app/r/shadowpay/7820"
+          },
+          "skinbaron": {
+            "price": 250.27,
+            "link": "https://cs2c.app/r/skinbaron/14092"
+          },
+          "skinflow": {
+            "price": 89.99,
+            "link": "https://cs2c.app/r/skinflow/4552"
+          },
+          "skinland": {
+            "price": 83.08,
+            "link": "https://cs2c.app/r/skinland/14655"
+          },
+          "skinout": {
+            "price": 253.19,
+            "link": "https://cs2c.app/r/skinout/14092"
+          },
+          "skinport": {
+            "price": 93.53,
+            "link": "https://cs2c.app/r/skinport/4552"
+          },
+          "skinscom": {
+            "price": 81.44,
+            "link": "https://cs2c.app/r/skinscom/14655"
+          },
+          "skinsmonkey": {
+            "price": 87.37,
+            "link": "https://cs2c.app/r/skinsmonkey/4552"
+          },
+          "skinswap": {
+            "price": 80.63,
+            "link": "https://cs2c.app/r/skinswap/14655"
+          },
+          "skinvault": {
+            "price": 91.49,
+            "link": "https://cs2c.app/r/skinvault/7820"
+          },
+          "steam": {
+            "price": 130.99,
+            "link": "https://cs2c.app/r/steam/19266"
+          },
+          "tradeit": {
+            "price": 94.45,
+            "link": "https://cs2c.app/r/tradeit/4552"
+          },
+          "waxpeer": {
+            "price": 89.1,
+            "link": "https://cs2c.app/r/waxpeer/7820"
+          },
+          "whitemarket": {
+            "price": 91.93,
+            "link": "https://cs2c.app/r/whitemarket/7820"
+          },
+          "youpin": {
+            "price": 90.2,
+            "link": "https://cs2c.app/r/youpin/4552"
+          }
         }
       },
       "BS": {
         "normal": {
-          "avanmarket": 42.84,
-          "buff163": 40.45,
-          "buffmarket": 41,
-          "c5": 41.63,
-          "csfloat": 38.74,
-          "csgo500": 43.31,
-          "csgoempire": 42.96,
-          "csmoney_m": 39.68,
-          "csmoney_t": 42.01,
-          "cstrade": 42.54,
-          "dmarket": 40.21,
-          "ecosteam": 41.49,
-          "haloskins": 42.04,
-          "itradegg": 42.57,
-          "lisskins": 41.37,
-          "marketcsgo": 46.15,
-          "pirateswap": 47.48,
-          "skinbaron": 45.5,
-          "skinflow": 43.3,
-          "skinland": 41.21,
-          "skinport": 39.88,
-          "skinsmonkey": 45.47,
-          "skinswap": 41.35,
-          "skinswap_t": 56.15,
-          "skinvault": 43.9,
-          "steam": 54.48,
-          "tradeit": 39.85,
-          "waxpeer": 43.43,
-          "whitemarket": 41.15,
-          "youpin": 39.2
-        },
-        "stattrak": {
-          "avanmarket": 41.63,
-          "buff163": 37.57,
-          "buffmarket": 38,
-          "c5": 38.08,
-          "csfloat": 38.66,
-          "csgo500": 41.91,
-          "csgoempire": 45.7,
-          "csmoney_m": 39.07,
-          "csmoney_t": 41,
-          "dmarket": 38.54,
-          "ecosteam": 40.9,
-          "haloskins": 38.45,
-          "lisskins": 39.81,
-          "marketcsgo": 44.47,
-          "pirateswap": 46.92,
-          "shadowpay": 43.86,
-          "skinflow": 45.81,
-          "skinland": 39.84,
-          "skinout": 39.68,
-          "skinport": 40.12,
-          "skinswap": 38.18,
-          "skinswap_t": 54.02,
-          "skinvault": 41.3,
-          "steam": 56.44,
-          "tradeit": 40.5,
-          "waxpeer": 41.67,
-          "whitemarket": 42.86,
-          "youpin": 38.68
+          "avanmarket": {
+            "price": 86.62,
+            "link": "https://cs2c.app/r/avanmarket/4553"
+          },
+          "buff163": {
+            "price": 87.39,
+            "link": "https://cs2c.app/r/buff163/5618"
+          },
+          "buffmarket": {
+            "price": 103.99,
+            "link": "https://cs2c.app/r/buffmarket/14656"
+          },
+          "c5": {
+            "price": 85.65,
+            "link": "https://cs2c.app/r/c5/7821"
+          },
+          "csfloat": {
+            "price": 79.95,
+            "link": "https://cs2c.app/r/csfloat/14656"
+          },
+          "csgoempire": {
+            "price": 108,
+            "link": "https://cs2c.app/r/csgoempire/4553"
+          },
+          "csmoney_m": {
+            "price": 94.66,
+            "link": "https://cs2c.app/r/csmoney_m/4553"
+          },
+          "cstrade": {
+            "price": 91.34,
+            "link": "https://cs2c.app/r/cstrade/14656"
+          },
+          "dmarket": {
+            "price": 80.55,
+            "link": "https://cs2c.app/r/dmarket/4553"
+          },
+          "ecosteam": {
+            "price": 85.47,
+            "link": "https://cs2c.app/r/ecosteam/4553"
+          },
+          "haloskins": {
+            "price": 86.49,
+            "link": "https://cs2c.app/r/haloskins/7821"
+          },
+          "lisskins": {
+            "price": 83.44,
+            "link": "https://cs2c.app/r/lisskins/7821"
+          },
+          "mannco": {
+            "price": 98.54,
+            "link": "https://cs2c.app/r/mannco/19262"
+          },
+          "marketcsgo": {
+            "price": 89.49,
+            "link": "https://cs2c.app/r/marketcsgo/4553"
+          },
+          "shadowpay": {
+            "price": 85.85,
+            "link": "https://cs2c.app/r/shadowpay/4553"
+          },
+          "skinflow": {
+            "price": 89.3,
+            "link": "https://cs2c.app/r/skinflow/4553"
+          },
+          "skinland": {
+            "price": 83.52,
+            "link": "https://cs2c.app/r/skinland/7821"
+          },
+          "skinport": {
+            "price": 91.85,
+            "link": "https://cs2c.app/r/skinport/4553"
+          },
+          "skinscom": {
+            "price": 91.06,
+            "link": "https://cs2c.app/r/skinscom/4553"
+          },
+          "skinsmonkey": {
+            "price": 87.07,
+            "link": "https://cs2c.app/r/skinsmonkey/14656"
+          },
+          "skinswap": {
+            "price": 81.78,
+            "link": "https://cs2c.app/r/skinswap/7821"
+          },
+          "skinvault": {
+            "price": 85.94,
+            "link": "https://cs2c.app/r/skinvault/7821"
+          },
+          "steam": {
+            "price": 124.15,
+            "link": "https://cs2c.app/r/steam/19262"
+          },
+          "tradeit": {
+            "price": 91.12,
+            "link": "https://cs2c.app/r/tradeit/7821"
+          },
+          "waxpeer": {
+            "price": 87.61,
+            "link": "https://cs2c.app/r/waxpeer/4553"
+          },
+          "whitemarket": {
+            "price": 88.56,
+            "link": "https://cs2c.app/r/whitemarket/14656"
+          },
+          "youpin": {
+            "price": 87.02,
+            "link": "https://cs2c.app/r/youpin/7821"
+          }
         }
       }
     },
-    "time": 1784973936648
+    "time": 1785024479796
   },
   "CS:GO Weapon Case": {
     "data": {
-      "avanmarket": 110.96,
-      "buff163": 114.41,
-      "buffmarket": 117,
-      "c5": 108.93,
-      "csdeals": 151.64,
-      "csfloat": 109.85,
-      "csgo500": 115.08,
-      "csgoempire": 111.8,
-      "csmoney_m": 113.55,
-      "csmoney_t": 121.57,
-      "dmarket": 111,
-      "dupefi": 113.98,
-      "ecosteam": 112.05,
-      "haloskins": 109.98,
-      "lisskins": 109.32,
-      "lootfarm": 151.76,
-      "mannco": 122.27,
-      "marketcsgo": 118.64,
-      "pirateswap": 132.59,
-      "rapidskins": 109.31,
-      "shadowpay": 117.52,
-      "skinbaron": 123.29,
-      "skinflow": 111.71,
-      "skinland": 112.92,
-      "skinout": 126.54,
-      "skinplace": 112.6,
-      "skinport": 110.63,
-      "skinscom": 110,
-      "skinsmonkey": 129.92,
-      "skinswap": 107.14,
-      "skinvault": 120.04,
-      "steam": 164.87,
-      "swapgg": 174.3,
-      "tradeit": 110.55,
-      "waxpeer": 114.19,
-      "youpin": 111.9
+      "avanmarket": {
+        "price": 109.37,
+        "link": "https://cs2c.app/r/avanmarket/142"
+      },
+      "buff163": {
+        "price": 113.67,
+        "link": "https://cs2c.app/r/buff163/142"
+      },
+      "buffmarket": {
+        "price": 116,
+        "link": "https://cs2c.app/r/buffmarket/142"
+      },
+      "c5": {
+        "price": 108.21,
+        "link": "https://cs2c.app/r/c5/142"
+      },
+      "csdeals": {
+        "price": 151.64,
+        "link": "https://cs2c.app/r/csdeals/142"
+      },
+      "csfloat": {
+        "price": 108.84,
+        "link": "https://cs2c.app/r/csfloat/142"
+      },
+      "csgo500": {
+        "price": 117.14,
+        "link": "https://cs2c.app/r/csgo500/142"
+      },
+      "csgoempire": {
+        "price": 110.8,
+        "link": "https://cs2c.app/r/csgoempire/142"
+      },
+      "csmoney_m": {
+        "price": 113.34,
+        "link": "https://cs2c.app/r/csmoney_m/142"
+      },
+      "csmoney_t": {
+        "price": 118.94,
+        "link": "https://cs2c.app/r/csmoney_t/142"
+      },
+      "dmarket": {
+        "price": 111,
+        "link": "https://cs2c.app/r/dmarket/142"
+      },
+      "dupefi": {
+        "price": 115.55,
+        "link": "https://cs2c.app/r/dupefi/142"
+      },
+      "ecosteam": {
+        "price": 110.42,
+        "link": "https://cs2c.app/r/ecosteam/142"
+      },
+      "haloskins": {
+        "price": 109.26,
+        "link": "https://cs2c.app/r/haloskins/142"
+      },
+      "lisskins": {
+        "price": 108.47,
+        "link": "https://cs2c.app/r/lisskins/142"
+      },
+      "lootfarm": {
+        "price": 151.76,
+        "link": "https://cs2c.app/r/lootfarm/142"
+      },
+      "mannco": {
+        "price": 122.17,
+        "link": "https://cs2c.app/r/mannco/142"
+      },
+      "marketcsgo": {
+        "price": 117.79,
+        "link": "https://cs2c.app/r/marketcsgo/142"
+      },
+      "pirateswap": {
+        "price": 132.59,
+        "link": "https://cs2c.app/r/pirateswap/142"
+      },
+      "rapidskins": {
+        "price": 108.3,
+        "link": "https://cs2c.app/r/rapidskins/142"
+      },
+      "shadowpay": {
+        "price": 111.6,
+        "link": "https://cs2c.app/r/shadowpay/142"
+      },
+      "skinbaron": {
+        "price": 123.3,
+        "link": null
+      },
+      "skinflow": {
+        "price": 111.71,
+        "link": "https://cs2c.app/r/skinflow/142"
+      },
+      "skinland": {
+        "price": 108.57,
+        "link": "https://cs2c.app/r/skinland/142"
+      },
+      "skinout": {
+        "price": 126.54,
+        "link": "https://cs2c.app/r/skinout/142"
+      },
+      "skinplace": {
+        "price": 111.72,
+        "link": "https://cs2c.app/r/skinplace/142"
+      },
+      "skinport": {
+        "price": 107.5,
+        "link": "https://cs2c.app/r/skinport/142"
+      },
+      "skinscom": {
+        "price": 109.65,
+        "link": "https://cs2c.app/r/skinscom/142"
+      },
+      "skinsmonkey": {
+        "price": 129.52,
+        "link": "https://cs2c.app/r/skinsmonkey/142"
+      },
+      "skinswap": {
+        "price": 105.58,
+        "link": "https://cs2c.app/r/skinswap/142"
+      },
+      "skinvault": {
+        "price": 132.59,
+        "link": "https://cs2c.app/r/skinvault/142"
+      },
+      "steam": {
+        "price": 164.83,
+        "link": "https://cs2c.app/r/steam/142"
+      },
+      "swapgg": {
+        "price": 174.3,
+        "link": "https://cs2c.app/r/swapgg/142"
+      },
+      "tradeit": {
+        "price": 110.55,
+        "link": "https://cs2c.app/r/tradeit/142"
+      },
+      "waxpeer": {
+        "price": 113.66,
+        "link": "https://cs2c.app/r/waxpeer/142"
+      },
+      "youpin": {
+        "price": 111.83,
+        "link": "https://cs2c.app/r/youpin/142"
+      }
     },
-    "time": 1784989524282
+    "time": 1785024481094
   }
 }
