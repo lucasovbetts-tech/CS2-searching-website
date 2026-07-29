@@ -19,6 +19,7 @@ console.log(
     'getGraffiti', await getGraffiti(),
     'getPins', await getPins(),
     'getCollections', await getCollections(),
+    'getHighlights', await getHighlights()
 );
 
 function darken(hex, factor) {
@@ -176,7 +177,6 @@ const rarityMaps = {
     "Distinguished": 15,
 };
 
-//creates the card for the skin
 export async function renderSkinCard(skins, weapon) {
 
     sortByRarity(skins, sortDescending)
@@ -250,8 +250,8 @@ async function renderCrateContentsCard(items, crateName, skins, stickers) {
         ? lowestPrice(Object.values(grid).flatMap(variants => variants[variant] ? Object.values(variants[variant]) : []))
         : null;
     const skinPriceText = match ? lowestForVariant('normal') : null;
-    //souvenir prices are never actually fetched into the grid (see csmarketapi.js's variants list), so this
-    //will always read "Price unavailable" for now - shown anyway so it's correct the moment that data exists
+    //souvenir prices are never actually fetched into the grid, so this will always read "Price unavailable"
+    //for now - shown anyway so it's correct the moment that data exists
     const stattrakPriceText = match && stattrak ? lowestForVariant('stattrak') : null;
     const souvenirPriceText = match && souvenir ? lowestForVariant('souvenir') : null;
         return `
@@ -354,7 +354,7 @@ const COLLECTIBLE_TYPES = {
     'music-kits': { label: 'Music Kits', fetch: getMusicKits, csfloatParam: 'music_kit_index' },
     graffiti: { label: 'Graffiti', fetch: getGraffiti, csfloatParam: null }, //CSFloat doesn't sell graffiti, so there's no link for this type
     pins: { label: 'Pins', fetch: getPins, csfloatParam: 'def_index' },
-    highlights: { label: 'Highlights', fetch: getHighlights, csfloatParam: null }, //no rarity field at all - see caveat below
+    highlights: { label: 'Highlights', fetch: getHighlights, csfloatParam: 'keychain_highlight_reel' },
 };
 
 //shows every item of one collectible type, once you've clicked into it - same card look renderCrateContentsCard uses
@@ -367,7 +367,7 @@ async function renderCollectibleItems(items, label) {
     const csfloatParam = type?.csfloatParam;
 
     const cards = await Promise.all(items.map(async item => {
-        const csfloatLink = csfloatParam ? `https://csfloat.com/search?type=buy_now&${csfloatParam}=${item.defIndex}` : null;
+        const csfloatLink = csfloatParam ? `https://csfloat.com/search?type=buy_now&${csfloatParam}=${item.defIndex ?? item.def_index}` : null;
         //these types have no wear tiers/variants - just the one normal price per item
         const priceText = lowestPrice(await getItemPrice(item.id));
 
@@ -400,7 +400,7 @@ function lowestPrice(prices) {
 
 //lowest normal/stattrak/souvenir price text for one skin, fetched once and reused per variant rather than
 //re-fetching the whole tier x variant grid per variant. souvenir stays PRICE_UNAVAILABLE for now - that
-//variant is never actually populated by the current fetch pipeline (see csmarketapi.js's variants list)
+//variant is never actually populated by the current fetch pipeline
 async function skinPriceTexts(defIndex, paintIndex, { stattrak, souvenir }) {
     const grid = await getPrices(defIndex, paintIndex) ?? {};
     const lowestForVariant = variant =>
@@ -574,7 +574,6 @@ export function renderExplorePage(weapon = null) {
 
                 const matches = searchableItems.filter(item => item.name.toLowerCase().includes(query));
 
-                //drops sections with nothing matching
                 const sections = SECTION_ORDER
                     .map(section => ({ section, items: matches.filter(m => m.section === section) }))
                     .filter(({ items }) => items.length);

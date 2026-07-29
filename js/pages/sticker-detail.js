@@ -45,7 +45,6 @@ function renderDetailStats(item) {
     </div>`;
 }
 
-//pill row of every crate/capsule this item can drop from - hidden entirely for items with no crate association
 function renderCrates(item) {
     if (!item.crates?.length) return '';
     return `

@@ -118,7 +118,6 @@ function renderDetailStats(item) {
     </div>`;
 }
 
-//pill row of every crate/capsule this item can drop from - hidden entirely for items with no crate association
 function renderCrates(item) {
     if (!item.crates?.length) return '';
     return `
@@ -147,6 +146,7 @@ export function renderSkinDetail(param) {
 
     return Promise.all([getSkinByIndex(defIndex, paintIndex), getPrices(defIndex, paintIndex), getMarkets()]).then(([s, prices, markets]) => {
         const container = document.querySelector('.skin-detail-page');
+        const csfloatLink = `https://csfloat.com/search?type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}`
         if (!container) return;
 
         if (!s) {
@@ -185,7 +185,7 @@ export function renderSkinDetail(param) {
                     ${s.description ? `<p class="skin-detail-desc">${s.description.replace(/\\n/g, '<br><br>')}</p>` : ''}
                     ${renderDetailStats(s)}
                     ${renderPriceGrid(s, prices, markets)}
-                    <a class="csfloat-link" href="https://csfloat.com/search?type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
+                    <a class="csfloat-link" href="${csfloatLink}" target="_blank" rel="noopener">View on CSFloat</a>
                     ${renderCrates(s)}
                     </div>
             </div>

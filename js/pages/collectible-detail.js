@@ -21,9 +21,7 @@ function formatMapName(map) {
     return map.replace(/^[a-z]+_/, '').replace(/^./, c => c.toUpperCase());
 }
 
-//total supply is only ever populated for weapon skins (confirmed empirically - every other CS2Cap item type
-//returns null for it), release date is populated much more broadly, and highlights have neither field at all
-//(different schema entirely) - each renders only when actually present
+
 function renderDetailStats(item) {
     const stats = [
         item.totalSupply != null ? { label: 'Total Supply', value: formatSupply(item.totalSupply) } : null,
@@ -41,8 +39,6 @@ function renderDetailStats(item) {
     </div>`;
 }
 
-//pill row of every crate/capsule this item can drop from - hidden entirely for items with no crate association
-//(highlights have no crates field at all - the optional chaining below covers that too)
 function renderCrates(item) {
     if (!item.crates?.length) return '';
     return `
@@ -58,7 +54,6 @@ function renderCrates(item) {
     </div>`;
 }
 
-//standalone playable clip for highlights, shown below the image and all the metadata - not swapped in for the image itself
 function renderHighlightVideo(item) {
     if (!item.video) return '';
     return `
@@ -134,7 +129,7 @@ const COLLECTIBLE_TYPES = {
     'music-kits': { fetch: getMusicKits, csfloatParam: 'music_kit_index' },
     graffiti: { fetch: getGraffiti, csfloatParam: null }, //CSFloat doesn't sell graffiti, so there's no link for this type
     pins: { fetch: getPins, csfloatParam: 'def_index' },
-    highlights: { fetch: getHighlights, csfloatParam: null }, //no rarity field at all - see caveat below
+    highlights: { fetch: getHighlights, csfloatParam: null },
 };
 
 //renders the page for one specific collectible item, routed to as "#/collectible/<slug>/<id>"
@@ -171,7 +166,7 @@ export function renderCollectibleDetail(param) {
             return;
         }
 
-        const csfloatLink = type.csfloatParam ? `https://csfloat.com/search?type=buy_now&${type.csfloatParam}=${item.defIndex}` : null;
+        const csfloatLink = type.csfloatParam ? `https://csfloat.com/search?type=buy_now&${type.csfloatParam}=${item.defIndex ?? item.def_index}` : null;
 
         container.innerHTML = `
             <button class="explore-back" onclick="window.history.back()">← Back</button>

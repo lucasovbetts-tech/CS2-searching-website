@@ -11,7 +11,7 @@ async function getPriceCache() {
 export async function getPrices(defIndex, paintIndex) {
     const cache = await getPriceCache();
     const entry = cache[`${defIndex}:${paintIndex}`];
-    return entry ? entry.data : null; //not in the cache - caller shows "Unavailable"
+    return entry ? entry.data : null;
 }
 
 //for non-skin items (stickers, agents, charms, patches, music kits, graffiti, pins) - no wear tiers or

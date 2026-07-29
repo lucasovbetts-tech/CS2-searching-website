@@ -40,13 +40,13 @@ window.addEventListener("scroll", () => {
   localStorage.setItem('scroll:' + window.location.hash, window.scrollY);
 });
 
-let forceTop = false; //set right before a nav-bar click changes the hash, so navigate() knows to skip restoring scroll
+let forceTop = false; 
 
 function navigate() {
     const route  = getRoute();
     const param  = getRouteParam();
     const render = ROUTES[route] ?? renderHome;
-    const hash   = window.location.hash; //capture now, in case it changes again before render finishes
+    const hash   = window.location.hash;
     const result = render(param);
     updateActiveNav(route);
 
@@ -54,7 +54,7 @@ function navigate() {
     forceTop = false; //reset immediately so it only applies to this one navigation
 
     //Promise.resolve on a non-promise (what the synchronous pages return) resolves immediately,
-    //so this waits for real content on async pages (explore.js) without guessing at timing
+    //waits for real content on async pages (explore.js) without guessing at timing
     Promise.resolve(result).then(() => {
         if (skipRestore) { scrollTo(0, 0); return; }
         const saved = localStorage.getItem('scroll:' + hash);

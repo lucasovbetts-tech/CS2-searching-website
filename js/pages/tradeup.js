@@ -206,21 +206,21 @@ export function renderTradeup() {
             return;
         }
 
-        grid.innerHTML = ''; //clear the "Loading…" placeholder before appending real cards
+        grid.innerHTML = '';
         let rendered = 0;
 
         function renderNextBatch() {
             const next = allSkins.slice(rendered, rendered + BATCH_SIZE);
             grid.insertAdjacentHTML('beforeend', next.map(({ skin, collection, collectionImage }) => renderTradeupCard(skin, collection, collectionImage)).join(''));
             rendered += next.length;
-            if (rendered >= allSkins.length) observer.disconnect(); //nothing left to load, stop watching the sentinel
+            if (rendered >= allSkins.length) observer.disconnect();
         }
 
         const observer = new IntersectionObserver(entries => {
             if (entries[0].isIntersecting) renderNextBatch();
         }, { rootMargin: '300px' }); //start loading the next batch a bit before the sentinel is actually on-screen
 
-        renderNextBatch(); //first batch renders immediately, no need to wait on a scroll
+        renderNextBatch();
         if (sentinel) observer.observe(sentinel);
 
         //shared by the search box, rarity dropdown, and collection dropdown, so all three combine instead of each one

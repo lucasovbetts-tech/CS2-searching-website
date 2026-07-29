@@ -3,6 +3,7 @@ import { getCases, getStickerCapsules, getSouvenirPackages, getNonTournamentStic
 import { getCollections } from '../api/collections.js';
 import { getSkins } from '../api/skins.js'
 import { getAgents, getCharms, getPatches, getMusicKits, getGraffiti, getPins, getStickers } from '../api/collectibles.js';
+import { getHighlights } from '../api/highlights.js';
 
 const CATEGORIES = ['all', 'cases', 'collections', 'pistols', 'smgs', 'rifles', 'heavy', 'knives', 'gloves'];
 
@@ -22,18 +23,18 @@ async function populateDropdowns() {
     let cases;
     let collections;
 
-    try { weapons = await getWeapons(); } catch { return; } //IF FAILED TO FETCH JSON RETURN
+    try { weapons = await getWeapons(); } catch { return; }
     try { cases = await getCases(); } catch { return; }
     try { collections = await getCollections(); } catch { return; }
 
-    const categoryData = { ...weapons, cases, collections }; //combines weapon-type categories with cases/collections into one lookup
+    const categoryData = { ...weapons, cases, collections };
 
     CATEGORIES.filter(c => c !== 'all').forEach(cat => {
         const el = document.getElementById(`drop-${cat}`);
         if (!el || !categoryData[cat]) return;
         el.innerHTML = categoryData[cat]
             .map(w => {
-                const name  = typeof w === 'string' ? w : w.name; //gets the name of the weapon
+                const name  = typeof w === 'string' ? w : w.name;
                 const image = typeof w === 'string' ? null : w.image;
                 return `<button class="cat-weapon">
                     ${image ? `<img class="cat-weapon-thumb" src="${image}" alt="">` : '<span class="cat-weapon-thumb cat-weapon-thumb--empty"></span>'}
@@ -117,6 +118,7 @@ export function initSearch() {
     )).then(results => setCombined('collectible', results.flat()));
 
     getStickers().then(data => setCombined('sticker', data.map(s => ({ ...s, kind: 'sticker' }))));
+    getHighlights().then(data => setCombined('highlight', data.map(h => ({ ...h, kind: 'highlight'}))))
 
     const MAX_RESULTS = 40;
     let debounceTimer;
@@ -127,7 +129,7 @@ export function initSearch() {
 
     function runSearch(rawQuery) {
         const query = rawQuery.toLowerCase();
-        const queryWords = query.split(' ').filter(Boolean); //drops empty strings from extra spaces
+        const queryWords = query.split(' ').filter(Boolean);
 
         const resultsEl = document.getElementById('searchResults');
         if (!resultsEl) return;
@@ -191,3 +193,6 @@ export function initSearch() {
         window.location.hash = '#/explore/'
     });
 }
+
+
+

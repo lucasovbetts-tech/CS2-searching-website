@@ -3,5 +3,5 @@ export function formatSupply(n) {
 }
 
 export function formatDate(iso) {
-    return new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+    return new Date(iso).toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
 }
