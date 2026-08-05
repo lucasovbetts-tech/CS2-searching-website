@@ -3,9 +3,17 @@
    ════════════════════════════════════════════════════ */
 
 .tradeup-layout {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 68px); /* fills the space below the 68px site header - lets the two columns split whatever's left */
     width: 100%;
     padding: 48px 40px 48px 60px;
     animation: fadeIn 0.2s ease;
+}
+
+.tradeup-title,
+.tradeup-outcomes {
+    flex-shrink: 0; /* keep their natural height - only .tradeup-columns below should shrink/scroll */
 }
 
 #tradeupSentinel {
@@ -20,13 +28,92 @@
     margin-bottom: 24px;
 }
 
+/* ── Outcomes summary bar ── */
+
+.tradeup-outcomes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px; /* sits below the skin cards/placeholders in .tradeup-right-col, not above the columns - was margin-bottom */
+    padding: 16px 24px;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+}
+
+.tradeup-outcomes-title {
+    flex-shrink: 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.tradeup-outcomes-stats {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    gap: 8px;
+    min-width: 0; /* lets the row shrink below its content's natural width instead of overflowing/wrapping */
+    overflow-x: auto; /* fallback if the window's too narrow to fit all 7 even at minimum width */
+}
+
+.tradeup-outcome-stat {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.tradeup-outcome-label {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-sec);
+}
+
+.tradeup-outcome-value {
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.tradeup-outcome-value--positive {
+    color: #56c98d;
+}
+
+.tradeup-outcome-value--negative {
+    color: #c93b3b;
+}
+
 /* ── Filter toolbar ── */
 
 .tradeup-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 30; /* comfortably above .tradeup-card:hover's z-index: 20, so an open dropdown list always wins over a hover-lifted card scrolling beneath it */
+    /* semi-transparent + blurred rather than a flat var(--bg) - a fully opaque rectangle reads as a hard-edged box
+       against the page's animated background glow (.bg-canvas orbs in Mainstyle.css); this still hides scrolled
+       cards passing underneath while letting some of that glow bleed through, same glass trick as the price pills */
+    background: rgba(15, 10, 26, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 32px;
+    padding-bottom: 32px; /* was margin-bottom - needs to be padding so the sticky background covers this gap too, not just the toolbar's own row */
 }
 
 .tf-field {
@@ -82,6 +169,12 @@
 
 .tf-field--select {
     cursor: pointer;
+}
+
+/* Rarity gets locked once a skin is sitting in the right panel - a trade-up can't mix rarities */
+.tf-field--locked {
+    pointer-events: none;
+    opacity: 0.55;
 }
 
 .tf-select-btn {
@@ -167,12 +260,124 @@
     display: flex;
     align-items: flex-start;
     gap: 32px;
+    flex: 1;
+    min-height: 0; /* lets this flex child shrink to fit .tradeup-layout instead of overflowing it */
 }
 
 .tradeup-left,
-.tradeup-right {
+.tradeup-right-col {
     flex: 1;
     min-width: 0; /* lets the flex child shrink below its content's natural width instead of overflowing */
+    height: 100%;
+    overflow-y: auto; /* each column now scrolls independently - whichever one the mouse is over catches the wheel scroll */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* Firefox - invisible at rest, revealed on :hover below */
+}
+
+.tradeup-left:hover,
+.tradeup-right-col:hover {
+    scrollbar-color: var(--border) transparent; /* Firefox */
+}
+
+.tradeup-left::-webkit-scrollbar,
+.tradeup-right-col::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tradeup-left::-webkit-scrollbar-track,
+.tradeup-right-col::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tradeup-left::-webkit-scrollbar-thumb,
+.tradeup-right-col::-webkit-scrollbar-thumb {
+    background: transparent; /* invisible at rest - only appears while hovering/scrolling this column, see below */
+    border-radius: 3px;
+    transition: background 0.2s ease;
+}
+
+.tradeup-left:hover::-webkit-scrollbar-thumb,
+.tradeup-right-col:hover::-webkit-scrollbar-thumb {
+    background: var(--border);
+}
+
+.tradeup-right-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.tradeup-reset-btn {
+    position: sticky;
+    top: 0;
+    z-index: 30; /* comfortably above .tradeup-card-right/.tradeup-slot-placeholder:hover's z-index: 20 */
+    align-self: flex-end; /* back to a compact button, not a full-width bar - a sliver of scrolled content briefly showing through the small gap below it isn't worth the bar it looked like */
+    margin-bottom: 32px; /* matches .tradeup-toolbar's padding-bottom on the left - the small button alone didn't carry enough visual weight to read as a separated section */
+    padding: 6px 14px;
+    /* the subtle white tint layered over an opaque var(--bg) - one background declaration, not two, so the second
+       doesn't just override the first; needs to be fully opaque so scrolling cards don't show through beneath it */
+    background: linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.tradeup-reset-btn:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)), var(--bg);
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+.tradeup-right {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+/* purely decorative empty spots - no hover/interaction of their own, real cards replace them one at a time.
+   Reuses the exact same inner skeleton as a real card (see renderTradeupSlotPlaceholder) so it's exactly the same
+   size without guessing an aspect-ratio - the skeleton pieces are just hidden and a dashed border + icon shown instead */
+.skin-card.tradeup-slot-placeholder {
+    position: relative;
+    cursor: default;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1.5px dashed var(--border);
+    box-shadow: none;
+}
+
+/* compound selector, not just .tradeup-slot-placeholder:hover - .skin-card:hover (explore.css) loads after this file,
+   so a single-class selector here would lose the tie and the lift/glow hover would still show through */
+.skin-card.tradeup-slot-placeholder:hover {
+    transform: none;
+    border-color: var(--border);
+    box-shadow: none;
+}
+
+.tradeup-slot-placeholder::before,
+.tradeup-slot-placeholder::after {
+    display: none;
+}
+
+.tradeup-slot-placeholder > *:not(.tradeup-slot-icon) {
+    visibility: hidden;
+}
+
+.tradeup-slot-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tradeup-slot-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--text-sec);
+    opacity: 0.5;
 }
 
 .tradeup-divider {
@@ -197,7 +402,8 @@
 /* .skin-card.overflow:hidden (explore.css) and this rule have equal specificity as single classes, and explore.css
    happens to load after tradeup.css in index.html, so it was silently winning and overriding the line above no matter
    what it said - .skin-card.tradeup-card is a compound selector (higher specificity), so this wins regardless of load order */
-.skin-card.tradeup-card {
+.skin-card.tradeup-card,
+.skin-card.tradeup-card-right {
     overflow: visible; /* these cards are narrow (6 per row) - a collection-name tooltip is often wider than the card itself */
 }
 
@@ -205,13 +411,16 @@
    overflow: hidden was what clipped them into the card's rounded shape, so now that it's gone they need their own
    matching radius or their square corners poke out past the rounded card background */
 .skin-card.tradeup-card::before,
-.skin-card.tradeup-card::after {
+.skin-card.tradeup-card::after,
+.skin-card.tradeup-card-right::before,
+.skin-card.tradeup-card-right::after {
     border-radius: inherit;
 }
 
 /* .skin-card:hover applies a transform, which creates a new stacking context - without this, a hovered card's escaping
    tooltip can end up underneath a neighboring card instead of on top of it, depending on DOM order */
-.tradeup-card:hover {
+.tradeup-card:hover,
+.tradeup-card-right:hover {
     z-index: 20;
 }
 
@@ -378,11 +587,104 @@
     min-width: 0;
 }
 
+.tradeup-float-input {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 10px;
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    appearance: textfield;
+    -moz-appearance: textfield; /* Firefox - the two -webkit rules below handle Chrome/Safari/Edge */
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.tradeup-float-input:focus {
+    border-color: rgba(168, 85, 247, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tradeup-float-input::-webkit-outer-spin-button,
+.tradeup-float-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* right-aligned row - buttons sit flush against the card's right edge and grow leftward */
+.tradeup-card-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.tradeup-card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.tradeup-card-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.tradeup-edit-btn:hover,
+.tradeup-copy-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(168, 85, 247, 0.5);
+}
+
+.tradeup-delete-btn {
+    background: rgba(201, 59, 59, 0.15);
+    border-color: rgba(201, 59, 59, 0.4);
+}
+
+.tradeup-delete-btn:hover {
+    background: rgba(201, 59, 59, 0.3);
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 900px) {
+    /* independent per-column scrolling only makes sense side-by-side - once stacked, let the whole page scroll normally instead */
+    .tradeup-layout {
+        height: auto;
+    }
+
     .tradeup-columns {
         flex-direction: column;
+    }
+
+    .tradeup-left,
+    .tradeup-right-col {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .tradeup-toolbar,
+    .tradeup-reset-btn {
+        position: static;
     }
 
     .tradeup-divider {

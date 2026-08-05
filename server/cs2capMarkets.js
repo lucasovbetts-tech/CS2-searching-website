@@ -22,4 +22,4 @@ fetchMarkets().catch(err => {
     process.exit(1);
 });
 
-//to re-run: "node server/cs2capMarkets.js" from the repo root
+//node server/cs2capMarkets.js
