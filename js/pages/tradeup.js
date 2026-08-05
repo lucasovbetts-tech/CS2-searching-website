@@ -34,9 +34,16 @@ function getWear(float) {
 
 
 document.addEventListener('click', e => {
-    if (e.target.closest('.tf-field--select')) return; 
+    if (e.target.closest('.tf-field--select')) return;
     document.querySelectorAll('.tradeup-toolbar .tf-field--select.open, .tradeup-toolbar .custom-select-list.open, .tradeup-toolbar .tf-select-btn.open')
         .forEach(el => el.classList.remove('open'));
+});
+
+//closes any open custom-price popup when the click lands outside both the popup itself and the edit button that
+//opens it - those two are excluded so opening/interacting with the popup doesn't immediately close itself
+document.addEventListener('click', e => {
+    if (e.target.closest('.tradeup-price-popup') || e.target.closest('.tradeup-edit-btn')) return;
+    document.querySelectorAll('.tradeup-price-popup.open').forEach(p => p.classList.remove('open'));
 });
 
 
@@ -196,14 +203,22 @@ function renderTradeupSlotPlaceholder() {
     </div>`;
 }
 
-function renderTradeupRight(weapon, name, skins, float = 0.035) {
+//price is optional - when omitted (a fresh pick from the left grid) the price is derived from float via WEAR_PRICES
+//as normal; when passed (copying an existing right-panel card) it overrides that, carrying over whatever price was
+//actually showing on the source card - which is correct whether that came from the wear calculation or a custom edit
+function renderTradeupRight(weapon, name, skins, float = 0.035, price = null) {
     const rightGrid = document.getElementById('tradeup-right');
     const { skin, collection, collectionImage } = skins.find(s => s.skin.weapon === weapon && s.skin.name === name);
+    const displayPrice = price !== null ? price : WEAR_PRICES[getWear(float)];
     const cardHTML = `
         <div class="skin-card tradeup-card-right" data-weapon="${skin.weapon}" data-name="${skin.name}" data-rarity="${skin.rarity.name}" style="background: ${rarityGradient(skin.rarity.color)}">
             <div class="tradeup-price-row">
-                <span class="tradeup-price-pill">£${WEAR_PRICES[getWear(float)]}</span>
+                <span class="tradeup-price-pill">£${displayPrice}</span>
             </div>
+                <div class="tradeup-price-popup">
+                    <label class="tf-label">Custom Price:</label>
+                    <input class="tradeup-price-popup-input" type="number" min="0" step="0.01" placeholder="Enter price">
+                </div>
             ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.weapon} | ${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
             <div class="tradeup-meta-row">
                 <span class="tradeup-collection-wrap" data-tooltip="${collection}">
@@ -221,12 +236,7 @@ function renderTradeupRight(weapon, name, skins, float = 0.035) {
             <input class="tradeup-float-input" type="number" min="0" max="1" step="0.001" value="${float}">
             <div class="tradeup-card-actions">
                 <button class="tradeup-card-btn tradeup-edit-btn" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-edit">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
-                        <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415" />
-                        <path d="M16 5l3 3" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-receipt-2"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2" /><path d="M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5" /></svg>
                 </button>
                 <button class="tradeup-card-btn tradeup-copy-btn" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-copy">
@@ -257,6 +267,26 @@ function renderTradeupRight(weapon, name, skins, float = 0.035) {
     }
 }
 
+//toggles that card's custom-price popup open/closed - just flips a CSS class, the show/hide itself is handled
+//entirely by .tradeup-price-popup/.open in tradeup.css. Closes every other card's open popup first, so clicking a
+//different edit button swaps which one's open instead of stacking multiple open at once
+function editPrice(card) {
+    const popup = card.querySelector('.tradeup-price-popup');
+    document.querySelectorAll('.tradeup-price-popup.open').forEach(p => {
+        if (p !== popup) p.classList.remove('open');
+    });
+    
+    popup.classList.toggle('open');
+}
+function updateOutcomes() {
+    const rightGrid = document.getElementById('tradeup-right');
+    const total = [...rightGrid.querySelectorAll('.tradeup-card-right .tradeup-price-pill')]
+        .reduce((sum, pill) => sum + parseFloat(pill.textContent.replace('£', '')), 0);
+    //outcomes() returns the whole .tradeup-outcomes div, wrapper included - outerHTML swaps the entire element for
+    //the freshly-rendered one (innerHTML would nest a second .tradeup-outcomes inside the existing one instead)
+    document.getElementById('tradeup-outcomes').outerHTML = outcomes({ cost: total });
+}
+
 //summary bar of trade-up math (float/cost/odds/profit) - takes plain numbers rather than computing them itself,
 //since the actual simulation (weighted float, output odds across possible results) is a separate concern. Values
 //default to 0 as a placeholder until that real calculation gets wired in
@@ -264,7 +294,7 @@ function outcomes({ averageFloat = 0, cost = 0, profitChance = 0, profitability 
     const profitabilityClass = profitability < 100 ? 'tradeup-outcome-value--negative' : 'tradeup-outcome-value--positive';
     const averageProfitClass = averageProfit < 0 ? 'tradeup-outcome-value--negative' : 'tradeup-outcome-value--positive';
     return `
-    <div class="tradeup-outcomes">
+    <div class="tradeup-outcomes" id="tradeup-outcomes">
         <h2 class="tradeup-outcomes-title">Outcomes</h2>
         <div class="tradeup-outcomes-stats">
             <div class="tradeup-outcome-stat">
@@ -440,6 +470,7 @@ export function renderTradeup() {
                 if (cardNum === 0) syncRarityLock();
                 syncSlotCount();
             }
+            updateOutcomes()
         })
 
         document.getElementById('tradeupReset')?.addEventListener('click', () => {
@@ -450,31 +481,49 @@ export function renderTradeup() {
         rightGrid.addEventListener('click', e => {
             const deleteBtn = e.target.closest('.tradeup-delete-btn');
             const copyBtn = e.target.closest('.tradeup-copy-btn')
+            const editBtn = e.target.closest('.tradeup-edit-btn');
+            if (editBtn) {
+                editPrice(editBtn.closest('.tradeup-card-right'));
+                updateOutcomes()
+            }
+
             if (deleteBtn) {
                 deleteBtn.closest('.tradeup-card-right').remove();
                 const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
                 if (cardNum === 0) rarityField.classList.toggle('tf-field--locked');
                 syncSlotCount()
+                updateOutcomes()
             }
             if (copyBtn) {
                 const card = e.target.closest('.tradeup-card-right');
                 const rarity = card.dataset.rarity;
                 const limit = rarity === 'Covert' ? 5 : 10;
                 const cardFloat = parseFloat(card.querySelector('.tradeup-float-input').value) || 0;
+                const cardPrice = parseFloat(card.querySelector('.tradeup-price-pill').textContent.replace('£', '')) || 0;
                 const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
                 if (cardNum < limit) {
-                    renderTradeupRight(card.dataset.weapon, card.dataset.name, allSkins, cardFloat)
+                    renderTradeupRight(card.dataset.weapon, card.dataset.name, allSkins, cardFloat, cardPrice)
                     syncSlotCount();
                 }
                 if (cardNum === 0) syncRarityLock();
+                updateOutcomes()
             }
         })
 
         rightGrid.addEventListener('input', e => {
             const floatInput = e.target.closest('.tradeup-float-input');
-            if (!floatInput) return;
-            const pricePill = floatInput.closest('.tradeup-card-right').querySelector('.tradeup-price-pill');
-            pricePill.textContent = `£${WEAR_PRICES[getWear(parseFloat(floatInput.value) || 0)]}`;
+            if (floatInput) {
+                const pricePill = floatInput.closest('.tradeup-card-right').querySelector('.tradeup-price-pill');
+                pricePill.textContent = `£${WEAR_PRICES[getWear(parseFloat(floatInput.value) || 0)]}`;
+                updateOutcomes();
+            }
+
+            const priceInput = e.target.closest('.tradeup-price-popup-input');
+            if (priceInput) {
+                const pricePill = priceInput.closest('.tradeup-card-right').querySelector('.tradeup-price-pill');
+                pricePill.textContent = `£${priceInput.value || 0}`;
+                updateOutcomes();
+            }
         })
 
         //shared by the search box, rarity dropdown, and collection dropdown, so all three combine instead of each one

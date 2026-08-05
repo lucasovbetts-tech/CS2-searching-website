@@ -104,12 +104,6 @@
     position: sticky;
     top: 0;
     z-index: 30; /* comfortably above .tradeup-card:hover's z-index: 20, so an open dropdown list always wins over a hover-lifted card scrolling beneath it */
-    /* semi-transparent + blurred rather than a flat var(--bg) - a fully opaque rectangle reads as a hard-edged box
-       against the page's animated background glow (.bg-canvas orbs in Mainstyle.css); this still hides scrolled
-       cards passing underneath while letting some of that glow bleed through, same glass trick as the price pills */
-    background: rgba(15, 10, 26, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -270,6 +264,10 @@
     min-width: 0; /* lets the flex child shrink below its content's natural width instead of overflowing */
     height: 100%;
     overflow-y: auto; /* each column now scrolls independently - whichever one the mouse is over catches the wheel scroll */
+    /* setting only overflow-y forces the browser to compute overflow-x as non-visible too (it can't stay truly
+       "visible" once the other axis scrolls) - without this padding, cards on the left/right edge get clipped by
+       that invisible x-boundary the moment they grow slightly on :hover (scale(1.02)) */
+    padding: 0 6px;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent; /* Firefox - invisible at rest, revealed on :hover below */
 }
@@ -465,6 +463,44 @@
 .tradeup-price-sep {
     color: var(--text-sec);
     font-size: 0.7rem;
+}
+
+/* hidden by default - editPrice() in tradeup.js just toggles .open, all the show/hide logic lives here */
+.tradeup-price-popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 15;
+    margin-top: 6px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5);
+}
+
+.tradeup-price-popup.open {
+    display: flex;
+}
+
+.tradeup-price-popup-input {
+    width: 110px;
+    padding: 5px 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.tradeup-price-popup-input:focus {
+    border-color: rgba(168, 85, 247, 0.5);
 }
 
 /* ── Collection badge + shortened wear-bar, below the image ── */
