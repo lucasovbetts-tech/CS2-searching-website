@@ -98,6 +98,108 @@
     color: #c93b3b;
 }
 
+/* ── Possible outcomes preview - the trade-up's potential results ── */
+
+.tradeup-possible-outcomes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.tradeup-outcome-card {
+    padding: 12px 10px;
+}
+
+/* same pill recipe as .tradeup-price-pill (blurred dark pill), just absolutely positioned into the card's corner
+   instead of sitting in normal flow - z-index: 1 needed to clear .skin-card::before/::after's scrim+sheen overlays */
+.profit-per-skin {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.66rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+}
+
+.tradeup-outcome-card--positive .profit-per-skin {
+    color: #56c98d;
+}
+
+.tradeup-outcome-card--negative .profit-per-skin {
+    color: #c93b3b;
+}
+
+.tradeup-outcome-card .skin-img,
+.tradeup-outcome-card .skin-img-placeholder {
+    width: 65%;
+    margin: 8px auto 10px;
+}
+
+.tradeup-outcome-card .tradeup-wear-bar {
+    margin-bottom: 8px;
+}
+
+.tradeup-outcome-weapon {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0;
+}
+
+.tradeup-outcome-skin {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--text-sec);
+    margin: 2px 0 0;
+}
+
+.tradeup-outcome-float {
+    text-align: center;
+    margin-top: 4px;
+    color: var(--text-sec);
+    font-size: 0.7rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.tradeup-outcome-price {
+    text-align: center;
+    margin-top: 2px;
+    color: var(--text);
+    font-size: 0.75rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+/* compound selector (.skin-card + modifier), not just the modifier alone - explore.css's .skin-card { background:
+   var(--card) } loads after this file and would otherwise win on equal specificity, same issue as .tradeup-card above */
+.skin-card.tradeup-outcome-card--positive {
+    background: rgba(86, 201, 141, 0.14);
+    border-color: rgba(86, 201, 141, 0.4);
+}
+
+.skin-card.tradeup-outcome-card--negative {
+    background: rgba(201, 59, 59, 0.14);
+    border-color: rgba(201, 59, 59, 0.4);
+}
+
+.tradeup-outcome-card--positive .tradeup-outcome-price {
+    color: #56c98d;
+}
+
+.tradeup-outcome-card--negative .tradeup-outcome-price {
+    color: #c93b3b;
+}
+
 /* ── Filter toolbar ── */
 
 .tradeup-toolbar {
