@@ -404,8 +404,8 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
             goldARR = matchedCase?.contains_rare ?? [];
         }
 
-        const normalRanked = colMatch.contains.map(skin => ({ skin, rank: RARITY_RANK[skin.rarity.name], collection: colMatch.name }));
-        const goldRanked = goldARR.map(skin => ({ skin, rank: GOLD_RANK, collection: colMatch.name }));
+        const normalRanked = colMatch.contains.map(skin => ({ skin, rank: RARITY_RANK[skin.rarity.name], collection: colMatch.name, collectionImage: colMatch.image }));
+        const goldRanked = goldARR.map(skin => ({ skin, rank: GOLD_RANK, collection: colMatch.name, collectionImage: colMatch.image }));
 
         return [...normalRanked, ...goldRanked];
     });
@@ -427,15 +427,16 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
         const fullSkin = skins.find(s => s.weapon === weapon && s.name === (name ?? null));
         const minFloat = fullSkin?.minFloat ?? 0;
         const maxFloat = fullSkin?.maxFloat ?? 1;
-        const collection = fullSkin?.collection ?? '';
+        //entry.collection (colMatch.name), not fullSkin.collection - the latter is null for most knives/gloves
+        //(they're tied to a case, not a named set) and an {name, image} object, not a string, when it does exist
         const outputFloat = calculateOutcomeFloat(inputs, minFloat, maxFloat);
-        return { ...entry.skin, minFloat, maxFloat, outputFloat, fullSkin, collection };
+        return { ...entry.skin, minFloat, maxFloat, outputFloat, fullSkin, collection: entry.collection, collectionImage: entry.collectionImage };
     });
 
-    calculateOutcomeProbability(filteredOutcomes);
-    //one price fetch per candidate output, in parallel - fullSkin (already looked up above for minFloat/maxFloat)
-    //carries the defIndex/paintIndex needed to fetch that specific skin's real price, same as input cards do
-    const pricedOutcomes = await Promise.all(filteredOutcomes.map(async ({ fullSkin, ...skin }) => {
+
+    const skinsProbability = await calculateOutcomeProbability(filteredOutcomes);
+
+    const pricedOutcomes = await Promise.all(skinsProbability.map(async ({ fullSkin, ...skin }) => {
         if (!fullSkin) return { ...skin, price: null };
         const prices = await getPrices(fullSkin.defIndex, fullSkin.paintIndex);
         const price = cheapestPrice(prices, tierKeyForFloat(skin.outputFloat));
@@ -453,14 +454,20 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
         return `
         <div class="skin-card tradeup-outcome-card ${cardClass}">
             <div class="profit-per-skin">${profit > 0 ? '+' : ''}${profit}$</div>
+            <div class="probability-per-skin">${skin.probability !== undefined ? `${skin.probability}%` : 'N/A'}</div>
             ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
-            <div class="tradeup-wear-bar" data-tooltip="Float range: ${skin.minFloat} – ${skin.maxFloat}">
-                <span class="tradeup-wear-marker" style="left: ${skin.minFloat * 100}%"></span>
-                <span class="tradeup-wear-marker" style="left: ${skin.maxFloat * 100}%"></span>
+            <div class="tradeup-meta-row">
+                <span class="tradeup-collection-wrap" data-tooltip="${skin.collection}">
+                    ${skin.collectionImage ? `<img class="tradeup-collection-img" src="${skin.collectionImage}" alt="${skin.collection}">` : '<span class="tradeup-collection-img tradeup-collection-img--empty"></span>'}
+                </span>
+                <div class="tradeup-wear-bar" data-tooltip="Float range: ${skin.minFloat} – ${skin.maxFloat}">
+                    <span class="tradeup-wear-marker" style="left: ${skin.minFloat * 100}%"></span>
+                    <span class="tradeup-wear-marker" style="left: ${skin.maxFloat * 100}%"></span>
+                </div>
             </div>
             <div class="tradeup-name-col">
                 <p class="tradeup-outcome-weapon">${weapon}</p>
-                <p class="tradeup-outcome-skin">${name ?? ''} - ${skin.phase ?? ''}</p>
+                <p class="tradeup-outcome-skin">${name ?? ''}  ${skin.phase ? `- ${skin.phase}` : ''}</p>
             </div>
             <p class="tradeup-outcome-float">${tierKeyForFloat(outputFloat)} - ${outputFloat}</p>
             <p class="tradeup-outcome-price">${skin.price !== null ? `$${skin.price.toFixed(2)}` : 'N/A'}</p>
@@ -472,7 +479,34 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
 }
 
 function calculateOutcomeProbability(outcomes) {
-    console.log(outcomes)
+    const rightGrid = document.getElementById('tradeup-right');
+    const inputs = [...rightGrid.querySelectorAll('.tradeup-card-right')];
+    const collections = inputs.flatMap(i => {
+        const collection = i.dataset.collection
+        return [ collection ]
+    })
+    const collCounts = {};
+    for (const collection of collections) {
+        collCounts[collection] = (collCounts[collection] || 0) + 1;
+    }
+    const total = collections.length;
+    const percentage = [];
+    for (const [collection, count] of Object.entries(collCounts))
+        percentage[collection] = ((count / total) * 100).toFixed(0);
+
+    if (inputs[0].dataset.rarity === 'Covert') {
+
+    } else if (inputs[0].dataset.rarity !== 'Covert') {
+        const collOutcomes = {};
+        for (const outcome of outcomes) {
+            collOutcomes[outcome.collection] = (collOutcomes[outcome.collection] || 0) + 1;
+        }
+        const skinChance = {};
+        for (const [collection, count] of Object.entries(collOutcomes))
+            skinChance[collection] = (percentage[collection] / count).toFixed(2);
+        const outcomesWithChance = outcomes.map(skin => ({ ...skin, probability: skinChance[skin.collection] }));
+        return outcomesWithChance;
+    }
 }
 
 export function renderTradeup() {
@@ -606,10 +640,12 @@ export function renderTradeup() {
             const limit = rarity === 'Covert' ? 5 : 10;
             const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
             if (cardNum < limit) {
+                //no updateOutcomes() check here even though this card might complete the grid - the price hasn't
+                //loaded yet at this point (renderTradeupRight inserts synchronously, getPrices() resolves later),
+                //so applyPrices()'s own check above already covers this once real price data is actually in
                 renderTradeupRight(card.dataset.weapon, card.dataset.name, allSkins)
                 if (cardNum === 0) syncRarityLock();
                 syncSlotCount();
-                if (rightGrid.querySelectorAll('.tradeup-card-right').length === limit) updateOutcomes(collections, cases, skins);
             }
         })
 

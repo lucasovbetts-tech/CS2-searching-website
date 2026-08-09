@@ -138,14 +138,28 @@
     color: #c93b3b;
 }
 
+/* same pill as .profit-per-skin, mirrored into the opposite corner */
+.probability-per-skin {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.66rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+}
+
 .tradeup-outcome-card .skin-img,
 .tradeup-outcome-card .skin-img-placeholder {
     width: 65%;
     margin: 8px auto 10px;
-}
-
-.tradeup-outcome-card .tradeup-wear-bar {
-    margin-bottom: 8px;
 }
 
 .tradeup-outcome-weapon {
@@ -503,7 +517,8 @@
    happens to load after tradeup.css in index.html, so it was silently winning and overriding the line above no matter
    what it said - .skin-card.tradeup-card is a compound selector (higher specificity), so this wins regardless of load order */
 .skin-card.tradeup-card,
-.skin-card.tradeup-card-right {
+.skin-card.tradeup-card-right,
+.skin-card.tradeup-outcome-card {
     overflow: visible; /* these cards are narrow (6 per row) - a collection-name tooltip is often wider than the card itself */
 }
 
@@ -513,14 +528,17 @@
 .skin-card.tradeup-card::before,
 .skin-card.tradeup-card::after,
 .skin-card.tradeup-card-right::before,
-.skin-card.tradeup-card-right::after {
+.skin-card.tradeup-card-right::after,
+.skin-card.tradeup-outcome-card::before,
+.skin-card.tradeup-outcome-card::after {
     border-radius: inherit;
 }
 
 /* .skin-card:hover applies a transform, which creates a new stacking context - without this, a hovered card's escaping
    tooltip can end up underneath a neighboring card instead of on top of it, depending on DOM order */
 .tradeup-card:hover,
-.tradeup-card-right:hover {
+.tradeup-card-right:hover,
+.tradeup-outcome-card:hover {
     z-index: 20;
 }
 
@@ -631,7 +649,10 @@
 }
 
 .tradeup-collection-wrap {
-    position: relative;
+    /* no position: relative here (unlike .tradeup-wear-bar below) - the badge itself is a small icon flush against
+       the card's edge, so a tooltip centered on IT overflows past the card/column almost immediately. Leaving this
+       unpositioned lets the absolute tooltip fall through to the next positioned ancestor up the tree instead -
+       .skin-card - so it centers on the whole card's width, which actually has room for the text */
     display: inline-flex;
     flex-shrink: 0;
     cursor: default;
