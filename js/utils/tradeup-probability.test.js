@@ -12,6 +12,8 @@ import {
     dedupeRarePool,
     TradeUpValidationError,
     CHROMA_1_CASE_ID,
+    CHROMA_2_CASE_ID,
+    CHROMA_3_CASE_ID,
 } from './tradeup-probability.js';
 
 //Real data, not fabricated - pulled straight from crates.json (ByMykel/CSGO-API) on 2026-08-11 so the tests are
@@ -170,6 +172,53 @@ test('Spectrum Black Pearl, conditional on Doppler = 2.00%', () => {
     const total = dopplerOutcomes.reduce((s, o) => s + o.probability, 0);
     const blackPearl = dopplerOutcomes.find(o => o.phase === 'Black Pearl');
     assert.equal(((blackPearl.probability / total) * 100).toFixed(2), '2.00');
+});
+
+//--- Chroma 2 / Chroma 3: share Chroma 1's skewed finish weight AND its skewed phase table -------------------
+//Real data confirmed: Chroma 2 (crate-4089) and Chroma 3 (crate-4233) have the identical 5-model/6-finish
+//shape as Chroma 1, so the same fixture list is reused with a different caseId for each.
+
+test('Chroma 2 and Chroma 3 Doppler finish share = 40.48% (same skew as Chroma 1)', () => {
+    for (const caseId of [CHROMA_2_CASE_ID, CHROMA_3_CASE_ID]) {
+        const outcomes = computeCaseGroupOutcomes(caseId, CHROMA_M9_ONLY, 1, 1);
+        const dopplerShare = outcomes.filter(o => o.finish === 'Doppler').reduce((s, o) => s + o.probability, 0);
+        assert.equal((dopplerShare * 100).toFixed(2), '40.48', `caseId: ${caseId}`);
+    }
+});
+
+test('Chroma 2 and Chroma 3 every other finish = 11.90% (same skew as Chroma 1)', () => {
+    for (const caseId of [CHROMA_2_CASE_ID, CHROMA_3_CASE_ID]) {
+        const outcomes = computeCaseGroupOutcomes(caseId, CHROMA_M9_ONLY, 1, 1);
+        for (const finish of ['Marble Fade', 'Tiger Tooth', 'Damascus Steel', 'Ultraviolet', 'Rust Coat']) {
+            const hit = outcomes.find(o => o.finish === finish);
+            assert.equal((hit.probability * 100).toFixed(2), '11.90', `caseId: ${caseId}, finish: ${finish}`);
+        }
+    }
+});
+
+test('Chroma 2 and Chroma 3 use the same skewed phase table as Chroma 1, not the standard one', () => {
+    //all three Chroma cases now share PHASE_WEIGHTS.chroma (340 total, numbered phases weighted 80 each) -
+    //if this test breaks, phaseTableFor's case check fell out of sync with finishWeightsFor's CHROMA_CASE_IDS.
+    for (const caseId of [CHROMA_2_CASE_ID, CHROMA_3_CASE_ID]) {
+        const outcomes = computeCaseGroupOutcomes(caseId, CHROMA_M9_ONLY, 1, 1);
+        const dopplerOutcomes = outcomes.filter(o => o.finish === 'Doppler');
+        const total = dopplerOutcomes.reduce((s, o) => s + o.probability, 0);
+
+        //chroma table: Phase 2 weight 80/340, Black Pearl weight 2/340 - both conditional on Doppler already chosen
+        const phase2 = dopplerOutcomes.find(o => o.phase === 'Phase 2');
+        assert.equal(((phase2.probability / total) * 100).toFixed(2), (80 / 340 * 100).toFixed(2), `caseId: ${caseId}`);
+
+        const blackPearl = dopplerOutcomes.find(o => o.phase === 'Black Pearl');
+        assert.equal(((blackPearl.probability / total) * 100).toFixed(2), (2 / 340 * 100).toFixed(2), `caseId: ${caseId}`);
+    }
+});
+
+test('a full single-case Chroma 2 (or 3) contract still sums to 1', () => {
+    for (const caseId of [CHROMA_2_CASE_ID, CHROMA_3_CASE_ID]) {
+        const outcomes = computeCaseGroupOutcomes(caseId, CHROMA_CONTAINS_RARE, 5, 5);
+        const total = outcomes.reduce((s, o) => s + o.probability, 0);
+        closeTo(total, 1, 1e-9, `caseId: ${caseId}`);
+    }
 });
 
 //--- invariants ------------------------------------------------------------------------------------------

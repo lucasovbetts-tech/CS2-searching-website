@@ -9,14 +9,18 @@ export class TradeUpValidationError extends Error {
 export const STANDARD_INPUT_COUNT = 10;
 export const GOLD_INPUT_COUNT = 5;
 
+//all three Chroma cases share the same skewed Doppler finish weight AND the same skewed phase table (below)
 export const CHROMA_1_CASE_ID = 'crate-4061';
+export const CHROMA_2_CASE_ID = 'crate-4089';
+export const CHROMA_3_CASE_ID = 'crate-4233';
+const CHROMA_CASE_IDS = new Set([CHROMA_1_CASE_ID, CHROMA_2_CASE_ID, CHROMA_3_CASE_ID]);
 
-const CHROMA_1_FINISH_WEIGHTS = { Doppler: 17 };
-const CHROMA_1_DEFAULT_FINISH_WEIGHT = 5;
+const CHROMA_FINISH_WEIGHTS = { Doppler: 17 };
+const CHROMA_DEFAULT_FINISH_WEIGHT = 5;
 
 
 const PHASE_WEIGHTS = {
-    chroma1: { 'Phase 1': 80, 'Phase 2': 80, 'Phase 3': 80, 'Phase 4': 80, 'Ruby': 9, 'Sapphire': 9, 'Black Pearl': 2 },
+    chroma: { 'Phase 1': 80, 'Phase 2': 80, 'Phase 3': 80, 'Phase 4': 80, 'Ruby': 9, 'Sapphire': 9, 'Black Pearl': 2 },
     standard: { 'Phase 1': 20, 'Phase 2': 20, 'Phase 3': 20, 'Phase 4': 20, 'Ruby': 9, 'Sapphire': 9, 'Black Pearl': 2 },
     gamma: { 'Phase 1': 23, 'Phase 2': 23, 'Phase 3': 23, 'Phase 4': 23, 'Emerald': 8 },
 };
@@ -24,7 +28,7 @@ const PHASE_WEIGHTS = {
 //Frozen (outer object and each array) because this is exported someone
 //mutating the arrays would corrupt the key set for every other importer.
 export const PHASE_KEYS = Object.freeze({
-    chroma1: Object.freeze(Object.keys(PHASE_WEIGHTS.chroma1)),
+    chroma: Object.freeze(Object.keys(PHASE_WEIGHTS.chroma)),
     standard: Object.freeze(Object.keys(PHASE_WEIGHTS.standard)),
     gamma: Object.freeze(Object.keys(PHASE_WEIGHTS.gamma)),
 });
@@ -43,7 +47,7 @@ function sumWeights(table) {
 
 function phaseTableFor(caseId, finish) {
     if (finish === 'Gamma Doppler') return PHASE_WEIGHTS.gamma;
-    return caseId === CHROMA_1_CASE_ID ? PHASE_WEIGHTS.chroma1 : PHASE_WEIGHTS.standard;
+    return CHROMA_CASE_IDS.has(caseId) ? PHASE_WEIGHTS.chroma : PHASE_WEIGHTS.standard;
 }
 
 //makes sure the finish has a weight and returns it
@@ -55,10 +59,10 @@ function requireWeight(table, key, context) {
     return weight;
 }
 
-//gives each finnish a uniform weight unless its in the chroma 1 case
+//gives each finnish a uniform weight unless its in one of the chroma cases (1, 2 or 3)
 function finishWeightsFor(caseId, finishes) {
-    if (caseId !== CHROMA_1_CASE_ID) return Object.fromEntries(finishes.map(f => [f, 1])); //uniform 1/N
-    return Object.fromEntries(finishes.map(f => [f, CHROMA_1_FINISH_WEIGHTS[f] ?? CHROMA_1_DEFAULT_FINISH_WEIGHT]));
+    if (!CHROMA_CASE_IDS.has(caseId)) return Object.fromEntries(finishes.map(f => [f, 1])); //uniform 1/N
+    return Object.fromEntries(finishes.map(f => [f, CHROMA_FINISH_WEIGHTS[f] ?? CHROMA_DEFAULT_FINISH_WEIGHT]));
 }
 
 //removes stattrak/souvenir and the star from gloves/knives
@@ -94,15 +98,15 @@ export function computeCaseGroupOutcomes(caseId, rawContainsRare, groupCount, to
     for (const model of models) {
         const finishes = [...byModel.get(model)];
 
-        const fWeights = finishWeightsFor(caseId, finishes);
-        const finishTotal = sumWeights(fWeights); 
+        const fWeights = finishWeightsFor(caseId, finishes); //doppler weight = 17 regular = 5. Non chroma is uniform weight = 1
+        const finishTotal = sumWeights(fWeights); //42 for chroma 6 for anything else
 
         for (const finish of finishes) {
             if (UNVERIFIED_PHASED_FINISHES.has(finish)) {
                 throw new TradeUpValidationError(`${finish} phase weights are unverified - refusing to guess odds for "${model} | ${finish}".`);
             }
 
-            const finishWeight = requireWeight(fWeights, finish, `finish weight for model "${model}"`);
+            const finishWeight = requireWeight(fWeights, finish, `finish weight for model "${model}"`); 
 
             if (KNOWN_PHASED_FINISHES.has(finish)) {
                 const phaseTable = phaseTableFor(caseId, finish); //gets the right odds for doppler/gamma doppler
