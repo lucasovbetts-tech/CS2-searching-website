@@ -2,7 +2,6 @@ import { renderHome }          from './pages/home.js';
 import { renderInventory }     from './pages/inventory.js';
 import { renderTradeup }       from './pages/tradeup.js';
 import { renderExplorePage }   from './pages/explore.js';
-import { renderCaseSimulator } from './pages/case-simulator.js';
 import { renderSkinDetail }    from './pages/skin-detail.js';
 import { renderStickerDetail } from './pages/sticker-detail.js';
 import { renderCollectibleDetail } from './pages/collectible-detail.js';
@@ -14,7 +13,6 @@ const ROUTES = {
     'inventory':      renderInventory,
     'tradeup':        renderTradeup,
     'explore':        renderExplorePage,
-    'case-simulator': renderCaseSimulator,
     'skin':           renderSkinDetail,
     'sticker':        renderStickerDetail,
     'collectible':    renderCollectibleDetail,
