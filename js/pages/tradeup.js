@@ -325,6 +325,16 @@ async function updateOutcomes(collections, cases, skins) {
 
     const possibleOutcomes = await renderSkinOutcomes(collections, cases, skins, total);
 
+    //reads straight off the rendered outcome cards (price + probability text), same DOM-parsing approach as `total`
+    //above, rather than the raw possibleOutcomes data - keeps this in sync with whatever's actually on screen
+    const profitChance = [...document.querySelectorAll('.tradeup-outcome-card')]
+        .map(card => ({
+            price: parseFloat(card.querySelector('.tradeup-outcome-price').textContent.replace('$', '')) || 0,
+            probability: parseFloat(card.querySelector('.probability-per-skin').textContent.replace('%', '')) || 0,
+        }))
+        .filter(({ price }) => price > total)
+        .reduce((sum, { probability }) => sum + probability, 0);
+
     let averageFloat = 0;
     if (possibleOutcomes.length) {
         const floatSum = possibleOutcomes.reduce((sum, skin) => sum + skin.outputFloat, 0);
@@ -341,7 +351,16 @@ async function updateOutcomes(collections, cases, skins) {
         maxLoss = (Math.min(...prices) - total).toFixed(2);
     }
 
-    document.getElementById('tradeup-outcomes').outerHTML = outcomes({ cost: total.toFixed(2), averageFloat, maxProfit, maxLoss });
+    //expected value: probability-weighted average of what you'd actually get back across every priced outcome.
+    //unpriced outcomes (price === null) are excluded from pricedOutcomes above, so their probability mass isn't
+    //represented here either - this slightly understates EV rather than guessing at a price for them
+    const expectedValue = pricedOutcomes.reduce((sum, skin) => sum + (skin.probability ?? 0) * skin.price, 0);
+
+    //100% = break-even. 110% means +10 profit per 100 spent, 60% means -40 loss per 100 spent
+    const profitability = total > 0 ? (expectedValue / total * 100).toFixed(2) : 0;
+    const averageProfit = (expectedValue - total).toFixed(2);
+
+    document.getElementById('tradeup-outcomes').outerHTML = outcomes({ cost: total.toFixed(2), averageFloat, profitChance, profitability, averageProfit, maxProfit, maxLoss });
 }
 
 //summary bar of trade-up math (float/cost/odds/profit) - takes plain numbers rather than computing them itself,
@@ -421,18 +440,10 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
     }));
 
     const filteredOutcomes = skinOutcomeARR.filter(entry => entry.rank === targetRank).map(entry => {
-        //gold/knife items (contains_rare) are prefixed "★ " in their raw name (e.g. "★ Karambit | Forest DDPAT",
-        //or just "★ Bayonet" for vanilla, no "|" at all) - getSkins()'s normalized weapon field never includes
-        //that star, so without stripping it first the match always fails and silently falls back to the wrong
-        //0-1 range instead of that knife's real (often much narrower) float caps
         const [weapon, name] = entry.skin.name.replace(/^★\s*/, '').split('|').map(s => s.trim());
-        //vanilla knives have no "|" at all, so name comes back undefined from the split above - but getSkins()
-        //stores their name as null, not undefined, so it has to be normalized here or the comparison still misses
         const fullSkin = skins.find(s => s.weapon === weapon && s.name === (name ?? null));
         const minFloat = fullSkin?.minFloat ?? 0;
         const maxFloat = fullSkin?.maxFloat ?? 1;
-        //entry.collection (colMatch.name), not fullSkin.collection - the latter is null for most knives/gloves
-        //(they're tied to a case, not a named set) and an {name, image} object, not a string, when it does exist
         const outputFloat = calculateOutcomeFloat(inputs, minFloat, maxFloat);
         return { ...entry.skin, minFloat, maxFloat, outputFloat, fullSkin, collection: entry.collection, collectionImage: entry.collectionImage };
     });
@@ -494,33 +505,23 @@ const DEBUG_PROBABILITY = false; //flip on to assert the whole distribution sums
 function calculateOutcomeProbability(outcomes, collections, cases) {
     const rightGrid = document.getElementById('tradeup-right');
     const cards = [...rightGrid.querySelectorAll('.tradeup-card-right')];
+
     if (cards.length === 0) return outcomes;
- 
-    //rarity is locked uniform across every card once the first one's added (see the lock comment further down
-    //in this file), so the first card alone tells us whether this is a Covert -> Rare Special contract or not
+
     const isGoldTier = cards[0].dataset.rarity === 'Covert';
     const expectedCount = isGoldTier ? GOLD_INPUT_COUNT : STANDARD_INPUT_COUNT;
-    //still mid-selection (fewer cards than the contract needs) - not an error, just nothing to price up yet.
-    //Existing cards keep rendering with no probability badge (the 'N/A' fallback already in the outcome-card template).
     if (cards.length !== expectedCount) return outcomes;
  
     const resolvedInputs = cards.map(card => {
         const collection = card.dataset.collection;
         const colMatch = collections.find(c => c.name === collection);
-        //only crates that are actually real Cases (not souvenir packages, which share the same `crates` list on
-        //a collection but have no Rare Special pool) count toward case resolution
+
         const caseIds = isGoldTier
             ? (colMatch?.crates ?? []).filter(crate => cases.some(cs => cs.id === crate.id)).map(crate => crate.id)
             : [];
-        return {
-            collection,
-            //the Category toolbar field (Normal/StatTrak/Souvenir) isn't wired to actually tag picked cards yet,
-            //so this always reads false today - kept honest rather than guessed at, ready for whenever it is wired up
-            stattrak: card.dataset.stattrak === 'true',
-            caseIds,
-        };
+        return { collection, caseIds };
     });
- 
+
     let probabilityByKey;
     try {
         if (isGoldTier) {
@@ -536,11 +537,6 @@ function calculateOutcomeProbability(outcomes, collections, cases) {
             const theoretical = computeGoldOutcomes(groups, resolvedInputs.length);
  
             if (DEBUG_PROBABILITY) assertOutcomesSumToOne(theoretical);
- 
-            //One key per (model, finish, phase). Phased finishes are NOT collapsed back into a finish total:
-            //the engine already emits one row per phase, and each outcome card corresponds to exactly one of
-            //them. Summing them and stamping the finish total onto every phase card would show ~7x the true
-            //odds on each Doppler card and make the displayed column sum to roughly 700%.
             probabilityByKey = new Map();
             for (const o of theoretical) {
                 probabilityByKey.set(goldKey(o.model, o.finish, o.phase), o.probability);
@@ -561,11 +557,6 @@ function calculateOutcomeProbability(outcomes, collections, cases) {
         }
     } catch (err) {
         if (!(err instanceof TradeUpValidationError)) throw err;
-        //an invalid combination (e.g. a Covert input whose collection has no case) - not a bug, just not
-        //price-able. Log why and fall back to the existing 'N/A' badge instead of crashing the whole page.
-        //Note this is all-or-nothing: one unpriceable input blanks every outcome on the contract, which reads
-        //as "the calculator is broken" rather than "this one input is the problem". Fine for now; if it starts
-        //happening on real data, surface err.message in the UI rather than only the console.
         console.warn('Trade-up probability unavailable:', err.message);
         return outcomes;
     }
@@ -582,21 +573,12 @@ function calculateOutcomeProbability(outcomes, collections, cases) {
         const probability = probabilityByKey.get(key);
  
         if (probability === undefined) {
-            //Almost always a string-matching problem rather than missing data: the outcome's phase label not
-            //matching PHASE_WEIGHTS' keys exactly (casing, "Black Pearl" vs "Black-Pearl", a missing phase
-            //field on the outcome object entirely). Named loudly because the symptom - one card showing N/A -
-            //looks identical to legitimately-unpriceable and is otherwise near-impossible to spot.
             console.warn(`No probability matched for "${outcome.name}" (phase: ${outcome.phase ?? 'none'}) - key "${key}".`);
         }
- 
-        //stays a Number. Formatting to 2dp belongs at render time - as a string it silently breaks any sort,
-        //filter or EV multiply downstream ("9.50" > "40.48" is true).
         return { ...outcome, probability };
     });
 }
- 
-//Phased outcomes key on all three parts; unphased ones omit the phase segment entirely so they can't collide
-//with a phased entry that happens to have a falsy phase.
+
 function goldKey(model, finish, phase) {
     return phase ? `${model}|${finish}|${phase}` : `${model}|${finish}`;
 }

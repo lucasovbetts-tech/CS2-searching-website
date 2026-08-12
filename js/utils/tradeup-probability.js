@@ -147,9 +147,7 @@ export function validateInputs(inputs, { isGoldTier }) {
     if (isGoldTier) {
         for (const input of inputs) {
             if (input.caseIds.length === 0) {
-                throw new TradeUpValidationError(
-                    `"${input.collection}" has no associated case, so it has no Rare Special pool to draw from.`
-                );
+                throw new TradeUpValidationError(`"${input.collection}" has no associated case, so it has no Rare Special pool to draw from.`);
             }
             if (input.caseIds.length > 1) {
                 throw new TradeUpValidationError(
