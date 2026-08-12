@@ -4,7 +4,7 @@ import { getCases } from '../api/crates.js';
 import { getPrices } from '../api/prices.js';
 import { WEAR_TIERS } from '../utils/wear-tiers.js';
 import {
-    computeGoldOutcomes, computeStandardOutcomes, validateInputs, parseRareItemName,
+    computeGoldOutcomes, computeStandardOutcomes, parseRareItemName,
     TradeUpValidationError, GOLD_INPUT_COUNT, STANDARD_INPUT_COUNT, assertOutcomesSumToOne,
 } from '../utils/tradeup-probability.js';
 
@@ -523,8 +523,6 @@ function calculateOutcomeProbability(outcomes, collections, cases) {
  
     let probabilityByKey;
     try {
-        validateInputs(resolvedInputs, { isGoldTier });
- 
         if (isGoldTier) {
             const groups = new Map();
             for (const input of resolvedInputs) {

@@ -137,9 +137,7 @@ export function computeStandardOutcomeProbability(groupCount, totalInputs, outpu
 export function validateInputs(inputs, { isGoldTier }) {
     const expected = isGoldTier ? GOLD_INPUT_COUNT : STANDARD_INPUT_COUNT;
     if (inputs.length !== expected) {
-        throw new TradeUpValidationError(
-            `${isGoldTier ? 'Covert → Rare Special' : 'Standard'} contracts need exactly ${expected} inputs, got ${inputs.length}.`
-        );
+        throw new TradeUpValidationError(`${isGoldTier ? 'Covert → Rare Special' : 'Standard'} contracts need exactly ${expected} inputs, got ${inputs.length}.`);
     }
 
     if (new Set(inputs.map(i => !!i.stattrak)).size > 1) {
