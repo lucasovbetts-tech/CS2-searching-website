@@ -2,7 +2,7 @@ import { getSkins } from '../api/skins.js'
 import { getCollections } from '../api/collections.js';
 import { getCases } from '../api/crates.js';
 import { getPrices } from '../api/prices.js';
-import { WEAR_TIERS } from '../utils/wear-tiers.js';
+import { WEAR_TIERS, wearTiersFor } from '../utils/wear-tiers.js';
 import {
     computeGoldOutcomes, computeStandardOutcomes, parseRareItemName,
     TradeUpValidationError, GOLD_INPUT_COUNT, STANDARD_INPUT_COUNT, assertOutcomesSumToOne,
@@ -33,6 +33,20 @@ function cheapestPrice(prices, tierKey, variant = 'normal') {
     if (!markets) return null;
     const entries = Object.values(markets);
     return entries.length ? Math.min(...entries.map(m => m.price)) : null;
+}
+
+//low/high across only the wear tiers this specific skin can actually reach (wearTiersFor) - a skin capped at
+//maxFloat 0.08 (many knives) should never show a Battle-Scarred price it can't actually produce. Either side can
+//come back null if none of the reachable tiers have price data at all.
+function priceRangeFor(skin, prices, variant = 'normal') {
+    const tierPrices = wearTiersFor(skin).map(t => cheapestPrice(prices, t.key, variant)).filter(p => p !== null);
+    return tierPrices.length ? { low: Math.min(...tierPrices), high: Math.max(...tierPrices) } : { low: null, high: null };
+}
+
+//reads the Category field straight off the DOM (same pattern as rarity/collection elsewhere in this file) rather
+//than tracking a separate variable, so it can never drift out of sync with what's actually selected
+function currentCategory() {
+    return document.querySelector('#tfCategory .custom-select-opt.active')?.dataset.value || 'Normal';
 }
 
 //real CS2 trade-up float formula: average how "worn" the 10 inputs are, each relative to its OWN float range
@@ -159,12 +173,13 @@ function wireDropdown(fieldEl, onSelect, searchable = false) {
 
 //one tradeupable skin's card - same shape as explore.js's skin-card, plus the collection's own image next to a shortened wear-bar
 function renderTradeupCard(skin, collection, collectionImage) {
+    const stattrakSuffix = currentCategory() === 'StatTrak' ? ' <sup class="stattrak-badge">StatTrak™</sup>' : '';
     return `
     <div class="skin-card tradeup-card" data-weapon="${skin.weapon}" data-name="${skin.name}" data-rarity="${skin.rarity.name}" style="background: ${rarityGradient(skin.rarity.color)}">
         <div class="tradeup-price-row">
-            <span class="tradeup-price-pill" id="tradeUpPriceLow">£10</span>
+            <span class="tradeup-price-pill tradeup-price-low">…</span>
             <span class="tradeup-price-sep">–</span>
-            <span class="tradeup-price-pill" id="tradeUpPriceHigh">£20</span>
+            <span class="tradeup-price-pill tradeup-price-high">…</span>
         </div>
         ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.weapon} | ${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
         <div class="tradeup-meta-row">
@@ -178,7 +193,7 @@ function renderTradeupCard(skin, collection, collectionImage) {
         </div>
         <div class="tradeup-name-col">
             <span class="skin-weapon">${skin.weapon}</span>
-            <p class="skin-name">${skin.name}</p>
+            <p class="skin-name">${skin.name}${stattrakSuffix}</p>
         </div>
     </div>`;
 }
@@ -223,6 +238,7 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
     //default parameter value since skin isn't resolved yet at that point. Falls back to this specific skin's own
     //minFloat + 0.02 instead, which is always a guaranteed-valid float for it
     if (float === null) float = (skin.minFloat + 0.02).toFixed(5);
+    const stattrakSuffix = currentCategory() === 'StatTrak' ? ' <sup class="stattrak-badge">StatTrak™</sup>' : '';
     const cardHTML = `
         <div class="skin-card tradeup-card-right" data-weapon="${skin.weapon}" data-name="${skin.name}" data-rarity="${skin.rarity.name}" data-collection="${collection}" style="background: ${rarityGradient(skin.rarity.color)}">
             <div class="tradeup-price-row">
@@ -244,7 +260,7 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
             </div>
             <div class="tradeup-name-col">
                 <span class="skin-weapon">${skin.weapon}</span>
-                <p class="skin-name">${skin.name}</p>
+                <p class="skin-name">${skin.name}${stattrakSuffix}</p>
             </div>
             <input class="tradeup-float-input" type="number" min="0" max="1" step="0.001" value="${float}">
             <div class="tradeup-card-actions">
@@ -288,7 +304,8 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
     cardEl._skin = skin;
     const applyPrices = prices => {
         cardEl._prices = prices;
-        const value = cheapestPrice(prices, tierKeyForFloat(float));
+        const variant = currentCategory() === 'StatTrak' ? 'stattrak' : 'normal';
+        const value = cheapestPrice(prices, tierKeyForFloat(float), variant);
         cardEl.querySelector('.tradeup-price-pill').textContent = value !== null ? `$${value.toFixed(2)}` : 'N/A';
         const rightGridEl = document.getElementById('tradeup-right');
         const limit = skin.rarity.name === 'Covert' ? 5 : 10;
@@ -300,6 +317,26 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
     } else {
         getPrices(skin.defIndex, skin.paintIndex).then(applyPrices);
     }
+}
+
+//Category changed while cards already sit in the right panel - patches each one's name/price in place rather than
+//re-adding them, reusing the prices each card already fetched (cardEl._prices) instead of re-fetching from cache.
+function updateRightPanelForCategory() {
+    const isStatTrak = currentCategory() === 'StatTrak';
+    const variant = isStatTrak ? 'stattrak' : 'normal';
+    document.querySelectorAll('#tradeup-right .tradeup-card-right').forEach(cardEl => {
+        const skin = cardEl._skin;
+        if (!skin) return;
+
+        const nameEl = cardEl.querySelector('.skin-name');
+        if (nameEl) nameEl.innerHTML = `${skin.name}${isStatTrak ? ' <sup class="stattrak-badge">StatTrak™</sup>' : ''}`; //innerHTML, not textContent - <sup> needs to render as an element, not literal text
+
+        const float = parseFloat(cardEl.querySelector('.tradeup-float-input')?.value) || 0;
+        const value = cheapestPrice(cardEl._prices, tierKeyForFloat(float), variant);
+        const pill = cardEl.querySelector('.tradeup-price-pill');
+        if (pill) pill.textContent = value !== null ? `$${value.toFixed(2)}` : 'N/A';
+    });
+    updateOutcomes(); //cost (and everything derived from it) needs recalculating against the new prices
 }
 
 function editPrice(card) {
@@ -333,7 +370,7 @@ async function updateOutcomes(collections, cases, skins) {
             probability: parseFloat(card.querySelector('.probability-per-skin').textContent.replace('%', '')) || 0,
         }))
         .filter(({ price }) => price > total)
-        .reduce((sum, { probability }) => sum + probability, 0);
+        .reduce((sum, { probability }) => sum + probability, 0).toFixed(2);
 
     let averageFloat = 0;
     if (possibleOutcomes.length) {
@@ -351,21 +388,13 @@ async function updateOutcomes(collections, cases, skins) {
         maxLoss = (Math.min(...prices) - total).toFixed(2);
     }
 
-    //expected value: probability-weighted average of what you'd actually get back across every priced outcome.
-    //unpriced outcomes (price === null) are excluded from pricedOutcomes above, so their probability mass isn't
-    //represented here either - this slightly understates EV rather than guessing at a price for them
-    const expectedValue = pricedOutcomes.reduce((sum, skin) => sum + (skin.probability ?? 0) * skin.price, 0);
-
-    //100% = break-even. 110% means +10 profit per 100 spent, 60% means -40 loss per 100 spent
+    const expectedValue = pricedOutcomes.reduce((sum, skin) => sum + (skin.probability ?? 0) * skin.price, 0).toFixed(2);
     const profitability = total > 0 ? (expectedValue / total * 100).toFixed(2) : 0;
     const averageProfit = (expectedValue - total).toFixed(2);
 
     document.getElementById('tradeup-outcomes').outerHTML = outcomes({ cost: total.toFixed(2), averageFloat, profitChance, profitability, averageProfit, maxProfit, maxLoss });
 }
 
-//summary bar of trade-up math (float/cost/odds/profit) - takes plain numbers rather than computing them itself,
-//since the actual simulation (weighted float, output odds across possible results) is a separate concern. Values
-//default to 0 as a placeholder until that real calculation gets wired in
 function outcomes({ averageFloat = 0, cost = 0, profitChance = 0, profitability = 0, averageProfit = 0, maxProfit = 0, maxLoss = 0 } = {}) {
     const profitabilityClass = profitability < 100 ? 'tradeup-outcome-value--negative' : 'tradeup-outcome-value--positive';
     const averageProfitClass = averageProfit < 0 ? 'tradeup-outcome-value--negative' : 'tradeup-outcome-value--positive';
@@ -451,10 +480,15 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
 
     const skinsProbability = await calculateOutcomeProbability(filteredOutcomes, collections, cases);
 
+    //the picker already refuses to let a StatTrak contract include a Covert input whose collection's gold pool is
+    //gloves (StatTrak gloves don't exist), so every outcome reachable here is safe to price with the same variant
+    const isStatTrak = currentCategory() === 'StatTrak';
+    const variant = isStatTrak ? 'stattrak' : 'normal';
+
     const pricedOutcomes = await Promise.all(skinsProbability.map(async ({ fullSkin, ...skin }) => {
         if (!fullSkin) return { ...skin, price: null };
         const prices = await getPrices(fullSkin.defIndex, fullSkin.paintIndex);
-        const price = cheapestPrice(prices, tierKeyForFloat(skin.outputFloat));
+        const price = cheapestPrice(prices, tierKeyForFloat(skin.outputFloat), variant);
         return { ...skin, price };
     }));
 
@@ -482,7 +516,7 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
             </div>
             <div class="tradeup-name-col">
                 <p class="tradeup-outcome-weapon">${weapon}</p>
-                <p class="tradeup-outcome-skin">${name ?? ''}  ${skin.phase ? `- ${skin.phase}` : ''}</p>
+                <p class="tradeup-outcome-skin">${name ?? ''}  ${skin.phase ? `- ${skin.phase}` : ''}${isStatTrak ? ' <sup class="stattrak-badge">StatTrak™</sup>' : ''}</p>
             </div>
             <p class="tradeup-outcome-float">${tierKeyForFloat(outputFloat)} - ${outputFloat}</p>
             <p class="tradeup-outcome-price">${skin.price !== null ? `$${skin.price.toFixed(2)}` : 'N/A'}</p>
@@ -602,7 +636,7 @@ export function renderTradeup() {
                         ${renderDropdownField('tfRarity', 'Rarity', ['All Rarities', 'Consumer Grade', 'Industrial Grade', 'Mil-Spec Grade', 'Restricted', 'Classified', 'Covert',])}
                         ${renderDropdownField('tfCollection', 'Collection', ['All Collections'], true)}
                         ${renderDropdownField('tfSort', 'Sort by', ['Cheapest', 'Most Expensive'])}
-                        ${renderDropdownField('tfCategory', 'Category', ['Normal', 'StatTrak', 'Souvenir'])}
+                        ${renderDropdownField('tfCategory', 'Category', ['Normal', 'StatTrak'])}
                     </div>
                     <div class="tradeup-grid" id="tradeupGrid">
                         <p class="explore-loading">Loading…</p>
@@ -619,15 +653,19 @@ export function renderTradeup() {
             </div>
         </div>
     `;
-    return Promise.all([getSkins(), getCollections(), getCases()]).then(([skins, collections, cases]) => {
+    return Promise.all([getSkins(), getCollections(), getCases(), getPrices()]).then(([skins, collections, cases]) => {
         
         //"Limited Edition Item" isn't a real skin collection - it's a catch-all bucket the API uses for armory pass
         //weapons, which don't work like normal collections and can't be traded up
         const tradeUpData = collections.filter(c => c.name !== 'Limited Edition Item').map(c => {
             const linkedCaseIds = c.crates.map(crate => crate.id);
-            const hasGold = cases.some(cs => linkedCaseIds.includes(cs.id)); //every real Case has a non-empty contains_rare, so a match is enough
+            const matchedCase = cases.find(cs => linkedCaseIds.includes(cs.id));
+            const hasGold = !!matchedCase; //every real Case has a non-empty contains_rare, so a match is enough
+            //gloves can never be StatTrak in the real game, unlike knives - every item in one case's contains_rare
+            //is the same category (a case never mixes knives and gloves), so checking just the first entry is enough
+            const goldIsGloves = hasGold && skins.find(s => s.weapon === parseRareItemName(matchedCase.contains_rare[0]?.name ?? '').model)?.category === 'Gloves';
             const parsed = c.contains.map(item => {
-                const [weapon, skin] = item.name.split('|').map(s => s.trim()); 
+                const [weapon, skin] = item.name.split('|').map(s => s.trim());
                 return { weapon, skin };
             });
             const matchedSkins = parsed.map(({ weapon, skin }) =>
@@ -639,17 +677,18 @@ export function renderTradeup() {
 
             //only keep skins that can actually trade up: the next rank up needs to exist somewhere in this same collection
             const tradeupable = matchedSkins.filter(s => ranksPresent.has(RARITY_RANK[s.rarity.name] - 1));
-            
-            return { collection: c.name, collectionImage: c.image, hasGold, tradeupable };
+
+            return { collection: c.name, collectionImage: c.image, hasGold, goldIsGloves, tradeupable };
         });
 
         const grid = document.getElementById('tradeupGrid');
         const sentinel = document.getElementById('tradeupSentinel');
         if (!grid) return;
 
-        //flat {skin, collection, collectionImage} per tradeupable skin - raw objects, not pre-rendered HTML, so search can filter by name/weapon
-        const allSkins = tradeUpData.flatMap(({ collection, collectionImage, tradeupable }) => 
-            tradeupable.map(skin => ({ skin, collection, collectionImage })));
+        //flat {skin, collection, collectionImage, goldIsGloves} per tradeupable skin - raw objects, not pre-rendered
+        //HTML, so search can filter by name/weapon
+        const allSkins = tradeUpData.flatMap(({ collection, collectionImage, goldIsGloves, tradeupable }) =>
+            tradeupable.map(skin => ({ skin, collection, collectionImage, goldIsGloves })));
         if (!allSkins.length) {
             grid.innerHTML = '<p class="explore-empty">No tradeupable skins found.</p>';
             return;
@@ -661,9 +700,24 @@ export function renderTradeup() {
         //===================RENDERING ONLY 50 SKINS AT A TIME TO REDUCE LAG ============================
         function renderNextBatch() {
             const next = currentPool.slice(rendered, rendered + BATCH_SIZE);
+            const previousLength = grid.children.length;
             grid.insertAdjacentHTML('beforeend', next.map(({ skin, collection, collectionImage }) => renderTradeupCard(skin, collection, collectionImage)).join(''));
             rendered += next.length;
             if (rendered >= currentPool.length) observer.disconnect();
+
+            //cards render instantly with "…" placeholders above; prices get patched in per-card once each one's
+            //own getPrices() call resolves, same as the right-panel cards do, rather than blocking the whole batch
+            //on every price in it before anything shows up
+            const newCardEls = [...grid.children].slice(previousLength);
+            const variant = currentCategory() === 'StatTrak' ? 'stattrak' : 'normal';
+            newCardEls.forEach((cardEl, i) => {
+                const { skin } = next[i];
+                getPrices(skin.defIndex, skin.paintIndex).then(prices => {
+                    const { low, high } = priceRangeFor(skin, prices, variant);
+                    cardEl.querySelector('.tradeup-price-low').textContent = low !== null ? `$${low.toFixed(2)}` : 'N/A';
+                    cardEl.querySelector('.tradeup-price-high').textContent = high !== null ? `$${high.toFixed(2)}` : 'N/A';
+                });
+            });
         }
 
         const observer = new IntersectionObserver(entries => {
@@ -678,6 +732,7 @@ export function renderTradeup() {
 
         const rightGrid = document.getElementById('tradeup-right');
         const rarityField = document.getElementById('tfRarity');
+        const categoryField = document.getElementById('tfCategory');
         rightGrid.innerHTML = Array(10).fill(renderTradeupSlotPlaceholder()).join('');
 
         //once any skin sits in the right panel, the whole contract is locked to that skin's rarity - a real trade-up
@@ -694,6 +749,9 @@ export function renderTradeup() {
         function syncRarityLock() {
             const lockedCard = rightGrid.querySelector('.tradeup-card-right');
             rarityField.classList.toggle('tf-field--locked', !!lockedCard);
+            //Category is locked alongside Rarity, same condition (at least one input already picked) - switching
+            //StatTrak/Normal mid-contract would change what every already-placed input's price actually means
+            categoryField?.classList.toggle('tf-field--locked', !!lockedCard);
             setRarity(lockedCard ? lockedCard.dataset.rarity : 'All Rarities');
         }
 
@@ -749,7 +807,10 @@ export function renderTradeup() {
             if (deleteBtn) {
                 deleteBtn.closest('.tradeup-card-right').remove();
                 const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
-                if (cardNum === 0) rarityField.classList.toggle('tf-field--locked');
+                if (cardNum === 0) {
+                    rarityField.classList.toggle('tf-field--locked');
+                    categoryField?.classList.toggle('tf-field--locked');
+                }
                 syncSlotCount();
                 //the deleted card is already gone by this point, so its own data-rarity can't be read anymore -
                 //the rarity dropdown's own active value is used instead
@@ -805,16 +866,22 @@ export function renderTradeup() {
             const query = document.querySelector('.tf-input')?.value.trim().toLowerCase() || '';
             const rarity = document.querySelector('#tfRarity .custom-select-opt.active')?.dataset.value || 'All Rarities';
             const selectedCollection = document.querySelector('#tfCollection .custom-select-opt.active')?.dataset.value || 'All Collections';
+            //StatTrak excludes skins with no StatTrak version at all (skin.stattrak === false), and separately excludes
+            //any Covert ("red") skin whose collection's gold pool is gloves - gloves can never be StatTrak in the real
+            //game, so a StatTrak trade-up into one isn't actually possible even though the input skin itself might
+            //otherwise support StatTrak. Normal/Souvenir add no extra filtering of their own here.
+            const category = currentCategory();
 
             observer.disconnect(); //about to reset pagination from scratch against whatever pool applies below
 
-            currentPool = (!query && rarity === 'All Rarities' && selectedCollection === 'All Collections')
+            currentPool = (!query && rarity === 'All Rarities' && selectedCollection === 'All Collections' && category !== 'StatTrak')
                 ? allSkins
-                : allSkins.filter(({ skin, collection }) => {
+                : allSkins.filter(({ skin, collection, goldIsGloves }) => {
                     const matchesQuery = !query || `${skin.weapon} ${skin.name}`.toLowerCase().includes(query);
                     const matchesRarity = rarity === 'All Rarities' || skin.rarity.name === rarity;
                     const matchesCollection = selectedCollection === 'All Collections' || collection === selectedCollection;
-                    return matchesQuery && matchesRarity && matchesCollection;
+                    const matchesCategory = category !== 'StatTrak' || (skin.stattrak && !(skin.rarity.name === 'Covert' && goldIsGloves));
+                    return matchesQuery && matchesRarity && matchesCollection && matchesCategory;
                 });
 
             grid.innerHTML = currentPool.length ? '' : '<p class="explore-empty">No matches found.</p>';
@@ -838,11 +905,34 @@ export function renderTradeup() {
                 .join('');
         }
 
+        //reorders whatever's currently rendered in the grid, reading each card's low price straight off its own
+        //pill text (same approach as `total`/`profitChance` elsewhere in this file) rather than re-fetching or
+        //re-rendering anything - cards paginated in later just get appended unsorted at the end as usual, this
+        //isn't a persistent sort applied to the whole underlying pool
+        function sortVisibleCards(sortBy) {
+            const priced = [...grid.querySelectorAll('.tradeup-card')].map(card => {
+                const low = parseFloat(card.querySelector('.tradeup-price-low')?.textContent.replace('$', ''));
+                return { card, price: Number.isNaN(low) ? null : low }; //still-loading ("…") or genuinely unpriced ("N/A") both parse to null here
+            });
+            priced.sort((a, b) => {
+                if (a.price === null && b.price === null) return 0;
+                if (a.price === null) return 1; //no price always sinks to the bottom, regardless of direction
+                if (b.price === null) return -1;
+                return sortBy === 'Most Expensive' ? b.price - a.price : a.price - b.price;
+            });
+            priced.forEach(({ card }) => grid.appendChild(card)); //appendChild on an existing node moves it - this reorders in place, no re-render
+        }
+
         document.querySelector('.tf-input')?.addEventListener('input', applyFilters);
         wireDropdown(document.getElementById('tfRarity'), applyFilters);
         wireDropdown(document.getElementById('tfCollection'), applyFilters, true);
-        wireDropdown(document.getElementById('tfSort'));
-        wireDropdown(document.getElementById('tfCategory'));
+        wireDropdown(document.getElementById('tfSort'), sortVisibleCards);
+        //re-renders the left grid (so newly-rendered cards pick up the new category via currentCategory()) and
+        //patches the already-placed right-panel cards in place, rather than re-adding them
+        wireDropdown(document.getElementById('tfCategory'), () => {
+            applyFilters();
+            updateRightPanelForCategory();
+        });
 
     }).catch(() => {
         const grid = document.getElementById('tradeupGrid');

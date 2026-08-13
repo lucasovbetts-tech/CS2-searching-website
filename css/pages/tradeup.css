@@ -555,6 +555,14 @@
     font-size: 0.85rem;
 }
 
+/* em, not rem - scales relative to whichever .skin-name context it's sitting in (left picker card vs right input
+   card have different base sizes) rather than needing a size tuned per context */
+.stattrak-badge {
+    font-size: 0.6em;
+    font-weight: 700;
+    color: var(--text-sec);
+}
+
 /* ── Price pills, top of the card ── */
 
 .tradeup-price-row {
@@ -562,25 +570,29 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 3px; /* was 5px - real prices need every bit of room they can get to stay on one line */
 }
 
 .tradeup-price-pill {
     display: inline-flex;
     align-items: center;
-    padding: 2px 8px;
+    flex-shrink: 0; /* without this, flex would shrink the pill's own box smaller than its nowrap text needs,
+                        pushing the text out past the pill's rounded background instead of the row just overflowing */
+    padding: 2px 5px; /* was 2px 8px - trimmed to fit real prices ("$169.87") on one line, not the old short placeholders */
     border-radius: 999px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text);
-    font-size: 0.66rem;
+    font-size: 0.58rem; /* was 0.66rem */
     font-weight: 700;
     font-variant-numeric: tabular-nums;
+    white-space: nowrap;
 }
 
 .tradeup-price-sep {
+    flex-shrink: 0;
     color: var(--text-sec);
     font-size: 0.7rem;
 }

@@ -61,7 +61,6 @@ export function renderSearchSection() {
                         <input class="search-input" type="text"
                             placeholder="e.g. AK-47 | Redline, AWP | Dragon Lore..."
                             autocomplete="off" spellcheck="false"/>
-                        <button class="search-btn">Search</button>
                     </div>
                     <div class="search-results" id="searchResults"></div>
                 </div>
