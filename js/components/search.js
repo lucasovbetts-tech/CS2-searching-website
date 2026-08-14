@@ -90,7 +90,8 @@ export function initSearch() {
     //precomputes a lowercased searchable string once per item so typing doesn't redo this work on every keystroke
     const withSearchable = (items) => items.map(item => ({
         ...item,
-        searchable: (item.kind === 'skin' ? `${item.weapon} ${item.name ?? ''}`
+        //phase included so a Doppler/Gamma Doppler phase (e.g. "black pearl") is searchable
+        searchable: (item.kind === 'skin' ? `${item.weapon} ${item.name ?? ''} ${item.phase ?? ''}`
             : item.slug === 'agents' ? item.marketHashName
             : item.name).toLowerCase()
     }));

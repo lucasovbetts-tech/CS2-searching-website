@@ -35,7 +35,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
-    margin-top: 20px; /* sits below the skin cards/placeholders in .tradeup-right-col, not above the columns - was margin-bottom */
+    margin-top: 20px; /* sits below the skin cards/placeholders in .tradeup-right-col, not above the columns */
     padding: 16px 24px;
     background: var(--card);
     border: 1.5px solid var(--border);
@@ -223,7 +223,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    padding-bottom: 32px; /* was margin-bottom - needs to be padding so the sticky background covers this gap too, not just the toolbar's own row */
+    padding-bottom: 32px; /* padding, not margin, so the sticky background covers this gap too, not just the toolbar's own row */
 }
 
 .tf-field {
@@ -379,7 +379,7 @@
     flex: 1;
     min-width: 0; /* lets the flex child shrink below its content's natural width instead of overflowing */
     height: 100%;
-    overflow-y: auto; /* each column now scrolls independently - whichever one the mouse is over catches the wheel scroll */
+    overflow-y: auto; /* this column scrolls independently - whichever one the mouse is over catches the wheel scroll */
     /* setting only overflow-y forces the browser to compute overflow-x as non-visible too (it can't stay truly
        "visible" once the other axis scrolls) - without this padding, cards on the left/right edge get clipped by
        that invisible x-boundary the moment they grow slightly on :hover (scale(1.02)) */
@@ -424,8 +424,8 @@
     position: sticky;
     top: 0;
     z-index: 30; /* comfortably above .tradeup-card-right/.tradeup-slot-placeholder:hover's z-index: 20 */
-    align-self: flex-end; /* back to a compact button, not a full-width bar - a sliver of scrolled content briefly showing through the small gap below it isn't worth the bar it looked like */
-    margin-bottom: 32px; /* matches .tradeup-toolbar's padding-bottom on the left - the small button alone didn't carry enough visual weight to read as a separated section */
+    align-self: flex-end; /* compact button, not a full-width bar */
+    margin-bottom: 32px; /* matches .tradeup-toolbar's padding-bottom on the left */
     padding: 6px 14px;
     /* the subtle white tint layered over an opaque var(--bg) - one background declaration, not two, so the second
        doesn't just override the first; needs to be fully opaque so scrolling cards don't show through beneath it */
@@ -570,7 +570,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    gap: 3px; /* was 5px - real prices need every bit of room they can get to stay on one line */
+    gap: 3px; /* real prices need every bit of room they can get to stay on one line */
 }
 
 .tradeup-price-pill {
@@ -578,14 +578,14 @@
     align-items: center;
     flex-shrink: 0; /* without this, flex would shrink the pill's own box smaller than its nowrap text needs,
                         pushing the text out past the pill's rounded background instead of the row just overflowing */
-    padding: 2px 5px; /* was 2px 8px - trimmed to fit real prices ("$169.87") on one line, not the old short placeholders */
+    padding: 2px 5px; /* trimmed to fit real prices ("$169.87") on one line */
     border-radius: 999px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text);
-    font-size: 0.58rem; /* was 0.66rem */
+    font-size: 0.58rem;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;

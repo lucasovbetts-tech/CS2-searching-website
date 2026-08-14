@@ -5,6 +5,7 @@ import { getCollections } from '../api/collections.js';
 import { getAgents, getCharms, getPatches, getMusicKits, getGraffiti, getPins, getStickers } from '../api/collectibles.js';
 import { getHighlights } from '../api/highlights.js';
 import { getPrices, getItemPrice } from '../api/prices.js';
+import { priceSpan } from '../utils/currency.js';
 
 console.log(
     'getStickerCapsules', await getStickerCapsules(),
@@ -238,8 +239,7 @@ async function renderCrateContentsCard(items, crateName, skins, stickers) {
     const stattrak = match?.stattrak;
     const souvenir = match?.souvenir;
     const csfloatLink = match ? `https://csfloat.com/search?type=buy_now&def_index=${match.defIndex}&paint_index=${match.paintIndex}` : null;
-    //sticker capsule contents aren't skins - i.id here is ByMykel's own id, which no longer matches stickers.json
-    //(CS2Cap-sourced now, different id scheme), so the real record has to be looked up by name instead
+    //sticker capsule contents aren't skins - i.id doesn't match stickers.json's id scheme, so look up by name instead
     const stickerMatch = !match ? stickers?.find(s => s.name === name) : null;
     const stickerPriceText = stickerMatch ? lowestPrice(await getItemPrice(stickerMatch.id)) : null;
     //getPrices returns the full tier x variant grid ({tier: {variant: {market: price}}}), not a flat
@@ -395,7 +395,7 @@ function lowestPrice(prices) {
     if (!prices) return PRICE_UNAVAILABLE;
     const values = Object.values(prices);
     if (!values.length) return PRICE_UNAVAILABLE;
-    return `From $${Math.min(...values.map(v => v.price)).toFixed(2)}`;
+    return `From ${priceSpan(Math.min(...values.map(v => v.price)))}`;
 }
 
 //lowest normal/stattrak/souvenir price text for one skin, fetched once and reused per variant rather than

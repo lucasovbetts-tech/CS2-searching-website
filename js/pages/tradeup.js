@@ -2,6 +2,7 @@ import { getSkins } from '../api/skins.js'
 import { getCollections } from '../api/collections.js';
 import { getCases } from '../api/crates.js';
 import { getPrices } from '../api/prices.js';
+import { priceSpan, applyPrice, toUsd } from '../utils/currency.js';
 import { WEAR_TIERS, wearTiersFor } from '../utils/wear-tiers.js';
 import {
     computeGoldOutcomes, computeStandardOutcomes, parseRareItemName,
@@ -299,14 +300,13 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
     }
 
     //tapes the already-found skin onto the card so renderSkinOutcomes() (runs on every keystroke/add/delete/copy) can
-    //reuse it directly instead of re-running skins.find() across the whole catalog every single time it's called
-    //which would be slower
+    //reuse it directly instead of re-running skins.find() across the whole catalog every time
     cardEl._skin = skin;
     const applyPrices = prices => {
         cardEl._prices = prices;
         const variant = currentCategory() === 'StatTrak' ? 'stattrak' : 'normal';
         const value = cheapestPrice(prices, tierKeyForFloat(float), variant);
-        cardEl.querySelector('.tradeup-price-pill').textContent = value !== null ? `$${value.toFixed(2)}` : 'N/A';
+        applyPrice(cardEl.querySelector('.tradeup-price-pill'), value);
         const rightGridEl = document.getElementById('tradeup-right');
         const limit = skin.rarity.name === 'Covert' ? 5 : 10;
         if (rightGridEl.querySelectorAll('.tradeup-card-right').length === limit) updateOutcomes();
@@ -333,8 +333,7 @@ function updateRightPanelForCategory() {
 
         const float = parseFloat(cardEl.querySelector('.tradeup-float-input')?.value) || 0;
         const value = cheapestPrice(cardEl._prices, tierKeyForFloat(float), variant);
-        const pill = cardEl.querySelector('.tradeup-price-pill');
-        if (pill) pill.textContent = value !== null ? `$${value.toFixed(2)}` : 'N/A';
+        applyPrice(cardEl.querySelector('.tradeup-price-pill'), value);
     });
     updateOutcomes(); //cost (and everything derived from it) needs recalculating against the new prices
 }
@@ -358,15 +357,15 @@ async function updateOutcomes(collections, cases, skins) {
 
     const total = cards
         .map(card => card.querySelector('.tradeup-price-pill'))
-        .reduce((sum, pill) => sum + (parseFloat(pill.textContent.replace('$', '')) || 0), 0);
+        .reduce((sum, pill) => sum + (parseFloat(pill.dataset.usd) || 0), 0);
 
     const possibleOutcomes = await renderSkinOutcomes(collections, cases, skins, total);
 
-    //reads straight off the rendered outcome cards (price + probability text), same DOM-parsing approach as `total`
-    //above, rather than the raw possibleOutcomes data - keeps this in sync with whatever's actually on screen
+    //reads straight off the rendered outcome cards (raw usd + probability text), same DOM-reading approach as
+    //`total` above, rather than the raw possibleOutcomes data - keeps this in sync with whatever's actually on screen
     const profitChance = [...document.querySelectorAll('.tradeup-outcome-card')]
         .map(card => ({
-            price: parseFloat(card.querySelector('.tradeup-outcome-price').textContent.replace('$', '')) || 0,
+            price: parseFloat(card.querySelector('.tradeup-outcome-price [data-usd]')?.dataset.usd) || 0,
             probability: parseFloat(card.querySelector('.probability-per-skin').textContent.replace('%', '')) || 0,
         }))
         .filter(({ price }) => price > total)
@@ -384,15 +383,15 @@ async function updateOutcomes(collections, cases, skins) {
     let maxLoss = 0;
     if (pricedOutcomes.length) {
         const prices = pricedOutcomes.map(skin => skin.price);
-        maxProfit = (Math.max(...prices) - total).toFixed(2);
-        maxLoss = (Math.min(...prices) - total).toFixed(2);
+        maxProfit = Math.max(...prices) - total;
+        maxLoss = Math.min(...prices) - total;
     }
 
-    const expectedValue = pricedOutcomes.reduce((sum, skin) => sum + (skin.probability ?? 0) * skin.price, 0).toFixed(2);
+    const expectedValue = pricedOutcomes.reduce((sum, skin) => sum + (skin.probability ?? 0) * skin.price, 0);
     const profitability = total > 0 ? (expectedValue / total * 100).toFixed(2) : 0;
-    const averageProfit = (expectedValue - total).toFixed(2);
+    const averageProfit = expectedValue - total;
 
-    document.getElementById('tradeup-outcomes').outerHTML = outcomes({ cost: total.toFixed(2), averageFloat, profitChance, profitability, averageProfit, maxProfit, maxLoss });
+    document.getElementById('tradeup-outcomes').outerHTML = outcomes({ cost: total, averageFloat, profitChance, profitability, averageProfit, maxProfit, maxLoss });
 }
 
 function outcomes({ averageFloat = 0, cost = 0, profitChance = 0, profitability = 0, averageProfit = 0, maxProfit = 0, maxLoss = 0 } = {}) {
@@ -408,7 +407,7 @@ function outcomes({ averageFloat = 0, cost = 0, profitChance = 0, profitability 
             </div>
             <div class="tradeup-outcome-stat">
                 <span class="tradeup-outcome-label">Cost</span>
-                <span class="tradeup-outcome-value" id="tradeup-outcome-value">$${cost}</span>
+                <span class="tradeup-outcome-value" id="tradeup-outcome-value">${priceSpan(cost)}</span>
             </div>
             <div class="tradeup-outcome-stat">
                 <span class="tradeup-outcome-label">Profit Chances</span>
@@ -420,15 +419,15 @@ function outcomes({ averageFloat = 0, cost = 0, profitChance = 0, profitability 
             </div>
             <div class="tradeup-outcome-stat">
                 <span class="tradeup-outcome-label">Average Profit</span>
-                <span class="tradeup-outcome-value ${averageProfitClass}">$${averageProfit}</span>
+                <span class="tradeup-outcome-value ${averageProfitClass}">${priceSpan(averageProfit)}</span>
             </div>
             <div class="tradeup-outcome-stat">
                 <span class="tradeup-outcome-label">Max Profit</span>
-                <span class="tradeup-outcome-value tradeup-outcome-value--positive">$${maxProfit}</span>
+                <span class="tradeup-outcome-value tradeup-outcome-value--positive">${priceSpan(maxProfit)}</span>
             </div>
             <div class="tradeup-outcome-stat">
                 <span class="tradeup-outcome-label">Max Loss</span>
-                <span class="tradeup-outcome-value tradeup-outcome-value--negative">$${maxLoss}</span>
+                <span class="tradeup-outcome-value tradeup-outcome-value--negative">${priceSpan(maxLoss)}</span>
             </div>
         </div>
     </div>`;
@@ -468,9 +467,13 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
         maxFloat: card._skin.maxFloat,
     }));
 
-    const filteredOutcomes = skinOutcomeARR.filter(entry => entry.rank === targetRank).map(entry => {
+    const rankFiltered = skinOutcomeARR.filter(entry => entry.rank === targetRank);
+
+    const filteredOutcomes = rankFiltered.map(entry => {
         const [weapon, name] = entry.skin.name.replace(/^★\s*/, '').split('|').map(s => s.trim());
-        const fullSkin = skins.find(s => s.weapon === weapon && s.name === (name ?? null));
+        //contains_rare entries for a phased finish (Doppler/Gamma Doppler) share the same `name` across all
+        //phases, so phase is matched too to resolve each entry to its own correct skins.json row
+        const fullSkin = skins.find(s => s.weapon === weapon && s.name === (name ?? null) && s.phase === (entry.skin.phase ?? null));
         const minFloat = fullSkin?.minFloat ?? 0;
         const maxFloat = fullSkin?.maxFloat ?? 1;
         const outputFloat = calculateOutcomeFloat(inputs, minFloat, maxFloat);
@@ -497,12 +500,12 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
 
     const cardsHTML = pricedOutcomes.map(skin => {
         const outputFloat = skin.outputFloat.toFixed(5);
-        const profit = skin.price !== null ? (skin.price - total).toFixed(2) : '' 
+        const profit = skin.price !== null ? skin.price - total : null;
         const [weapon, name] = skin.name.split('|').map(n => n.trim());
         const cardClass = skin.price === null ? '' : skin.price > total ? 'tradeup-outcome-card--positive' : 'tradeup-outcome-card--negative';
         return `
         <div class="skin-card tradeup-outcome-card ${cardClass}">
-            <div class="profit-per-skin">${profit > 0 ? '+' : ''}${profit}$</div>
+            <div class="profit-per-skin">${profit !== null ? (profit > 0 ? '+' : '') + priceSpan(profit) : ''}</div>
             <div class="probability-per-skin">${formatProbability(skin.probability)}</div>
             ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
             <div class="tradeup-meta-row">
@@ -519,7 +522,7 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
                 <p class="tradeup-outcome-skin">${name ?? ''}  ${skin.phase ? `- ${skin.phase}` : ''}${isStatTrak ? ' <sup class="stattrak-badge">StatTrak™</sup>' : ''}</p>
             </div>
             <p class="tradeup-outcome-float">${tierKeyForFloat(outputFloat)} - ${outputFloat}</p>
-            <p class="tradeup-outcome-price">${skin.price !== null ? `$${skin.price.toFixed(2)}` : 'N/A'}</p>
+            <p class="tradeup-outcome-price">${priceSpan(skin.price)}</p>
         </div>`;
     });
 
@@ -654,15 +657,10 @@ export function renderTradeup() {
         </div>
     `;
     return Promise.all([getSkins(), getCollections(), getCases(), getPrices()]).then(([skins, collections, cases]) => {
-        
-        //"Limited Edition Item" isn't a real skin collection - it's a catch-all bucket the API uses for armory pass
-        //weapons, which don't work like normal collections and can't be traded up
         const tradeUpData = collections.filter(c => c.name !== 'Limited Edition Item').map(c => {
             const linkedCaseIds = c.crates.map(crate => crate.id);
             const matchedCase = cases.find(cs => linkedCaseIds.includes(cs.id));
-            const hasGold = !!matchedCase; //every real Case has a non-empty contains_rare, so a match is enough
-            //gloves can never be StatTrak in the real game, unlike knives - every item in one case's contains_rare
-            //is the same category (a case never mixes knives and gloves), so checking just the first entry is enough
+            const hasGold = !!matchedCase; 
             const goldIsGloves = hasGold && skins.find(s => s.weapon === parseRareItemName(matchedCase.contains_rare[0]?.name ?? '').model)?.category === 'Gloves';
             const parsed = c.contains.map(item => {
                 const [weapon, skin] = item.name.split('|').map(s => s.trim());
@@ -684,9 +682,7 @@ export function renderTradeup() {
         const grid = document.getElementById('tradeupGrid');
         const sentinel = document.getElementById('tradeupSentinel');
         if (!grid) return;
-
-        //flat {skin, collection, collectionImage, goldIsGloves} per tradeupable skin - raw objects, not pre-rendered
-        //HTML, so search can filter by name/weapon
+        
         const allSkins = tradeUpData.flatMap(({ collection, collectionImage, goldIsGloves, tradeupable }) =>
             tradeupable.map(skin => ({ skin, collection, collectionImage, goldIsGloves })));
         if (!allSkins.length) {
@@ -714,8 +710,8 @@ export function renderTradeup() {
                 const { skin } = next[i];
                 getPrices(skin.defIndex, skin.paintIndex).then(prices => {
                     const { low, high } = priceRangeFor(skin, prices, variant);
-                    cardEl.querySelector('.tradeup-price-low').textContent = low !== null ? `$${low.toFixed(2)}` : 'N/A';
-                    cardEl.querySelector('.tradeup-price-high').textContent = high !== null ? `$${high.toFixed(2)}` : 'N/A';
+                    applyPrice(cardEl.querySelector('.tradeup-price-low'), low);
+                    applyPrice(cardEl.querySelector('.tradeup-price-high'), high);
                 });
             });
         }
@@ -723,8 +719,8 @@ export function renderTradeup() {
         const observer = new IntersectionObserver(entries => {
             if (entries[0].isIntersecting) renderNextBatch();
         }, {
-            root: grid.closest('.tradeup-left'), //the left column scrolls independently now, not the page - intersection
-            rootMargin: '300px' //has to be measured against that scroll container instead of the default (page viewport)
+            root: grid.closest('.tradeup-left'), //the left column scrolls independently, not the page
+            rootMargin: '300px'
         });
 
         renderNextBatch();
@@ -844,7 +840,7 @@ export function renderTradeup() {
             if (floatInput) {
                 const card = floatInput.closest('.tradeup-card-right');
                 const value = cheapestPrice(card._prices, tierKeyForFloat(parseFloat(floatInput.value) || 0));
-                card.querySelector('.tradeup-price-pill').textContent = value !== null ? `$${value.toFixed(2)}` : 'N/A';
+                applyPrice(card.querySelector('.tradeup-price-pill'), value);
                 const limit = card.dataset.rarity === 'Covert' ? 5 : 10;
                 const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
                 if (cardNum === limit) updateOutcomes(collections, cases, skins);
@@ -853,7 +849,9 @@ export function renderTradeup() {
             const priceInput = e.target.closest('.tradeup-price-popup-input');
             if (priceInput) {
                 const card = priceInput.closest('.tradeup-card-right');
-                card.querySelector('.tradeup-price-pill').textContent = `$${priceInput.value || 0}`;
+                //typed against whatever currency is currently displayed, so it's converted back to usd for storage -
+                //everything else in this file works in usd internally and only converts at render time
+                applyPrice(card.querySelector('.tradeup-price-pill'), toUsd(parseFloat(priceInput.value) || 0));
                 const limit = card.dataset.rarity === 'Covert' ? 5 : 10;
                 const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
                 if (cardNum === limit) updateOutcomes(collections, cases, skins);
@@ -911,7 +909,7 @@ export function renderTradeup() {
         //isn't a persistent sort applied to the whole underlying pool
         function sortVisibleCards(sortBy) {
             const priced = [...grid.querySelectorAll('.tradeup-card')].map(card => {
-                const low = parseFloat(card.querySelector('.tradeup-price-low')?.textContent.replace('$', ''));
+                const low = parseFloat(card.querySelector('.tradeup-price-low')?.dataset.usd);
                 return { card, price: Number.isNaN(low) ? null : low }; //still-loading ("…") or genuinely unpriced ("N/A") both parse to null here
             });
             priced.sort((a, b) => {

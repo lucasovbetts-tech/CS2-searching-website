@@ -424,12 +424,6 @@ body {
     color: var(--text-sec);
 }
 
-.locale-divider {
-    height: 1px;
-    background: var(--border);
-    margin: 0 -2px;
-}
-
 /* ── Custom Select ── */
 
 .custom-select {

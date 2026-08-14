@@ -3,6 +3,7 @@ import { getSkinByIndex } from '../api/skins.js';
 import { getMarkets } from '../api/markets.js';
 import { wearTiersFor } from '../utils/wear-tiers.js';
 import { formatSupply, formatDate } from '../utils/format.js';
+import { priceSpan } from '../utils/currency.js';
 
 //same darken/gradient look the explore skin-cards use, kept in sync by hand since there's no shared module for it yet
 function darken(hex, factor) {
@@ -57,7 +58,7 @@ function renderPriceGrid(s, prices, markets) {
             if (!cell) return `<span class="skin-price-col${stattrakClass}">—</span>`;
             const [market, data] = cell;
             const logo = markets[market]?.logo;
-            const inner = `${logo ? `<img class="skin-price-col-logo" src="${logo}" alt="${market}">` : ''}$${data.price.toFixed(2)}`;
+            const inner = `${logo ? `<img class="skin-price-col-logo" src="${logo}" alt="${market}">` : ''}${priceSpan(data.price)}`;
             return data.link
                 ? `<a class="skin-price-col${stattrakClass}" href="${data.link}" target="_blank" rel="noopener">${inner}</a>`
                 : `<span class="skin-price-col${stattrakClass}">${inner}</span>`;
@@ -68,8 +69,7 @@ function renderPriceGrid(s, prices, markets) {
 }
 
 //FT is the most commonly-traded tier, so it's preferred as "the" price to show for a skin; falls back down
-//the list for skins that don't span FT (e.g. most knives only run Factory New - Minimal Wear). Same fallback
-//order the old (deleted) cs2cap.js used for its single representative-cell fetch. Normal variant only.
+//the list for skins that don't span FT (e.g. most knives only run Factory New - Minimal Wear)
 const TIER_PRIORITY = ['FT', 'FN', 'MW', 'WW', 'BS'];
 
 function representativeTierPrices(prices) {
@@ -91,7 +91,7 @@ function renderMarketListings(prices, markets) {
     <div class="market-listings">
         ${entries.map(([key, data]) => {
             const logo = markets[key]?.logo;
-            const inner = `${logo ? `<img src="${logo}" alt="${key}">` : ''}$${data.price.toFixed(2)}`;
+            const inner = `${logo ? `<img src="${logo}" alt="${key}">` : ''}${priceSpan(data.price)}`;
             return data.link
                 ? `<a class="market-pill" href="${data.link}" target="_blank" rel="noopener">${inner}</a>`
                 : `<span class="market-pill">${inner}</span>`;
@@ -99,8 +99,8 @@ function renderMarketListings(prices, markets) {
     </div>`;
 }
 
-//total supply is only ever populated for weapon skins (confirmed empirically - every other CS2Cap item type
-//returns null for it), release date is populated much more broadly - each renders only when actually present
+//total supply is only ever populated for weapon skins, release date is populated much more broadly -
+//each renders only when actually present
 function renderDetailStats(item) {
     const stats = [
         item.totalSupply != null ? { label: 'Total Supply', value: formatSupply(item.totalSupply) } : null,

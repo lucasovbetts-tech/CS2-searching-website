@@ -46,7 +46,7 @@
 
             <div class="header-divider"></div>
 
-            <!-- Language / Currency picker -->
+            <!-- Currency picker -->
             <div class="locale-picker" id="localePicker">
                 <button class="locale-btn" id="localeBtn" aria-expanded="false" aria-haspopup="true">
                     <svg class="locale-globe" viewBox="0 0 24 24" fill="none">
@@ -57,41 +57,13 @@
                         <path d="M3.6 8.5h16.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                         <path d="M3.6 15.5h16.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
-                    <span id="localeLabel">EN / USD</span>
+                    <span id="localeLabel">USD</span>
                     <svg class="locale-chevron" viewBox="0 0 24 24" fill="none">
                         <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
 
                 <div class="locale-popup" id="localePopup">
-                    <div class="locale-section">
-                        <span class="locale-section-label">Language</span>
-                        <div class="custom-select" id="langSelect">
-                            <button class="custom-select-btn" type="button">
-                                <span class="custom-select-val">English</span>
-                                <svg viewBox="0 0 24 24" fill="none" class="select-chevron">
-                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                            <div class="custom-select-list">
-                                <button class="custom-select-opt active" data-value="en" type="button">English</button>
-                                <button class="custom-select-opt" data-value="es" type="button">Spanish — Español</button>
-                                <button class="custom-select-opt" data-value="fr" type="button">French — Français</button>
-                                <button class="custom-select-opt" data-value="de" type="button">German — Deutsch</button>
-                                <button class="custom-select-opt" data-value="pt" type="button">Portuguese — Português</button>
-                                <button class="custom-select-opt" data-value="ru" type="button">Russian — Русский</button>
-                                <button class="custom-select-opt" data-value="zh" type="button">Chinese — 中文</button>
-                                <button class="custom-select-opt" data-value="ja" type="button">Japanese — 日本語</button>
-                                <button class="custom-select-opt" data-value="ko" type="button">Korean — 한국어</button>
-                                <button class="custom-select-opt" data-value="ar" type="button">Arabic — العربية</button>
-                                <button class="custom-select-opt" data-value="tr" type="button">Turkish — Türkçe</button>
-                                <button class="custom-select-opt" data-value="it" type="button">Italian — Italiano</button>
-                                <button class="custom-select-opt" data-value="nl" type="button">Dutch — Nederlands</button>
-                                <button class="custom-select-opt" data-value="pl" type="button">Polish — Polski</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="locale-divider"></div>
                     <div class="locale-section">
                         <span class="locale-section-label">Currency</span>
                         <div class="custom-select" id="currSelect">

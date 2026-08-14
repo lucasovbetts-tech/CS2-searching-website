@@ -175,8 +175,8 @@ test('Spectrum Black Pearl, conditional on Doppler = 2.00%', () => {
 });
 
 //--- Chroma 2 / Chroma 3: share Chroma 1's skewed finish weight AND its skewed phase table -------------------
-//Real data confirmed: Chroma 2 (crate-4089) and Chroma 3 (crate-4233) have the identical 5-model/6-finish
-//shape as Chroma 1, so the same fixture list is reused with a different caseId for each.
+//Chroma 2 (crate-4089) and Chroma 3 (crate-4233) have the identical 5-model/6-finish shape as Chroma 1,
+//so the same fixture list is reused with a different caseId for each.
 
 test('Chroma 2 and Chroma 3 Doppler finish share = 40.48% (same skew as Chroma 1)', () => {
     for (const caseId of [CHROMA_2_CASE_ID, CHROMA_3_CASE_ID]) {
@@ -267,9 +267,9 @@ test('computeStandardOutcomeProbability throws on 0 reachable outputs rather tha
 });
 
 test('computeStandardOutcomes emits one row per output skin, and each group sums to its true share', () => {
-    //differing output counts per collection on purpose - this is exactly the shape the old bug collapsed:
-    //7/10 inputs from a collection with 4 outputs, 3/10 from one with only 2. Group shares must land on
-    //0.7/0.3 regardless of the output count on either side, not get diluted by it.
+    //differing output counts per collection on purpose - 7/10 inputs from a collection with 4 outputs,
+    //3/10 from one with only 2. Group shares must land on 0.7/0.3 regardless of the output count on
+    //either side, not get diluted by it.
     const groups = new Map([['Collection A', 7], ['Collection B', 3]]);
     const outputNames = new Map([
         ['Collection A', ['A1', 'A2', 'A3', 'A4']],
@@ -355,8 +355,8 @@ test('a full Gamma Case contract still sums to 1', () => {
 });
 
 test('UNVERIFIED_PHASED_FINISHES still exists as a mechanism and still throws for a genuinely unknown finish', () => {
-    //Gamma Doppler is verified now, but the guard itself must still work for whatever the next unverified
-    //phased finish turns out to be - simulate one via a fixture case that mixes in a made-up phased finish.
+    //the guard must still work for whatever the next unverified phased finish turns out to be -
+    //simulate one via a fixture case that mixes in a made-up phased finish.
     const madeUpPool = ['★ Fake Knife | Doppler', '★ Fake Knife | Made-Up Future Phased Finish'];
     //this doesn't throw on its own (Made-Up... isn't in KNOWN_PHASED_FINISHES, so it's just treated as flat) -
     //the real guard is UNVERIFIED_PHASED_FINISHES, which is asserted empty-but-present rather than deleted
@@ -366,10 +366,9 @@ test('UNVERIFIED_PHASED_FINISHES still exists as a mechanism and still throws fo
 //--- item 6: StatTrak entries in contains_rare (verified absent - see below) ---------------------------------
 
 test('real contains_rare pools never include a StatTrak-prefixed entry (Chroma 1, Spectrum, Gamma)', () => {
-    //Checked directly against crates.json on 2026-08-11: 0 StatTrak entries across every case's contains_rare
-    //in the whole dataset. This asserts that against the fixtures so a future API change that starts including
-    //them fails loudly here, instead of silently inflating modelCount (parseRareItemName doesn't strip
-    //"StatTrak™", so a StatTrak entry would parse to a distinct, wrong model name).
+    //asserts this against the fixtures so a future API change that starts including StatTrak entries fails
+    //loudly here, instead of silently inflating modelCount (parseRareItemName doesn't strip "StatTrak™",
+    //so a StatTrak entry would parse to a distinct, wrong model name).
     for (const raw of [...CHROMA_CONTAINS_RARE, ...SPECTRUM_CONTAINS_RARE, ...GAMMA_CONTAINS_RARE]) {
         const { model } = parseRareItemName(raw);
         assert.ok(!model.includes('StatTrak'), `unexpected StatTrak entry: ${raw}`);
@@ -379,9 +378,9 @@ test('real contains_rare pools never include a StatTrak-prefixed entry (Chroma 1
 //--- item 7: the dedupe assumption (phases are NOT distinguishable by name in contains_rare) -----------------
 
 test('contains_rare really does repeat a phased finish once per phase slot with identical names', () => {
-    //Confirmed directly against crates.json: Chroma Case lists "★ Karambit | Doppler" seven times over (one
-    //per phase), all with the exact same string - there is no way to tell which raw entry is Ruby vs Sapphire
-    //etc. by name alone. dedupeRarePool's collapsing behaviour depends on this being true.
+    //Chroma Case lists "★ Karambit | Doppler" seven times over (one per phase), all with the exact same
+    //string - there is no way to tell which raw entry is Ruby vs Sapphire etc. by name alone.
+    //dedupeRarePool's collapsing behaviour depends on this being true.
     const karambitDoppler = CHROMA_CONTAINS_RARE.filter(n => n === '★ Karambit | Doppler');
     assert.equal(karambitDoppler.length, 7, 'expected 7 identical raw slots, one per Doppler phase');
     assert.equal(new Set(karambitDoppler).size, 1, 'all 7 slots must be string-identical (no phase info in the name)');
@@ -390,7 +389,6 @@ test('contains_rare really does repeat a phased finish once per phase slot with 
 //--- item 8: CHROMA_1_CASE_ID really is "Chroma Case", not Chroma 2/3 ------------------------------------------
 
 test('CHROMA_1_CASE_ID resolves to "Chroma Case" specifically, not Chroma 2 or 3', () => {
-    //Confirmed directly against crates.json on 2026-08-11.
     const realChromaCaseIds = [
         { id: 'crate-4061', name: 'Chroma Case' },
         { id: 'crate-4089', name: 'Chroma 2 Case' },

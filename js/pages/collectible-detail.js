@@ -3,6 +3,7 @@ import { getHighlights } from '../api/highlights.js';
 import { getItemPrice } from '../api/prices.js';
 import { getMarkets } from '../api/markets.js';
 import { formatSupply, formatDate } from '../utils/format.js';
+import { priceSpan } from '../utils/currency.js';
 
 //same darken/gradient look the explore skin-cards use, kept in sync by hand since there's no shared module for it yet
 function darken(hex, factor) {
@@ -99,7 +100,7 @@ function lowestPrice(prices) {
     if (!prices) return PRICE_UNAVAILABLE;
     const values = Object.values(prices);
     if (!values.length) return PRICE_UNAVAILABLE;
-    return `From $${Math.min(...values.map(v => v.price)).toFixed(2)}`;
+    return `From ${priceSpan(Math.min(...values.map(v => v.price)))}`;
 }
 
 //one pill per market that actually has a price for this item - logo + price, cheapest first.
@@ -113,7 +114,7 @@ function renderMarketListings(prices, markets) {
     <div class="market-listings">
         ${entries.map(([key, data]) => {
             const logo = markets[key]?.logo;
-            const inner = `${logo ? `<img src="${logo}" alt="${key}">` : ''}$${data.price.toFixed(2)}`;
+            const inner = `${logo ? `<img src="${logo}" alt="${key}">` : ''}${priceSpan(data.price)}`;
             return data.link
                 ? `<a class="market-pill" href="${data.link}" target="_blank" rel="noopener">${inner}</a>`
                 : `<span class="market-pill">${inner}</span>`;

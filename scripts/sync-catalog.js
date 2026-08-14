@@ -6,6 +6,15 @@ const BYMYKEL_BASE = 'https://raw.githubusercontent.com/ByMykel/CSGO-API/main/pu
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const ENV_PATH = path.join(__dirname, '..', 'server', '.env');
 
+//maps CS2Cap's full wear label to the short code the rest of the app keys by
+const WEAR_NAME_TO_KEY = {
+    'Factory New': 'FN',
+    'Minimal Wear': 'MW',
+    'Field-Tested': 'FT',
+    'Well-Worn': 'WW',
+    'Battle-Scarred': 'BS',
+};
+
 function loadCs2capKey() {
     const envContent = fs.readFileSync(ENV_PATH, 'utf-8');
     const match = envContent.match(/^CS2CAP_API_KEY=(.+)$/m);
@@ -19,8 +28,7 @@ async function fetchByMykel(file) {
     return res.json();
 }
 
-//CS2Cap's catalog has no description field at all, on any item type - ByMykel is kept around just for
-//this one field, keyed by def_index (skins additionally key on paint_index, since one weapon def_index covers many patterns)
+//CS2Cap's catalog has no description field, so ByMykel is kept around just for this one field, keyed by def_index
 function descByDefIndex(byMykelItems) {
     const map = new Map();
     for (const item of byMykelItems) map.set(Number(item.def_index), item.description);
@@ -46,21 +54,15 @@ function writeJson(filename, data) {
 function buildSkins(cs2capItems, byMykelSkins) {
     const descByKey = new Map();
     for (const s of byMykelSkins) {
-        //vanilla knives (no pattern) key on paint_index 0 - Valve's own sentinel for "no paint applied",
-        //matching the 0 given to vanilla knives below
+        //vanilla knives (no pattern) key on paint_index 0, Valve's sentinel for "no paint applied"
         const paintIndex = s.paint_index != null ? Number(s.paint_index) : 0;
         descByKey.set(`${s.weapon.weapon_id}:${paintIndex}`, s.description);
     }
 
-    //one CS2Cap item = one exact tradable listing (skin x wear x StatTrak/souvenir variant), so every
-    //wear/variant row for the same skin gets grouped back into a single skins.json record. Vanilla knives
-    //(item_type Weapon, no skin_name - confirmed live to be exactly the 20 knife types, nothing else) are kept;
-    //everything else with no skin_name (stickers, agents, etc.) already has its own item_type and never reaches here.
-    //
-    //paint_index alone isn't a safe group key: Doppler-family skins (and vanilla knives) all share
-    //paint_index null regardless of which actual skin they are (e.g. Bayonet's Doppler and Gamma Doppler -
-    //two entirely different skins - both key on "500:null"), so skin_name + phase are included too to
-    //keep those apart. Confirmed live: this correctly splits them into separate groups of the right size.
+    //one CS2Cap item = one exact tradable listing (skin x wear x StatTrak/souvenir variant), grouped back
+    //into a single skins.json record per skin. paint_index alone isn't a safe group key - Doppler-family
+    //skins (and vanilla knives) share paint_index null regardless of which actual skin they are, so
+    //skin_name + phase are included too to keep those apart.
     const groups = new Map();
     for (const item of cs2capItems) {
         if (item.item_type !== 'Weapon') continue;
@@ -72,10 +74,8 @@ function buildSkins(cs2capItems, byMykelSkins) {
     return [...groups.values()].flatMap(group => {
         const first = group[0];
         const isVanilla = first.skin_name == null;
-        //paint_index 0 is Valve's real sentinel for "no paint applied", safe to assign to true vanilla knives.
-        //Anything else with a null paint_index (seen for a handful of stray Doppler-family entries whose real
-        //phase-specific versions already exist elsewhere in the catalog with proper distinct paint indices) has
-        //no reliable numeric identity to assign - assigning 0 would collide with vanilla's, so it's dropped instead
+        //paint_index 0 is Valve's sentinel for "no paint applied" - only safe to assign to true vanilla
+        //knives, so anything else with a null paint_index is dropped instead of colliding with that
         if (!isVanilla && first.paint_index == null) return [];
 
         const defIndex = Number(first.def_index);
@@ -100,6 +100,11 @@ function buildSkins(cs2capItems, byMykelSkins) {
             totalSupply: group.reduce((sum, i) => sum + (i.supply || 0), 0),
             defIndex,
             paintIndex,
+            //one skins.json row collapses ~10 raw CS2Cap items (5 wear tiers x normal/StatTrak), so this
+            //keeps each one's item_id keyed by wear code + variant for sync-skin-prices.js to look up
+            itemIds: Object.fromEntries(
+                group.map(i => [`${WEAR_NAME_TO_KEY[i.wear_name] ?? i.wear_name}:${i.is_stattrak ? 'stattrak' : 'normal'}`, i.item_id])
+            ),
         }];
     });
 }
@@ -152,15 +157,12 @@ async function sync() {
     writeJson('music-kits.json', buildSimpleItems(cs2capItems, { itemType: 'Music Kit', descriptions: descByDefIndex(musicKitDesc) }));
     writeJson('graffiti.json', buildSimpleItems(cs2capItems, { itemType: 'Graffiti', descriptions: descByDefIndex(graffitiDesc) }));
     writeJson('stickers.json', buildSimpleItems(cs2capItems, { itemType: 'Sticker', descriptions: descByDefIndex(stickerDesc) }));
-    //kept ungrouped (Pin/Operation Pass/Tournament Pass together) with a type field, same shape ByMykel's
-    //collectibles.json had - getPins() filters client-side same as before
+    //kept ungrouped (Pin/Operation Pass/Tournament Pass together) with a type field - getPins() filters client-side
     writeJson('collectibles.json', buildSimpleItems(cs2capItems, { itemType: 'Collectible', descriptions: descByDefIndex(collectibleDesc), includeType: true }));
-    //cases/capsules/souvenirs intentionally NOT sourced from CS2Cap - it has no "what does this crate contain"
-    //relationship at all (no contains/contains_rare equivalent), which explore.js's case/golds views depend on.
-    //js/api/crates.js stays on ByMykel's live crates.json instead, which has that data.
+    //cases/capsules/souvenirs not sourced from CS2Cap - it has no contains/contains_rare equivalent,
+    //which explore.js's case/golds views need. js/api/crates.js stays on ByMykel's crates.json for that.
 
-    //straight copy - ByMykel is the only source with the actual clip video/thumbnail, CS2Cap's "Highlight Reel"
-    //charm rows have neither, just a generic per-tournament icon
+    //straight copy - ByMykel has the actual clip video/thumbnail, CS2Cap's "Highlight Reel" charms don't
     writeJson('highlights.json', highlights);
 }
 

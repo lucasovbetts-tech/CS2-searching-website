@@ -1,3 +1,5 @@
+import { getCurrency, setCurrency } from '../utils/currency.js';
+
 // Wires up a custom dropdown element; onChange fires with the selected data-value on pick
 function makeSelect(el, onChange) {
     if (!el) return null;
@@ -42,30 +44,45 @@ function makeSelect(el, onChange) {
         onChange(opt.dataset.value);
     });
 
-    return { closeList, getValue };
+    //selects an option programmatically (restoring a saved preference) without simulating a real click
+    function select(value) {
+        const opt = el.querySelector(`.custom-select-opt[data-value="${value}"]`);
+        if (!opt) return;
+        el.querySelectorAll('.custom-select-opt').forEach(o => o.classList.remove('active'));
+        opt.classList.add('active');
+        valEl.textContent = opt.textContent;
+    }
+
+    return { closeList, getValue, select };
 }
 
 export function initLocale() {
     const btn    = document.getElementById('localeBtn');
     const popup  = document.getElementById('localePopup');
     const label  = document.getElementById('localeLabel');
-    const langEl = document.getElementById('langSelect');
     const currEl = document.getElementById('currSelect');
 
     if (!btn) return;
 
-    function updateLabel(langVal, currVal) {
-        const l = langVal.toUpperCase();
-        label.textContent = `${l} / ${currVal}`;
+    function updateLabel(currVal) {
+        label.textContent = currVal;
     }
 
-    const langSel = makeSelect(langEl, val => updateLabel(val, currSel.getValue()));
-    const currSel = makeSelect(currEl, val => updateLabel(langSel.getValue(), val));
+    const currSel = makeSelect(currEl, val => {
+        setCurrency(val);
+        updateLabel(val);
+    });
+
+    //the dropdown defaults to USD in the HTML - restore whatever was actually saved from last time
+    const savedCurrency = getCurrency();
+    if (savedCurrency !== currSel.getValue()) {
+        currSel.select(savedCurrency);
+        updateLabel(savedCurrency);
+    }
 
     popup.addEventListener('click', e => {
         e.stopPropagation();
         if (!e.target.closest('.custom-select')) {
-            langSel.closeList();
             currSel.closeList();
         }
     });
@@ -80,7 +97,6 @@ export function initLocale() {
         popup.classList.remove('open');
         btn.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
-        langSel.closeList();
         currSel.closeList();
     }
 
