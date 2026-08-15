@@ -21,10 +21,33 @@ const RARITY_RANK = {
 const GOLD_RANK = 0;
 const BATCH_SIZE = 50;
 
+//snapshot of the right panel, taken right before navigating away to a skin's detail page so pressing back
+//can restore it - cleared once restored (or on an explicit reset) so a later fresh visit starts blank again
+let savedTradeupState = null;
+
+function saveTradeupState() {
+    const cards = [...document.querySelectorAll('#tradeup-right .tradeup-card-right')];
+    if (!cards.length) { savedTradeupState = null; return; }
+    savedTradeupState = {
+        category: currentCategory(),
+        cards: cards.map(card => ({
+            weapon: card.dataset.weapon,
+            name: card.dataset.name,
+            float: parseFloat(card.querySelector('.tradeup-float-input')?.value) || 0,
+        })),
+    };
+}
+
 //same breakpoints WEAR_TIERS already defines (0.07/0.15/0.38/0.45) - reused instead of a second copy so this can't
 //drift out of sync, and so the returned key ('FN'/'MW'/...) matches exactly what getPrices()'s data is keyed by
 function tierKeyForFloat(float) {
     return (WEAR_TIERS.find(t => float < t.max) || WEAR_TIERS[WEAR_TIERS.length - 1]).key;
+}
+
+//rounds to at most 5 decimals without padding trailing zeros (0.02000 -> 0.02, 0.123456 -> 0.12346) -
+//converting back to a number drops them since numbers don't carry formatting, only their string form does
+function formatFloat(n) {
+    return Number(n.toFixed(5));
 }
 
 //cheapest market for a given wear-tier/variant cell - same "cheapest across providers" approach skin-detail.js
@@ -238,7 +261,7 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
     //0.035 isn't valid for every skin (some have a minFloat above it, or a maxFloat below it) - can't be a fixed
     //default parameter value since skin isn't resolved yet at that point. Falls back to this specific skin's own
     //minFloat + 0.02 instead, which is always a guaranteed-valid float for it
-    if (float === null) float = (skin.minFloat + 0.02).toFixed(5);
+    if (float === null) float = formatFloat(skin.minFloat + 0.02);
     const stattrakSuffix = currentCategory() === 'StatTrak' ? ' <sup class="stattrak-badge">StatTrak™</sup>' : '';
     const cardHTML = `
         <div class="skin-card tradeup-card-right" data-weapon="${skin.weapon}" data-name="${skin.name}" data-rarity="${skin.rarity.name}" data-collection="${collection}" style="background: ${rarityGradient(skin.rarity.color)}">
@@ -374,7 +397,7 @@ async function updateOutcomes(collections, cases, skins) {
     let averageFloat = 0;
     if (possibleOutcomes.length) {
         const floatSum = possibleOutcomes.reduce((sum, skin) => sum + skin.outputFloat, 0);
-        averageFloat = (floatSum / possibleOutcomes.length).toFixed(5);
+        averageFloat = formatFloat(floatSum / possibleOutcomes.length);
     }
 
     //profit/loss only makes sense against outcomes that actually got a real price back
@@ -489,22 +512,23 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
     const variant = isStatTrak ? 'stattrak' : 'normal';
 
     const pricedOutcomes = await Promise.all(skinsProbability.map(async ({ fullSkin, ...skin }) => {
-        if (!fullSkin) return { ...skin, price: null };
+        if (!fullSkin) return { ...skin, price: null, defIndex: null, paintIndex: null };
         const prices = await getPrices(fullSkin.defIndex, fullSkin.paintIndex);
         const price = cheapestPrice(prices, tierKeyForFloat(skin.outputFloat), variant);
-        return { ...skin, price };
+        return { ...skin, price, defIndex: fullSkin.defIndex, paintIndex: fullSkin.paintIndex };
     }));
 
     //most expensive first - null (?? -Infinity) sinks unpriced "N/A" cards to the bottom instead of NaN-ing the sort
     pricedOutcomes.sort((a, b) => (b.price ?? -Infinity) - (a.price ?? -Infinity));
 
     const cardsHTML = pricedOutcomes.map(skin => {
-        const outputFloat = skin.outputFloat.toFixed(5);
+        const outputFloat = formatFloat(skin.outputFloat);
         const profit = skin.price !== null ? skin.price - total : null;
         const [weapon, name] = skin.name.split('|').map(n => n.trim());
         const cardClass = skin.price === null ? '' : skin.price > total ? 'tradeup-outcome-card--positive' : 'tradeup-outcome-card--negative';
+        const linkAttrs = skin.defIndex != null ? `data-def="${skin.defIndex}" data-paint="${skin.paintIndex}"` : '';
         return `
-        <div class="skin-card tradeup-outcome-card ${cardClass}">
+        <div class="skin-card tradeup-outcome-card ${cardClass}" ${linkAttrs}>
             <div class="profit-per-skin">${profit !== null ? (profit > 0 ? '+' : '') + priceSpan(profit) : ''}</div>
             <div class="probability-per-skin">${formatProbability(skin.probability)}</div>
             ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
@@ -742,6 +766,14 @@ export function renderTradeup() {
             applyFilters();
         }
 
+        //same idea as setRarity, but for Category - no filtering side effect of its own, callers trigger that separately
+        function setCategory(value) {
+            const list = categoryField.querySelector('.custom-select-list');
+            const val = categoryField.querySelector('.tf-select-val');
+            list.querySelectorAll('.custom-select-opt').forEach(o => o.classList.toggle('active', o.dataset.value === value));
+            val.textContent = value;
+        }
+
         function syncRarityLock() {
             const lockedCard = rightGrid.querySelector('.tradeup-card-right');
             rarityField.classList.toggle('tf-field--locked', !!lockedCard);
@@ -765,6 +797,21 @@ export function renderTradeup() {
             }
         }
 
+        //restores whatever was picked before navigating away to a skin's detail page (see saveTradeupState) -
+        //category has to be set before the cards are re-added since renderTradeupRight prices each one against
+        //whatever currentCategory() returns at the time
+        if (savedTradeupState) {
+            const { category, cards } = savedTradeupState;
+            savedTradeupState = null;
+            setCategory(category);
+            cards.forEach(({ weapon, name, float }) => renderTradeupRight(weapon, name, allSkins, float));
+            syncRarityLock();
+            syncSlotCount();
+            const rarity = rarityField.querySelector('.custom-select-opt.active')?.dataset.value;
+            const limit = rarity === 'Covert' ? 5 : 10;
+            if (rightGrid.querySelectorAll('.tradeup-card-right').length === limit) updateOutcomes(collections, cases, skins);
+        }
+
         //===================CLICK LISTENERS============================
         grid.addEventListener('click', e => {
             const card = e.target.closest('.tradeup-card');
@@ -782,7 +829,15 @@ export function renderTradeup() {
             }
         })
 
+        document.getElementById('tradeupPossibleOutcomes')?.addEventListener('click', e => {
+            const card = e.target.closest('.tradeup-outcome-card');
+            if (!card || !card.dataset.def) return; //no def/paint - couldn't resolve this outcome to a real skin
+            saveTradeupState();
+            window.location.hash = '#/skin/' + card.dataset.def + '-' + card.dataset.paint;
+        });
+
         document.getElementById('tradeupReset')?.addEventListener('click', () => {
+            savedTradeupState = null;
             rightGrid.innerHTML = Array(10).fill(renderTradeupSlotPlaceholder()).join('');
             syncRarityLock();
             updateOutcomes(collections, cases, skins);
@@ -839,7 +894,8 @@ export function renderTradeup() {
             const floatInput = e.target.closest('.tradeup-float-input');
             if (floatInput) {
                 const card = floatInput.closest('.tradeup-card-right');
-                const value = cheapestPrice(card._prices, tierKeyForFloat(parseFloat(floatInput.value) || 0));
+                const variant = currentCategory() === 'StatTrak' ? 'stattrak' : 'normal';
+                const value = cheapestPrice(card._prices, tierKeyForFloat(parseFloat(floatInput.value) || 0), variant);
                 applyPrice(card.querySelector('.tradeup-price-pill'), value);
                 const limit = card.dataset.rarity === 'Covert' ? 5 : 10;
                 const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
