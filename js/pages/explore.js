@@ -7,22 +7,6 @@ import { getHighlights } from '../api/highlights.js';
 import { getPrices, getItemPrice } from '../api/prices.js';
 import { priceSpan } from '../utils/currency.js';
 
-console.log(
-    'getStickerCapsules', await getStickerCapsules(),
-    'getSouvenirPackages', await getSouvenirPackages(),
-    'getNonTournamentStickerCapsules', await getNonTournamentStickerCapsules(),
-    'getCases', await getCases(),
-    'getSkins', await getSkins(),
-    'getAgents', await getAgents(),
-    'getCharms', await getCharms(),
-    'getPatches', await getPatches(),
-    'getMusicKits', await getMusicKits(),
-    'getGraffiti', await getGraffiti(),
-    'getPins', await getPins(),
-    'getCollections', await getCollections(),
-    'getHighlights', await getHighlights()
-);
-
 function darken(hex, factor) {
     const r = parseInt(hex.slice(1, 3), 16);
     const g = parseInt(hex.slice(3, 5), 16);

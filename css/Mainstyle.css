@@ -24,6 +24,27 @@
     box-sizing: border-box;
 }
 
+/* ── Scrollbars ── */
+/* Hidden everywhere - scrolling itself still works exactly as before (wheel, trackpad,
+   touch, keyboard, scroll-into-view), only the visual bar is gone. Needs all three:
+   scrollbar-width for Firefox, -ms-overflow-style for legacy Edge, and the
+   ::-webkit-scrollbar pseudo for Chrome/Safari/Edge. */
+
+html,
+body,
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
 /* ── Base ── */
 
 body {
@@ -485,17 +506,6 @@ body {
     transform: translateY(-6px);
     pointer-events: none;
     transition: opacity 0.18s ease, transform 0.18s ease;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(168, 85, 247, 0.3) transparent;
-}
-
-.custom-select-list::-webkit-scrollbar {
-    width: 4px;
-}
-
-.custom-select-list::-webkit-scrollbar-thumb {
-    background: rgba(168, 85, 247, 0.3);
-    border-radius: 4px;
 }
 
 .custom-select-list.open {

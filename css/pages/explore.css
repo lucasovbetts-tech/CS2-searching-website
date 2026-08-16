@@ -50,17 +50,6 @@
        button, not flush against it; padding shifts content back in so buttons still render at the original width */
     margin: 0 -16px;
     padding: 0 16px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
-}
-
-.category-sidebar-list::-webkit-scrollbar {
-    width: 4px;
-}
-
-.category-sidebar-list::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 2px;
 }
 
 .sideBarSearch-wrap {

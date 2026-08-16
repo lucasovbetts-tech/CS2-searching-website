@@ -1,14 +1,10 @@
+import { cachedJson } from './json-cache.js';
+
 const CRATES_URL = 'https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/crates.json';
 
-let _cache = null;
-
-async function getCrates() {
-    if (_cache) return _cache;
-    const res = await fetch(CRATES_URL);
-    if (!res.ok) throw new Error('Failed to load crates.json');
-    _cache = await res.json();
-    return _cache;
-}
+//every exported function below reads the same file, and callers routinely ask for several at once
+//(search.js requests five in one Promise.all) - the shared promise keeps that to a single download
+const getCrates = cachedJson(CRATES_URL, 'Failed to load crates.json');
 
 const TOURNAMENT_PATTERN = /Legends|Challengers|Contenders/i; //matches per-team Major/RMR sticker capsules, e.g. "Katowice 2019 Legends"
 

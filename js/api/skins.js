@@ -1,11 +1,9 @@
-let _cache = null;
+import { cachedJson } from './json-cache.js';
+
+const loadSkins = cachedJson('data/skins.json', 'Failed to load skins.json');
 
 export async function getSkins() {
-    if (_cache) return _cache;
-    const res = await fetch('data/skins.json');
-    if (!res.ok) throw new Error('Failed to load skins.json');
-    _cache = await res.json();
-    return _cache;
+    return loadSkins();
 }
 
 export async function getSkinsByWeapon(weapon) {

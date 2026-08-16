@@ -93,13 +93,6 @@ document.addEventListener('click', e => {
         .forEach(el => el.classList.remove('open'));
 });
 
-//closes any open custom-price popup when the click lands outside both the popup itself and the edit button that
-//opens it - those two are excluded so opening/interacting with the popup doesn't immediately close itself
-document.addEventListener('click', e => {
-    if (e.target.closest('.tradeup-price-popup') || e.target.closest('.tradeup-edit-btn')) return;
-    document.querySelectorAll('.tradeup-price-popup.open').forEach(p => p.classList.remove('open'));
-});
-
 
 function darken(hex, factor) {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -268,10 +261,6 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
             <div class="tradeup-price-row">
                 <span class="tradeup-price-pill">…</span>
             </div>
-                <div class="tradeup-price-popup">
-                    <label class="tf-label">Custom Price:</label>
-                    <input class="tradeup-price-popup-input" type="number" min="0" step="0.01" placeholder="Enter price">
-                </div>
             ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.weapon} | ${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
             <div class="tradeup-meta-row">
                 <span class="tradeup-collection-wrap" data-tooltip="${collection}">
@@ -340,6 +329,8 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
     } else {
         getPrices(skin.defIndex, skin.paintIndex).then(applyPrices);
     }
+
+    return cardEl;
 }
 
 //Category changed while cards already sit in the right panel - patches each one's name/price in place rather than
@@ -361,13 +352,22 @@ function updateRightPanelForCategory() {
     updateOutcomes(); //cost (and everything derived from it) needs recalculating against the new prices
 }
 
+//one shared popup for the whole page rather than one per card - a fixed-position element nested inside a card
+//stops being fixed to the viewport the moment that card gets a hover transform (transform on an ancestor creates
+//a new containing block for fixed descendants), which is what made it jump around when hovering other cards
+let activePriceCard = null;
+
 function editPrice(card) {
-    const popup = card.querySelector('.tradeup-price-popup');
-    document.querySelectorAll('.tradeup-price-popup.open').forEach(p => {
-        if (p !== popup) p.classList.remove('open');
-    });
-    
-    popup.classList.toggle('open');
+    const popup = document.getElementById('tradeupPricePopup');
+    if (!popup) return;
+    if (popup.classList.contains('open') && activePriceCard === card) {
+        popup.classList.remove('open');
+        activePriceCard = null;
+        return;
+    }
+    activePriceCard = card;
+    popup.querySelector('.tradeup-price-popup-input').value = '';
+    popup.classList.add('open');
 }
 
 async function updateOutcomes(collections, cases, skins) {
@@ -678,6 +678,14 @@ export function renderTradeup() {
                     <div class="tradeup-possible-outcomes" id="tradeupPossibleOutcomes"></div>
                 </div>
             </div>
+            <div class="tradeup-price-popup" id="tradeupPricePopup">
+                <div class="tradeup-price-popup-box">
+                    <button class="tradeup-price-popup-close" type="button" aria-label="Close">×</button>
+                    <label class="tf-label">Custom Price:</label>
+                    <input class="tradeup-price-popup-input" id="tradeupPricePopupInput" type="number" min="0" step="0.01" placeholder="Enter price">
+                    <button class="tradeup-price-popup-update" type="button">Update</button>
+                </div>
+            </div>
         </div>
     `;
     return Promise.all([getSkins(), getCollections(), getCases(), getPrices()]).then(([skins, collections, cases]) => {
@@ -836,6 +844,35 @@ export function renderTradeup() {
             window.location.hash = '#/skin/' + card.dataset.def + '-' + card.dataset.paint;
         });
 
+        const pricePopup = document.getElementById('tradeupPricePopup');
+        pricePopup?.addEventListener('click', e => {
+            //click landed directly on the backdrop (not bubbled up from the box inside) - same as clicking
+            //outside any other modal
+            if (e.target === pricePopup) {
+                pricePopup.classList.remove('open');
+                activePriceCard = null;
+                return;
+            }
+
+            if (e.target.closest('.tradeup-price-popup-close')) {
+                pricePopup.classList.remove('open');
+                activePriceCard = null;
+                return;
+            }
+
+            if (e.target.closest('.tradeup-price-popup-update') && activePriceCard) {
+                const priceInput = document.getElementById('tradeupPricePopupInput');
+                //typed against whatever currency is currently displayed, so it's converted back to usd for storage -
+                //everything else in this file works in usd internally and only converts at render time
+                applyPrice(activePriceCard.querySelector('.tradeup-price-pill'), toUsd(parseFloat(priceInput.value) || 0));
+                pricePopup.classList.remove('open');
+                const limit = activePriceCard.dataset.rarity === 'Covert' ? 5 : 10;
+                const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
+                if (cardNum === limit) updateOutcomes(collections, cases, skins);
+                activePriceCard = null;
+            }
+        });
+
         document.getElementById('tradeupReset')?.addEventListener('click', () => {
             savedTradeupState = null;
             rightGrid.innerHTML = Array(10).fill(renderTradeupSlotPlaceholder()).join('');
@@ -882,7 +919,13 @@ export function renderTradeup() {
                 const cardFloat = parseFloat(card.querySelector('.tradeup-float-input').value) || 0;
                 const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
                 if (cardNum < limit) {
-                    renderTradeupRight(card.dataset.weapon, card.dataset.name, allSkins, cardFloat, card._prices)
+                    const newCard = renderTradeupRight(card.dataset.weapon, card.dataset.name, allSkins, cardFloat, card._prices);
+                    //copies whatever price is actually showing on the source card, including a manual override
+                    //from the price popup - not just its float, since renderTradeupRight would otherwise
+                    //recompute the price fresh from the price grid and lose that override
+                    const sourcePill = card.querySelector('.tradeup-price-pill');
+                    const sourceUsd = sourcePill.dataset.usd ? parseFloat(sourcePill.dataset.usd) : null;
+                    if (sourceUsd !== null) applyPrice(newCard.querySelector('.tradeup-price-pill'), sourceUsd);
                     syncSlotCount();
                 }
                 if (cardNum === 0) syncRarityLock();
@@ -897,17 +940,6 @@ export function renderTradeup() {
                 const variant = currentCategory() === 'StatTrak' ? 'stattrak' : 'normal';
                 const value = cheapestPrice(card._prices, tierKeyForFloat(parseFloat(floatInput.value) || 0), variant);
                 applyPrice(card.querySelector('.tradeup-price-pill'), value);
-                const limit = card.dataset.rarity === 'Covert' ? 5 : 10;
-                const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
-                if (cardNum === limit) updateOutcomes(collections, cases, skins);
-            }
-
-            const priceInput = e.target.closest('.tradeup-price-popup-input');
-            if (priceInput) {
-                const card = priceInput.closest('.tradeup-card-right');
-                //typed against whatever currency is currently displayed, so it's converted back to usd for storage -
-                //everything else in this file works in usd internally and only converts at render time
-                applyPrice(card.querySelector('.tradeup-price-pill'), toUsd(parseFloat(priceInput.value) || 0));
                 const limit = card.dataset.rarity === 'Covert' ? 5 : 10;
                 const cardNum = rightGrid.querySelectorAll('.tradeup-card-right').length;
                 if (cardNum === limit) updateOutcomes(collections, cases, skins);
