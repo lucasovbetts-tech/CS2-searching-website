@@ -82,19 +82,35 @@ function loadAllItemIds() {
 }
 
 //one row per (item, market) quote
+const COLUMNS_PER_ROW = 3;
+//Postgres caps a statement at 65535 bind parameters; 500 rows x 3 columns leaves plenty of room
+const INSERT_CHUNK = 500;
+
+//one row per (item, market) quote, sent as multi-row INSERTs so the database is hit once per chunk
+//rather than once per row - stickers alone are 11k items, and a round-trip each was minutes of latency
 async function insertPrices(pricedItems) {
-    let inserted = 0;
+    const rows = [];
     for (const item of pricedItems) {
         for (const quote of item.quotes) {
             const price = quote.lowest_ask / 100; //minor units (cents) -> dollars
-            await pool.query(
-                `INSERT INTO item_price_history (item_id, market, price)
-                 VALUES ($1, $2, $3)
-                 ON CONFLICT (item_id, market, fetched_at) DO NOTHING`,
-                [String(item.item_id), quote.provider, price]
-            );
-            inserted++;
+            rows.push([String(item.item_id), quote.provider, price]);
         }
+    }
+
+    let inserted = 0;
+    for (let i = 0; i < rows.length; i += INSERT_CHUNK) {
+        const chunk = rows.slice(i, i + INSERT_CHUNK);
+        //builds "($1,$2,$3), ($4,$5,$6)" - one placeholder group per row in the chunk
+        const placeholders = chunk
+            .map((_, r) => `(${Array.from({ length: COLUMNS_PER_ROW }, (_, c) => `$${r * COLUMNS_PER_ROW + c + 1}`).join(', ')})`)
+            .join(', ');
+        const res = await pool.query(
+            `INSERT INTO item_price_history (item_id, market, price)
+             VALUES ${placeholders}
+             ON CONFLICT (item_id, market, fetched_at) DO NOTHING`,
+            chunk.flat()
+        );
+        inserted += res.rowCount; //rows actually written, so ON CONFLICT skips aren't counted as inserts
     }
     return inserted;
 }

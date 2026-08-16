@@ -87,8 +87,15 @@ async function fetchAllSkinPrices(allItemIds) {
 }
 
 //maps each priced result back to its skin via itemIdToSkin, then inserts one row per (item, market) quote
+const COLUMNS_PER_ROW = 6;
+//Postgres caps a statement at 65535 bind parameters; 500 rows x 6 columns leaves plenty of room
+const INSERT_CHUNK = 500;
+
+//maps each priced result back to its skin via itemIdToSkin, then inserts one row per (item, market)
+//quote. Sent as multi-row INSERTs so the database is hit once per chunk rather than once per row -
+//a full sync is tens of thousands of rows, and a round-trip each was minutes of pure latency.
 async function insertPrices(pricedItems, itemIdToSkin) {
-    let inserted = 0;
+    const rows = [];
     for (const item of pricedItems) {
         const skin = itemIdToSkin.get(item.item_id);
         if (!skin) {
@@ -97,14 +104,24 @@ async function insertPrices(pricedItems, itemIdToSkin) {
         }
         for (const quote of item.quotes) {
             const price = quote.lowest_ask / 100; //minor units (cents) -> dollars
-            await pool.query(
-                `INSERT INTO price_history (def_index, paint_index, wear_tier, variant, market, price)
-                 VALUES ($1, $2, $3, $4, $5, $6)
-                 ON CONFLICT (def_index, paint_index, wear_tier, variant, market, fetched_at) DO NOTHING`,
-                [skin.defIndex, skin.paintIndex, skin.wearTier, skin.variant, quote.provider, price]
-            );
-            inserted++;
+            rows.push([skin.defIndex, skin.paintIndex, skin.wearTier, skin.variant, quote.provider, price]);
         }
+    }
+
+    let inserted = 0;
+    for (let i = 0; i < rows.length; i += INSERT_CHUNK) {
+        const chunk = rows.slice(i, i + INSERT_CHUNK);
+        //builds "($1,$2,$3,$4,$5,$6), ($7,$8,...)" - one placeholder group per row in the chunk
+        const placeholders = chunk
+            .map((_, r) => `(${Array.from({ length: COLUMNS_PER_ROW }, (_, c) => `$${r * COLUMNS_PER_ROW + c + 1}`).join(', ')})`)
+            .join(', ');
+        const res = await pool.query(
+            `INSERT INTO price_history (def_index, paint_index, wear_tier, variant, market, price)
+             VALUES ${placeholders}
+             ON CONFLICT (def_index, paint_index, wear_tier, variant, market, fetched_at) DO NOTHING`,
+            chunk.flat()
+        );
+        inserted += res.rowCount; //rows actually written, so ON CONFLICT skips aren't counted as inserts
     }
     return inserted;
 }
