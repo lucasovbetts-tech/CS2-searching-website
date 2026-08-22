@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import pg from 'pg';
+import { setupAuth } from './auth.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -15,7 +16,13 @@ const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-app.use(cors());
+
+//credentials:true and an explicit origin, not the wildcard - a wildcard origin makes browsers
+//refuse to send the session cookie, so sign-in would appear to work and then not stick
+app.use(cors({ origin: process.env.BASE_URL || true, credentials: true }));
+
+//before the routes below, so anything added later can read req.user
+setupAuth(app, pool);
 
 // serves the frontend from the same origin as the API, so prices.js never needs an environment-specific backend URL
 app.use('/css', express.static(path.join(ROOT, 'css')));
