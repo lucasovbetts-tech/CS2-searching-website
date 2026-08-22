@@ -162,15 +162,14 @@ const rarityMaps = {
     "Distinguished": 15,
 };
 
-export async function renderSkinCard(skins, weapon) {
+export function renderSkinCard(skins, weapon) {
 
     sortByRarity(skins, sortDescending)
 
     if (skins.length === 0) {
         return `<p class="explore-empty">No skins available for ${weapon} yet.</p>`;
     }
-    const cards = await Promise.all(skins.map(async s => {
-        const prices = await skinPriceTexts(s.defIndex, s.paintIndex, { stattrak: s.stattrak, souvenir: s.souvenir });
+    const cards = skins.map(s => {
 
         return `
         <div class="skin-card" data-def="${s.defIndex}" data-paint="${s.paintIndex}" style="background: ${rarityGradient(s.rarity.color)}">
@@ -190,27 +189,27 @@ export async function renderSkinCard(skins, weapon) {
                     ${s.souvenir ? '<span class="skin-badge skin-badge--souvenir">Souvenir</span>' : ''}
                 </div>
                     <div class="skinCardPrices">
-                        <p class="skinCardPriceNormal">${prices.normal}</p>
-                        ${s.stattrak ? `<p class="skinCardPriceStattrak">${prices.stattrak}</p>` : ''}
-                        ${s.souvenir ? `<p class="skinCardPriceSouvenir">${prices.souvenir}</p>` : ''}
+                        <p class="skinCardPriceNormal">${PRICE_LOADING}</p>
+                        ${s.stattrak ? `<p class="skinCardPriceStattrak">${PRICE_LOADING}</p>` : ''}
+                        ${s.souvenir ? `<p class="skinCardPriceSouvenir">${PRICE_LOADING}</p>` : ''}
                     </div>
                     <a class="csfloat-link" href="https://csfloat.com/search?type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}" target="_blank" rel="noopener">View on CSFloat</a>
             </div>
         </div>
     `;
-    }));
+    });
     return cards.join('');
 }
 
 //creates the card for an item inside a capsule/souvenir/case/collection (sticker or skin, both are just name + image here)
-async function renderCrateContentsCard(items, crateName, skins, stickers) {
+function renderCrateContentsCard(items, crateName, skins, stickers) {
 
     sortByRarity(items, sortDescending)
 
     if (!items || items.length === 0) {
         return `<p class="explore-empty">Nothing found for ${crateName}.</p>`;
     }
-    const cards = await Promise.all(items.map(async i => {
+    const cards = items.map(i => {
         const name = i.name;
         let [weapon, skin] = name.split("|").map(s => s.trim());
         const weaponName = weapon.replace("★ ", "");
@@ -225,19 +224,6 @@ async function renderCrateContentsCard(items, crateName, skins, stickers) {
     const csfloatLink = match ? `https://csfloat.com/search?type=buy_now&def_index=${match.defIndex}&paint_index=${match.paintIndex}` : null;
     //sticker capsule contents aren't skins - i.id doesn't match stickers.json's id scheme, so look up by name instead
     const stickerMatch = !match ? stickers?.find(s => s.name === name) : null;
-    const stickerPriceText = stickerMatch ? lowestPrice(await getItemPrice(stickerMatch.id)) : null;
-    //getPrices returns the full tier x variant grid ({tier: {variant: {market: price}}}), not a flat
-    //market->price map like getItemPrice - flatten it down to plain numbers before lowestPrice can use it.
-    //Fetched once and reused for every variant line below, rather than re-fetching per variant.
-    const grid = match ? await getPrices(match.defIndex, match.paintIndex) ?? {} : null;
-    const lowestForVariant = variant => grid
-        ? lowestPrice(Object.values(grid).flatMap(variants => variants[variant] ? Object.values(variants[variant]) : []))
-        : null;
-    const skinPriceText = match ? lowestForVariant('normal') : null;
-    //souvenir prices are never actually fetched into the grid, so this will always read "Price unavailable"
-    //for now - shown anyway so it's correct the moment that data exists
-    const stattrakPriceText = match && stattrak ? lowestForVariant('stattrak') : null;
-    const souvenirPriceText = match && souvenir ? lowestForVariant('souvenir') : null;
         return `
         <div class="skin-card" ${match ? `data-def="${match.defIndex}" data-paint="${match.paintIndex}"` : `data-sticker-id="${stickerMatch ? stickerMatch.id : i.id}"`} style="background: ${rarityGradient(i.rarity.color)}">
             <span class="skin-rarity">${i.rarity.name}</span>
@@ -258,11 +244,11 @@ async function renderCrateContentsCard(items, crateName, skins, stickers) {
                     </div>
                     <div class="skinCardPrices">
                         ${stickerMatch ? `
-                        <p class="skinCardPriceNormal">${stickerPriceText}</p>
+                        <p class="skinCardPriceNormal">${PRICE_LOADING}</p>
                         ` : match ? `
-                        <p class="skinCardPriceNormal">${skinPriceText}</p>
-                        ${stattrak ? `<p class="skinCardPriceStattrak">${stattrakPriceText}</p>` : ''}
-                        ${souvenir ? `<p class="skinCardPriceSouvenir">${souvenirPriceText}</p>` : ''}
+                        <p class="skinCardPriceNormal">${PRICE_LOADING}</p>
+                        ${stattrak ? `<p class="skinCardPriceStattrak">${PRICE_LOADING}</p>` : ''}
+                        ${souvenir ? `<p class="skinCardPriceSouvenir">${PRICE_LOADING}</p>` : ''}
                         ` : `
                         <p class="skinCardPriceNormal">Price Unavailable</p>
                         `}
@@ -271,24 +257,23 @@ async function renderCrateContentsCard(items, crateName, skins, stickers) {
                 </div>
         </div>
         `;
-    }));
+    });
     return cards.join('');
 }
 
-async function renderCaseCard(crate) {
+function renderCaseCard(crate) {
     const name = crate.name;
     const img = crate.image;
     const csfloatLink = crate.def_index != null ? `https://csfloat.com/search?type=buy_now&def_index=${crate.def_index}` : null; //collections have no def_index - CSFloat has nothing to link to
     const color = crate.rarity?.color ?? '#a855f7'; //collections have no rarity field at all (mixed rarities inside), so fall back to the app's accent color
     //cases/capsules/souvenirs are still ByMykel-sourced (no CS2Cap catalog id available), so priced by their
     //own name instead of an id - CS2Cap's /prices endpoint works fine off market_hash_name alone either way
-    const priceText = crate.def_index != null ? lowestPrice(await getItemPrice(name)) : null;
     return `
-        <div class="case-hero-card" style="background: ${rarityGradient(color)}">
+        <div class="case-hero-card" data-crate-name="${name}" style="background: ${rarityGradient(color)}">
             ${img ? `<img class="case-hero-img" src="${img}" alt="${name}">` : '<div class="skin-img-placeholder"></div>'}
             ${crate.def_index != null ? `
             <div class="skinCardPrices">
-                <p class="skinCardPriceNormal">${priceText}</p>
+                <p class="skinCardPriceNormal">${PRICE_LOADING}</p>
             </div>` : ''}
             ${csfloatLink ? `<a class="csfloat-link" href="${csfloatLink}" target="_blank" rel="noopener">View on CSFloat</a>` : ''}
         </div>`;
@@ -342,7 +327,7 @@ const COLLECTIBLE_TYPES = {
 };
 
 //shows every item of one collectible type, once you've clicked into it - same card look renderCrateContentsCard uses
-async function renderCollectibleItems(items, label) {
+function renderCollectibleItems(items, label) {
     if (!items || items.length === 0) {
         return `<p class="explore-empty">Nothing found for ${label}.</p>`;
     }
@@ -350,10 +335,8 @@ async function renderCollectibleItems(items, label) {
     const [slug, type] = Object.entries(COLLECTIBLE_TYPES).find(([, t]) => t.label === label) ?? [];
     const csfloatParam = type?.csfloatParam;
 
-    const cards = await Promise.all(items.map(async item => {
+    const cards = items.map(item => {
         const csfloatLink = csfloatParam ? `https://csfloat.com/search?type=buy_now&${csfloatParam}=${item.defIndex ?? item.def_index}` : null;
-        //these types have no wear tiers/variants - just the one normal price per item
-        const priceText = lowestPrice(await getItemPrice(item.id));
 
         //highlights have no rarity field at all (not a graded item type), unlike every other collectible here
         return `
@@ -362,15 +345,17 @@ async function renderCollectibleItems(items, label) {
                 ${item.image ? `<img class="skin-img" src="${item.image}" alt="${item.name}">` : '<div class="skin-img-placeholder"></div>'}
                 <p class="skin-name">${slug === 'agents' ? item.marketHashName : item.name}</p>
                     <div class="skinCardPrices">
-                        <p class="skinCardPriceNormal">${priceText}</p>
+                        <p class="skinCardPriceNormal">${PRICE_LOADING}</p>
                     </div>
                     ${csfloatLink ? `<a class="csfloat-link" href="${csfloatLink}" target="_blank" rel="noopener">View on CSFloat</a>` : ''}
             </div>
-        `}));
+        `});
     return cards.join('');
 }
 
 const PRICE_UNAVAILABLE = 'Price unavailable.';
+//what a card shows in its price slots until fillPrices() patches the real number in
+const PRICE_LOADING = '<span class="price-loading">…</span>';
 
 //cheapest market found for a non-skin item (sticker, agent, charm, etc.) - no wear tiers/variants, one price per
 //market. Also fed a flat array of {price, link} objects directly by skinPriceTexts below (Object.values on an
@@ -395,6 +380,43 @@ async function skinPriceTexts(defIndex, paintIndex, { stattrak, souvenir }) {
         stattrak: stattrak ? lowestForVariant('stattrak') : null,
         souvenir: souvenir ? lowestForVariant('souvenir') : null,
     };
+}
+
+//Cards render immediately with "…" in their price slots; this walks whatever was just inserted and
+//patches each one as its own price resolves. Previously every render awaited every price before any
+//card appeared, so the whole grid waited on the slowest lookup.
+//
+//Which prices a card needs is read back off the DOM: data-def/data-paint means a skin (with the
+//tier x variant grid), otherwise it's a flat per-item price keyed by id.
+function fillPrices(root) {
+    if (!root) return;
+
+    const fill = (card, selector, text) => {
+        const el = card.querySelector(selector);
+        if (el && text != null) el.innerHTML = text;
+    };
+
+    root.querySelectorAll('.skin-card, .case-hero-card').forEach(card => {
+        const { def, paint, stickerId, id, crateName } = card.dataset;
+
+        if (def != null) {
+            //the presence of a stattrak/souvenir slot is what says whether this skin has those variants
+            skinPriceTexts(Number(def), Number(paint), {
+                stattrak: !!card.querySelector('.skinCardPriceStattrak'),
+                souvenir: !!card.querySelector('.skinCardPriceSouvenir'),
+            }).then(texts => {
+                fill(card, '.skinCardPriceNormal', texts.normal);
+                fill(card, '.skinCardPriceStattrak', texts.stattrak);
+                fill(card, '.skinCardPriceSouvenir', texts.souvenir);
+            });
+            return;
+        }
+
+        //cases/capsules are priced by name rather than id - they're still ByMykel-sourced with no catalog id
+        const key = stickerId ?? id ?? crateName;
+        if (key == null) return;
+        getItemPrice(key).then(prices => fill(card, '.skinCardPriceNormal', lowestPrice(prices)));
+    });
 }
 
 export function renderExplorePage(weapon = null) {
@@ -454,7 +476,8 @@ export function renderExplorePage(weapon = null) {
             if (!grid) return;
 
             if (isGolds) {
-                grid.innerHTML = await renderCrateContentsCard(crate ? crate.contains_rare : [], crateName, skins, stickers);
+                grid.innerHTML = renderCrateContentsCard(crate ? crate.contains_rare : [], crateName, skins, stickers);
+                fillPrices(grid);
                 attachSkinCardNav(grid);
                 return;
             }
@@ -472,8 +495,9 @@ export function renderExplorePage(weapon = null) {
                 <span class="weapon-card-count">${goldCount} ${goldCount === 1 ? 'gold' : 'golds'}</span>
             </button>`;
             const hero = document.getElementById('caseHero');
-            if (hero && crate) hero.innerHTML = await renderCaseCard(crate);
-            grid.innerHTML = goldsCard + await renderCrateContentsCard(crate ? crate.contains : [], crateName, skins, stickers);
+            if (hero && crate) { hero.innerHTML = renderCaseCard(crate); fillPrices(hero); }
+            grid.innerHTML = goldsCard + renderCrateContentsCard(crate ? crate.contains : [], crateName, skins, stickers);
+            fillPrices(grid);
             grid.addEventListener('click', e => {
                 const card = e.target.closest('.weapon-card');
                 if (card && card.dataset.golds) window.location.hash = '#/explore/crate/' + encodeURIComponent(crateName) + '/golds';
@@ -489,7 +513,8 @@ export function renderExplorePage(weapon = null) {
         return type.fetch().then(async items => {
             const grid = document.getElementById('skinGrid');
             if (!grid) return;
-            grid.innerHTML = await renderCollectibleItems(items, type.label);
+            grid.innerHTML = renderCollectibleItems(items, type.label);
+            fillPrices(grid);
             attachSkinCardNav(grid);
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
@@ -499,7 +524,8 @@ export function renderExplorePage(weapon = null) {
         return getSkinsByWeapon(weapon).then(async skins => {
             const grid = document.getElementById('skinGrid');
             if (!grid) return;
-            grid.innerHTML = await renderSkinCard(skins, weapon);
+            grid.innerHTML = renderSkinCard(skins, weapon);
+            fillPrices(grid);
             attachSkinCardNav(grid);
         }).catch(() => {
             const grid = document.getElementById('skinGrid');

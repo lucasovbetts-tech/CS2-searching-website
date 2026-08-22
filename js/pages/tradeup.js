@@ -688,7 +688,12 @@ export function renderTradeup() {
             </div>
         </div>
     `;
-    return Promise.all([getSkins(), getCollections(), getCases(), getPrices()]).then(([skins, collections, cases]) => {
+    //kicks the price cache off in the background but deliberately isn't awaited - every card fills its own
+    //price in once its getPrices() call resolves, so making the grid wait on the whole price table first
+    //just delayed the cards appearing for no benefit
+    getPrices();
+
+    return Promise.all([getSkins(), getCollections(), getCases()]).then(([skins, collections, cases]) => {
         const tradeUpData = collections.filter(c => c.name !== 'Limited Edition Item').map(c => {
             const linkedCaseIds = c.crates.map(crate => crate.id);
             const matchedCase = cases.find(cs => linkedCaseIds.includes(cs.id));

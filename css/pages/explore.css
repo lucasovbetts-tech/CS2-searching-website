@@ -833,3 +833,15 @@
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }
+
+/* price placeholder shown until fillPrices() patches the real number in */
+.price-loading {
+    opacity: 0.4;
+    letter-spacing: 0.15em;
+    animation: pricePulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pricePulse {
+    0%, 100% { opacity: 0.25; }
+    50%      { opacity: 0.6; }
+}
