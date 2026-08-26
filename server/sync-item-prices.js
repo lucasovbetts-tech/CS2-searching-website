@@ -81,7 +81,6 @@ function loadAllItemIds() {
     return ids;
 }
 
-//one row per (item, market) quote
 const COLUMNS_PER_ROW = 3;
 //Postgres caps a statement at 65535 bind parameters; 500 rows x 3 columns leaves plenty of room
 const INSERT_CHUNK = 500;
@@ -115,6 +114,13 @@ async function insertPrices(pricedItems) {
     return inserted;
 }
 
+//The API reads current prices from these views rather than scanning the whole history table on
+//every request. CONCURRENTLY so the site keeps serving the previous snapshot while they rebuild.
+async function refreshCurrentPriceViews() {
+    await pool.query('REFRESH MATERIALIZED VIEW CONCURRENTLY current_item_markets');
+    await pool.query('REFRESH MATERIALIZED VIEW CONCURRENTLY current_item_cheapest');
+}
+
 async function sync() {
     const allItemIds = loadAllItemIds();
     console.log(`Fetching prices for ${allItemIds.length} non-skin items (agents, charms, patches, music kits, graffiti, stickers, collectibles)...`);
@@ -124,6 +130,9 @@ async function sync() {
 
     const inserted = await insertPrices(pricedItems);
     console.log(`Inserted ${inserted} price rows.`);
+
+    console.log('Refreshing current-price views...');
+    await refreshCurrentPriceViews();
 
     await pool.end();
 }

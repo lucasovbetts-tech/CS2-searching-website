@@ -1,6 +1,6 @@
 import { getAgents, getCharms, getPatches, getMusicKits, getGraffiti, getPins } from '../api/collectibles.js';
 import { getHighlights } from '../api/highlights.js';
-import { getItemPrice } from '../api/prices.js';
+import { getItemMarkets } from '../api/prices.js';
 import { getMarkets } from '../api/markets.js';
 import { formatSupply, formatDate } from '../utils/format.js';
 import { priceSpan } from '../utils/currency.js';
@@ -93,6 +93,8 @@ function renderHighlightMeta(item) {
 }
 
 const PRICE_UNAVAILABLE = 'Price unavailable. (Not found in cache)';
+//shown in the price slots until fillItemPrices() swaps the real markets in
+const PRICE_LOADING = '<span class="price-loading">…</span>';
 
 //cheapest market found for the item - no wear tiers/variants for these types, just one price per market.
 //each market's value is {price, link}
@@ -133,6 +135,20 @@ const COLLECTIBLE_TYPES = {
     highlights: { fetch: getHighlights, csfloatParam: null },
 };
 
+
+//Fetches this item's per-market prices after the page is on screen and swaps them into their
+//placeholders. The bulk /api/item-prices only carries the cheapest number, so the full
+//breakdown is a separate request made only when a detail page is actually opened.
+async function fillItemPrices(id) {
+    const [prices, markets] = await Promise.all([getItemMarkets(id), getMarkets()]);
+
+    const listings = document.getElementById('itemMarketListings');
+    const lowest = document.getElementById('itemLowestPrice');
+    if (!listings || !lowest) return; //navigated away while the request was in flight
+
+    listings.innerHTML = renderMarketListings(prices, markets);
+    lowest.innerHTML = lowestPrice(prices);
+}
 //renders the page for one specific collectible item, routed to as "#/collectible/<slug>/<id>"
 export function renderCollectibleDetail(param) {
     const [slug, id] = (param || '').split('/');
@@ -154,7 +170,9 @@ export function renderCollectibleDetail(param) {
         return;
     }
 
-    return Promise.all([type.fetch(), getItemPrice(id), getMarkets()]).then(([items, prices, markets]) => {
+    //only the catalog record is awaited before rendering - the per-market prices are a separate
+    //request that patches itself in afterwards, so the page appears immediately
+    return type.fetch().then(items => {
         const container = document.querySelector('.skin-detail-page');
         if (!container) return;
 
@@ -177,14 +195,14 @@ export function renderCollectibleDetail(param) {
                         ${item.rarity ? `<span class="skin-rarity">${item.rarity.name}</span>` : ''}
                         ${item.image ? `<img class="skin-detail-img" src="${item.image}" alt="${item.name}">` : '<div class="skin-img-placeholder"></div>'}
                     </div>
-                    ${renderMarketListings(prices, markets)}
+                    <div id="itemMarketListings">${PRICE_LOADING}</div>
                 </div>
                 <div class="skin-detail-info">
                     <h1 class="skin-detail-name">${slug === 'agents' ? item.marketHashName : item.name}</h1>
                     ${item.description ? `<p class="skin-detail-desc">${item.description.replace(/\\n/g, '<br><br>')}</p>` : ''}
                     ${slug === 'highlights' ? renderHighlightMeta(item) : ''}
                     ${renderDetailStats(item)}
-                    <p class="skin-detail-desc">${lowestPrice(prices)}</p>
+                    <p class="skin-detail-desc" id="itemLowestPrice">${PRICE_LOADING}</p>
                     ${csfloatLink ? `<a class="csfloat-link" href="${csfloatLink}" target="_blank" rel="noopener">View on CSFloat</a>` : ''}
                     ${renderCrates(item)}
                 </div>
@@ -194,6 +212,8 @@ export function renderCollectibleDetail(param) {
         //volume has no HTML attribute equivalent - has to be set on the element itself once it exists
         const video = container.querySelector('video');
         if (video) video.volume = 0.1;
+
+        fillItemPrices(id);
     }).catch(() => {
         const container = document.querySelector('.skin-detail-page');
         if (container) container.innerHTML = `

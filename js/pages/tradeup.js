@@ -50,13 +50,10 @@ function formatFloat(n) {
     return Number(n.toFixed(5));
 }
 
-//cheapest market for a given wear-tier/variant cell - same "cheapest across providers" approach skin-detail.js
-//uses (its priceGrid()), just for a single cell instead of the whole grid. Returns just the number, not {market, data}
+//cheapest price for a given wear-tier/variant cell. /api/prices already returns the minimum across
+//markets, so this is a plain lookup - the per-market breakdown only ships to the detail pages now.
 function cheapestPrice(prices, tierKey, variant = 'normal') {
-    const markets = prices?.[tierKey]?.[variant];
-    if (!markets) return null;
-    const entries = Object.values(markets);
-    return entries.length ? Math.min(...entries.map(m => m.price)) : null;
+    return prices?.[tierKey]?.[variant] ?? null;
 }
 
 //low/high across only the wear tiers this specific skin can actually reach (wearTiersFor) - a skin capped at

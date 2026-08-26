@@ -338,3 +338,10 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* price placeholder shown until fillSkinPrices()/fillItemPrices() patch the real markets in */
+.price-loading {
+    opacity: 0.4;
+    letter-spacing: 0.15em;
+    animation: pricePulse 1.2s ease-in-out infinite;
+}

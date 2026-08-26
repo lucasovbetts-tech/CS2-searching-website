@@ -357,14 +357,10 @@ const PRICE_UNAVAILABLE = 'Price unavailable.';
 //what a card shows in its price slots until fillPrices() patches the real number in
 const PRICE_LOADING = '<span class="price-loading">…</span>';
 
-//cheapest market found for a non-skin item (sticker, agent, charm, etc.) - no wear tiers/variants, one price per
-//market. Also fed a flat array of {price, link} objects directly by skinPriceTexts below (Object.values on an
-//array just returns the array), so this handles both shapes the same way. Each market's value is {price, link}.
-function lowestPrice(prices) {
-    if (!prices) return PRICE_UNAVAILABLE;
-    const values = Object.values(prices);
-    if (!values.length) return PRICE_UNAVAILABLE;
-    return `From ${priceSpan(Math.min(...values.map(v => v.price)))}`;
+//"From $x" for a single price. /api/item-prices returns the cheapest already, so this takes a
+//plain number rather than a map of markets - the per-market breakdown only goes to detail pages.
+function lowestPrice(price) {
+    return price == null ? PRICE_UNAVAILABLE : `From ${priceSpan(price)}`;
 }
 
 //lowest normal/stattrak/souvenir price text for one skin, fetched once and reused per variant rather than
@@ -372,8 +368,11 @@ function lowestPrice(prices) {
 //variant is never actually populated by the current fetch pipeline
 async function skinPriceTexts(defIndex, paintIndex, { stattrak, souvenir }) {
     const grid = await getPrices(defIndex, paintIndex) ?? {};
-    const lowestForVariant = variant =>
-        lowestPrice(Object.values(grid).flatMap(variants => variants[variant] ? Object.values(variants[variant]) : []));
+    //grid is { wearTier: { variant: price } } - take the lowest across every tier this skin has
+    const lowestForVariant = variant => {
+        const prices = Object.values(grid).map(variants => variants[variant]).filter(p => p != null);
+        return prices.length ? lowestPrice(Math.min(...prices)) : PRICE_UNAVAILABLE;
+    };
 
     return {
         normal: lowestForVariant('normal'),
@@ -415,7 +414,7 @@ function fillPrices(root) {
         //cases/capsules are priced by name rather than id - they're still ByMykel-sourced with no catalog id
         const key = stickerId ?? id ?? crateName;
         if (key == null) return;
-        getItemPrice(key).then(prices => fill(card, '.skinCardPriceNormal', lowestPrice(prices)));
+        getItemPrice(key).then(price => fill(card, '.skinCardPriceNormal', lowestPrice(price)));
     });
 }
 

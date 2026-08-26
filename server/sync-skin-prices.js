@@ -86,7 +86,6 @@ async function fetchAllSkinPrices(allItemIds) {
     return allItems;
 }
 
-//maps each priced result back to its skin via itemIdToSkin, then inserts one row per (item, market) quote
 const COLUMNS_PER_ROW = 6;
 //Postgres caps a statement at 65535 bind parameters; 500 rows x 6 columns leaves plenty of room
 const INSERT_CHUNK = 500;
@@ -126,6 +125,13 @@ async function insertPrices(pricedItems, itemIdToSkin) {
     return inserted;
 }
 
+//The API reads current prices from these views rather than scanning the whole history table on
+//every request. CONCURRENTLY so the site keeps serving the previous snapshot while they rebuild.
+async function refreshCurrentPriceViews() {
+    await pool.query('REFRESH MATERIALIZED VIEW CONCURRENTLY current_skin_markets');
+    await pool.query('REFRESH MATERIALIZED VIEW CONCURRENTLY current_skin_cheapest');
+}
+
 async function sync() {
     const itemIdToSkin = loadItemIdMap();
     const allItemIds = [...itemIdToSkin.keys()];
@@ -136,6 +142,9 @@ async function sync() {
 
     const inserted = await insertPrices(pricedItems, itemIdToSkin);
     console.log(`Inserted ${inserted} price rows.`);
+
+    console.log('Refreshing current-price views...');
+    await refreshCurrentPriceViews();
 
     await pool.end();
 }

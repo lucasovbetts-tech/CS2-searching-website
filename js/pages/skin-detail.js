@@ -1,4 +1,4 @@
-import { getPrices } from '../api/prices.js';
+import { getSkinMarkets } from '../api/prices.js';
 import { getSkinByIndex } from '../api/skins.js';
 import { getMarkets } from '../api/markets.js';
 import { wearTiersFor } from '../utils/wear-tiers.js';
@@ -18,6 +18,10 @@ function rarityGradient(hex) {
 }
 
 const VARIANT_LABELS = { normal: 'Normal', stattrak: 'StatTrak™' };
+
+//shown in the price slots until fillPrices() swaps the real markets in - the page itself renders
+//immediately off skins.json, so only the price areas wait on the network
+const PRICE_LOADING = '<p class="skin-detail-desc price-loading">…</p>';
 
 //cheapest market for each wear-tier/variant cell - keeps which market it came from too (not just the price),
 //so the table can show that market's logo next to the number. Each market's value is {price, link}.
@@ -133,6 +137,21 @@ function renderCrates(item) {
     </div>`;
 }
 
+
+//Fetches this one skin's per-market prices after the page is already on screen and swaps them
+//into their placeholders. The bulk /api/prices only carries the cheapest number per variant, so
+//the full breakdown is a separate request made only when a detail page is actually opened.
+async function fillSkinPrices(s, defIndex, paintIndex) {
+    const [grid, markets] = await Promise.all([getSkinMarkets(defIndex, paintIndex), getMarkets()]);
+
+    const listings = document.getElementById('skinMarketListings');
+    const table = document.getElementById('skinPriceGrid');
+    if (!listings || !table) return; //navigated away while the request was in flight
+
+    const rep = grid ? representativeTierPrices(grid) : null;
+    listings.innerHTML = renderMarketListings(rep, markets);
+    table.innerHTML = renderPriceGrid(s, grid, markets);
+}
 //renders the page for one specific skin, routed to as "#/skin/<defIndex>-<paintIndex>" since that pair is the only unique id skins.json gives us
 export function renderSkinDetail(param) {
     const app = document.getElementById('app');
@@ -144,9 +163,10 @@ export function renderSkinDetail(param) {
         </div>
     `;
 
-    return Promise.all([getSkinByIndex(defIndex, paintIndex), getPrices(defIndex, paintIndex), getMarkets()]).then(([s, prices, markets]) => {
+    //only the skin record is awaited before rendering - prices are a separate request that patches
+    //itself in afterwards, so the page appears immediately instead of sitting on "Loading..."
+    return getSkinByIndex(defIndex, paintIndex).then(s => {
         const container = document.querySelector('.skin-detail-page');
-        const csfloatLink = `https://csfloat.com/search?type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}`
         if (!container) return;
 
         if (!s) {
@@ -155,7 +175,8 @@ export function renderSkinDetail(param) {
                 <p class="explore-empty">Skin not found.</p>`;
             return;
         }
-        const repPrices = prices ? representativeTierPrices(prices) : null;
+
+        const csfloatLink = `https://csfloat.com/search?type=buy_now&def_index=${s.defIndex}&paint_index=${s.paintIndex}`
         container.innerHTML = `
             <button class="explore-back" onclick="window.history.back()">← Back</button>
             <div class="skin-detail-layout">
@@ -164,7 +185,7 @@ export function renderSkinDetail(param) {
                         <span class="skin-rarity">${s.rarity.name}</span>
                         ${s.image ? `<img class="skin-detail-img" src="${s.image}" alt="${s.weapon} | ${s.name}">` : '<div class="skin-img-placeholder"></div>'}
                     </div>
-                    ${renderMarketListings(repPrices, markets)}
+                    <div id="skinMarketListings">${PRICE_LOADING}</div>
                 </div>
                 <div class="skin-detail-info">
                     <span class="skin-weapon">${s.category === "Knives" || s.category === "Gloves" ? `★ ${s.weapon}` : s.weapon}</span>
@@ -184,12 +205,14 @@ export function renderSkinDetail(param) {
 
                     ${s.description ? `<p class="skin-detail-desc">${s.description.replace(/\\n/g, '<br><br>')}</p>` : ''}
                     ${renderDetailStats(s)}
-                    ${renderPriceGrid(s, prices, markets)}
+                    <div id="skinPriceGrid">${PRICE_LOADING}</div>
                     <a class="csfloat-link" href="${csfloatLink}" target="_blank" rel="noopener">View on CSFloat</a>
                     ${renderCrates(s)}
                     </div>
             </div>
         `;
+
+        fillSkinPrices(s, defIndex, paintIndex);
     }).catch(() => {
         const container = document.querySelector('.skin-detail-page');
         if (container) container.innerHTML = `

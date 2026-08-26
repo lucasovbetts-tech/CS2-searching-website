@@ -1,6 +1,7 @@
 import './env.js'; // must stay the first import so env.js is loaded first
 import express from 'express';
 import cors from 'cors';
+import compression from 'compression';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
@@ -16,6 +17,9 @@ const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+//gzip every response - the price payloads are highly repetitive JSON and compress ~10:1
+app.use(compression());
 
 //credentials:true and an explicit origin, not the wildcard - a wildcard origin makes browsers
 //refuse to send the session cookie, so sign-in would appear to work and then not stick
@@ -58,30 +62,23 @@ function cs2capLink(provider, itemId) {
     return `https://cs2c.app/r/${provider}/${itemId}`;
 }
 
-//every skin's current price, shaped as { "defIndex:paintIndex": { data: { wearTier: { variant: { market: { price, link } } } } } }
-//DISTINCT ON keeps one row per (def_index, paint_index, wear_tier, variant, market) group; paired with
-//"ORDER BY ... fetched_at DESC" that row is always the newest snapshot - older rows stay in the table for history.
+//Bulk endpoint: the CHEAPEST price per skin/wear/variant, nothing else. Shaped as
+//  { "defIndex:paintIndex": { data: { wearTier: { variant: <price> } } } }
+//The grids (explore, tradeup) only ever take Math.min() across markets, so shipping every
+//market's price and redirect link to them was ~29MB of payload to produce one number.
+//Detail pages get the full breakdown from /api/prices/:def-:paint below instead.
 app.get('/api/prices', async (req, res) => {
     try {
-        const { rows } = await pool.query(`
-            SELECT DISTINCT ON (def_index, paint_index, wear_tier, variant, market)
-                def_index, paint_index, wear_tier, variant, market, price
-            FROM price_history
-            ORDER BY def_index, paint_index, wear_tier, variant, market, fetched_at DESC
-        `);
+        const { rows } = await pool.query(
+            `SELECT def_index, paint_index, wear_tier, variant, price FROM current_skin_cheapest`
+        );
 
         const cache = {};
         for (const row of rows) {
             const key = `${row.def_index}:${row.paint_index}`;
             cache[key] ??= { data: {} };
             cache[key].data[row.wear_tier] ??= {};
-            cache[key].data[row.wear_tier][row.variant] ??= {};
-
-            const itemId = skinItemIdLookup.get(`${row.def_index}:${row.paint_index}:${row.wear_tier}:${row.variant}`);
-            cache[key].data[row.wear_tier][row.variant][row.market] = {
-                price: Number(row.price), //pg returns NUMERIC columns as strings
-                link: itemId != null ? cs2capLink(row.market, itemId) : null,
-            };
+            cache[key].data[row.wear_tier][row.variant] = Number(row.price); //pg returns NUMERIC as strings
         }
 
         res.json(cache);
@@ -91,27 +88,74 @@ app.get('/api/prices', async (req, res) => {
     }
 });
 
-//same idea as /api/prices, but for non-skin items (agents, charms, stickers, etc.) - simpler shape since
-//item_price_history already stores item_id directly, no lookup table needed to build the redirect link
-app.get('/api/item-prices', async (req, res) => {
-    try {
-        const { rows } = await pool.query(`
-            SELECT DISTINCT ON (item_id, market)
-                item_id, market, price
-            FROM item_price_history
-            ORDER BY item_id, market, fetched_at DESC
-        `);
+//One skin's full per-market breakdown, fetched only when a detail page opens.
+//  { wearTier: { variant: { market: { price, link } } } }
+app.get('/api/prices/:defIndex-:paintIndex', async (req, res) => {
+    const defIndex = Number(req.params.defIndex);
+    const paintIndex = Number(req.params.paintIndex);
+    if (!Number.isInteger(defIndex) || !Number.isInteger(paintIndex)) {
+        return res.status(400).json({ error: 'Invalid skin id' });
+    }
 
-        const cache = {};
+    try {
+        const { rows } = await pool.query(
+            `SELECT wear_tier, variant, market, price
+             FROM current_skin_markets
+             WHERE def_index = $1 AND paint_index = $2`,
+            [defIndex, paintIndex]
+        );
+
+        const grid = {};
         for (const row of rows) {
-            cache[row.item_id] ??= { data: {} };
-            cache[row.item_id].data[row.market] = {
+            grid[row.wear_tier] ??= {};
+            grid[row.wear_tier][row.variant] ??= {};
+
+            const itemId = skinItemIdLookup.get(`${defIndex}:${paintIndex}:${row.wear_tier}:${row.variant}`);
+            grid[row.wear_tier][row.variant][row.market] = {
                 price: Number(row.price),
-                link: cs2capLink(row.market, row.item_id),
+                link: itemId != null ? cs2capLink(row.market, itemId) : null,
             };
         }
 
+        res.json(grid);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to load skin prices' });
+    }
+});
+
+//Same split for non-skin items (stickers, agents, charms, ...): cheapest in bulk...
+app.get('/api/item-prices', async (req, res) => {
+    try {
+        const { rows } = await pool.query(`SELECT item_id, price FROM current_item_cheapest`);
+
+        const cache = {};
+        for (const row of rows) cache[row.item_id] = { data: Number(row.price) };
+
         res.json(cache);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to load item prices' });
+    }
+});
+
+//...and the full per-market breakdown for one item on demand
+app.get('/api/item-prices/:id', async (req, res) => {
+    try {
+        const { rows } = await pool.query(
+            `SELECT market, price FROM current_item_markets WHERE item_id = $1`,
+            [String(req.params.id)]
+        );
+
+        const markets = {};
+        for (const row of rows) {
+            markets[row.market] = {
+                price: Number(row.price),
+                link: cs2capLink(row.market, req.params.id),
+            };
+        }
+
+        res.json(markets);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Failed to load item prices' });
