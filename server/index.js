@@ -21,15 +21,20 @@ const PORT = process.env.PORT || 3001;
 //refuse to send the session cookie, so sign-in would appear to work and then not stick
 app.use(cors({ origin: process.env.BASE_URL || true, credentials: true }));
 
-//before the routes below, so anything added later can read req.user
-setupAuth(app, pool);
-
-// serves the frontend from the same origin as the API, so prices.js never needs an environment-specific backend URL
+// Serves the frontend from the same origin as the API, so prices.js never needs an
+// environment-specific backend URL.
+//
+// Deliberately ahead of setupAuth: these files are public and never read req.user, and one
+// page load pulls ~35 of them (28 ES modules alone). Behind the session middleware, every
+// one of those would trigger a session lookup - a Postgres round-trip per file once signed in.
 app.use('/css', express.static(path.join(ROOT, 'css')));
 app.use('/js', express.static(path.join(ROOT, 'js')));
 app.use('/data', express.static(path.join(ROOT, 'data')));
 app.use('/assets', express.static(path.join(ROOT, 'assets')));
 app.get('/', (req, res) => res.sendFile(path.join(ROOT, 'index.html')));
+
+//before the API routes below, so anything added later can read req.user
+setupAuth(app, pool);
 
 //built once at startup, not per-request - skins.json only changes when scripts/sync-catalog.js re-runs.
 //Maps "defIndex:paintIndex:wearTier:variant" -> item_id, bridging price_history's wear_tier/variant keys

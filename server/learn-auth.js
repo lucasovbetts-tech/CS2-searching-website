@@ -1,42 +1,99 @@
 // Throwaway teaching file - delete whenever. Run it with:  node learn-auth.js
-// Then open http://localhost:4000 and refresh a few times.
+// Then open http://localhost:4000
 
 import express from 'express';
 import crypto from 'crypto';
 
 const app = express();
+app.use(express.urlencoded({ extended: false })); // parses the login form's POST body
 
-// STEP 2: instead of one shared counter, one counter PER visitor.
-// The key is a random id we hand out; the value is that visitor's count.
-const visitsById = new Map();
+const SECRET = 'toy-secret-do-not-use-for-real';
 
-app.get('/', (req, res) => {
-    // 1. Did this browser send us an id it was given earlier?
-    //    Cookies arrive as one header string: "a=1; b=2; visitorId=abc"
+// STEP 4: the session now holds WHO you are, not just a visit count.
+// id -> { visits, user }.  user is null until you log in.
+const sessions = new Map();
+
+// Pretend user database. A real one would store a hash, never the password itself -
+// see the note at the bottom of this file.
+const USERS = { lucas: 'hunter2', daniel: 'balls' };
+
+function sign(id) {
+    const sig = crypto.createHmac('sha256', SECRET).update(id).digest('base64url');
+    return `${id}.${sig}`;
+}
+
+function unsign(signed) {
+    const dot = signed.lastIndexOf('.');
+    if (dot < 0) return null;
+    const id = signed.slice(0, dot);
+    const expected = sign(id);
+    if (signed.length !== expected.length) return null;
+    return crypto.timingSafeEqual(Buffer.from(signed), Buffer.from(expected)) ? id : null;
+}
+
+// Everything cookie-related now lives in one middleware, so each route below can just
+// read req.session - which is exactly what express-session does for you in the real app.
+app.use((req, res, next) => {
     const cookies = Object.fromEntries(
         (req.headers.cookie ?? '').split('; ').filter(Boolean).map(c => {
             const [k, ...v] = c.split('=');
             return [k, v.join('=')];
         })
     );
-    let id = cookies.visitorId;
 
-    // 2. No id? Then this is someone new. Make one and tell the browser to keep it.
+    const raw = cookies.visitorId;
+    let id = raw ? unsign(decodeURIComponent(raw)) : null;
+
     if (!id) {
         id = crypto.randomBytes(16).toString('hex');
-        res.setHeader('Set-Cookie', `visitorId=${id}; HttpOnly; Path=/`);
+        res.setHeader('Set-Cookie', `visitorId=${encodeURIComponent(sign(id))}; HttpOnly; Path=/`);
     }
 
-    // 3. Look up THIS visitor's count, not a global one.
-    const count = (visitsById.get(id) ?? 0) + 1;
-    visitsById.set(id, count);
+    if (!sessions.has(id)) sessions.set(id, { visits: 0, user: null });
 
-    res.send(`
-        <h1>Your visits: ${count}</h1>
-        <p>Your id: <code>${id}</code></p>
-        <p>Total visitors the server has seen: ${visitsById.size}</p>
-        <p>Refresh. Then try a private window.</p>
+    req.sessionId = id;
+    req.session = sessions.get(id); // attached to req, so every route below can use it
+    next();                          // hand control to the next middleware/route
+});
+
+app.get('/', (req, res) => {
+    req.session.visits++;
+
+    res.send(req.session.user ? `
+        <h1>Hello, ${req.session.user}</h1>
+        <p>You have visited ${req.session.visits} times.</p>
+        <form method="POST" action="/logout"><button>Log out</button></form>
+    ` : `
+        <h1>Not logged in</h1>
+        <p>Visits: ${req.session.visits} (counted even while logged out)</p>
+        <form method="POST" action="/login">
+            <input name="username" placeholder="lucas">
+            <input name="password" type="password" placeholder="hunter2">
+            <button>Log in</button>
+        </form>
     `);
 });
 
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+
+    // THE ONLY STEP STEAM REPLACES. Everything else on this page stays the same.
+    if (USERS[username] && USERS[username] === password) {
+        req.session.user = username;
+    }
+    res.redirect('/');
+});
+
+app.post('/logout', (req, res) => {
+    sessions.delete(req.sessionId); // throw the whole session away
+    res.redirect('/');
+});
+
 app.listen(4000, () => console.log('open http://localhost:4000'));
+
+// Note the visit count survives logging in and out - the SESSION and the IDENTITY are
+// separate things. You always have a session; sometimes it has a user attached.
+//
+// Storing a plaintext password like this is wrong in real code (you'd store a slow hash,
+// e.g. argon2/bcrypt) - and avoiding that responsibility entirely is a big reason to
+// delegate to Steam, Google, etc. instead of handling passwords yourself.

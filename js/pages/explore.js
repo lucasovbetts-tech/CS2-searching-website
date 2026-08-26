@@ -28,7 +28,7 @@ function renderCrateSection (items, title) {
 
         return `
         <button class="weapon-card" data-crate="${name}">
-            ${img ? `<img class="weapon-card-img" src="${img}" alt="${name}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
+            ${img ? `<img class="weapon-card-img" loading="lazy" src="${img}" alt="${name}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
             <span class="weapon-card-name">${name}</span>
             <span class="weapon-card-count">${count} ${count === 1 ? 'item' : 'items'}</span>
         </button>`;
@@ -68,7 +68,7 @@ function explorePageSorting(skins, weaponData) {
 
             return `
             <button class="weapon-card" data-weapon="${weapon}">
-                ${img ? `<img class="weapon-card-img" src="${img}" alt="${weapon}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
+                ${img ? `<img class="weapon-card-img" loading="lazy" src="${img}" alt="${weapon}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
                 <span class="weapon-card-name">${weapon}</span>
                 <span class="weapon-card-count">${count} ${count === 1 ? 'skin' : 'skins'}</span>
             </button>`;
@@ -174,7 +174,7 @@ export function renderSkinCard(skins, weapon) {
         return `
         <div class="skin-card" data-def="${s.defIndex}" data-paint="${s.paintIndex}" style="background: ${rarityGradient(s.rarity.color)}">
             <span class="skin-rarity">${s.rarity.name}</span>
-            ${s.image ? `<img class="skin-img" src="${s.image}" alt="${s.weapon}${s.name ? ' | ' + s.name : ''}">` : '<div class="skin-img-placeholder"></div>'}
+            ${s.image ? `<img class="skin-img" loading="lazy" src="${s.image}" alt="${s.weapon}${s.name ? ' | ' + s.name : ''}">` : '<div class="skin-img-placeholder"></div>'}
             ${s.minFloat != null ? `
             <div class="wear-bar" data-tooltip="Float range: ${s.minFloat} – ${s.maxFloat}">
                 <span class="wear-bar-marker" style="left: ${s.minFloat * 100}%"></span>
@@ -227,7 +227,7 @@ function renderCrateContentsCard(items, crateName, skins, stickers) {
         return `
         <div class="skin-card" ${match ? `data-def="${match.defIndex}" data-paint="${match.paintIndex}"` : `data-sticker-id="${stickerMatch ? stickerMatch.id : i.id}"`} style="background: ${rarityGradient(i.rarity.color)}">
             <span class="skin-rarity">${i.rarity.name}</span>
-            ${i.image ? `<img class="skin-img" src="${i.image}" alt="${name}">` : '<div class="skin-img-placeholder"></div>'}
+            ${i.image ? `<img class="skin-img" loading="lazy" src="${i.image}" alt="${name}">` : '<div class="skin-img-placeholder"></div>'}
             ${match ? `
             <div class="wear-bar" data-tooltip="Float range: ${minFloat} – ${maxFloat}">
                 <span class="wear-bar-marker" style="left: ${minFloat * 100}%"></span>
@@ -303,7 +303,7 @@ function renderCollectibles(agents, charms, patches, musicKits, graffiti, pins, 
         const firstImage = items[0]?.image
         return `
         <button class="weapon-card" data-collectible="${slug}">
-            ${firstImage ? `<img class="weapon-card-img" src="${firstImage}" alt="${label}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
+            ${firstImage ? `<img class="weapon-card-img" loading="lazy" src="${firstImage}" alt="${label}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
             <span class="weapon-card-name">${label}</span>
             <span class="weapon-card-count">${items ? items.length : ''}</span>
         </button>`;
@@ -342,7 +342,7 @@ function renderCollectibleItems(items, label) {
         return `
             <div data-slug="${slug}" data-id="${item.id}" class="skin-card" style="background: ${rarityGradient(item.rarity?.color ?? '#a855f7')}">
                 ${item.rarity ? `<span class="skin-rarity">${item.rarity.name}</span>` : ''}
-                ${item.image ? `<img class="skin-img" src="${item.image}" alt="${item.name}">` : '<div class="skin-img-placeholder"></div>'}
+                ${item.image ? `<img class="skin-img" loading="lazy" src="${item.image}" alt="${item.name}">` : '<div class="skin-img-placeholder"></div>'}
                 <p class="skin-name">${slug === 'agents' ? item.marketHashName : item.name}</p>
                     <div class="skinCardPrices">
                         <p class="skinCardPriceNormal">${PRICE_LOADING}</p>
@@ -485,7 +485,7 @@ export function renderExplorePage(weapon = null) {
             const goldCount = crate && crate.contains_rare ? crate.contains_rare.length : 0;
             const goldsPreview = crate && crate.contains_rare ? crate.contains_rare.slice(0, 24) : [];
             const goldsMosaic = goldsPreview.length
-                ? `<div class="weapon-card-mosaic">${goldsPreview.map(g => `<img src="${g.image}" alt="${g.name}">`).join('')}</div>`
+                ? `<div class="weapon-card-mosaic">${goldsPreview.map(g => `<img loading="lazy" src="${g.image}" alt="${g.name}">`).join('')}</div>`
                 : '<div class="weapon-card-img weapon-card-img--empty"></div>';
 
             const goldsCard = goldCount === 0 ? '' : `
@@ -594,7 +594,7 @@ export function renderExplorePage(weapon = null) {
                             <h2 class="weapon-category-title">${section}</h2>
                             <div class="weapon-grid">${items.map(item => `
                                 <button class="weapon-card" ${item.kind === 'weapon' ? `data-weapon="${item.name}"` : `data-crate="${item.name}"`}>
-                                    ${item.image ? `<img class="weapon-card-img" src="${item.image}" alt="${item.name}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
+                                    ${item.image ? `<img class="weapon-card-img" loading="lazy" src="${item.image}" alt="${item.name}">` : '<div class="weapon-card-img weapon-card-img--empty"></div>'}
                                     <span class="weapon-card-name">${item.name}</span>
                                 </button>`).join('')}</div>
                         </section>`).join('')

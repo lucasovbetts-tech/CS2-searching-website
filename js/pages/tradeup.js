@@ -198,10 +198,10 @@ function renderTradeupCard(skin, collection, collectionImage) {
             <span class="tradeup-price-sep">–</span>
             <span class="tradeup-price-pill tradeup-price-high">…</span>
         </div>
-        ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.weapon} | ${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
+        ${skin.image ? `<img class="skin-img" loading="lazy" src="${skin.image}" alt="${skin.weapon} | ${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
         <div class="tradeup-meta-row">
             <span class="tradeup-collection-wrap" data-tooltip="${collection}">
-                ${collectionImage ? `<img class="tradeup-collection-img" src="${collectionImage}" alt="${collection}">` : '<span class="tradeup-collection-img tradeup-collection-img--empty"></span>'}
+                ${collectionImage ? `<img class="tradeup-collection-img" loading="lazy" src="${collectionImage}" alt="${collection}">` : '<span class="tradeup-collection-img tradeup-collection-img--empty"></span>'}
             </span>
             <div class="tradeup-wear-bar" data-tooltip="Float range: ${skin.minFloat} – ${skin.maxFloat}">
                 <span class="tradeup-wear-marker" style="left: ${skin.minFloat * 100}%"></span>
@@ -261,10 +261,10 @@ function renderTradeupRight(weapon, name, skins, float = null, priceData = null)
             <div class="tradeup-price-row">
                 <span class="tradeup-price-pill">…</span>
             </div>
-            ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.weapon} | ${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
+            ${skin.image ? `<img class="skin-img" loading="lazy" src="${skin.image}" alt="${skin.weapon} | ${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
             <div class="tradeup-meta-row">
                 <span class="tradeup-collection-wrap" data-tooltip="${collection}">
-                    ${collectionImage ? `<img class="tradeup-collection-img" src="${collectionImage}" alt="${collection}">` : '<span class="tradeup-collection-img tradeup-collection-img--empty"></span>'}
+                    ${collectionImage ? `<img class="tradeup-collection-img" loading="lazy" src="${collectionImage}" alt="${collection}">` : '<span class="tradeup-collection-img tradeup-collection-img--empty"></span>'}
                 </span>
                 <div class="tradeup-wear-bar" data-tooltip="Float range: ${skin.minFloat} – ${skin.maxFloat}">
                     <span class="tradeup-wear-marker" style="left: ${skin.minFloat * 100}%"></span>
@@ -531,10 +531,10 @@ async function renderSkinOutcomes(collections, cases, skins, total) {
         <div class="skin-card tradeup-outcome-card ${cardClass}" ${linkAttrs}>
             <div class="profit-per-skin">${profit !== null ? (profit > 0 ? '+' : '') + priceSpan(profit) : ''}</div>
             <div class="probability-per-skin">${formatProbability(skin.probability)}</div>
-            ${skin.image ? `<img class="skin-img" src="${skin.image}" alt="${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
+            ${skin.image ? `<img class="skin-img" loading="lazy" src="${skin.image}" alt="${skin.name}">` : '<div class="skin-img-placeholder"></div>'}
             <div class="tradeup-meta-row">
                 <span class="tradeup-collection-wrap" data-tooltip="${skin.collection}">
-                    ${skin.collectionImage ? `<img class="tradeup-collection-img" src="${skin.collectionImage}" alt="${skin.collection}">` : '<span class="tradeup-collection-img tradeup-collection-img--empty"></span>'}
+                    ${skin.collectionImage ? `<img class="tradeup-collection-img" loading="lazy" src="${skin.collectionImage}" alt="${skin.collection}">` : '<span class="tradeup-collection-img tradeup-collection-img--empty"></span>'}
                 </span>
                 <div class="tradeup-wear-bar" data-tooltip="Float range: ${skin.minFloat} – ${skin.maxFloat}">
                     <span class="tradeup-wear-marker" style="left: ${skin.minFloat * 100}%"></span>
