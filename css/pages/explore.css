@@ -46,10 +46,12 @@
     min-height: 0; /* lets this flex child actually shrink below its content height instead of forcing the sidebar taller than max-height */
     overflow-y: auto;
     overflow-x: hidden; /* buttons scale up on hover past the column width - don't let that make the sidebar scroll sideways */
-    /* bleeds this list 16px past the sidebar's own edges so overflow-x's clip line sits outside the hover-scaled
-       button, not flush against it; padding shifts content back in so buttons still render at the original width */
-    margin: 0 -16px;
-    padding: 0 16px;
+    /* bleeds this list 24px past the sidebar on ALL FOUR sides so the clip line sits outside the hover-scaled
+       button and its drop shadow, not flush against them; the matching padding shifts content back in, so the
+       buttons still render at the sidebar's width and in the same place. Top/bottom matter as much as the sides:
+       overflow-y clips those edges too, which sliced the shadow off the first and last button in the list. */
+    margin: -24px;
+    padding: 24px;
 }
 
 .sideBarSearch-wrap {
@@ -74,6 +76,14 @@
     border-color: rgba(168, 85, 247, 0.65);
     background: rgba(168, 85, 247, 0.12);
     box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.12);
+}
+
+/* the grid filter in .explore-header (crate contents, one weapon's skins, one collectible type) - reuses
+   .sideBarSearch-wrap's chrome, just capped in width so it doesn't stretch the full grid on a wide screen,
+   and spaced off the hero/title row above it */
+.grid-search-wrap {
+    max-width: 420px;
+    margin-top: 20px;
 }
 
 .sideBarSearch-icon {
@@ -118,7 +128,9 @@
     border-color: rgba(168, 85, 247, 0.45);
     color: var(--text);
     transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    /* negative spread pulls the shadow back in before it's blurred, so the whole hover state fits inside the
+       24px bleed above; the extra alpha keeps it reading as strongly as the wider, lighter version did */
+    box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.45);
 }
 
 .explore-header {
@@ -800,6 +812,11 @@
 
     .category-sidebar-list {
         gap: 8px;
+        /* .explore-layout's gap drops to 16px here, and the bleed's padding box still takes pointer events -
+           a 24px bleed would sit over the skin grid and eat clicks on its left edge. 14px stays inside the gap,
+           and the smaller hover scale below keeps the shadow within it. */
+        margin: -14px;
+        padding: 14px;
     }
 
     .categoryTitle {
@@ -814,6 +831,12 @@
     .category-sidebar-btn {
         padding: 12px;
         font-size: 0.82rem;
+    }
+
+    /* 1.1 on a 165px sidebar overhangs more than the 14px bleed above can hold, and reads as a bigger jump
+       at this size anyway */
+    .category-sidebar-btn:hover {
+        transform: scale(1.06);
     }
 
     .explore-main {

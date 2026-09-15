@@ -18,9 +18,12 @@ export async function initSteamAuth() {
     box.dataset.signedIn = 'true';
     box.innerHTML = `
         ${user.avatar ? `<img class="steam-avatar" src="${user.avatar}" alt="">` : ''}
-        <span class="steam-user">${user.display_name ?? 'Signed in'}</span>
+        <span class="steam-user"></span>
         <button class="steam-logout" type="button" title="Sign out">Sign out</button>
     `;
+    //textContent, not interpolated into the innerHTML above - Steam display names are chosen by
+    //the user, so a name like <img src=x onerror=...> would otherwise run as markup
+    box.querySelector('.steam-user').textContent = user.display_name ?? 'Signed in';
 
     box.querySelector('.steam-logout')?.addEventListener('click', e => {
         e.stopPropagation(); //without this the box's own handler fires and sends us back to Steam

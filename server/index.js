@@ -13,7 +13,12 @@ const ROOT = path.join(__dirname, '..');
 const SKINS_PATH = path.join(ROOT, 'data', 'skins.json');
 
 const { Pool } = pg;
-const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    connectionTimeoutMillis: 5000,
+    statement_timeout: 10000,
+    application_name: 'wearhouse-api',
+});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,28 +26,16 @@ const PORT = process.env.PORT || 3001;
 //gzip every response - the price payloads are highly repetitive JSON and compress ~10:1
 app.use(compression());
 
-//credentials:true and an explicit origin, not the wildcard - a wildcard origin makes browsers
-//refuse to send the session cookie, so sign-in would appear to work and then not stick
 app.use(cors({ origin: process.env.BASE_URL || true, credentials: true }));
 
-// Serves the frontend from the same origin as the API, so prices.js never needs an
-// environment-specific backend URL.
-//
-// Deliberately ahead of setupAuth: these files are public and never read req.user, and one
-// page load pulls ~35 of them (28 ES modules alone). Behind the session middleware, every
-// one of those would trigger a session lookup - a Postgres round-trip per file once signed in.
 app.use('/css', express.static(path.join(ROOT, 'css')));
 app.use('/js', express.static(path.join(ROOT, 'js')));
 app.use('/data', express.static(path.join(ROOT, 'data')));
 app.use('/assets', express.static(path.join(ROOT, 'assets')));
 app.get('/', (req, res) => res.sendFile(path.join(ROOT, 'index.html')));
 
-//before the API routes below, so anything added later can read req.user
 setupAuth(app, pool);
 
-//built once at startup, not per-request - skins.json only changes when scripts/sync-catalog.js re-runs.
-//Maps "defIndex:paintIndex:wearTier:variant" -> item_id, bridging price_history's wear_tier/variant keys
-//back to the item_id the redirect link needs.
 function buildSkinItemIdLookup() {
     const skins = JSON.parse(fs.readFileSync(SKINS_PATH, 'utf-8'));
     const lookup = new Map();
@@ -62,11 +55,6 @@ function cs2capLink(provider, itemId) {
     return `https://cs2c.app/r/${provider}/${itemId}`;
 }
 
-//Bulk endpoint: the CHEAPEST price per skin/wear/variant, nothing else. Shaped as
-//  { "defIndex:paintIndex": { data: { wearTier: { variant: <price> } } } }
-//The grids (explore, tradeup) only ever take Math.min() across markets, so shipping every
-//market's price and redirect link to them was ~29MB of payload to produce one number.
-//Detail pages get the full breakdown from /api/prices/:def-:paint below instead.
 app.get('/api/prices', async (req, res) => {
     try {
         const { rows } = await pool.query(

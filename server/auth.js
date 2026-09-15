@@ -52,8 +52,7 @@ export function setupAuth(app, pool) {
     }));
 
     app.use(passport.initialize());
-    app.use(passport.session());
-
+    app.use(passport.session()); 
     //the whole user row goes in the session - it's four small fields, so this avoids a
     //database round-trip on every single request just to rehydrate a name and avatar
     passport.serializeUser((user, done) => done(null, user));

@@ -418,6 +418,49 @@ function fillPrices(root) {
     });
 }
 
+//Filters whichever card grid the current route is showing - a crate's contents, one weapon's skins, or one
+//collectible type - as the user types. Each view renders its cards with a different function and stores the
+//searchable name in a different field, so both are passed in:
+//  render - takes the matching items, returns the grid's HTML
+//  text   - takes one item, returns the string to match the query against
+//  prefix - HTML pinned ahead of the unfiltered grid only (the crate view's Golds tile)
+//
+//Debounced rather than filtering per keystroke: every pass rebuilds the whole grid's innerHTML and re-runs
+//fillPrices over the new cards, which is far too much work to repeat on each letter of a full case.
+//180ms rather than the header search's 120ms for the same reason - that one only rebuilds a small dropdown.
+//
+//Only the cards are re-rendered. The input itself lives up in .explore-header, outside #skinGrid, so
+//replacing the grid never blows away focus or the caret. The click handlers are delegated on grid too
+//(attachSkinCardNav, and the golds card's), so they keep working on the new cards without re-attaching -
+//re-attaching here would stack a duplicate listener on every keystroke.
+function attachGridSearch(grid, items, { render, text, prefix = '' }) {
+    const input = document.querySelector('.gridSearch');
+    if (!input || !items) return;
+
+    let debounceTimer;
+    input.addEventListener('input', e => {
+        const query = e.target.value.trim().toLowerCase();
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            if (!query) {
+                //prefix only belongs on the unfiltered view - the Golds tile is navigation, not one of the contents
+                grid.innerHTML = prefix + render(items);
+                fillPrices(grid);
+                return;
+            }
+
+            //filter() copies, so the render functions' in-place sortByRarity can't reorder the original array
+            const matches = items.filter(i => text(i).toLowerCase().includes(query));
+
+            grid.innerHTML = matches.length
+                ? render(matches)
+                : '<p class="explore-empty">No matches found.</p>';
+            fillPrices(grid);
+        }, 180);
+    });
+}
+
 export function renderExplorePage(weapon = null) {
     const app = document.getElementById('app');
 
@@ -444,6 +487,14 @@ export function renderExplorePage(weapon = null) {
                             ${weapon && !isCollectible ? `<button class="explore-sort-toggle" id="sortToggleBtn">${sortDescending ? 'Rarest last' : 'Rarest first'}</button>` : ''}
                         </div>
                     </div>
+                    ${weapon ? `
+                    <div class="sideBarSearch-wrap grid-search-wrap">
+                        <svg class="sideBarSearch-icon" viewBox="0 0 24 24" fill="none">
+                            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
+                            <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                        <input class="sideBarSearch gridSearch" type="text" placeholder="${isCrate ? 'Search contents...' : isCollectible ? `Search ${collectibleLabel}...` : 'Search skins...'}" autocomplete="off">
+                    </div>` : ''}
                 </div>
                 <div class="${weapon ? 'skin-grid' : 'weapon-categories'}" id="skinGrid">
                     <p class="explore-loading">Loading…</p>
@@ -475,9 +526,14 @@ export function renderExplorePage(weapon = null) {
             if (!grid) return;
 
             if (isGolds) {
-                grid.innerHTML = renderCrateContentsCard(crate ? crate.contains_rare : [], crateName, skins, stickers);
+                const golds = crate ? crate.contains_rare : [];
+                grid.innerHTML = renderCrateContentsCard(golds, crateName, skins, stickers);
                 fillPrices(grid);
                 attachSkinCardNav(grid);
+                attachGridSearch(grid, golds, {
+                    render: list => renderCrateContentsCard(list, crateName, skins, stickers),
+                    text: i => i.name,
+                });
                 return;
             }
 
@@ -495,13 +551,19 @@ export function renderExplorePage(weapon = null) {
             </button>`;
             const hero = document.getElementById('caseHero');
             if (hero && crate) { hero.innerHTML = renderCaseCard(crate); fillPrices(hero); }
-            grid.innerHTML = goldsCard + renderCrateContentsCard(crate ? crate.contains : [], crateName, skins, stickers);
+            const contents = crate ? crate.contains : [];
+            grid.innerHTML = goldsCard + renderCrateContentsCard(contents, crateName, skins, stickers);
             fillPrices(grid);
             grid.addEventListener('click', e => {
                 const card = e.target.closest('.weapon-card');
                 if (card && card.dataset.golds) window.location.hash = '#/explore/crate/' + encodeURIComponent(crateName) + '/golds';
             });
             attachSkinCardNav(grid);
+            attachGridSearch(grid, contents, {
+                render: list => renderCrateContentsCard(list, crateName, skins, stickers),
+                text: i => i.name,
+                prefix: goldsCard,
+            });
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
             if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load contents.</p>`;
@@ -515,6 +577,12 @@ export function renderExplorePage(weapon = null) {
             grid.innerHTML = renderCollectibleItems(items, type.label);
             fillPrices(grid);
             attachSkinCardNav(grid);
+            attachGridSearch(grid, items, {
+                render: list => renderCollectibleItems(list, type.label),
+                //agents show marketHashName on the card and the rest show name, so match against whichever
+                //this type actually has rather than searching text the card never displays
+                text: i => i.marketHashName ?? i.name ?? '',
+            });
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
             if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load ${collectibleLabel}.</p>`;
@@ -526,6 +594,12 @@ export function renderExplorePage(weapon = null) {
             grid.innerHTML = renderSkinCard(skins, weapon);
             fillPrices(grid);
             attachSkinCardNav(grid);
+            attachGridSearch(grid, skins, {
+                render: list => renderSkinCard(list, weapon),
+                //the card shows weapon, skin name and phase as separate lines, so match across all three -
+                //"doppler ruby" and "karambit fade" both find what you'd expect
+                text: s => `${s.weapon ?? ''} ${s.name ?? ''} ${s.phase ?? ''}`,
+            });
         }).catch(() => {
             const grid = document.getElementById('skinGrid');
             if (grid) grid.innerHTML = `<p class="explore-empty">Failed to load skins.</p>`;
