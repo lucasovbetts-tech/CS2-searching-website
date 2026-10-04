@@ -1,6 +1,6 @@
 import { getSkins, getSkinsByWeapon } from '../api/skins.js';
 import { getWeapons } from '../api/weapons.js';
-import { getStickerCapsules, getSouvenirPackages, getNonTournamentStickerCapsules, getCases } from '../api/crates.js';
+import { getStickerCapsules, getSouvenirPackages, getNonTournamentStickerCapsules, getCases, getCrateId } from '../api/crates.js';
 import { getCollections } from '../api/collections.js';
 import { getAgents, getCharms, getPatches, getMusicKits, getGraffiti, getPins, getStickers } from '../api/collectibles.js';
 import { getHighlights } from '../api/highlights.js';
@@ -261,17 +261,19 @@ function renderCrateContentsCard(items, crateName, skins, stickers) {
     return cards.join('');
 }
 
-function renderCaseCard(crate) {
+//crateId is CS2Cap's item_id for this container, from data/crates.json via getCrateId(). The container's
+//own price needs it - ByMykel's crates.json, where everything else on this card comes from, has no CS2Cap
+//id at all. null for the ~39 old tournament capsules CS2Cap doesn't list, which render with no price block
+//rather than sitting on "Price unavailable" forever.
+function renderCaseCard(crate, crateId) {
     const name = crate.name;
     const img = crate.image;
     const csfloatLink = crate.def_index != null ? `https://csfloat.com/search?type=buy_now&def_index=${crate.def_index}` : null; //collections have no def_index - CSFloat has nothing to link to
     const color = crate.rarity?.color ?? '#a855f7'; //collections have no rarity field at all (mixed rarities inside), so fall back to the app's accent color
-    //cases/capsules/souvenirs are still ByMykel-sourced (no CS2Cap catalog id available), so priced by their
-    //own name instead of an id - CS2Cap's /prices endpoint works fine off market_hash_name alone either way
     return `
-        <div class="case-hero-card" data-crate-name="${name}" style="background: ${rarityGradient(color)}">
+        <div class="case-hero-card" ${crateId != null ? `data-id="${crateId}"` : ''} style="background: ${rarityGradient(color)}">
             ${img ? `<img class="case-hero-img" src="${img}" alt="${name}">` : '<div class="skin-img-placeholder"></div>'}
-            ${crate.def_index != null ? `
+            ${crateId != null ? `
             <div class="skinCardPrices">
                 <p class="skinCardPriceNormal">${PRICE_LOADING}</p>
             </div>` : ''}
@@ -396,7 +398,7 @@ function fillPrices(root) {
     };
 
     root.querySelectorAll('.skin-card, .case-hero-card').forEach(card => {
-        const { def, paint, stickerId, id, crateName } = card.dataset;
+        const { def, paint, stickerId, id } = card.dataset;
 
         if (def != null) {
             //the presence of a stattrak/souvenir slot is what says whether this skin has those variants
@@ -411,8 +413,8 @@ function fillPrices(root) {
             return;
         }
 
-        //cases/capsules are priced by name rather than id - they're still ByMykel-sourced with no catalog id
-        const key = stickerId ?? id ?? crateName;
+        //stickers, collectibles and containers all price off a plain CS2Cap item_id
+        const key = stickerId ?? id;
         if (key == null) return;
         getItemPrice(key).then(price => fill(card, '.skinCardPriceNormal', lowestPrice(price)));
     });
@@ -550,7 +552,7 @@ export function renderExplorePage(weapon = null) {
                 <span class="weapon-card-count">${goldCount} ${goldCount === 1 ? 'gold' : 'golds'}</span>
             </button>`;
             const hero = document.getElementById('caseHero');
-            if (hero && crate) { hero.innerHTML = renderCaseCard(crate); fillPrices(hero); }
+            if (hero && crate) { hero.innerHTML = renderCaseCard(crate, await getCrateId(crateName)); fillPrices(hero); }
             const contents = crate ? crate.contains : [];
             grid.innerHTML = goldsCard + renderCrateContentsCard(contents, crateName, skins, stickers);
             fillPrices(grid);

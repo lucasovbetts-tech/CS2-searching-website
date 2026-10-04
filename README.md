@@ -4,7 +4,7 @@ A price comparison site for CS2 skins. It pulls prices from 41 marketplaces, kee
 them in Postgres, and shows the cheapest one per item so you don't have to check each site yourself.
 There's also a trade-up calculator that works out the real odds of each possible outcome.
 
-<!-- TODO: screenshot of the explore page goes here -->
+![Explore page](assets/Images/explorePage.png)
 
 ## What it does
 
@@ -70,7 +70,7 @@ part is that outcome chances are weighted by how many skins each collection cont
 part is gold trade-ups, where you have to account for knife model, finish, and phase.
 
 Doppler phases aren't uniform, and Chroma cases use a different phase table from every other case,
-so the same knife has different Ruby odds depending on which case it came from. Those weights are in
+so the same knife has different doppler odds depending on which case it came from. Those weights are in
 `PHASE_WEIGHTS`.
 
 There are 34 tests in `js/utils/tradeup-probability.test.js`, checked against real case pools pulled

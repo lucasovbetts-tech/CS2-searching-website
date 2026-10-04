@@ -14,7 +14,7 @@ const CS2CAP_API_KEY = process.env.CS2CAP_API_KEY;
 if (!CS2CAP_API_KEY) throw new Error('CS2CAP_API_KEY not set in server/.env');
 
 //every non-skin catalog file - not highlights.json, which has no item_id to price against
-const ITEM_FILES = ['agents.json', 'charms.json', 'patches.json', 'music-kits.json', 'graffiti.json', 'stickers.json', 'collectibles.json'];
+const ITEM_FILES = ['agents.json', 'charms.json', 'patches.json', 'music-kits.json', 'graffiti.json', 'stickers.json', 'collectibles.json', 'crates.json'];
 
 const CS2CAP_PRICES_URL = 'https://api.cs2c.app/v1/prices/batch';
 const BATCH_SIZE = 100;
@@ -123,7 +123,7 @@ async function refreshCurrentPriceViews() {
 
 async function sync() {
     const allItemIds = loadAllItemIds();
-    console.log(`Fetching prices for ${allItemIds.length} non-skin items (agents, charms, patches, music kits, graffiti, stickers, collectibles)...`);
+    console.log(`Fetching prices for ${allItemIds.length} non-skin items (agents, charms, patches, music kits, graffiti, stickers, collectibles, crates)...`);
 
     const pricedItems = await fetchAllPrices(allItemIds);
     console.log(`Got prices for ${pricedItems.length} items - inserting into item_price_history...`);

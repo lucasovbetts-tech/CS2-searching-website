@@ -1,0 +1,2337 @@
+[
+  {
+    "id": "139",
+    "name": "Gift Package",
+    "type": "Gift"
+  },
+  {
+    "id": "140",
+    "name": "Pallet of Presents",
+    "type": "Gift"
+  },
+  {
+    "id": "141",
+    "name": "Audience Participation Parcel",
+    "type": "Gift"
+  },
+  {
+    "id": "142",
+    "name": "CS:GO Weapon Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "143",
+    "name": "eSports 2013 Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "144",
+    "name": "Operation Bravo Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "145",
+    "name": "CS:GO Weapon Case 2",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "146",
+    "name": "eSports 2013 Winter Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "147",
+    "name": "DreamHack 2013 Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "148",
+    "name": "Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "149",
+    "name": "Winter Offensive Weapon Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "150",
+    "name": "CS:GO Weapon Case 3",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "151",
+    "name": "Operation Phoenix Weapon Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "152",
+    "name": "Sticker Capsule 2",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "153",
+    "name": "EMS One 2014 Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "154",
+    "name": "EMS Katowice 2014 Challengers",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "155",
+    "name": "EMS Katowice 2014 Legends",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "156",
+    "name": "Community Sticker Capsule 1",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "157",
+    "name": "Huntsman Weapon Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "158",
+    "name": "Operation Breakout Weapon Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "159",
+    "name": "eSports 2014 Summer Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "160",
+    "name": "ESL One Cologne 2014 Legends",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "161",
+    "name": "ESL One Cologne 2014 Challengers",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "162",
+    "name": "ESL One Cologne 2014 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "163",
+    "name": "ESL One Cologne 2014 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "164",
+    "name": "ESL One Cologne 2014 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "165",
+    "name": "ESL One Cologne 2014 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "166",
+    "name": "ESL One Cologne 2014 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "167",
+    "name": "ESL One Cologne 2014 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "168",
+    "name": "ESL One Cologne 2014 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "169",
+    "name": "Operation Vanguard Weapon Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "170",
+    "name": "DreamHack 2014 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "171",
+    "name": "DreamHack 2014 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "172",
+    "name": "DreamHack 2014 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "173",
+    "name": "DreamHack 2014 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "174",
+    "name": "DreamHack 2014 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "175",
+    "name": "DreamHack 2014 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "176",
+    "name": "DreamHack 2014 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "177",
+    "name": "DreamHack 2014 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "178",
+    "name": "Chroma Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "179",
+    "name": "ESL One Katowice 2015 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "180",
+    "name": "ESL One Katowice 2015 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "181",
+    "name": "ESL One Katowice 2015 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "182",
+    "name": "ESL One Katowice 2015 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "183",
+    "name": "ESL One Katowice 2015 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "184",
+    "name": "ESL One Katowice 2015 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "185",
+    "name": "ESL One Katowice 2015 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "186",
+    "name": "ESL One Katowice 2015 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "187",
+    "name": "ESL One Katowice 2015 Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "188",
+    "name": "Chroma 2 Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "189",
+    "name": "Enfu Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "190",
+    "name": "Falchion Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "191",
+    "name": "ESL One Cologne 2015 Legends (Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "192",
+    "name": "ESL One Cologne 2015 Challengers (Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "193",
+    "name": "Autograph Capsule | Group A (Foil) | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "194",
+    "name": "Autograph Capsule | Group B (Foil) | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "195",
+    "name": "Autograph Capsule | Group C (Foil) | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "196",
+    "name": "Autograph Capsule | Group D (Foil) | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "197",
+    "name": "Autograph Capsule | Fnatic | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "198",
+    "name": "Autograph Capsule | Luminosity Gaming | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "199",
+    "name": "Autograph Capsule | Natus Vincere | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "200",
+    "name": "Autograph Capsule | Ninjas in Pyjamas | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "201",
+    "name": "Autograph Capsule | Team EnVyUs | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "202",
+    "name": "Autograph Capsule | Titan | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "203",
+    "name": "Autograph Capsule | Team SoloMid | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "204",
+    "name": "Autograph Capsule | Virtus.Pro | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "205",
+    "name": "Autograph Capsule | mousesports | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "206",
+    "name": "Autograph Capsule | Renegades | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "207",
+    "name": "Autograph Capsule | Team Immunity | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "208",
+    "name": "Autograph Capsule | Team eBettle | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "209",
+    "name": "Autograph Capsule | Team Kinguin | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "210",
+    "name": "Autograph Capsule | Flipsid3 Tactics | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "211",
+    "name": "Autograph Capsule | Counter Logic Gaming | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "212",
+    "name": "Autograph Capsule | Cloud9 G2A | Cologne 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "213",
+    "name": "ESL One Cologne 2015 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "214",
+    "name": "ESL One Cologne 2015 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "215",
+    "name": "ESL One Cologne 2015 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "216",
+    "name": "ESL One Cologne 2015 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "217",
+    "name": "ESL One Cologne 2015 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "218",
+    "name": "ESL One Cologne 2015 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "219",
+    "name": "ESL One Cologne 2015 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "220",
+    "name": "Shadow Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "221",
+    "name": "DreamHack Cluj-Napoca 2015 Legends (Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "222",
+    "name": "DreamHack Cluj-Napoca 2015 Challengers (Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "223",
+    "name": "Autograph Capsule | Challengers (Foil) | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "224",
+    "name": "Autograph Capsule | Legends (Foil) | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "225",
+    "name": "Autograph Capsule | Ninjas in Pyjamas | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "226",
+    "name": "Autograph Capsule | Team Dignitas | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "227",
+    "name": "Autograph Capsule | Counter Logic Gaming | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "228",
+    "name": "Autograph Capsule | Vexed Gaming | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "229",
+    "name": "Autograph Capsule | Flipsid3 Tactics | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "230",
+    "name": "Autograph Capsule | Team Liquid | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "231",
+    "name": "Autograph Capsule | mousesports | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "232",
+    "name": "Autograph Capsule | Natus Vincere | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "233",
+    "name": "Autograph Capsule | Virtus.Pro | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "234",
+    "name": "Autograph Capsule | Cloud9 | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "235",
+    "name": "Autograph Capsule | G2 Esports | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "236",
+    "name": "Autograph Capsule | Titan | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "237",
+    "name": "Autograph Capsule | Team SoloMid | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "238",
+    "name": "Autograph Capsule | Team EnVyUs | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "239",
+    "name": "Autograph Capsule | Fnatic | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "240",
+    "name": "Autograph Capsule | Luminosity Gaming | Cluj-Napoca 2015",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "241",
+    "name": "DreamHack Cluj-Napoca 2015 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "242",
+    "name": "DreamHack Cluj-Napoca 2015 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "243",
+    "name": "DreamHack Cluj-Napoca 2015 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "244",
+    "name": "DreamHack Cluj-Napoca 2015 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "245",
+    "name": "DreamHack Cluj-Napoca 2015 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "246",
+    "name": "DreamHack Cluj-Napoca 2015 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "247",
+    "name": "DreamHack Cluj-Napoca 2015 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "248",
+    "name": "Pinups Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "249",
+    "name": "Slid3 Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "250",
+    "name": "Team Roles Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "251",
+    "name": "Revolver Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "252",
+    "name": "Operation Wildfire Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "253",
+    "name": "MLG Columbus 2016 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "254",
+    "name": "MLG Columbus 2016 Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "255",
+    "name": "Autograph Capsule | Challengers (Foil) | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "256",
+    "name": "Autograph Capsule | Legends (Foil) | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "257",
+    "name": "Autograph Capsule | Ninjas in Pyjamas | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "258",
+    "name": "Autograph Capsule | Splyce | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "259",
+    "name": "Autograph Capsule | Counter Logic Gaming | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "260",
+    "name": "Autograph Capsule | Gambit Gaming | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "261",
+    "name": "Autograph Capsule | Flipsid3 Tactics | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "262",
+    "name": "Autograph Capsule | Team Liquid | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "263",
+    "name": "Autograph Capsule | mousesports | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "264",
+    "name": "Autograph Capsule | Natus Vincere | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "265",
+    "name": "Autograph Capsule | Virtus.Pro | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "266",
+    "name": "Autograph Capsule | Cloud9 | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "267",
+    "name": "Autograph Capsule | G2 Esports | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "268",
+    "name": "Autograph Capsule | FaZe Clan | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "269",
+    "name": "Autograph Capsule | Astralis | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "270",
+    "name": "Autograph Capsule | Team EnVyUs | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "271",
+    "name": "Autograph Capsule | Fnatic | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "272",
+    "name": "Autograph Capsule | Luminosity Gaming | MLG Columbus 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "273",
+    "name": "MLG Columbus 2016 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "274",
+    "name": "MLG Columbus 2016 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "275",
+    "name": "MLG Columbus 2016 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "276",
+    "name": "MLG Columbus 2016 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "277",
+    "name": "MLG Columbus 2016 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "278",
+    "name": "MLG Columbus 2016 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "279",
+    "name": "MLG Columbus 2016 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "280",
+    "name": "MLG Columbus 2016 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "281",
+    "name": "Chroma 3 Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "282",
+    "name": "Community Graffiti Box 1",
+    "type": "Graffiti Box"
+  },
+  {
+    "id": "283",
+    "name": "Collectible Pins Capsule Series 1",
+    "type": "Pins Capsule"
+  },
+  {
+    "id": "284",
+    "name": "Gamma Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "285",
+    "name": "Cologne 2016 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "286",
+    "name": "Cologne 2016 Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "287",
+    "name": "Autograph Capsule | Challengers (Foil) | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "288",
+    "name": "Autograph Capsule | Legends (Foil) | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "289",
+    "name": "Autograph Capsule | Ninjas in Pyjamas | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "290",
+    "name": "Autograph Capsule | OpTic Gaming | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "291",
+    "name": "Autograph Capsule | Counter Logic Gaming | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "292",
+    "name": "Autograph Capsule | Gambit Gaming | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "293",
+    "name": "Autograph Capsule | Flipsid3 Tactics | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "294",
+    "name": "Autograph Capsule | Team Liquid | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "295",
+    "name": "Autograph Capsule | mousesports | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "296",
+    "name": "Autograph Capsule | Natus Vincere | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "297",
+    "name": "Autograph Capsule | Virtus.Pro | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "298",
+    "name": "Autograph Capsule | SK Gaming | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "299",
+    "name": "Autograph Capsule | G2 Esports | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "300",
+    "name": "Autograph Capsule | FaZe Clan | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "301",
+    "name": "Autograph Capsule | Astralis | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "302",
+    "name": "Autograph Capsule | Team EnVyUs | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "303",
+    "name": "Autograph Capsule | Fnatic | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "304",
+    "name": "Autograph Capsule | Team Dignitas | Cologne 2016",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "305",
+    "name": "Cologne 2016 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "306",
+    "name": "Cologne 2016 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "307",
+    "name": "Cologne 2016 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "308",
+    "name": "Cologne 2016 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "309",
+    "name": "Cologne 2016 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "310",
+    "name": "Cologne 2016 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "311",
+    "name": "Cologne 2016 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "312",
+    "name": "Gamma 2 Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "313",
+    "name": "Sugarface Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "314",
+    "name": "Bestiary Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "315",
+    "name": "Collectible Pins Capsule Series 2",
+    "type": "Pins Capsule"
+  },
+  {
+    "id": "316",
+    "name": "CS:GO Graffiti Box",
+    "type": "Graffiti Box"
+  },
+  {
+    "id": "317",
+    "name": "Perfect World Graffiti Box",
+    "type": "Graffiti Box"
+  },
+  {
+    "id": "318",
+    "name": "StatTrak™ Radicals Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "319",
+    "name": "Glove Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "320",
+    "name": "Atlanta 2017 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "321",
+    "name": "Atlanta 2017 Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "322",
+    "name": "Autograph Capsule | Challengers (Foil) | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "323",
+    "name": "Autograph Capsule | Legends (Foil) | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "324",
+    "name": "Autograph Capsule | Astralis | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "325",
+    "name": "Autograph Capsule | Team EnVyUs | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "326",
+    "name": "Autograph Capsule | FaZe Clan | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "327",
+    "name": "Autograph Capsule | Flipsid3 Tactics | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "328",
+    "name": "Autograph Capsule | Fnatic | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "329",
+    "name": "Autograph Capsule | G2 Esports | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "330",
+    "name": "Autograph Capsule | Gambit Gaming | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "331",
+    "name": "Autograph Capsule | GODSENT | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "332",
+    "name": "Autograph Capsule | HellRaisers | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "333",
+    "name": "Autograph Capsule | mousesports | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "334",
+    "name": "Autograph Capsule | Natus Vincere | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "335",
+    "name": "Autograph Capsule | North | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "336",
+    "name": "Autograph Capsule | OpTic Gaming | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "337",
+    "name": "Autograph Capsule | SK Gaming | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "338",
+    "name": "Autograph Capsule | Team Liquid | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "339",
+    "name": "Autograph Capsule | Virtus.Pro | Atlanta 2017",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "340",
+    "name": "Atlanta 2017 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "341",
+    "name": "Atlanta 2017 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "342",
+    "name": "Atlanta 2017 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "343",
+    "name": "Atlanta 2017 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "344",
+    "name": "Atlanta 2017 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "345",
+    "name": "Atlanta 2017 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "346",
+    "name": "Atlanta 2017 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "347",
+    "name": "Spectrum Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "348",
+    "name": "Operation Hydra Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "349",
+    "name": "Krakow 2017 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "350",
+    "name": "Krakow 2017 Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "351",
+    "name": "Krakow 2017 Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "352",
+    "name": "Krakow 2017 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "353",
+    "name": "Krakow 2017 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "354",
+    "name": "Krakow 2017 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "355",
+    "name": "Krakow 2017 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "356",
+    "name": "Krakow 2017 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "357",
+    "name": "Krakow 2017 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "358",
+    "name": "Krakow 2017 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "359",
+    "name": "Krakow 2017 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "360",
+    "name": "Spectrum 2 Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "361",
+    "name": "Perfect World Sticker Capsule 1",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "362",
+    "name": "Perfect World Sticker Capsule 2",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "363",
+    "name": "Boston 2018 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "364",
+    "name": "Boston 2018 Returning Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "365",
+    "name": "Boston 2018 Minor Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "366",
+    "name": "Boston 2018 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "367",
+    "name": "Boston 2018 Returning Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "368",
+    "name": "Boston 2018 Minor Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "369",
+    "name": "Boston 2018 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "370",
+    "name": "Boston 2018 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "371",
+    "name": "Boston 2018 Cobblestone Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "372",
+    "name": "Boston 2018 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "373",
+    "name": "Boston 2018 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "374",
+    "name": "Boston 2018 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "375",
+    "name": "Boston 2018 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "376",
+    "name": "Community Capsule 2018",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "377",
+    "name": "Clutch Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "378",
+    "name": "Boston 2018 Minor Challengers with Flash Gaming (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "379",
+    "name": "Boston 2018 Minor Challengers with Flash Gaming Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "380",
+    "name": "Chicken Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "381",
+    "name": "Boston 2018 Attending Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "382",
+    "name": "Boston 2018 Attending Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "383",
+    "name": "Collectible Pins Capsule Series 3",
+    "type": "Pins Capsule"
+  },
+  {
+    "id": "384",
+    "name": "Horizon Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "385",
+    "name": "London 2018 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "386",
+    "name": "London 2018 Returning Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "387",
+    "name": "London 2018 Minor Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "388",
+    "name": "London 2018 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "389",
+    "name": "London 2018 Returning Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "390",
+    "name": "London 2018 Minor Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "391",
+    "name": "London 2018 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "392",
+    "name": "London 2018 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "393",
+    "name": "London 2018 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "394",
+    "name": "London 2018 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "395",
+    "name": "London 2018 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "396",
+    "name": "London 2018 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "397",
+    "name": "London 2018 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "398",
+    "name": "Skill Groups Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "399",
+    "name": "Danger Zone Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "400",
+    "name": "Katowice 2019 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "401",
+    "name": "Katowice 2019 Returning Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "402",
+    "name": "Katowice 2019 Minor Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "403",
+    "name": "Katowice 2019 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "404",
+    "name": "Katowice 2019 Returning Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "405",
+    "name": "Katowice 2019 Minor Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "406",
+    "name": "Katowice 2019 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "407",
+    "name": "Katowice 2019 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "408",
+    "name": "Katowice 2019 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "409",
+    "name": "Katowice 2019 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "410",
+    "name": "Katowice 2019 Cache Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "411",
+    "name": "Katowice 2019 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "412",
+    "name": "Katowice 2019 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "413",
+    "name": "Halo Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "414",
+    "name": "Prisma Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "415",
+    "name": "Feral Predators Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "416",
+    "name": "CS:GO Patch Pack",
+    "type": "Patch Capsule"
+  },
+  {
+    "id": "417",
+    "name": "Half-Life: Alyx Patch Pack",
+    "type": "Patch Capsule"
+  },
+  {
+    "id": "418",
+    "name": "Warhammer 40,000 Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "419",
+    "name": "Shattered Web Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "420",
+    "name": "Berlin 2019 Legends (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "421",
+    "name": "Berlin 2019 Returning Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "422",
+    "name": "Berlin 2019 Minor Challengers (Holo-Foil)",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "423",
+    "name": "Berlin 2019 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "424",
+    "name": "Berlin 2019 Returning Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "425",
+    "name": "Berlin 2019 Minor Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "426",
+    "name": "Berlin 2019 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "427",
+    "name": "Berlin 2019 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "428",
+    "name": "Berlin 2019 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "429",
+    "name": "Berlin 2019 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "430",
+    "name": "Berlin 2019 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "431",
+    "name": "Berlin 2019 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "432",
+    "name": "Berlin 2019 Vertigo Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "433",
+    "name": "X-Ray P250 Package",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "434",
+    "name": "CS20 Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "435",
+    "name": "CS20 Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "436",
+    "name": "Half-Life: Alyx Collectible Pins Capsule",
+    "type": "Pins Capsule"
+  },
+  {
+    "id": "437",
+    "name": "Half-Life: Alyx Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "438",
+    "name": "Prisma 2 Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "439",
+    "name": "Masterminds Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "440",
+    "name": "StatTrak™ Masterminds Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "441",
+    "name": "Fracture Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "442",
+    "name": "Operation Broken Fang Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "443",
+    "name": "2020 RMR Legends",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "444",
+    "name": "2020 RMR Challengers",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "445",
+    "name": "2020 RMR Contenders",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "446",
+    "name": "Poorly Drawn Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "447",
+    "name": "Snakebite Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "448",
+    "name": "Tacticians Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "449",
+    "name": "StatTrak™ Tacticians Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "450",
+    "name": "2021 Community Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "451",
+    "name": "The Boardroom Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "452",
+    "name": "Battlefield 2042 Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "453",
+    "name": "Operation Riptide Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "454",
+    "name": "Stockholm 2021 Legends Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "455",
+    "name": "Stockholm 2021 Challengers Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "456",
+    "name": "Stockholm 2021 Contenders Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "457",
+    "name": "Stockholm 2021 Legends Patch Pack",
+    "type": "Patch Capsule"
+  },
+  {
+    "id": "458",
+    "name": "Stockholm 2021 Challengers Patch Pack",
+    "type": "Patch Capsule"
+  },
+  {
+    "id": "459",
+    "name": "Stockholm 2021 Contenders Patch Pack",
+    "type": "Patch Capsule"
+  },
+  {
+    "id": "460",
+    "name": "Stockholm 2021 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "461",
+    "name": "Stockholm 2021 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "462",
+    "name": "Stockholm 2021 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "463",
+    "name": "Stockholm 2021 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "464",
+    "name": "Stockholm 2021 Ancient Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "465",
+    "name": "Stockholm 2021 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "466",
+    "name": "Stockholm 2021 Vertigo Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "467",
+    "name": "Stockholm 2021 Champions Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "468",
+    "name": "Stockholm 2021 Finalists Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "469",
+    "name": "Dreams & Nightmares Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "470",
+    "name": "Antwerp 2022 Legends Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "471",
+    "name": "Antwerp 2022 Challengers Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "472",
+    "name": "Antwerp 2022 Contenders Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "473",
+    "name": "Antwerp 2022 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "474",
+    "name": "Antwerp 2022 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "475",
+    "name": "Antwerp 2022 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "476",
+    "name": "Antwerp 2022 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "477",
+    "name": "Antwerp 2022 Ancient Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "478",
+    "name": "Antwerp 2022 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "479",
+    "name": "Antwerp 2022 Vertigo Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "480",
+    "name": "Antwerp 2022 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "481",
+    "name": "Antwerp 2022 Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "482",
+    "name": "Antwerp 2022 Contenders Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "483",
+    "name": "Antwerp 2022 Champions Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "484",
+    "name": "Recoil Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "485",
+    "name": "10 Year Birthday Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "486",
+    "name": "Initiators Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "487",
+    "name": "StatTrak™ Initiators Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "488",
+    "name": "Rio 2022 Legends Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "489",
+    "name": "Rio 2022 Challengers Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "490",
+    "name": "Rio 2022 Contenders Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "491",
+    "name": "Rio 2022 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "492",
+    "name": "Rio 2022 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "493",
+    "name": "Rio 2022 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "494",
+    "name": "Rio 2022 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "495",
+    "name": "Rio 2022 Ancient Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "496",
+    "name": "Rio 2022 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "497",
+    "name": "Rio 2022 Vertigo Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "498",
+    "name": "Rio 2022 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "499",
+    "name": "Rio 2022 Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "500",
+    "name": "Rio 2022 Contenders Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "501",
+    "name": "Rio 2022 Champions Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "502",
+    "name": "Espionage Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "503",
+    "name": "Revolution Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "504",
+    "name": "Anubis Collection Package",
+    "type": "Collection Package"
+  },
+  {
+    "id": "505",
+    "name": "Paris 2023 Legends Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "506",
+    "name": "Paris 2023 Challengers Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "507",
+    "name": "Paris 2023 Contenders Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "508",
+    "name": "Paris 2023 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "509",
+    "name": "Paris 2023 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "510",
+    "name": "Paris 2023 Anubis Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "511",
+    "name": "Paris 2023 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "512",
+    "name": "Paris 2023 Ancient Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "513",
+    "name": "Paris 2023 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "514",
+    "name": "Paris 2023 Vertigo Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "515",
+    "name": "Paris 2023 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "516",
+    "name": "Paris 2023 Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "517",
+    "name": "Paris 2023 Contenders Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "518",
+    "name": "Paris 2023 Champions Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "519",
+    "name": "Kilowatt Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "520",
+    "name": "Ambush Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "521",
+    "name": "NIGHTMODE Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "522",
+    "name": "StatTrak™ NIGHTMODE Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "523",
+    "name": "Copenhagen 2024 Legends Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "524",
+    "name": "Copenhagen 2024 Challengers Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "525",
+    "name": "Copenhagen 2024 Contenders Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "526",
+    "name": "Copenhagen 2024 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "527",
+    "name": "Copenhagen 2024 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "528",
+    "name": "Copenhagen 2024 Anubis Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "529",
+    "name": "Copenhagen 2024 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "530",
+    "name": "Copenhagen 2024 Ancient Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "531",
+    "name": "Copenhagen 2024 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "532",
+    "name": "Copenhagen 2024 Vertigo Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "533",
+    "name": "Copenhagen 2024 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "534",
+    "name": "Copenhagen 2024 Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "535",
+    "name": "Copenhagen 2024 Contenders Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "536",
+    "name": "Copenhagen 2024 Champions Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "537",
+    "name": "Masterminds 2 Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "538",
+    "name": "StatTrak™ Masterminds 2 Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "539",
+    "name": "Shanghai 2024 Legends Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "540",
+    "name": "Shanghai 2024 Challengers Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "541",
+    "name": "Shanghai 2024 Contenders Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "542",
+    "name": "Shanghai 2024 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "543",
+    "name": "Shanghai 2024 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "544",
+    "name": "Shanghai 2024 Anubis Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "545",
+    "name": "Shanghai 2024 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "546",
+    "name": "Shanghai 2024 Ancient Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "547",
+    "name": "Shanghai 2024 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "548",
+    "name": "Shanghai 2024 Vertigo Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "549",
+    "name": "Shanghai 2024 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "550",
+    "name": "Shanghai 2024 Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "551",
+    "name": "Shanghai 2024 Contenders Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "552",
+    "name": "Shanghai 2024 Champions Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "553",
+    "name": "Austin 2025 Legends Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "554",
+    "name": "Austin 2025 Challengers Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "555",
+    "name": "Austin 2025 Contenders Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "556",
+    "name": "Austin 2025 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "557",
+    "name": "Austin 2025 Inferno Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "558",
+    "name": "Austin 2025 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "559",
+    "name": "Austin 2025 Mirage Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "560",
+    "name": "Austin 2025 Anubis Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "561",
+    "name": "Austin 2025 Anubis Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "562",
+    "name": "Austin 2025 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "563",
+    "name": "Austin 2025 Dust II Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "564",
+    "name": "Austin 2025 Ancient Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "565",
+    "name": "Austin 2025 Ancient Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "566",
+    "name": "Austin 2025 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "567",
+    "name": "Austin 2025 Nuke Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "568",
+    "name": "Austin 2025 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "569",
+    "name": "Austin 2025 Train Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "570",
+    "name": "Austin 2025 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "571",
+    "name": "Austin 2025 Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "572",
+    "name": "Austin 2025 Contenders Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "573",
+    "name": "Austin 2025 Champions Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "574",
+    "name": "Sealed Genesis Terminal",
+    "type": "Terminal"
+  },
+  {
+    "id": "37341",
+    "name": "Sealed Dead Hand Terminal",
+    "type": "Terminal"
+  },
+  {
+    "id": "575",
+    "name": "Budapest 2025 Legends Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "576",
+    "name": "Budapest 2025 Challengers Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "577",
+    "name": "Budapest 2025 Contenders Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "578",
+    "name": "Budapest 2025 Inferno Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "579",
+    "name": "Budapest 2025 Inferno Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "580",
+    "name": "Budapest 2025 Mirage Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "581",
+    "name": "Budapest 2025 Mirage Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "582",
+    "name": "Budapest 2025 Overpass Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "583",
+    "name": "Budapest 2025 Overpass Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "584",
+    "name": "Budapest 2025 Dust II Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "585",
+    "name": "Budapest 2025 Dust II Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "586",
+    "name": "Budapest 2025 Ancient Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "587",
+    "name": "Budapest 2025 Ancient Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "588",
+    "name": "Budapest 2025 Nuke Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "589",
+    "name": "Budapest 2025 Nuke Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "590",
+    "name": "Budapest 2025 Train Souvenir Package",
+    "type": "Souvenir Package"
+  },
+  {
+    "id": "591",
+    "name": "Budapest 2025 Train Souvenir Highlight Package",
+    "type": "Souvenir Highlight"
+  },
+  {
+    "id": "592",
+    "name": "Budapest 2025 Legends Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "593",
+    "name": "Budapest 2025 Challengers Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "594",
+    "name": "Budapest 2025 Contenders Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "595",
+    "name": "Budapest 2025 Champions Autograph Capsule",
+    "type": "Autograph Capsule"
+  },
+  {
+    "id": "596",
+    "name": "Gallery Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "597",
+    "name": "Fever Case",
+    "type": "Weapon Case"
+  },
+  {
+    "id": "598",
+    "name": "Warhammer 40,000 Traitor Astartes Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "599",
+    "name": "Warhammer 40,000 Adeptus Astartes Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "600",
+    "name": "Warhammer 40,000 Imperium Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "601",
+    "name": "Warhammer 40,000 Xenos Sticker Capsule",
+    "type": "Sticker Capsule"
+  },
+  {
+    "id": "602",
+    "name": "Deluge Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "603",
+    "name": "StatTrak™ Deluge Music Kit Box",
+    "type": "Music Kit Box"
+  },
+  {
+    "id": "40659",
+    "name": "Jackass Sticker Capsule",
+    "type": "Sticker Capsule"
+  }
+]

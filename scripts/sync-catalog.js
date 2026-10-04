@@ -131,6 +131,19 @@ function buildSimpleItems(cs2capItems, { itemType, subtype, descriptions, includ
     });
 }
 
+//Every container CS2Cap sells, written as { id, name } so sync-item-prices.js's loadAllItemIds() can read
+//it like any other catalog file. ~442 of ByMykel's 481 crates match on market_hash_name; the rest are old
+//tournament capsules CS2Cap doesn't list, and those render without a price rather than a wrong one.
+function buildCrates(cs2capItems) {
+    return cs2capItems
+        .filter(i => i.item_type === 'Crate')
+        .map(item => ({
+            id: String(item.item_id),
+            name: item.market_hash_name,
+            type: item.item_subtype,
+        }));
+}
+
 async function sync() {
     const key = loadCs2capKey();
 
@@ -159,8 +172,10 @@ async function sync() {
     writeJson('stickers.json', buildSimpleItems(cs2capItems, { itemType: 'Sticker', descriptions: descByDefIndex(stickerDesc) }));
     //kept ungrouped (Pin/Operation Pass/Tournament Pass together) with a type field - getPins() filters client-side
     writeJson('collectibles.json', buildSimpleItems(cs2capItems, { itemType: 'Collectible', descriptions: descByDefIndex(collectibleDesc), includeType: true }));
-    //cases/capsules/souvenirs not sourced from CS2Cap - it has no contains/contains_rare equivalent,
-    //which explore.js's case/golds views need. js/api/crates.js stays on ByMykel's crates.json for that.
+    //Name -> CS2Cap item_id bridge for containers, and nothing else. js/api/crates.js still reads ByMykel's
+    //crates.json for contains/contains_rare (CS2Cap has no equivalent, and the case/golds views need it) -
+    //this file exists purely so the containers themselves can be priced, which needs a CS2Cap id.
+    writeJson('crates.json', buildCrates(cs2capItems));
 
     //straight copy - ByMykel has the actual clip video/thumbnail, CS2Cap's "Highlight Reel" charms don't
     writeJson('highlights.json', highlights);

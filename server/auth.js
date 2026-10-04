@@ -33,13 +33,13 @@ export function setupAuth(app, pool) {
         app.get('/api/me', (req, res) => res.json(null));
         return;
     }
-
+    //creates the class that stores sessions in postgres
     const PgSession = connectPgSimple(session);
 
     app.set('trust proxy', 1); //so secure cookies work if this ends up behind a tunnel/proxy
 
     app.use(session({
-        store: new PgSession({ pool, tableName: 'session' }),
+        store: new PgSession({ pool, tableName: 'session' }), //uses the class to store sessions in postgres
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false,
@@ -51,8 +51,9 @@ export function setupAuth(app, pool) {
         },
     }));
 
-    app.use(passport.initialize());
-    app.use(passport.session()); 
+    app.use(passport.initialize()); //bolts passports helpers onto the login (req.login(), req.logout() and req.isAuthenticate())
+    app.use(passport.session()); //sets req.user etc up
+
     //the whole user row goes in the session - it's four small fields, so this avoids a
     //database round-trip on every single request just to rehydrate a name and avatar
     passport.serializeUser((user, done) => done(null, user));
