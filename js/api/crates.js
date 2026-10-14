@@ -39,6 +39,6 @@ export async function getSouvenirPackages() {
 export async function getCases() {
     const crates = await getCrates();
     //type === 'Case' catches the normal ones, but some containers (e.g. "Sealed Dead Hand Terminal") have a real
-    //contains_rare gold pool - genuinely function as a case - without actually being typed 'Case' in the source data
+    //contains_rare gold pool but don't have case in the name
     return crates.filter(c => c.type === 'Case' || (c.contains_rare && c.contains_rare.length > 0));
 }

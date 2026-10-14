@@ -1,3 +1,5 @@
+//each load function is exported as its own function to keep things consistant
+
 import { cachedJson } from './json-cache.js';
 
 const loadAgents       = cachedJson('data/agents.json',       'Failed to load agents.json');

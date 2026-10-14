@@ -13356,6 +13356,618 @@
     "defIndex": 1737
   },
   {
+    "id": "1342",
+    "name": "Astralis | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | Astralis | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/astr_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1806
+  },
+  {
+    "id": "1343",
+    "name": "Team EnVyUs | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | Team EnVyUs | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/nv_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1807
+  },
+  {
+    "id": "1344",
+    "name": "FaZe Clan | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | FaZe Clan | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/faze_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1808
+  },
+  {
+    "id": "1345",
+    "name": "Flipsid3 Tactics | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | Flipsid3 Tactics | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/flip_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1809
+  },
+  {
+    "id": "1346",
+    "name": "Fnatic | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | Fnatic | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/sha2024/fntc_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1810
+  },
+  {
+    "id": "1347",
+    "name": "G2 Esports | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | G2 Esports | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/g2_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1811
+  },
+  {
+    "id": "1348",
+    "name": "Gambit Gaming | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | Gambit Gaming | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/gamb_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1812
+  },
+  {
+    "id": "1349",
+    "name": "GODSENT | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | GODSENT | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/god_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1813
+  },
+  {
+    "id": "1350",
+    "name": "HellRaisers | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | HellRaisers | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/hlr_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1814
+  },
+  {
+    "id": "1351",
+    "name": "mousesports | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | mousesports | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/mss_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1815
+  },
+  {
+    "id": "1352",
+    "name": "Natus Vincere | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | Natus Vincere | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/navi_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1816
+  },
+  {
+    "id": "1353",
+    "name": "North | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | North | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/nor_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1817
+  },
+  {
+    "id": "1354",
+    "name": "OpTic Gaming | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | OpTic Gaming | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/optc_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1818
+  },
+  {
+    "id": "1355",
+    "name": "SK Gaming | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | SK Gaming | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/sk_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1819
+  },
+  {
+    "id": "1356",
+    "name": "Team Liquid | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | Team Liquid | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/liq_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1820
+  },
+  {
+    "id": "1357",
+    "name": "Virtus.Pro | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | Virtus.Pro | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/vp_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1821
+  },
+  {
+    "id": "1358",
+    "name": "ELEAGUE | Atlanta 2017",
+    "marketHashName": "Sealed Graffiti | ELEAGUE | Atlanta 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Atlanta 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/atlanta2017/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-01-20",
+    "defIndex": 1822
+  },
+  {
+    "id": "1359",
+    "name": "Astralis | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Astralis | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/astr_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2131
+  },
+  {
+    "id": "1360",
+    "name": "Virtus.Pro | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Virtus.Pro | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/vp_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2132
+  },
+  {
+    "id": "1361",
+    "name": "Fnatic | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Fnatic | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/sha2024/fntc_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2133
+  },
+  {
+    "id": "1362",
+    "name": "SK Gaming | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | SK Gaming | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/sk_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2134
+  },
+  {
+    "id": "1363",
+    "name": "Natus Vincere | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Natus Vincere | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/navi_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2135
+  },
+  {
+    "id": "1364",
+    "name": "Gambit | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Gambit | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/gamb_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2136
+  },
+  {
+    "id": "1365",
+    "name": "North | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | North | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/nor_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2137
+  },
+  {
+    "id": "1366",
+    "name": "FaZe Clan | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | FaZe Clan | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/faze_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2138
+  },
+  {
+    "id": "1367",
+    "name": "mousesports | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | mousesports | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/mss_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2139
+  },
+  {
+    "id": "1368",
+    "name": "G2 Esports | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | G2 Esports | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/g2_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2140
+  },
+  {
+    "id": "1369",
+    "name": "BIG | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | BIG | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/big_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2141
+  },
+  {
+    "id": "1370",
+    "name": "Cloud9 | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Cloud9 | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/sha2024/c9_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2142
+  },
+  {
+    "id": "1371",
+    "name": "PENTA Sports | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | PENTA Sports | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/penta_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2143
+  },
+  {
+    "id": "1372",
+    "name": "Flipsid3 Tactics | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Flipsid3 Tactics | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/flip_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2144
+  },
+  {
+    "id": "1373",
+    "name": "Immortals | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Immortals | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/imt_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2145
+  },
+  {
+    "id": "1374",
+    "name": "Vega Squadron | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | Vega Squadron | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/vega_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2146
+  },
+  {
+    "id": "1375",
+    "name": "PGL | Krakow 2017",
+    "marketHashName": "Sealed Graffiti | PGL | Krakow 2017",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/pgl_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Krakow 2017 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/pgl_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2017-07-13",
+    "defIndex": 2147
+  },
+  {
     "id": "1376",
     "name": "Water Gun",
     "marketHashName": "Sealed Graffiti | Water Gun",
@@ -13714,6 +14326,924 @@
     ],
     "releaseDate": "2017-09-14",
     "defIndex": 2435
+  },
+  {
+    "id": "1394",
+    "name": "Gambit Esports | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Gambit Esports | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/gamb_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2536
+  },
+  {
+    "id": "1395",
+    "name": "100 Thieves | Boston 2018",
+    "marketHashName": "Sealed Graffiti | 100 Thieves | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/thv_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2537
+  },
+  {
+    "id": "1396",
+    "name": "Astralis | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Astralis | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/astr_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2538
+  },
+  {
+    "id": "1397",
+    "name": "Virtus.Pro | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Virtus.Pro | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/vp_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2539
+  },
+  {
+    "id": "1398",
+    "name": "Fnatic | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Fnatic | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/sha2024/fntc_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2540
+  },
+  {
+    "id": "1399",
+    "name": "SK Gaming | Boston 2018",
+    "marketHashName": "Sealed Graffiti | SK Gaming | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/sk_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2541
+  },
+  {
+    "id": "1400",
+    "name": "BIG | Boston 2018",
+    "marketHashName": "Sealed Graffiti | BIG | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/big_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2542
+  },
+  {
+    "id": "1401",
+    "name": "North | Boston 2018",
+    "marketHashName": "Sealed Graffiti | North | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/nor_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2543
+  },
+  {
+    "id": "1402",
+    "name": "G2 Esports | Boston 2018",
+    "marketHashName": "Sealed Graffiti | G2 Esports | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/g2_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2544
+  },
+  {
+    "id": "1403",
+    "name": "Cloud9 | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Cloud9 | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/sha2024/c9_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2545
+  },
+  {
+    "id": "1404",
+    "name": "Flipsid3 Tactics | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Flipsid3 Tactics | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/krakow2017/flip_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2546
+  },
+  {
+    "id": "1405",
+    "name": "Natus Vincere | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Natus Vincere | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/navi_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2547
+  },
+  {
+    "id": "1406",
+    "name": "mousesports | Boston 2018",
+    "marketHashName": "Sealed Graffiti | mousesports | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/mss_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2548
+  },
+  {
+    "id": "1407",
+    "name": "Sprout Esports | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Sprout Esports | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/rio2022/spr_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2549
+  },
+  {
+    "id": "1408",
+    "name": "FaZe Clan | Boston 2018",
+    "marketHashName": "Sealed Graffiti | FaZe Clan | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/faze_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2550
+  },
+  {
+    "id": "1409",
+    "name": "Vega Squadron | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Vega Squadron | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/vega_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2551
+  },
+  {
+    "id": "1410",
+    "name": "Space Soldiers | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Space Soldiers | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/spc_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2552
+  },
+  {
+    "id": "1411",
+    "name": "Team Liquid | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Team Liquid | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/liq_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2553
+  },
+  {
+    "id": "1412",
+    "name": "Avangar | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Avangar | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/katowice2019/avg_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2554
+  },
+  {
+    "id": "1413",
+    "name": "Renegades | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Renegades | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/ren_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2555
+  },
+  {
+    "id": "1414",
+    "name": "Team EnVyUs | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Team EnVyUs | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/nv_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2556
+  },
+  {
+    "id": "1415",
+    "name": "Misfits Gaming | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Misfits Gaming | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/mfg_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2557
+  },
+  {
+    "id": "1416",
+    "name": "Quantum Bellator Fire | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Quantum Bellator Fire | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/qb_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2558
+  },
+  {
+    "id": "1417",
+    "name": "Tyloo | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Tyloo | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/tyl_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2559
+  },
+  {
+    "id": "1418",
+    "name": "ELEAGUE | Boston 2018",
+    "marketHashName": "Sealed Graffiti | ELEAGUE | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2560
+  },
+  {
+    "id": "1419",
+    "name": "Flash Gaming | Boston 2018",
+    "marketHashName": "Sealed Graffiti | Flash Gaming | Boston 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/flg_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "Boston 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/boston2018/eleague_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-01-10",
+    "defIndex": 2939
+  },
+  {
+    "id": "1420",
+    "name": "Cloud9 | London 2018",
+    "marketHashName": "Sealed Graffiti | Cloud9 | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/sha2024/c9_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3055
+  },
+  {
+    "id": "1421",
+    "name": "FaZe Clan | London 2018",
+    "marketHashName": "Sealed Graffiti | FaZe Clan | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/faze_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3056
+  },
+  {
+    "id": "1422",
+    "name": "Natus Vincere | London 2018",
+    "marketHashName": "Sealed Graffiti | Natus Vincere | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/navi_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3057
+  },
+  {
+    "id": "1423",
+    "name": "MIBR | London 2018",
+    "marketHashName": "Sealed Graffiti | MIBR | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/sha2024/mibr_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3058
+  },
+  {
+    "id": "1424",
+    "name": "mousesports | London 2018",
+    "marketHashName": "Sealed Graffiti | mousesports | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/mss_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3059
+  },
+  {
+    "id": "1425",
+    "name": "Winstrike Team | London 2018",
+    "marketHashName": "Sealed Graffiti | Winstrike Team | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/wins_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3060
+  },
+  {
+    "id": "1426",
+    "name": "G2 Esports | London 2018",
+    "marketHashName": "Sealed Graffiti | G2 Esports | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/g2_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3061
+  },
+  {
+    "id": "1427",
+    "name": "Fnatic | London 2018",
+    "marketHashName": "Sealed Graffiti | Fnatic | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/sha2024/fntc_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3062
+  },
+  {
+    "id": "1428",
+    "name": "Gambit Esports | London 2018",
+    "marketHashName": "Sealed Graffiti | Gambit Esports | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/gamb_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3063
+  },
+  {
+    "id": "1429",
+    "name": "Vega Squadron | London 2018",
+    "marketHashName": "Sealed Graffiti | Vega Squadron | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/vega_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3064
+  },
+  {
+    "id": "1430",
+    "name": "Space Soldiers | London 2018",
+    "marketHashName": "Sealed Graffiti | Space Soldiers | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/spc_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3065
+  },
+  {
+    "id": "1431",
+    "name": "BIG | London 2018",
+    "marketHashName": "Sealed Graffiti | BIG | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/big_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3066
+  },
+  {
+    "id": "1432",
+    "name": "Astralis | London 2018",
+    "marketHashName": "Sealed Graffiti | Astralis | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/astr_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3067
+  },
+  {
+    "id": "1433",
+    "name": "Team Liquid | London 2018",
+    "marketHashName": "Sealed Graffiti | Team Liquid | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/liq_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3068
+  },
+  {
+    "id": "1434",
+    "name": "North | London 2018",
+    "marketHashName": "Sealed Graffiti | North | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/nor_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3069
+  },
+  {
+    "id": "1435",
+    "name": "Virtus.Pro | London 2018",
+    "marketHashName": "Sealed Graffiti | Virtus.Pro | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/vp_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3070
+  },
+  {
+    "id": "1436",
+    "name": "Ninjas in Pyjamas | London 2018",
+    "marketHashName": "Sealed Graffiti | Ninjas in Pyjamas | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/nip_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3071
+  },
+  {
+    "id": "1437",
+    "name": "compLexity Gaming | London 2018",
+    "marketHashName": "Sealed Graffiti | compLexity Gaming | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/col_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3072
+  },
+  {
+    "id": "1438",
+    "name": "HellRaisers | London 2018",
+    "marketHashName": "Sealed Graffiti | HellRaisers | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/hlr_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3073
+  },
+  {
+    "id": "1439",
+    "name": "Renegades | London 2018",
+    "marketHashName": "Sealed Graffiti | Renegades | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/ren_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3074
+  },
+  {
+    "id": "1440",
+    "name": "OpTic Gaming | London 2018",
+    "marketHashName": "Sealed Graffiti | OpTic Gaming | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/optc_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3075
+  },
+  {
+    "id": "1441",
+    "name": "Rogue | London 2018",
+    "marketHashName": "Sealed Graffiti | Rogue | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/rog_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3076
+  },
+  {
+    "id": "1442",
+    "name": "Team Spirit | London 2018",
+    "marketHashName": "Sealed Graffiti | Team Spirit | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/spir_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3077
+  },
+  {
+    "id": "1443",
+    "name": "Tyloo | London 2018",
+    "marketHashName": "Sealed Graffiti | Tyloo | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/stockh2021/tyl_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3078
+  },
+  {
+    "id": "1444",
+    "name": "FACEIT | London 2018",
+    "marketHashName": "Sealed Graffiti | FACEIT | London 2018",
+    "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png",
+    "description": "This is a sealed container of a graffiti pattern. Once this graffiti pattern is unsealed, it will provide you with enough charges to apply the graffiti pattern <b>50</b> times to the in-game world.<br><br>50% of the proceeds from the sale of this graffiti support the included organizations.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": {
+      "name": "London 2018 Graffiti",
+      "image": "https://cdn.cs2c.app/images/econ/stickers/london2018/faceit_graffiti_png.png"
+    },
+    "crates": [],
+    "releaseDate": "2018-09-03",
+    "defIndex": 3079
   },
   {
     "id": "1445",

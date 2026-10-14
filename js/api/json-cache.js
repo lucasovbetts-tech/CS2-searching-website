@@ -1,9 +1,4 @@
-//Caches the in-flight promise, not the resolved value. Several pages request the same file at the
-//same time (search.js and explore.js both want skins.json on load, every skin card wants prices),
-//and caching only the result means each of those concurrent callers sees an empty cache and starts
-//its own download of the same multi-megabyte file.
-//
-//A rejected promise is evicted so a failed load can be retried rather than replaying the error forever.
+//returns a promise of the cached json file
 export function cachedJson(url, errorMessage) {
     let promise = null;
     return () => {

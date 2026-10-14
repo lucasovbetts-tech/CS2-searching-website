@@ -17,7 +17,7 @@ const WEAR_NAME_TO_KEY = {
 
 function loadCs2capKey() {
     const envContent = fs.readFileSync(ENV_PATH, 'utf-8');
-    const match = envContent.match(/^CS2CAP_API_KEY=(.+)$/m);
+    const match = envContent.match(/^CS2CAP_API_KEY=(.+)$/m); //finds the line starting "CS2CAP_API_KEY=" and captures everything after the = (m flag makes ^/$ match each line, not the whole file)
     if (!match) throw new Error('CS2CAP_API_KEY not set in server/.env');
     return match[1].trim();
 }

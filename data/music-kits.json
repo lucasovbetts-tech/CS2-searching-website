@@ -135,6 +135,36 @@
     "defIndex": 103
   },
   {
+    "id": "47516",
+    "name": "Starjunk 95, Industrial Sunset Memories",
+    "marketHashName": "Music Kit | Starjunk 95, Industrial Sunset Memories",
+    "image": "https://cdn.cs2c.app/images/econ/music_kits/starjunk95_01_png.png",
+    "description": "<span style='color:#99ccff;'>This item features StatTrak™ technology, which tracks certain statistics when equipped by its owner.</span><br/><br/><span style='color:#cf6a32;'>This item tracks Official Competitive MVPs.</span><br/><br/>This Music Kit will replace all of the music in the game and is shareable with anyone you are playing with. It also includes an MVP Anthem that plays for everyone in the match when you are MVP.\\n\\nThe Music Kit replaces the following music:\\n- Main Menu\\n- Round Start and End\\n- Map Objective\\n- Ten Second Warning\\n- Death Camera<br/><br/>Experience a music kit from the grooviest station in the galaxy, featuring the newest sounds of today drenched with vintage nostalgia of yesterday. This is Starjunk 95.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [],
+    "releaseDate": "2026-09-23",
+    "defIndex": 104
+  },
+  {
+    "id": "47517",
+    "name": "Starjunk 95, Industrial Sunset Memories",
+    "marketHashName": "StatTrak™ Music Kit | Starjunk 95, Industrial Sunset Memories",
+    "image": "https://cdn.cs2c.app/images/econ/music_kits/starjunk95_01_png.png",
+    "description": "<span style='color:#99ccff;'>This item features StatTrak™ technology, which tracks certain statistics when equipped by its owner.</span><br/><br/><span style='color:#cf6a32;'>This item tracks Official Competitive MVPs.</span><br/><br/>This Music Kit will replace all of the music in the game and is shareable with anyone you are playing with. It also includes an MVP Anthem that plays for everyone in the match when you are MVP.\\n\\nThe Music Kit replaces the following music:\\n- Main Menu\\n- Round Start and End\\n- Map Objective\\n- Ten Second Warning\\n- Death Camera<br/><br/>Experience a music kit from the grooviest station in the galaxy, featuring the newest sounds of today drenched with vintage nostalgia of yesterday. This is Starjunk 95.",
+    "rarity": {
+      "name": "High Grade",
+      "color": "#4b69ff"
+    },
+    "collection": null,
+    "crates": [],
+    "releaseDate": "2026-09-23",
+    "defIndex": 104
+  },
+  {
     "id": "3387",
     "name": "Sasha, LNOE",
     "marketHashName": "StatTrak™ Music Kit | Sasha, LNOE",
